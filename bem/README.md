@@ -4,11 +4,11 @@
 
 ```
 <div class="toggle toggle—simple”>
-<div class=“toggle__control toggle__control—active”>
-<h1 class=“toggle__title”>Title 1</h1>
-</div>
-<div class=“toggle__details toggle__details--active“>…</div>
-...
+    <div class=“toggle__control toggle__control—active”>
+        <h1 class=“toggle__title”>Title 1</h1>
+    </div>
+    <div class=“toggle__details toggle__details--active“>…</div>
+    ...
 </div>
 ```
 

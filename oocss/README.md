@@ -4,11 +4,11 @@
 
 ```
 <div class="toggle simple">
-<div class="toggle-control open">
-<h1 class="toggle-title">Title 1</h1>
-</div>
-<div class="toggle-details open">...</div>
-...
+    <div class="toggle-control open">
+        <h1 class="toggle-title">Title 1</h1>
+    </div>
+    <div class="toggle-details open">...</div>
+    ...
 </div>
 ```
 
