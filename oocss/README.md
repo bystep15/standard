@@ -2,7 +2,7 @@
 
 [OOCSS](http://oocss.org)（Object-Oriented CSS，[Github](https://github.com/stubbornella/oocss/wiki)、[FAQ](https://github.com/stubbornella/oocss/wiki/faq)），面向对象的CSS，典型案例是BootStrap，toggle组件的示例如下：
 
-```
+```html
 <div class="toggle simple">
     <div class="toggle-control open">
         <h1 class="toggle-title">Title 1</h1>

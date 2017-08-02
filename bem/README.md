@@ -2,7 +2,7 @@
 
 [BEM](http://getbem.com)（Block Element Modifier），块元素修饰符，在SMACSS的基础上修改toggle组件的示例如下：
 
-```
+```html
 <div class="toggle toggle—simple”>
     <div class=“toggle__control toggle__control—active”>
         <h1 class=“toggle__title”>Title 1</h1>

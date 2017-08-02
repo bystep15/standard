@@ -2,7 +2,7 @@
 
 [SMACSS](https://smacss.com)（Scalable and Modular Architecture for CSS），模块化的可扩展CSS，toggle组件的示例如下：
 
-```
+```html
 <div class="toggle toggle-simple”>
     <div class="toggle-control is-active">
         <h1 class="toggle-title">Title 1</h1>
