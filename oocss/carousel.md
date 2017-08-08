@@ -1,14 +1,75 @@
-Outlining how this should work.
+# Carousel
 
-* tag – a, button
-* class – btn
-* Possible displays:
+Documenting how this should work.
 
-1. single image sliding doors (horizontal only),
-2. single image sliding doors (vertical and horizontal),
-3. no images buttons (perhaps bowman/goog as inspiration) or some of the gradient transforms/filters
+* 100% of the width of its parent container, adapts to any sized container.
+* Controls can be above, below, or right/left.
+* Items width must be set in pixels (they can’t be %, no way to inherit container width from parent’s parent)
+* Ideally it would not have half-items visible, in JS remove the extra bit or expand the units to fill more space?
 
-* Keep markup low (as few nodes as possible)
-* Image, colors applied by a skin class, layout class for abstraction
-* Inline-block
-* Should be possible to float the buttons without breaking
+Brainstorming common markup for tabs, carousel, toggle, and accordion using the html5 syntax.
+
+
+## tabs
+```html
+<div class="section tabs">
+  <div class="control">
+    <ul> <!-- menu? -->
+      <li>Tab 1</li>
+      <li>Tab 2</li>
+      <li>Tab 3</li>
+    </ul>
+  </div>
+  <div class="details open"> Content Area </div>
+  <div class="details"> Content Area </div>
+  <div class="details"> Content Area </div>
+</div>
+```
+
+## toggle block
+
+```html
+<div class="section toggle">
+  <div class="control">
+    <h1>Clicking on me toggles the display of the content area</h1>
+  </div>
+  <div class="details open"> Content Area </div>
+</div>
+```
+
+
+## Carousel
+
+```html
+<div class="section carousel">
+  <div class="control"> radio buttons for section and buttons for left/right or top/bottom scroll </div>
+  <div class="details open"> Content Area </div>
+</div>
+```
+
+
+## Accordion
+
+```html
+<div class="section accordion">
+  <div class="section">
+    <div class="control">
+      <h1>Clicking on me opens the adjacent accordion content area</h1>
+    </div>
+    <div class="details open"> Content Area </div>
+  </div>
+  <div class="section">
+    <div class="control">
+      <h1>Clicking on me opens the adjacent accordian content area</h1>
+    </div>
+    <div class="details"> Content Area </div>
+  </div>
+  <div class="section">
+    <div class="control">
+      <h1>Clicking on me opens the adjacent accordian content area</h1>
+    </div>
+    <div class="details"> Content Area </div>
+  </div>
+</div>
+```
+
