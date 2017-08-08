@@ -20,6 +20,6 @@
 ## 资料翻译列表
 
 
-* [介绍](/introduction)
-* [按钮](/buttons)
-* [手风琴](/carousel)
+* [介绍](introduction.md)
+* [按钮](buttons.md)
+* [手风琴](carousel.md)
