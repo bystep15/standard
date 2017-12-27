@@ -2,20 +2,11 @@
 
 [原文](https://github.com/stubbornella/oocss/wiki)
 
-<div style="width:350px;text-align:left;float:left;" id="__ss_990405">
-<object style="margin:0px" width="350" height="300">
-<param 
-name="movie" 
-value="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" />
-<param name="allowFullScreen" value="true"/>
-<param name="allowScriptAccess" value="always"/>
-<embed src="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="350" height="300"></embed>
-</object></div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/EUTjDAdG7npnxS" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 
-<div style="overflow:hidden; _overflow:visible; zoom:1; padding-left: 20px;">
 How do you scale CSS for thousands of pages? Object Oriented CSS is an answer. It's an approach for writing CSS that's fast, maintainable, and standards-based. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites. Nicole Sullivan first presented it at Web Directions North in Denver and the response has been overwhelming.
 
-This Github project is for the OOCSS framework—a collection of code that's built using the OOCSS approach and is meant to help you get started. However, the framework is <em>not</em> the same thing as the OOCSS idea. (Confusingly though, they have the same name...that'll probably change.)
+This Github project is for the OOCSS framework—a collection of code that's built using the OOCSS approach and is meant to help you get started. However, the framework is *not* the same thing as the OOCSS idea. (Confusingly though, they have the same name...that'll probably change.)
 
 <h3>What's a CSS Object?</h3>
 Basically, a CSS "object" is a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS, and possibly JavaScript. That object can then be reused throughout a site. 
@@ -37,7 +28,6 @@ For instance, in the OOCSS framework the "media object":https://github.com/stubb
 <p>This gives you the assurance that: (1) all unclassed @<h2>@s will look the same; (2) all elements with the category class (called a mixin) will look the same; and 3) you won't need to create an override style for the case when you actually do want @.myObject h2@ to look like the normal @<h2>@.</p>
 </li>
 </ul>
-</div>
 
 <h2>Getting Started</h2>
 
