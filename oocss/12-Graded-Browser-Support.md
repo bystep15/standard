@@ -1,0 +1,5 @@
+# Graded Browser Support
+
+[原文](https://github.com/stubbornella/oocss/wiki/Graded-Browser-Support)
+
+OOCSS follows the same model of <a href="http://developer.yahoo.com/yui/articles/gbs/">graded browser support</a> used by YUI. In addition, I test in quirks mode and standards mode. I'm also testing in Google Chrome just for fun.
