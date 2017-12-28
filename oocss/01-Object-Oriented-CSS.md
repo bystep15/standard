@@ -71,7 +71,6 @@ Essentially, this means “rarely use location-dependent styles”. An object sh
 This gives you the assurance that: (1) all unclassed `<h2>`s will look the same; (2) all elements with the category class (called a mixin) will look the same; and 3) you won't need to create an override style for the case when you actually do want `.myObject h2` to look like the normal `<h2>`.</p>
 
 ## 入门（Getting Started）
----------
 [//]: # (这部分翻译的很好，不用改)
 1. 下载所有文件并设置本地目录。
 2. 打开template.html（这是您将修改创建所有其他页面的基本模板）。
@@ -87,7 +86,6 @@ This gives you the assurance that: (1) all unclassed `<h2>`s will look the same;
 5. Test site functionality by adding content objects from the content.css file. (These can also be found in **library.html**).
 
 ## 准备进行Alpha测试（Ready for alpha testing）
----------
 请帮我测试谈话泡泡对象！把他们穿过他们的步伐，让我知道如果你设法打破他们。在“问题”选项卡下添加功能请求。
 
 请帮助我测试谈话泡对象！通过观察他们，当如果您试图去刺破它，请让我知道。在“问题”选项卡下添加功能请求。
@@ -104,7 +102,6 @@ Please help me test the talk bubble objects! Put them through their paces and le
 -  Content Objects (particularly media)
 
 ## 稳定性（Stable）
----------
 - 模块
 - 模板
 - 网格
@@ -115,7 +112,6 @@ Please help me test the talk bubble objects! Put them through their paces and le
 -  Grids
 
 ## 基础库（Base Libraries）
----------
 OOCSS是建立在YUI库的重置与字体上。这些库提供了不同浏览器的共同起点。
 
 OOCSS的基础是建立在YUI库的重置库（reset）和字体（font）之上的。这些库为不同的浏览器提供了共同的起点。
@@ -129,7 +125,6 @@ OOCSS is built on top of reset and fonts from the YUI libraries.  These librarie
 - Reset and Fonts from YUI are a starting point.
 
 ## 未来（Upcoming）
----------
 - 内容对象
 - DHTML块（标签，轮播，切换等）
 
