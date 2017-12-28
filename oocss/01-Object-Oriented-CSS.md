@@ -4,7 +4,7 @@
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/EUTjDAdG7npnxS" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 
-[//]: # (上部分是原翻译，下部分是我翻译的，只有一段翻译的是原翻译不全)
+[//]: # (上面部分是原翻译，下部分是我翻译的，只有一段翻译的是原翻译不全)
 
 如何在数千页面上重用CSS？面向对象的CSS是一个答案。它是开发编写快速，可维护和基于标准的CSS一种方法。它为CSS增加了非常需要的可预测性，以便即使是初学者也可以参与编写漂亮的网站。尼科尔·沙利文（Nicole Sullivan）首先在丹佛的“Web Directions North”上提出，之后反响非常好。
 
