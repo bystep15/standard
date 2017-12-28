@@ -1,10 +1,10 @@
 # 面向对象的CSS（Object Oriented CSS）
 
-----------
 [原文](https://github.com/stubbornella/oocss/wiki)
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/EUTjDAdG7npnxS" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 
+<> (This is a comment, it will not be included)
 <上部分是原翻译，下部分是我翻译的，只有一段翻译的是原翻译不全>
 如何在数千页面上重用CSS？面向对象的CSS是一个答案。它是开发编写快速，可维护和基于标准的CSS一种方法。它为CSS增加了非常需要的可预测性，以便即使是初学者也可以参与编写漂亮的网站。尼科尔·沙利文（Nicole Sullivan）首先在丹佛的“Web Directions North”上提出，之后反响非常好。
 你会如何在数千页面上重用CSS？面向对象的CSS是一个不错的选择。它是一种可以编写快速、可维护并基于标准的CSS的方法。它为CSS增加了其非常需要的可预测性，以便即使是初学者也能参与编写完美的网站。它是由尼科尔·沙利文（Nicole Sullivan）在丹佛的“Web Directions North”会议上第一次提出的，并且获得了非常好的反响。
