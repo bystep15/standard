@@ -24,6 +24,7 @@ This Github project is for the OOCSS framework—a collection of code that's bui
 
 简而言之，CSS“对象”是一种可以重复使用的可视化模式，它可以从HTML，CSS和必要的JavaScript中抽象为独立的片段。抽象出的对象可以被整个网站重用。
 
+
 Basically, a CSS "object" is a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS, and possibly JavaScript. That object can then be reused throughout a site. 
 
 例如，在OOCSS框架中，[媒体对象](https://github.com/stubbornella/oocss/wiki/Content#template)描述包含固定大小的媒体元素（例如图像或视频）以及其他可变大小的内容（例如文本）的内容块。另一个例子是[模块对象](https://github.com/stubbornella/oocss/wiki/Module)，它描述具有所需体区和可选的页眉和页脚区域的通用内容块。
@@ -55,7 +56,9 @@ Separating structure and skin can also mean using classes to name your objects a
 
 通过在样式表中引用这些类（比如说，相对于直接使用`<img>`元素这样的样式），你的HTML将会更加灵活。例如，如果一个新的媒体元素在未来几年内将会大量使用（比如`<svg>`），通过这种方式，您可以在不接触CSS的情况下将它融入到HTML中。
 
+
 By referencing these classes in your stylesheets (say, rather than directly styling the `<img>` element), your HTML can be flexible. For instance, if a new media element were to take off in the next few years (e.g. `<svg>`), it could be integrated into the HTML without having to touch the CSS.
+
 
 - 分离容器和内容（Separate container and content）
 
