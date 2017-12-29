@@ -1,4 +1,4 @@
-#标准模块格式（Standard Module Format）
+# 标准模块格式（Standard Module Format）
 
 [原文](https://github.com/stubbornella/oocss/wiki/Standard-Module-Format)
 
