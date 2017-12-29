@@ -4,7 +4,7 @@
 
 Grids are used to break any space into fractions, they can be nested and stacked. A unit can contain another line or it can contain other objects directly.  The sum of the fractional sizes of all children of one line should be equal to one. Grids control width, content controls height. The grids have all the functionality of YUI grids and some other important features.
 
-网格经常用来将任何空间打碎成碎片，这些碎片可以被叠加和堆积。一个单元可以包含另一行或者直接包含其他的元素。一行中的所有子元素的碎片总和应当等于其他一行。网格控制着宽度，内容控制着高度。网格元素拥有YUI网格中所有的功能和一些其他重要的特性。
+网格经常用来将任何空间打碎成碎片，这些碎片可以被嵌套和堆叠。一个单元可以直接包含另一行或者其他的元素。一行中的所有内容的碎片空间总和应当等于其他一行的空间。网格控制着宽度，内容控制着高度。网格元素拥有YUI网格中所有的功能和一些其他重要的特性。
 
 - Less than 1kb! (including full templates and grids)
 - Infinite nesting and stacking.
@@ -16,14 +16,14 @@ Grids are used to break any space into fractions, they can be nested and stacked
 
 
 - 小于1kb！（包含所有的模板和网格）
-- 可以无限地叠加和堆积。
+- 可以无限地嵌套和堆叠。
 - 使用不同对象的唯一的变化是将不同的对象放到HTML中。在DOM中没有其他地方要改变，并且没有为独立样式提供位置。
 - 对后端的开发进行了简单的整合。
 - 对于初学者创建复杂页面布局提供了简单的方法。
 
 Please help me test the grids and template objects. Put them through their paces and let me know if you manage to break them!
 
-请帮我测试网格和模板对象。请您测试它们的效果，如果您设法去打破布局，请您联系我！
+请帮我测试网格和模板对象。请您测试它们的效果，如果您设法去改变这样的用法，请您联系我！
 
 ## Base Classes
 | Property | Description |
