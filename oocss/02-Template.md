@@ -8,7 +8,7 @@ Templates are used to solve common design patterns for page layout. Using these 
 
 Please help me test the grids and template objects. Put them through their paces and let me know if you manage to break them!
 
-请帮我测试网格和模板对象。请您测试它们的效果，如果您设法去打破布局，请您联系我！
+请帮我测试网格和模板对象。请您测试它们的效果，如果您设法去改变这样的用法，请您联系我！
 
 ## 基础类（Base Classes）
 
