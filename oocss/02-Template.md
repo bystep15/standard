@@ -2,9 +2,9 @@
 
 [原文](https://github.com/stubbornella/oocss/wiki/Template)
 
-Templates are used to solve common design patterns for page layout. Using these templates you can build pages which have a header, footer, left and right columns, and a main content area. Any of the sections can be broken up via [grids](https://github.com/stubbornella/oocss/wiki/grids). You can also use grids instead of columns. The main column is fully liquid, taking up all the rest of the space when the left column and right column have been rendered.
+Templates are used to solve common design patterns for page layout. Using these templates you can build pages which have a header, footer, left and right columns, and a main content area. Any of the sections can be broken up via [grids](https://github.com/bystep15/standard/blob/master/oocss/03-Grids.md). You can also use grids instead of columns. The main column is fully liquid, taking up all the rest of the space when the left column and right column have been rendered.
 
-模板是用来解决页面布局的通用设计模式。使用这些模板，您可以构建一个拥有页眉、页脚、左右边栏和主体内容区域的页面。以上提到的任何部分都可以通过[网格](https://github.com/stubbornella/oocss/wiki/grids)来打破布局。您也可以使用网格来代替竖栏布局。主体栏是流式布局，当左右边栏已经被渲染后，主题栏会充满剩下的全部空间。
+模板是用来解决页面布局的通用设计模式。使用这些模板，您可以构建一个拥有页眉、页脚、左右边栏和主体内容区域的页面。以上提到的任何部分都可以通过[网格](https://github.com/bystep15/standard/blob/master/oocss/03-Grids.md)来打破布局。您也可以使用网格来代替竖栏布局。主体栏是流式布局，当左右边栏已经被渲染后，主题栏会充满剩下的全部空间。
 
 Please help me test the grids and template objects. Put them through their paces and let me know if you manage to break them!
 
