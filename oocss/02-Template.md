@@ -113,7 +113,7 @@ You may not find the default and extended widths of columns or pages match your 
 ## 已知的问题（Known Issues）
 - Source order - the right column is before the main content in the source order. This choice was made in order to allow the columns to be completely independent objects and to have one unique template rather than multiple starting points for a site. This speeds and simplifies CMS development and enhances usability for those creating pages within the CMS. Skip to content links and navigational items marked up as lists are strongly encouraged.
 
-- 源文件顺序 - 在源文件中，右边栏的顺序应当先于主体内容的部分。这个决定是为了使得边栏可以成为完全独立的对象，并且对于整个网站，有唯一的模板而不是可以从多个起点开始编码。这个决定可以加速和简化CMS的开发并且提高使用CMS编写的页面的稳定性。并且我们强烈推荐跳过内容链接并使用将导航项目标记成清单的形式。
+- 源文件顺序 - 在源文件中，右边栏的顺序应当先于主体内容的部分。这样做的目的是为了边栏可以成为完全独立的对象，并且对于整个网站而言，有唯一的模板起点而不是可以从多个不同的起点开始编码。这个决定可以加速和简化CMS的开发并且提高使用CMS编写的页面的稳定性。并且我们强烈推荐省略掉内容链接并使用将导航项目标记成清单的形式。
 
 - Overflow - the containing blocks are made to wrap floats using the contexte de formattage; `overflow:hidden; _overflow:visible; zoom:1;`. This is known to cause printing bugs in older versions of Firefox and can cause absolutely positioned blocks originating in that container to be cropped. Removing floats and overflow via the print stylesheet is a corrective option.
 
