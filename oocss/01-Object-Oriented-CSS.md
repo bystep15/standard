@@ -77,7 +77,7 @@ This gives you the assurance that: (1) all unclassed `<h2>`s will look the same;
 2. Open template.html (this is the basic template you will modify to create all other pages).
 3. Set your left and right column widths by [extending the column objects](https://github.com/stubbornella/oocss/wiki/faq#extend)
 4. Use grids to break the page up further into smaller sections.
-5. Test site functionality by adding content objects from the content.css file. (These can also be found in **library.html**).
+5. Test site functionality by adding content objects from the content.css file. (These can also be found in library.html).
 
 
 1. 下载所有文件并设置本地目录。
