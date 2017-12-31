@@ -16,6 +16,7 @@ Outlining how this should work.
 - Inline-block
 - Should be possible to float the buttons without breaking
 
+----------
 
 - 标签 - a, button
 - 类 - btn
@@ -27,6 +28,8 @@ Outlining how this should work.
 - 图像，皮肤类应用的颜色，抽象的布局类
 - 内联块
 - 尽可能使按钮浮动，而不是打破布局
+
+----------
 
 - 使用a, button标签
 - 使用btn类
