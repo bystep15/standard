@@ -1,4 +1,4 @@
-# Grids
+# 网格（Grids）
 
 [原文](https://github.com/stubbornella/oocss/wiki/Grids)
 
