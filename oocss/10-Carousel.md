@@ -1,19 +1,27 @@
-# Carousel 
+# 滚动栏（Carousel）
 
 [原文](https://github.com/stubbornella/oocss/wiki/Carousel-)
 
 Documenting how this should work.
 
-* 100% of the width of its parent container, adapts to any sized container.
-* Controls can be above, below, or right/left.
-* Items width must be set in pixels (they can't be %, no way to inherit container width from parent's parent)
-* Ideally it would not have half-items visible, in JS remove the extra bit or expand the units to fill more space?
+- 100% of the width of its parent container, adapts to any sized container.
+- Controls can be above, below, or right/left.
+- Items width must be set in pixels (they can't be %, no way to inherit container width from parent's parent)
+- Ideally it would not have half-items visible, in JS remove the extra bit or expand the units to fill more space?
+
+使用文档
+
+- 宽度属性为其父容器的100％宽度，适应于任何尺寸的容器。
+- 控制组件可以在上方，下方或右侧/左侧。
+- 元素宽度必须以像素为单位（不能设为百分比，无法从父级的父级容器继承宽度）
+- 理想情况下，它处于不可见的状态，也许可以在JS中删除额外的区域或扩大比例以填补更多的空间？
 
 Brainstorming common markup for tabs, carousel, toggle, and accordion using the html5 syntax.
 
-h2. tabs
+使用html5语法来设计标签，滚动栏，切换块和手风琴的通用标签。
 
-<pre>
+## 标签页（tabs）
+```
 <div class="section tabs">
   <div class="control">
     <ul> <!-- menu? -->
@@ -26,31 +34,28 @@ h2. tabs
   <div class="details"> Content Area </div>
   <div class="details"> Content Area </div>
 </div>
-</pre>
+```
 
-h2. toggle block
-
-<pre>
+## 切换块（toggle block）
+```
 <div class="section toggle">
   <div class="control">
     <h1>Clicking on me toggles the display of the content area</h1>
   </div>
   <div class="details open"> Content Area </div>
 </div>
-</pre>
+```
 
-h2. Carousel
-
-<pre>
+## 滚动栏（Carousel）
+```
 <div class="section carousel">
   <div class="control"> radio buttons for section and buttons for left/right or top/bottom scroll </div>
   <div class="details open"> Content Area </div>
 </div>
-</pre>
+```
 
-h2. Accordion
-
-<pre>
+## 手风琴（ Accordion）
+```
 <div class="section accordion">
   <div class="section">
     <div class="control">
@@ -71,4 +76,4 @@ h2. Accordion
     <div class="details"> Content Area </div>
   </div>
 </div>
-</pre>
+```
