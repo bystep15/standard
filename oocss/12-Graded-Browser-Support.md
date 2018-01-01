@@ -1,4 +1,4 @@
-# Graded Browser Support
+# 分级浏览器支持（Graded Browser Support）
 
 [原文](https://github.com/stubbornella/oocss/wiki/Graded-Browser-Support)
 
