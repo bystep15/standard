@@ -91,11 +91,11 @@ Yes, designers instinctively understand objects, it is much more concrete than t
 
 是的，设计师本能地认为对象比目前大多数编写的CSS对象的方式更具体 - 作为例外的层面（想想，有一位吞下了一只苍蝇的老太太 （是个梗么？？？？？？））。 事实上，他们出于两个原因才喜欢面向对象的CSS。
 
-# It allows them to ramp up a lot faster when creating complex high traffic sites. They don't have to bother with understanding the structures until they are reasonably competent and comfortable with basic syntax.
-# When learning CSS, they never have to create the ugly "hello world!" website.  Designers care very much that their work is beautiful.  If they have to make something ugly, even for the sake of learning, they will very quickly get frustrated and annoyed.  OO-CSS allows their work to be beautiful at each stage of the learning process. 
+1. It allows them to ramp up a lot faster when creating complex high traffic sites. They don't have to bother with understanding the structures until they are reasonably competent and comfortable with basic syntax.
+2. When learning CSS, they never have to create the ugly "hello world!" website.  Designers care very much that their work is beautiful.  If they have to make something ugly, even for the sake of learning, they will very quickly get frustrated and annoyed.  OO-CSS allows their work to be beautiful at each stage of the learning process. 
 
-# 这使得他们可以更快的创建复杂的高流量网站。他们不必费心地去理解结构，直到他们可以合理和舒适的理解基本语法。
-# 在学习CSS时，他们永远不必创建无聊的“hello world！”网站。设计师非常在乎他们网站的优美程度。如果他们不得不为了学习而做出丑陋的事情，他们很快就会感到沮丧和烦恼。而面向对象的CSS可以让他们在学习过程的每个阶段都感到他们代码的优美。
+1. 这使得他们可以更快的创建复杂的高流量网站。他们不必费心地去理解结构，直到他们可以合理和舒适的理解基本语法。
+2. 在学习CSS时，他们永远不必创建无聊的“hello world！”网站。设计师非常在乎他们网站的优美程度。如果他们不得不为了学习而做出丑陋的事情，他们很快就会感到沮丧和烦恼。而面向对象的CSS可以让他们在学习过程的每个阶段都感到他们代码的优美。
 
 Designers are smart.  We need to give them credit. They may speak a different, non-engineering language, but often geeky language excludes people in a way that is kind of ugly. We can do better than that.
 
@@ -310,11 +310,11 @@ Screen reader users have two options:
 
 屏幕阅读用户有两个选项：
 
-# Skip links 
-# Navigation menus are always marked up as a list of links, or nested list of links. This is interesting because it allows screen reader users to skip the whole list via screen reader specific controls. 
+1. Skip links 
+2. Navigation menus are always marked up as a list of links, or nested list of links. This is interesting because it allows screen reader users to skip the whole list via screen reader specific controls. 
 
-# 样式链接
-# 导航菜单始终标记为链接列表或嵌套的链接列表。 这很有趣，因为它允许屏幕阅读器用户通过屏幕阅读器的特定控件跳过整个列表。
+1. 样式链接
+2. 导航菜单始终标记为链接列表或嵌套的链接列表。 这很有趣，因为它允许屏幕阅读器用户通过屏幕阅读器的特定控件跳过整个列表。
 
 Two ways to get past menus is sufficient IMO. 
 
