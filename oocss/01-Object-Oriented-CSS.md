@@ -8,35 +8,27 @@
 
 How do you scale CSS for thousands of pages? Object Oriented CSS is an answer. It's an approach for writing CSS that's fast, maintainable, and standards-based. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites. Nicole Sullivan first presented it at Web Directions North in Denver and the response has been overwhelming.
 
-如何在数千页面上重用CSS？面向对象的CSS是一个答案。它是开发编写快速，可维护和基于标准的CSS一种方法。它为CSS增加了非常需要的可预测性，以便即使是初学者也可以参与编写漂亮的网站。尼科尔·沙利文（Nicole Sullivan）首先在丹佛的“Web Directions North”上提出，之后反响非常好。
-
-你会如何在数千页面上重用CSS？面向对象的CSS是一个不错的选择。它是一种可以编写快速、可维护并基于标准的CSS的方法。它为CSS增加了其非常需要的可预测性，以便即使是初学者也能参与编写完美的网站。它是由尼科尔·沙利文（Nicole Sullivan）在丹佛的“Web Directions North”会议上第一次提出的，并且获得了非常好的反响。
+如何在数千页面上重用CSS？面向对象的CSS是一个不错的选择。它是编写快速、可维护并基于标准的CSS的一种方法。它为CSS增加了其非常需要的可预测性，以便即使是初学者也能参与编写完美的网站。它是由尼科尔·沙利文（Nicole Sullivan）在丹佛的“Web Directions North”会议上首次提出的，并且获得了非常好的反响。
 
 This Github project is for the OOCSS framework—a collection of code that's built using the OOCSS approach and is meant to help you get started. However, the framework is not the same thing as the OOCSS idea. (Confusingly though, they have the same name...that'll probably change.)
 
-这个Github项目就是一个OOCSS框架，使用OOCSS方法构建的代码集合，旨在帮助您开始使用。但是，这个框架和OOCSS的思想并不是一回事。（这很领人困惑，他们有相同的名字，这可能会改变。）
+这个Github项目就是一个OOCSS框架，使用OOCSS方法构建的代码集合，旨在帮助您开始使用。但是，这个框架和OOCSS的思想并不是一回事。（它们有相同的名称的确让人感到困扰...以后也许会有所改变吧。）
 
-这个GitHub项目就是基于面向对象的CSS（OOCSS）框架编写的，OOCSS框架是一种由OOCSS方法构建的代码集合，并旨在帮助您更好的使用OOCSS。但是，这个框架和OOCSS思想并不是一回事。（它们有相同的名称的确让人感到困扰...以后也许会有所改变吧。）
 
 ### 什么是CSS对象？（What's a CSS Object?）
 
 Basically, a CSS "object" is a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS, and possibly JavaScript. That object can then be reused throughout a site. 
 
-基本上，CSS “对象”是一种重复的可视化模式，可以被抽象为独立的HTML，CSS和必要的JavaScript片段。然后可以在整个站点中重用该对象。
-
-简而言之，CSS“对象”是一种可以重复使用的可视化模式，它可以从HTML，CSS和必要的JavaScript中抽象为独立的片段。抽象出的对象可以被整个网站重用。
+简而言之，CSS “对象”是一种重复使用的可视化模式，可以被抽象为独立的HTML，CSS和必要的JavaScript片段。然后可以在整个站点中重用该对象。
 
 For instance, in the OOCSS framework the [media object](https://github.com/stubbornella/oocss/wiki/Content#template) describes a content block containing a fixed-size media element (e.g. image or video) along with other variable-size content (e.g. text). Another example is the [module object](https://github.com/stubbornella/oocss/wiki/Module), which describes a generic content block with a required body area and optional header and footer areas. 
 
-例如，在OOCSS框架中，[媒体对象](https://github.com/stubbornella/oocss/wiki/Content#template)描述包含固定大小的媒体元素（例如图像或视频）以及其他可变大小的内容（例如文本）的内容块。另一个例子是[模块对象](https://github.com/stubbornella/oocss/wiki/Module)，它描述具有所需体区和可选的页眉和页脚区域的通用内容块。
-
-例如，在OOCSS框架中，[媒体对象](https://github.com/stubbornella/oocss/wiki/Content#template)是一种描述包含固定大小的媒体元素（例如图像或视频）与可变大小的内容（例如文本）的内容块。另一个例子是[模块对象](https://github.com/stubbornella/oocss/wiki/Module)，它是一种具有必要的主体部分和可选的页眉和页尾区域的通用内容块。
+例如，在OOCSS框架中，[媒体对象](https://github.com/stubbornella/oocss/wiki/Content#template)是表示包含固定大小的媒体元素（例如图像或视频）以及其他可变大小的内容（例如文本）的内容块。另一个例子是[模块对象](https://github.com/stubbornella/oocss/wiki/Module)，它用来表示具有必要的主体部分和可选的页眉和页尾区域的通用内容块。
 
 [Read more about objects on the FAQ page…](https://github.com/stubbornella/oocss/wiki/FAQ)
 
-[详细了解这些对象，请参看FAQ页面...](https://github.com/stubbornella/oocss/wiki/FAQ)
-
 [想要了解更多有关对象的内容，请参见FAQ页面...](https://github.com/stubbornella/oocss/wiki/FAQ)
+
 
 ### OOCSS的两个主要原则（Two Main Principles of OOCSS）
  - 分离结构性内容和语义化内容（Separate structure and skin ）
