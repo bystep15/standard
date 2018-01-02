@@ -38,9 +38,7 @@ For instance, in the OOCSS framework the [media object](https://github.com/stubb
 
 This means to define repeating visual features (like background and border styles) as separate "skins" that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code. See the [module object](https://github.com/bystep15/standard/blob/master/oocss/05-Module.md) and [its skins](https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md).
 
-这意味着将重复的视觉特征（如背景和边框样式）定义为单独的“皮肤”，您可以将其与各种对象进行混合和匹配，以获得大量的视觉品种而无需多少代码。请参阅[模块对象](https://github.com/bystep15/standard/blob/master/oocss/05-Module.md)和[其皮肤](https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md)。
-
-这意味着将重复的可视化特性（如背景和边框样式）定义为独立的语义化内容（皮肤），您可以将其与您不同的对象混合并匹配，以获得无需多少代码就能实现大量不同的视觉特性。详情请参阅[模块对象](https://github.com/bystep15/standard/blob/master/oocss/05-Module.md)和[其皮肤](https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md)。
+这意味着将重复的视觉特征（如背景和边框样式）定义为单独的“皮肤”，您可以将其与各种对象进行混合和匹配，以获得大量的视觉特性而无需多少代码。请参阅[模块对象](https://github.com/bystep15/standard/blob/master/oocss/05-Module.md)和[模块皮肤](https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md)。
 
 Separating structure and skin can also mean using classes to name your objects and their components, rather than relying solely on the semantics of HTML. For example, the media object is named with `class="media"`, and its components are named with `class="img"` (for the image/video component) and `class="bd"` (for the body/text component).
 

@@ -1,7 +1,11 @@
 {
-  "name": "bystep15 standard",
+  "name": "bystep15-standard",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "hexo server",
+    "deploy": "hexo deploy"
+  },
   "hexo": {
     "version": "3.4.4"
   },
