@@ -1,4 +1,7 @@
-# 面向对象的CSS（Object Oriented CSS）
+title: 面向对象的CSS（Object Oriented CSS）
+category: oocss
+---
+
 
 [原文](https://github.com/stubbornella/oocss/wiki)
 
