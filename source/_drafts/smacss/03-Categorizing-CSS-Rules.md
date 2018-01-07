@@ -79,7 +79,7 @@ By separating rules into the five categories, naming convention is beneficial fo
 
 I like to use a prefix to differentiate between Layout, State, and Module rules. For Layout, I use `l-` but `layout-` would work just as well. Using prefixes like `grid-` also provide enough clarity to separate layout styles from other styles. For State rules, I like `is-` as in `is-hidden` or `is-collapsed`. This helps describe things in a very readable way.
 
-我喜欢使用前缀来区分布局规则，状态规则和模块规则。对于布局规则，我通常使用`l-`但是`layout-`也可以使用。 使用`grid-`等前缀也足以将布局样式与其他样式分离开。对于状态规则，我喜欢用`is-`前缀，就像is-hidden`或者`is-collapsed`。 这有助于以一种非常可读的方式描述事物。
+我喜欢使用前缀来区分布局规则，状态规则和模块规则。对于布局规则，我通常使用`l-`但是`layout-`也可以使用。 使用`grid-`等前缀也足以将布局样式与其他样式分离开。对于状态规则，我喜欢用`is-`前缀，就像`is-hidden`或者`is-collapsed`。 这有助于以一种非常可读的方式描述事物。
 
 Modules are going to be the bulk of any project. As a result, having every module start with a prefix like `.module-` would be needlessly verbose. Modules just use the name of the module itself.
 
