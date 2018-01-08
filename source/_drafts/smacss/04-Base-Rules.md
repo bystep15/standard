@@ -1,4 +1,4 @@
-# 基本原则（Base Rules）
+# 基本规范（Base Rules）
 
 [原文](https://smacss.com/book/type-base)
 
