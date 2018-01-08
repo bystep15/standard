@@ -1,4 +1,4 @@
-# 布局规则（Layout Rules）
+# 布局规范（Layout Rules）
 
 [原文](https://smacss.com/book/type-layout)
 
