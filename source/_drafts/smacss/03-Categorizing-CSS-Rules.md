@@ -4,7 +4,7 @@
 
 Every project needs some organization. Throwing every new style you create onto the end of a single file would make finding things more difficult and would be very confusing for anybody else working on the project. Of course, you likely have some organization in place already. Hopefully, what you read among these pages will highlight what works with your existing process and, if I’m lucky, you will see new ways in which you can improve your process.
 
-每个项目都需要有一些规范。 如果把您创造的每一种新的样式放到单个文件的最后的话，会让查找相关内容变得更加复杂，并且对于从事这个项目的其他人来说，一些都会变得很混乱。当然,你可能已经有了一些规范。如果我幸运的话，在您阅读这些内容时，当与您现有工作内容相比时，你会看到可以用来改善你的流程的新方法。
+每个项目都需要有一些规范。 如果把您创造的每一种新的样式放到单个文件的最后的话，会让查找相关内容变得更加复杂，并且对于从事这个项目的其他人来说，一些都会变得很混乱。当然,您可能已经有了一些规范。如果我幸运的话，在您阅读这些内容时，当与您现有工作内容相比时，您会看到可以用来改善流程的新方法。
 
 How do you decide whether to use ID selectors, or class selectors, or any number of selectors that are at your disposal? How do you decide which elements should get the styling magic you wish to bestow upon it? How do you make it easy to understand how your site and your styles are organized?
 
