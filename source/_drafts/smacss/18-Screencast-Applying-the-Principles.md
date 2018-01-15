@@ -1,4 +1,4 @@
-# Screencast：应用的原则（Screencast: Applying the Principles）
+# Screencast：应用原则（Screencast: Applying the Principles）
 
 [原文](https://smacss.com/book/screencast-1)
 
