@@ -2,9 +2,11 @@
 
 <img src="https://raw.githubusercontent.com/css-modules/logos/master/css-modules-logo.png" width="150" height="150" />
 
-# Theming
+# 主题化（Theming）
 
 Instead of importing a style in the component, the component can take a style as property. This way different themes can be used. The user can even define custom themes.
+
+不像在组件中导入样式一样，组件可以将样式看作是一个属性。这样可以使用不同的主题。用户甚至还可以自定义主题样式。
 
 ``` css
 /* component/theme-a.css */

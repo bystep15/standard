@@ -2,9 +2,11 @@
 
 <img src="https://raw.githubusercontent.com/css-modules/logos/master/css-modules-logo.png" width="150" height="150" />
 
-# Pseudo class selectors
+# 伪类选择器（Pseudo class selectors）
 
 Because css modules works by adding classes to your elements you can easily add pseudo class selectors.
+
+因为css模块是通过向元素添加类来完成工作的，所以您可以轻松地添加伪类选择器。
 
 ```css
 /* component/text.css */

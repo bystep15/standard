@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/css-modules/logos/master/css-modules-logo.png" width="150" height="150" />
 
-# CSS Modules with Angular.js
+# 使用angular.js的CSS模块（CSS Modules with Angular.js）
 
 ```css
 .bacon { /* ... */ }
@@ -35,7 +35,7 @@ angular.module('myApp').controller('MyController', ['$scope', MyController])
 
 ---
 
-## CSS Modules with angular.js 1.5 component
+## 使用angular.js 1.5 组件的CSS模块（CSS Modules with angular.js 1.5 component）
 
 ```css
 .content { /* ... */ }
@@ -61,6 +61,10 @@ angular
     });
 ```
 
-**This needs expansion/revision by someone who really knows angular. Maybe that's you!**
+This needs expansion/revision by someone who really knows angular. Maybe that's you!
+
+这部分内容需要真正了解angular的人来扩展和修改。也许就是您！
 
 - [ ] Angular 2.0 syntax
+
+- [ ] Angular 2.0 语法
