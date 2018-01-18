@@ -2,9 +2,10 @@
 
 <img src="https://raw.githubusercontent.com/css-modules/logos/master/css-modules-logo.png" width="150" height="150" />
 
-# Examples
+# 范例（Examples）
 
 As we find examples in the wild, we'll add them here (or edit this and add a PR).
+
 
 ## Boilerplates
 
