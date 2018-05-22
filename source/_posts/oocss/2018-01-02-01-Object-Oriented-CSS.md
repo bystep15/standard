@@ -5,7 +5,7 @@ category: oocss
 
 [原文](https://github.com/stubbornella/oocss/wiki)
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/EUTjDAdG7npnxS" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="position: relative; box-sizing: border-box; width: 100%; max-width: 100%; height: 0; padding-top: 81.00%; border:1px solid #ccc;"><iframe src="//www.slideshare.net/slideshow/embed_code/key/EUTjDAdG7npnxS" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen> </iframe></div>
 
 [//]: # (上面部分是原翻译，下部分是我翻译的，只有一段翻译的是原翻译不全)
 
