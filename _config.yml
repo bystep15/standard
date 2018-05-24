@@ -14,7 +14,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://bystep15.github.io/standard
 root: /standard/
-permalink: :category/:year/:month/:day/:title.html
+permalink: :year/:month/:day/:post_title.html
 permalink_defaults:
 
 # Directory
