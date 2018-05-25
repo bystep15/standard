@@ -1,5 +1,6 @@
 title: 面向对象的CSS（Object Oriented CSS）
-category: oocss
+categories: [理论, css, oocss]
+tags: [理论, css, oocss]
 ---
 
 
@@ -7,11 +8,10 @@ category: oocss
 
 <div style="position: relative; box-sizing: border-box; width: 100%; max-width: 100%; height: 0; padding-top: 81.00%; border:1px solid #ccc;"><iframe src="//www.slideshare.net/slideshow/embed_code/key/EUTjDAdG7npnxS" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen> </iframe></div>
 
-[//]: # (上面部分是原翻译，下部分是我翻译的，只有一段翻译的是原翻译不全)
 
 How do you scale CSS for thousands of pages? Object Oriented CSS is an answer. It's an approach for writing CSS that's fast, maintainable, and standards-based. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites. Nicole Sullivan first presented it at Web Directions North in Denver and the response has been overwhelming.
 
-如何在数千页面上重用CSS？面向对象的CSS是一个不错的选择。它是编写快速、可维护并基于标准的CSS的一种方法。它为CSS增加了其非常需要的可预测性，以便即使是初学者也能参与编写完美的网站。它是由尼科尔·沙利文（Nicole Sullivan）在丹佛的“Web Directions North”会议上首次提出的，并且获得了非常好的反响。
+该如何在大量的页面中重用CSS呢？面向对象的CSS是一个不错的选择。这是一种快速编写可维护、标准化CSS代码的一种方法。为CSS添加了急需的可预测性，即使初学者也能参与编写完美的网站。尼科尔·沙利文（Nicole Sullivan）在丹佛的“Web Directions North”会议上首次提出，获得了极大反响。
 
 This Github project is for the OOCSS framework—a collection of code that's built using the OOCSS approach and is meant to help you get started. However, the framework is not the same thing as the OOCSS idea. (Confusingly though, they have the same name...that'll probably change.)
 
