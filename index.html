@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>HTML&amp;CSS模块化理论学习</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="HTML&amp;CSS模块化理论学习">
+<meta property="og:url" content="https://bystep15.github.io/standard/index.html">
+<meta property="og:site_name" content="HTML&amp;CSS模块化理论学习">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML&amp;CSS模块化理论学习">
+  
+    <link rel="alternate" href="/standard/atom.xml" title="HTML&amp;CSS模块化理论学习" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/standard/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/standard/" id="logo">HTML&amp;CSS模块化理论学习</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/standard/">Home</a>
+        
+          <a class="main-nav-link" href="/standard/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/standard/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://bystep15.github.io/standard"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-oocss-2018-01-02-01-Object-Oriented-CSS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/05/24/面向对象的css（object-oriented-css）.html" class="article-date">
+  <time datetime="2018-05-24T10:38:00.851Z" itemprop="datePublished">2018-05-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/standard/2018/05/24/面向对象的css（object-oriented-css）.html">面向对象的CSS（Object Oriented CSS）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/stubbornella/oocss/wiki" target="_blank" rel="noopener">原文</a></p>
+<div style="position: relative; box-sizing: border-box; width: 100%; max-width: 100%; height: 0; padding-top: 81.00%; border:1px solid #ccc;"><iframe src="//www.slideshare.net/slideshow/embed_code/key/EUTjDAdG7npnxS" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen> </iframe></div>
+
+
+<p>How do you scale CSS for thousands of pages? Object Oriented CSS is an answer. It’s an approach for writing CSS that’s fast, maintainable, and standards-based. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites. Nicole Sullivan first presented it at Web Directions North in Denver and the response has been overwhelming.</p>
+<p>该如何在大量的页面中重用CSS呢？面向对象的CSS是一个不错的选择。这是一种快速编写可维护、标准化CSS代码的一种方法。为CSS添加了急需的可预测性，即使初学者也能参与编写完美的网站。尼科尔·沙利文（Nicole Sullivan）在丹佛的“Web Directions North”会议上首次提出，获得了极大反响。</p>
+<p>This Github project is for the OOCSS framework—a collection of code that’s built using the OOCSS approach and is meant to help you get started. However, the framework is not the same thing as the OOCSS idea. (Confusingly though, they have the same name…that’ll probably change.)</p>
+<p>这个Github项目就是一个OOCSS框架，使用OOCSS方法构建的代码集合，旨在帮助您开始使用。但是，这个框架和OOCSS的思想并不是一回事。（它们有相同的名称的确让人感到困扰…以后也许会有所改变吧。）</p>
+<h3 id="什么是CSS对象？（What’s-a-CSS-Object-）"><a href="#什么是CSS对象？（What’s-a-CSS-Object-）" class="headerlink" title="什么是CSS对象？（What’s a CSS Object?）"></a>什么是CSS对象？（What’s a CSS Object?）</h3><p>Basically, a CSS “object” is a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS, and possibly JavaScript. That object can then be reused throughout a site. </p>
+<p>简而言之，CSS “对象”是一种重复使用的可视化模式，可以被抽象为独立的HTML，CSS和必要的JavaScript片段。然后可以在整个站点中重用该对象。</p>
+<p>For instance, in the OOCSS framework the <a href="https://github.com/stubbornella/oocss/wiki/Content#template" target="_blank" rel="noopener">media object</a> describes a content block containing a fixed-size media element (e.g. image or video) along with other variable-size content (e.g. text). Another example is the <a href="https://github.com/stubbornella/oocss/wiki/Module" target="_blank" rel="noopener">module object</a>, which describes a generic content block with a required body area and optional header and footer areas. </p>
+<p>例如，在OOCSS框架中，<a href="https://github.com/stubbornella/oocss/wiki/Content#template" target="_blank" rel="noopener">媒体对象</a>是表示包含固定大小的媒体元素（例如图像或视频）以及其他可变大小的内容（例如文本）的内容块。另一个例子是<a href="https://github.com/stubbornella/oocss/wiki/Module" target="_blank" rel="noopener">模块对象</a>，它用来表示具有必要的主体部分和可选的页眉和页尾区域的通用内容块。</p>
+<p><a href="https://github.com/stubbornella/oocss/wiki/FAQ" target="_blank" rel="noopener">Read more about objects on the FAQ page…</a></p>
+<p><a href="https://github.com/stubbornella/oocss/wiki/FAQ" target="_blank" rel="noopener">想要了解更多有关对象的内容，请参见FAQ页面…</a></p>
+<h3 id="OOCSS的两个主要原则（Two-Main-Principles-of-OOCSS）"><a href="#OOCSS的两个主要原则（Two-Main-Principles-of-OOCSS）" class="headerlink" title="OOCSS的两个主要原则（Two Main Principles of OOCSS）"></a>OOCSS的两个主要原则（Two Main Principles of OOCSS）</h3><ul>
+<li>分离结构性内容和语义化内容（Separate structure and skin ）</li>
+</ul>
+<p>This means to define repeating visual features (like background and border styles) as separate “skins” that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code. See the <a href="https://github.com/bystep15/standard/blob/master/oocss/05-Module.md" target="_blank" rel="noopener">module object</a> and <a href="https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md" target="_blank" rel="noopener">its skins</a>.</p>
+<p>这意味着将重复的视觉特征（如背景和边框样式）定义为单独的“皮肤”，您可以将其与各种对象进行混合和匹配，以获得大量的视觉特性而无需多少代码。请参阅<a href="https://github.com/bystep15/standard/blob/master/oocss/05-Module.md" target="_blank" rel="noopener">模块对象</a>和<a href="https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md" target="_blank" rel="noopener">模块皮肤</a>。</p>
+<p>Separating structure and skin can also mean using classes to name your objects and their components, rather than relying solely on the semantics of HTML. For example, the media object is named with <code>class=&quot;media&quot;</code>, and its components are named with <code>class=&quot;img&quot;</code> (for the image/video component) and <code>class=&quot;bd&quot;</code> (for the body/text component).</p>
+<p>分离结构和皮肤也可以意味着使用类命名对象及其组件，而不是仅依赖于HTML的语义。例如，媒体对象以 <code>class=&quot;media&quot;</code> 命名，其组件以<code>class=&quot;img&quot;</code>（对于图像/视频组件）和<code>class=&quot;bd&quot;</code>（用于主体body/文本组件）命名。</p>
+<p>分离结构性与语义性也意味着您可以使用类的命名格式来命名您的对象和它们的组件，而不是仅仅依赖于HTML的语义。例如，媒体对象可以命名为<code>class=&quot;media&quot;</code>，它的组件可以命名为<code>class=&quot;img&quot;</code>（对于图像和视频组件）和<code>class=&quot;bd&quot;</code>（对于主体和文本组件）。</p>
+<p>By referencing these classes in your stylesheets (say, rather than directly styling the <code>&lt;img&gt;</code> element), your HTML can be flexible. For instance, if a new media element were to take off in the next few years (e.g. <code>&lt;svg&gt;</code>), it could be integrated into the HTML without having to touch the CSS.</p>
+<p>通过在样式表中引用这些类（比如说，相对于直接使用<code>&lt;img&gt;</code>元素这样的样式），你的HTML将会更加灵活。例如，如果一个新的媒体元素在未来几年内将会大量使用（比如<code>&lt;svg&gt;</code>），通过这种方式，您可以在不接触CSS的情况下将它融入到HTML中。</p>
+<ul>
+<li>分离容器和内容（Separate container and content）</li>
+</ul>
+<p>Essentially, this means “rarely use location-dependent styles”. An object should look the same no matter where you put it. So instead of styling a specific <code>&lt;h2&gt;</code> with <code>.myObject h2 {...}</code>, create and apply a class that describes the <code>&lt;h2&gt;</code> in question, like <code>&lt;h2 class=&quot;category&quot;&gt;</code>.</p>
+<p>本质上，这意味着“很少使用与位置有关的风格”。无论你放在哪里，对象都应该是一样的。因此，而不是样式化特定<code>&lt;h2&gt;</code> <code>.myObject h2 {...}</code>，创建和应用描述一类<code>&lt;h2&gt;</code>的问题，如<code>&lt;h2 class=&quot;category&quot;&gt;</code></p>
+<p>从本质上来说，这意味着“位置与样式无关”。无论您将一个元素放在那里，它的表现形式都应该是一样的。所以，不同于对<code>&lt;h2&gt;</code>添加诸如<code>.myObject h2 {...}</code>这样的特殊样式，应该用同一个类诸如<code>&lt;h2 class=&quot;category&quot;&gt;</code>来描述<code>&lt;h2&gt;</code>。</p>
+<p>This gives you the assurance that: (1) all unclassed <code>&lt;h2&gt;</code>s will look the same; (2) all elements with the category class (called a mixin) will look the same; and 3) you won’t need to create an override style for the case when you actually do want <code>.myObject h2</code> to look like the normal <code>&lt;h2&gt;</code>.</p><p></p>
+<p>这样就可以保证：1）所有未分类<code>&lt;h2&gt;</code>的都将看起来一样; 2）具有类别类的所有元素（称为mixin）将看起来一样; 3）您不需要创建一个覆盖样式的情况下，当你真的想要<code>.myObject h2</code>看起来像正常<code>&lt;h2&gt;</code>。</p>
+<p>这样就可以向您保证：（1）所有没有类属性的<code>&lt;h2&gt;</code>看起来都一样；（2）所有具有某个类别类的元素（称为mixin）看起来都一样；（3）当您想让<code>.myObject h2</code>看起来跟正常的<code>&lt;h2&gt;</code>一样时，您不必创建一个覆盖样式。</p>
+<h2 id="入门（Getting-Started）"><a href="#入门（Getting-Started）" class="headerlink" title="入门（Getting Started）"></a>入门（Getting Started）</h2><ol>
+<li>Download all the files and set up a local directory.</li>
+<li>Open template.html (this is the basic template you will modify to create all other pages).</li>
+<li>Set your left and right column widths by <a href="https://github.com/stubbornella/oocss/wiki/faq#extend" target="_blank" rel="noopener">extending the column objects</a></li>
+<li>Use grids to break the page up further into smaller sections.</li>
+<li>Test site functionality by adding content objects from the content.css file. (These can also be found in library.html).</li>
+</ol>
+<ol>
+<li>下载所有文件并设置本地目录。</li>
+<li>打开template.html（这是您将修改创建所有其他页面的基本模板）。</li>
+<li>通过<a href="https://github.com/stubbornella/oocss/wiki/faq#extend" target="_blank" rel="noopener">扩展列对象</a>来设置左右列宽。</li>
+<li>使用网格将页面进一步分割成较小的部分。</li>
+<li>通过从content.css文件添加内容对象来测试站点功能。（这些也可以在library.html中找到）。</li>
+</ol>
+<h2 id="准备进行Alpha测试（Ready-for-alpha-testing）"><a href="#准备进行Alpha测试（Ready-for-alpha-testing）" class="headerlink" title="准备进行Alpha测试（Ready for alpha testing）"></a>准备进行Alpha测试（Ready for alpha testing）</h2><p>Please help me test the talk bubble objects! Put them through their paces and let me know if you manage to break them. Add feature requests under the “issues” tab.</p>
+<p>请帮我测试谈话泡泡对象！把他们穿过他们的步伐，让我知道如果你设法打破他们。在“问题”选项卡下添加功能请求。</p>
+<p>请帮助我测试谈话泡对象！通过观察他们，当如果您试图去刺破它，请让我知道。在“问题”选项卡下添加功能请求。</p>
+<ul>
+<li>Tabs (very experimental)</li>
+<li>Talk Bubbles</li>
+<li>Content Objects (particularly media)</li>
+</ul>
+<ul>
+<li>标签（很有实践用处）</li>
+<li>谈话泡</li>
+<li>内容对象（尤其是媒体对象）</li>
+</ul>
+<h2 id="稳定性（Stable）"><a href="#稳定性（Stable）" class="headerlink" title="稳定性（Stable）"></a>稳定性（Stable）</h2><ul>
+<li>Module</li>
+<li>Template</li>
+<li>Grids</li>
+</ul>
+<ul>
+<li>模块</li>
+<li>模板</li>
+<li>网格</li>
+</ul>
+<h2 id="基础库（Base-Libraries）"><a href="#基础库（Base-Libraries）" class="headerlink" title="基础库（Base Libraries）"></a>基础库（Base Libraries）</h2><p>OOCSS is built on top of reset and fonts from the YUI libraries.  These libraries provide a common starting point across different navigators.</p>
+<p>OOCSS是建立在YUI库的重置与字体上。这些库提供了不同浏览器的共同起点。</p>
+<p>OOCSS的基础是建立在YUI库的重置库（reset）和字体（font）之上的。这些库为不同的浏览器提供了共同的起点。</p>
+<ul>
+<li><p>Reset and Fonts from YUI are a starting point.</p>
+</li>
+<li><p>来自YUI的重置和字体是一个起点。</p>
+</li>
+<li><p>YUI中重置库（Reset）和字体库（Fonts）仅仅是一个起点。</p>
+</li>
+</ul>
+<h2 id="未来（Upcoming）"><a href="#未来（Upcoming）" class="headerlink" title="未来（Upcoming）"></a>未来（Upcoming）</h2><ul>
+<li>Content objects</li>
+<li>DHTML blocks (tabs, carousel, toggle, etc)</li>
+</ul>
+<ul>
+<li>内容对象</li>
+<li>DHTML块（标签，轮播，切换等）</li>
+</ul>
+<h2 id="感谢！（Thanks-）"><a href="#感谢！（Thanks-）" class="headerlink" title="感谢！（Thanks!）"></a>感谢！（Thanks!）</h2><p>I’ve had the good fortune to work/study/play with some amazing developers, engineers, managers, designers, and visionaries over the years.  All of them contributed in different ways to shaping my ideas about how CSS should be built and maintained.  </p>
+<p>多年来，我一直有幸与一些惊人的开发人员，工程师，经理，设计师和梦想家一起工作/学习/玩耍。所有这些都以不同的方式帮助了我如何构建和维护CSS的想法。</p>
+<p>多年来，我一直有幸与一些杰出的开发人员，工程师，项目管理人员，设计师和一些有远见的人一起工作/学习/娱乐。他们都在以不同的方式帮助我实现更好的构建和维护CSS的理想。</p>
+<p>Many many thanks to Arnaud Gueras, Florian Harmel,  Sebastian Tiphaine, Yann Doussot, Thomas Vial, Adrien Thery, Sebastien Cardif, Thomas Vergnaud, Etienne Bernard, Yannick Bonnieux, Renaud Boyerand, Matt Sweeney, Nate Koechley, Leslie Jensen-Inman, Philip Tellis, Stoyan Stefanov, Robin Garner, Kevin Michel, Christophe Dubois, Orphelie Dudemaine, Medhi El Azmi, Christophe Charles, Eric Prudhommeaux, Mark Mason, Tenni Theurer, Steve Souders, Jennifer Le Hegaret, Praveen P N, Doug Crockford, Nicholas Zakas, Mark Norman Francis, Christian Heilmann, Jenny Han Donnelly, Tom Croucher, Brian Rountree, Ryan Grove, Philippe Mihelic, Stephanie Troeth, Nick Fogler, Gonzalo Cordero and the other Jukus, and Dan Cederholm and his book bulletproof. </p>
+<p>十分感谢以下所有人员：Arnaud Gueras, Florian Harmel, Sebastian Tiphaine, Yann Doussot, Thomas Vial, Adrien Thery, Sebastien Cardif, Thomas Vergnaud, Etienne Bernard, Yannick Bonnieux, Renaud Boyerand, Matt Sweeney, Nate Koechley, Leslie Jensen-Inman, Philip Tellis, Stoyan Stefanov, Robin Garner, Kevin Michel, Christophe Dubois, Orphelie Dudemaine, Medhi El Azmi, Christophe Charles, Eric Prudhommeaux, Mark Mason, Tenni Theurer, Steve Souders, Jennifer Le Hegaret, Praveen P N, Doug Crockford, Nicholas Zakas, Mark Norman Francis, Christian Heilmann, Jenny Han Donnelly, Tom Croucher, Brian Rountree, Ryan Grove, Philippe Mihelic, Stephanie Troeth, Nick Fogler, Gonzalo Cordero and the other Jukus, and Dan Cederholm和他的防弹书。</p>
+<p>I’m sure I’ve forgotten some… deepest apologies.</p>
+<p>我很确定我遗忘了一些人….对此感到深深地抱歉。</p>
+<blockquote>
+<p>“If you can’t be a good example, then you’ll just have to serve as a horrible warning.”<br>—— Catherine Aird</p>
+</blockquote>
+<blockquote>
+<p>“若不能成为典范，那你只能作为警示以被世人警惕。”<br>—— Catherine Aird</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/05/24/面向对象的css（object-oriented-css）.html" data-id="cjhhb8yvz001cyw0f1dyh7pvq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/">理论</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/">css</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/oocss/">oocss</a></li></ul></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/standard/tags/css/" style="font-size: 10px;">css</a> <a href="/standard/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/standard/tags/理论/" style="font-size: 10px;">理论</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/05/">五月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/standard/2018/05/24/面向对象的css（object-oriented-css）.html">面向对象的CSS（Object Oriented CSS）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 alex2010, bystep15<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/standard/" class="mobile-nav-link">Home</a>
+  
+    <a href="/standard/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/standard/fancybox/jquery.fancybox.css">
+  <script src="/standard/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/standard/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
