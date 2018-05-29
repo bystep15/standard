@@ -1,4 +1,4 @@
-title: 面向对象的CSS（Object Oriented CSS）
+title: 01、面向对象的CSS（Object Oriented CSS）
 categories: [理论, css, oocss]
 tags: [理论, css, oocss]
 ---
@@ -11,40 +11,36 @@ tags: [理论, css, oocss]
 
 How do you scale CSS for thousands of pages? Object Oriented CSS is an answer. It's an approach for writing CSS that's fast, maintainable, and standards-based. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites. Nicole Sullivan first presented it at Web Directions North in Denver and the response has been overwhelming.
 
-该如何在大量的页面中重用CSS呢？面向对象的CSS是一个不错的选择。这是一种快速编写可维护、标准化CSS代码的一种方法。为CSS添加了急需的可预测性，即使初学者也能参与编写完美的网站。尼科尔·沙利文（Nicole Sullivan）在丹佛的“Web Directions North”会议上首次提出，获得了极大反响。
+如何在大量的页面中重用CSS呢？面向对象的CSS是一个不错的选择。这是一种快速编写可维护、标准化CSS代码的方法。为CSS添加了急需的可预测性，即使初学者也能参与编写完美的网站。尼科尔·沙利文（Nicole Sullivan）在丹佛的“Web Directions North”会议上首次提出，获得了很大反响。
 
 This Github project is for the OOCSS framework—a collection of code that's built using the OOCSS approach and is meant to help you get started. However, the framework is not the same thing as the OOCSS idea. (Confusingly though, they have the same name...that'll probably change.)
 
-这个Github项目就是一个OOCSS框架，使用OOCSS方法构建的代码集合，旨在帮助您开始使用。但是，这个框架和OOCSS的思想并不是一回事。（它们有相同的名称的确让人感到困扰...以后也许会有所改变吧。）
+这个[Github项目](https://github.com/stubbornella/oocss)就是一个OOCSS框架——使用OOCSS方法构建起来的代码集合，旨在帮助您起步使用。但是，这个框架和OOCSS的思想是两码事（它们只是名字相同而已...以后也许会改变一下）。
 
 
 ### 什么是CSS对象？（What's a CSS Object?）
 
 Basically, a CSS "object" is a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS, and possibly JavaScript. That object can then be reused throughout a site. 
 
-简而言之，CSS “对象”是一种重复使用的可视化模式，可以被抽象为独立的HTML，CSS和必要的JavaScript片段。然后可以在整个站点中重用该对象。
+根本上说，CSS “对象”是一种可复用的可视化模式，可以被抽象为独立的HTML，CSS和必要的JavaScript片段。然后可以在整站中重用该对象。
 
 For instance, in the OOCSS framework the [media object](https://github.com/stubbornella/oocss/wiki/Content#template) describes a content block containing a fixed-size media element (e.g. image or video) along with other variable-size content (e.g. text). Another example is the [module object](https://github.com/stubbornella/oocss/wiki/Module), which describes a generic content block with a required body area and optional header and footer areas. 
 
-例如，在OOCSS框架中，[媒体对象](https://github.com/stubbornella/oocss/wiki/Content#template)是表示包含固定大小的媒体元素（例如图像或视频）以及其他可变大小的内容（例如文本）的内容块。另一个例子是[模块对象](https://github.com/stubbornella/oocss/wiki/Module)，它用来表示具有必要的主体部分和可选的页眉和页尾区域的通用内容块。
-
-[Read more about objects on the FAQ page…](https://github.com/stubbornella/oocss/wiki/FAQ)
+例如，在OOCSS框架中，[媒体对象](https://github.com/stubbornella/oocss/wiki/Content#template)用来表示内容容器，包含固定大小的媒体元素（例如图像或视频）和其他可变大小的内容（例如文本）。另一个例子是[模块对象](https://github.com/stubbornella/oocss/wiki/Module)，它用来表示通用的内容块，包含必需的主体部分和可选的页眉、页尾区域。
 
 [想要了解更多有关对象的内容，请参见FAQ页面...](https://github.com/stubbornella/oocss/wiki/FAQ)
 
 
 ### OOCSS的两个主要原则（Two Main Principles of OOCSS）
- - 分离结构性内容和语义化内容（Separate structure and skin ）
+ - 分离结构和外观（Separate structure and skin ）
 
 This means to define repeating visual features (like background and border styles) as separate "skins" that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code. See the [module object](https://github.com/bystep15/standard/blob/master/oocss/05-Module.md) and [its skins](https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md).
 
-这意味着将重复的视觉特征（如背景和边框样式）定义为单独的“皮肤”，您可以将其与各种对象进行混合和匹配，以获得大量的视觉特性而无需多少代码。请参阅[模块对象](https://github.com/bystep15/standard/blob/master/oocss/05-Module.md)和[模块皮肤](https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md)。
+这意味着需要将重复的视觉特征（如背景和边框样式）定义为单独的“皮肤”，与各种对象进行混合和匹配，用少量的代码得到广泛的使用。请参阅[模块对象](https://github.com/bystep15/standard/blob/master/oocss/05-Module.md)和[模块皮肤](https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md)。
 
 Separating structure and skin can also mean using classes to name your objects and their components, rather than relying solely on the semantics of HTML. For example, the media object is named with `class="media"`, and its components are named with `class="img"` (for the image/video component) and `class="bd"` (for the body/text component).
 
-分离结构和皮肤也可以意味着使用类命名对象及其组件，而不是仅依赖于HTML的语义。例如，媒体对象以 `class="media"` 命名，其组件以`class="img"`（对于图像/视频组件）和`class="bd"`（用于主体body/文本组件）命名。
-
-分离结构性与语义性也意味着您可以使用类的命名格式来命名您的对象和它们的组件，而不是仅仅依赖于HTML的语义。例如，媒体对象可以命名为`class="media"`，它的组件可以命名为`class="img"`（对于图像和视频组件）和`class="bd"`（对于主体和文本组件）。
+分离结构和外观意味着使用类命名对象及其组件，而不是仅依赖于HTML的语义。例如，媒体对象以 `class="media"` 命名，其组件以`class="img"`（对于图像/视频组件）和`class="bd"`（用于主体body/文本组件）命名。
 
 By referencing these classes in your stylesheets (say, rather than directly styling the `<img>` element), your HTML can be flexible. For instance, if a new media element were to take off in the next few years (e.g. `<svg>`), it could be integrated into the HTML without having to touch the CSS.
 
@@ -54,15 +50,11 @@ By referencing these classes in your stylesheets (say, rather than directly styl
 
 Essentially, this means “rarely use location-dependent styles”. An object should look the same no matter where you put it. So instead of styling a specific `<h2>` with `.myObject h2 {...}`, create and apply a class that describes the `<h2>` in question, like `<h2 class="category">`.
 
-本质上，这意味着“很少使用与位置有关的风格”。无论你放在哪里，对象都应该是一样的。因此，而不是样式化特定`<h2>` `.myObject h2 {...}`，创建和应用描述一类`<h2>`的问题，如`<h2 class="category">`
-
-从本质上来说，这意味着“位置与样式无关”。无论您将一个元素放在那里，它的表现形式都应该是一样的。所以，不同于对`<h2>`添加诸如`.myObject h2 {...}`这样的特殊样式，应该用同一个类诸如`<h2 class="category">`来描述`<h2>`。
+本质上，这意味着“杜绝使用位置依赖的样式风格”。无论将一个元素放在哪里，对象的表现形式都应该是一样的。所以，不同于对`<h2>`添加诸如`.myObject h2 {...}`这样的特殊样式，应该用同一个类诸如`<h2 class="category">`来描述`<h2>`。
 
 This gives you the assurance that: (1) all unclassed `<h2>`s will look the same; (2) all elements with the category class (called a mixin) will look the same; and 3) you won't need to create an override style for the case when you actually do want `.myObject h2` to look like the normal `<h2>`.</p>
 
-这样就可以保证：1）所有未分类`<h2>`的都将看起来一样; 2）具有类别类的所有元素（称为mixin）将看起来一样; 3）您不需要创建一个覆盖样式的情况下，当你真的想要`.myObject h2`看起来像正常`<h2>`。
-
-这样就可以向您保证：（1）所有没有类属性的`<h2>`看起来都一样；（2）所有具有某个类别类的元素（称为mixin）看起来都一样；（3）当您想让`.myObject h2`看起来跟正常的`<h2>`一样时，您不必创建一个覆盖样式。
+这样就可以向您保证：（1）所有没有类属性的`<h2>`看起来都一样；（2）所有具有某个类别类的元素（称为mixin）看起来都一样；（3）当需要`.myObject h2`和普通的`<h2>`看起来一样时，不需要再创建一个覆盖样式。
 
 ## 入门（Getting Started）
 [//]: # (这部分翻译的很好，不用改)
@@ -82,13 +74,12 @@ This gives you the assurance that: (1) all unclassed `<h2>`s will look the same;
 ## 准备进行Alpha测试（Ready for alpha testing）
 Please help me test the talk bubble objects! Put them through their paces and let me know if you manage to break them. Add feature requests under the "issues" tab.
 
-请帮我测试谈话泡泡对象！把他们穿过他们的步伐，让我知道如果你设法打破他们。在“问题”选项卡下添加功能请求。
 
-请帮助我测试谈话泡对象！通过观察他们，当如果您试图去刺破它，请让我知道。在“问题”选项卡下添加功能请求。
+请帮我测试谈话泡泡对象！通过观察他们，当如果您试图去刺破它，请让我知道。在“问题”选项卡下添加功能请求。
 
--  Tabs (very experimental)
--  Talk Bubbles
--  Content Objects (particularly media)
+- Tabs (very experimental)
+- Talk Bubbles
+- Content Objects (particularly media)
 
 
 - 标签（很有实践用处）
@@ -98,7 +89,7 @@ Please help me test the talk bubble objects! Put them through their paces and le
 ## 稳定性（Stable）
 - Module
 - Template
--  Grids
+- Grids
 
 
 - 模块
@@ -108,28 +99,21 @@ Please help me test the talk bubble objects! Put them through their paces and le
 ## 基础库（Base Libraries）
 OOCSS is built on top of reset and fonts from the YUI libraries.  These libraries provide a common starting point across different navigators.
 
-OOCSS是建立在YUI库的重置与字体上。这些库提供了不同浏览器的共同起点。
-
-OOCSS的基础是建立在YUI库的重置库（reset）和字体（font）之上的。这些库为不同的浏览器提供了共同的起点。
+OOCSS的基础是建立在YUI库的重置库（reset）和字体（font）之上的。这些库磨平了浏览器之间的差异，提供了一个同样的起点。
 
 - Reset and Fonts from YUI are a starting point.
 
-- 来自YUI的重置和字体是一个起点。
-
-- YUI中重置库（Reset）和字体库（Fonts）仅仅是一个起点。
+- 以YUI中重置库（Reset）和字体库（Fonts）为起点。
 
 ## 未来（Upcoming）
 - Content objects
 - DHTML blocks (tabs, carousel, toggle, etc)
-
 
 - 内容对象
 - DHTML块（标签，轮播，切换等）
 
 ## 感谢！（Thanks!）
 I've had the good fortune to work/study/play with some amazing developers, engineers, managers, designers, and visionaries over the years.  All of them contributed in different ways to shaping my ideas about how CSS should be built and maintained.  
-
-多年来，我一直有幸与一些惊人的开发人员，工程师，经理，设计师和梦想家一起工作/学习/玩耍。所有这些都以不同的方式帮助了我如何构建和维护CSS的想法。
 
 多年来，我一直有幸与一些杰出的开发人员，工程师，项目管理人员，设计师和一些有远见的人一起工作/学习/娱乐。他们都在以不同的方式帮助我实现更好的构建和维护CSS的理想。
 
@@ -144,6 +128,5 @@ I'm sure I've forgotten some... deepest apologies.
 > “If you can't be a good example, then you'll just have to serve as a horrible warning.” 
 > —— Catherine Aird
 
-> “若不能成为典范，那你只能作为警示以被世人警惕。”
-> —— Catherine Aird
-
+> “如果你不能成为一个好榜样，那么你只能作为一个可怕的警告。”
+> —— 凯瑟琳艾尔德
