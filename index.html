@@ -65,6 +65,112 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-oocss/04-Standard-Module-Format" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html" class="article-date">
+  <time datetime="2018-06-06T02:30:00.000Z" itemprop="datePublished">2018-06-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">04、标准模块格式（Standard Module Format）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/stubbornella/oocss/wiki/Standard-Module-Format" target="_blank" rel="noopener">原文</a></p>
+<p>The standard module format is based on the <a href="http://developer.yahoo.com/yui/examples/container:/module.html" target="_blank" rel="noopener">YUI module control</a>.  I hope to include input from microformats and HTML5 communities to inform the choice of class names.</p>
+<p>标准模块格式基于<a href="http://developer.yahoo.com/yui/examples/container:/module.html" target="_blank" rel="noopener">YUI模块控制</a>。我希望从微格式和HTML5社区收集一些意见，来为类选择合适的名称。</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mod</code></td>
+<td>Module is the wrapper for every container object. It provides basic structure for a transparent inside module. It can be extended by <code>mojo</code> or <code>ag</code>to provide for transparent outside and complex borders respectively.</td>
+</tr>
+<tr>
+<td><code>inner</code></td>
+<td>Inner exists for two reasons. First, it solves a bug (Opera prior to version 8.5) in which position relative and overflow hidden cannot exist on the same element. Second, it allows for two elements on which borders can be placed to extend the number of blocks that can be built without using image based borders.</td>
+</tr>
+<tr>
+<td><code>hd</code></td>
+<td>The module header generally contains a heading, but may also contain buttons, links, tabs, etc. <code>hd</code> provides basic structure and can be extended via skin classes. A module can have 0-1 (should this be 0-n?) <code>hd</code>.</td>
+</tr>
+<tr>
+<td><code>bd</code></td>
+<td>The body is the main open editable region of the module. It is an obligatory region, the module may contain 1-n bodies.</td>
+</tr>
+<tr>
+<td><code>ft</code></td>
+<td>The module footer is an object. ft provides basic structure and it can be extended via skin classes.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mod</code></td>
+<td>模块是容器对象的包装器，为内在模块提供了透明的基本结构。可以使用<code>mojo</code> 或者 <code>ag</code>分别扩展成透明的外边距和复杂的边框。</td>
+</tr>
+<tr>
+<td><code>inner</code></td>
+<td>内元素（inner）存在有两个原因。第一，它解决了一个bug（Opera 8.5之前的版本存在），相对定位和溢出隐藏没办法同时存在于一个元素上。第二，使用两个元素的边框扩展了块的数量，而不需要基于图片的边框。</td>
+</tr>
+<tr>
+<td><code>hd</code></td>
+<td>这个模块头通常包括一个标题，也可以包含按钮，链接，标签等等。<code>hd</code>提供了基本的结构并且可以通过皮肤类来扩展。一个模块中可以包含0-1（或者说0-n？）个<code>hd</code>。</td>
+</tr>
+<tr>
+<td><code>bd</code></td>
+<td>主体部分是模块中主要的开放可编辑的区域。它是必须存在的区域，模块可以包含1-n个主体部分。</td>
+</tr>
+<tr>
+<td><code>ft</code></td>
+<td>这个尾部模块是一个对象。<code>ft</code>提供了基本的结构并且可以由皮肤类来扩展。</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mod"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hd"</span>&gt;</span>head<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span>body<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ft"</span>&gt;</span>foot<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/06/04、标准模块格式（standard-module-format）.html" data-id="cji394ml80000nn0flse0xnmb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-oocss/03-Grids" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/standard/2018/06/06/03、网格（grids）.html" class="article-date">
@@ -182,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://bystep15.github.io/standard/2018/06/06/03、网格（grids）.html" data-id="cji2pcfur0000jq0ffp1wb5cm" class="article-share-link">Share</a>
+      <a data-url="https://bystep15.github.io/standard/2018/06/06/03、网格（grids）.html" data-id="cji2kurme0000ei0fae92q4ls" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
@@ -637,6 +743,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">04、标准模块格式（Standard Module Format）</a>
+          </li>
         
           <li>
             <a href="/standard/2018/06/06/03、网格（grids）.html">03、网格（Grids）</a>
