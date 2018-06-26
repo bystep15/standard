@@ -65,6 +65,450 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-standard/Google-HTML-CSS-Style-Guide" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/26/.html" class="article-date">
+  <time datetime="2018-06-26T03:25:37.679Z" itemprop="datePublished">2018-06-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Google-HTML-CSS-Style-Guide"><a href="#Google-HTML-CSS-Style-Guide" class="headerlink" title="# Google HTML/CSS Style Guide"></a># Google HTML/CSS Style Guide</h1><h3 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h3><p>|  </p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#Background" target="_blank" rel="noopener">1 Background</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#General" target="_blank" rel="noopener">2 General</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#General_Style_Rules" target="_blank" rel="noopener">2.1 General Style Rules</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#General_Formatting_Rules" target="_blank" rel="noopener">2.2 General Formatting Rules</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#General_Meta_Rules" target="_blank" rel="noopener">2.3 General Meta Rules</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#HTML" target="_blank" rel="noopener">3 HTML</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#HTML_Style_Rules" target="_blank" rel="noopener">3.1 HTML Style Rules</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#HTML_Formatting_Rules" target="_blank" rel="noopener">3.2 HTML Formatting Rules</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#CSS" target="_blank" rel="noopener">4 CSS</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#CSS_Style_Rules" target="_blank" rel="noopener">4.1 CSS Style Rules</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#CSS_Formatting_Rules" target="_blank" rel="noopener">4.2 CSS Formatting Rules</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#CSS_Meta_Rules" target="_blank" rel="noopener">4.3 CSS Meta Rules</a></p>
+<p><a href="https://google.github.io/styleguide/htmlcssguide.html#Parting_Words" target="_blank" rel="noopener">Parting Words</a></p>
+<p> |</p>
+<h2 id="1-Background"><a href="#1-Background" class="headerlink" title="1 Background"></a>1 Background<a href="https://google.github.io/styleguide/htmlcssguide.html#Background" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h2><p>This document defines formatting and style rules for HTML and CSS. It aims at improving collaboration, code quality, and enabling supporting infrastructure. It applies to raw, working files that use HTML and CSS, including GSS files. Tools are free to obfuscate, minify, and compile as long as the general code quality is maintained.</p>
+<h2 id="2-General"><a href="#2-General" class="headerlink" title="2 General"></a>2 General<a href="https://google.github.io/styleguide/htmlcssguide.html#General" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h2><h3 id="2-1-General-Style-Rules"><a href="#2-1-General-Style-Rules" class="headerlink" title="2.1 General Style Rules"></a>2.1 General Style Rules<a href="https://google.github.io/styleguide/htmlcssguide.html#General_Style_Rules" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h3><h4 id="2-1-1-Protocol"><a href="#2-1-1-Protocol" class="headerlink" title="2.1.1 Protocol"></a>2.1.1 Protocol<a href="https://google.github.io/styleguide/htmlcssguide.html#Protocol" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use the HTTPS protocol for embedded resources where possible.</p>
+<p>Always use the HTTPS protocol (<code>https:</code>) for images and other media files, style sheets, and scripts, unless the respective files are not available over HTTPS.</p>
+<pre><code>src=&quot;//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;      src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;
+
+src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;
+</code></pre><p>/<em> Not recommended: omits the protocol </em>/  @import  ‘//fonts.googleapis.com/css?family=Open+Sans’;  /<em> Not recommended: uses the HTTP protocol </em>/  @import  ‘<a href="http://fonts.googleapis.com/css?family=Open+Sans&#39;" target="_blank" rel="noopener">http://fonts.googleapis.com/css?family=Open+Sans&#39;</a>;</p>
+<p>/<em> Recommended </em>/  @import  ‘<a href="https://fonts.googleapis.com/css?family=Open+Sans&#39;" target="_blank" rel="noopener">https://fonts.googleapis.com/css?family=Open+Sans&#39;</a>;</p>
+<h3 id="2-2-General-Formatting-Rules"><a href="#2-2-General-Formatting-Rules" class="headerlink" title="2.2 General Formatting Rules"></a>2.2 General Formatting Rules<a href="https://google.github.io/styleguide/htmlcssguide.html#General_Formatting_Rules" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h3><h4 id="2-2-1-Indentation"><a href="#2-2-1-Indentation" class="headerlink" title="2.2.1 Indentation"></a>2.2.1 Indentation<a href="https://google.github.io/styleguide/htmlcssguide.html#Indentation" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Indent by 2 spaces at a time.</p>
+<p>Don’t use tabs or mix tabs and spaces for indentation.</p>
+<p>  Fantastic Great </p>
+<p>.example { color: blue;  }</p>
+<h4 id="2-2-2-Capitalization"><a href="#2-2-2-Capitalization" class="headerlink" title="2.2.2 Capitalization"></a>2.2.2 Capitalization<a href="https://google.github.io/styleguide/htmlcssguide.html#Capitalization" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use only lowercase.</p>
+<p>All code has to be lowercase: This applies to HTML element names, attributes, attribute values (unless <code>text/CDATA</code>), CSS selectors, properties, and property values (with the exception of strings).</p>
+<pre><code>HREF=&quot;/&quot;&gt;Home
+
+src=&quot;google.png&quot;  alt=&quot;Google&quot;&gt;
+</code></pre><p>/<em> Not recommended </em>/ color:  #E5E5E5;</p>
+<p>/<em> Recommended </em>/ color:  #e5e5e5;</p>
+<h4 id="2-2-3-Trailing-Whitespace"><a href="#2-2-3-Trailing-Whitespace" class="headerlink" title="2.2.3 Trailing Whitespace"></a>2.2.3 Trailing Whitespace<a href="https://google.github.io/styleguide/htmlcssguide.html#Trailing_Whitespace" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Remove trailing white spaces.</p>
+<p>Trailing white spaces are unnecessary and can complicate diffs.</p>
+<p>  What?_</p>
+<p>  Yes please.</p>
+<h3 id="2-3-General-Meta-Rules"><a href="#2-3-General-Meta-Rules" class="headerlink" title="2.3 General Meta Rules"></a>2.3 General Meta Rules<a href="https://google.github.io/styleguide/htmlcssguide.html#General_Meta_Rules" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h3><h4 id="2-3-1-Encoding"><a href="#2-3-1-Encoding" class="headerlink" title="2.3.1 Encoding"></a>2.3.1 Encoding<a href="https://google.github.io/styleguide/htmlcssguide.html#Encoding" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use UTF-8 (no BOM).</p>
+<p>Make sure your editor uses UTF-8 as character encoding, without a byte order mark.</p>
+<p>Specify the encoding in HTML templates and documents via <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code>. Do not specify the encoding of style sheets as these assume UTF-8.</p>
+<p>(More on encodings and when and how to specify them can be found in <a href="https://www.w3.org/International/tutorials/tutorial-char-enc/" target="_blank" rel="noopener">Handling character encodings in HTML and CSS</a>.)</p>
+<h4 id="2-3-2-Comments"><a href="#2-3-2-Comments" class="headerlink" title="2.3.2 Comments"></a>2.3.2 Comments<a href="https://google.github.io/styleguide/htmlcssguide.html#Comments" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Explain code as needed, where possible.</p>
+<p>Use comments to explain code: What does it cover, what purpose does it serve, why is respective solution used or preferred?</p>
+<p>(This item is optional as it is not deemed a realistic expectation to always demand fully documented code. Mileage may vary heavily for HTML and CSS code and depends on the project’s complexity.)</p>
+<h4 id="2-3-3-Action-Items"><a href="#2-3-3-Action-Items" class="headerlink" title="2.3.3 Action Items"></a>2.3.3 Action Items<a href="https://google.github.io/styleguide/htmlcssguide.html#Action_Items" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Mark todos and action items with <code>TODO</code>.</p>
+<p>Highlight todos by using the keyword <code>TODO</code> only, not other common formats like <code>@@</code>.</p>
+<p>Append a contact (username or mailing list) in parentheses as with the format <code>TODO(contact)</code>.</p>
+<p>Append action items after a colon as in <code>TODO: action item</code>.</p>
+<p>  Testcenter&gt;</p>
+<pre><code>Apples  Oranges  
+</code></pre><h2 id="3-HTML"><a href="#3-HTML" class="headerlink" title="3 HTML"></a>3 HTML<a href="https://google.github.io/styleguide/htmlcssguide.html#HTML" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h2><h3 id="3-1-HTML-Style-Rules"><a href="#3-1-HTML-Style-Rules" class="headerlink" title="3.1 HTML Style Rules"></a>3.1 HTML Style Rules<a href="https://google.github.io/styleguide/htmlcssguide.html#HTML_Style_Rules" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h3><h4 id="3-1-1-Document-Type"><a href="#3-1-1-Document-Type" class="headerlink" title="3.1.1 Document Type"></a>3.1.1 Document Type<a href="https://google.github.io/styleguide/htmlcssguide.html#Document_Type" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use HTML5.</p>
+<p>HTML5 (HTML syntax) is preferred for all HTML documents: <code>&lt;!DOCTYPE html&gt;</code>.</p>
+<p>(It’s recommended to use HTML, as <code>text/html</code>. Do not use XHTML. XHTML, as <a href="https://hixie.ch/advocacy/xhtml" target="_blank" rel="noopener"><code>application/xhtml+xml</code></a>, lacks both browser and infrastructure support and offers less room for optimization than HTML.)</p>
+<p>Although fine with HTML, do not close void elements, i.e. write <code>&lt;br&gt;</code>, not <code>&lt;br /&gt;</code>.</p>
+<h4 id="3-1-2-HTML-Validity"><a href="#3-1-2-HTML-Validity" class="headerlink" title="3.1.2 HTML Validity"></a>3.1.2 HTML Validity<a href="https://google.github.io/styleguide/htmlcssguide.html#HTML_Validity" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use valid HTML where possible.</p>
+<p>Use valid HTML code unless that is not possible due to otherwise unattainable performance goals regarding file size.</p>
+<p>Use tools such as the <a href="https://validator.w3.org/nu/" target="_blank" rel="noopener">W3C HTML validator</a> to test.</p>
+<p>Using valid HTML is a measurable baseline quality attribute that contributes to learning about technical requirements and constraints, and that ensures proper HTML usage.</p>
+<p>  Test  This is only a test.</p>
+<pre><code>charset=&quot;utf-8&quot;&gt;  Test  This is only a test.
+</code></pre><h4 id="3-1-3-Semantics"><a href="#3-1-3-Semantics" class="headerlink" title="3.1.3 Semantics"></a>3.1.3 Semantics<a href="https://google.github.io/styleguide/htmlcssguide.html#Semantics" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use HTML according to its purpose.</p>
+<p>Use elements (sometimes incorrectly called “tags”) for what they have been created for. For example, use heading elements for headings, <code>p</code> elements for paragraphs, <code>a</code> elements for anchors, etc.</p>
+<p>Using HTML according to its purpose is important for accessibility, reuse, and code efficiency reasons.</p>
+<pre><code>onclick=&quot;goToRecommendations();&quot;&gt;All recommendations
+
+href=&quot;recommendations/&quot;&gt;All recommendations
+</code></pre><h4 id="3-1-4-Multimedia-Fallback"><a href="#3-1-4-Multimedia-Fallback" class="headerlink" title="3.1.4 Multimedia Fallback"></a>3.1.4 Multimedia Fallback<a href="https://google.github.io/styleguide/htmlcssguide.html#Multimedia_Fallback" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Provide alternative contents for multimedia.</p>
+<p>For multimedia, such as images, videos, animated objects via <code>canvas</code>, make sure to offer alternative access. For images that means use of meaningful alternative text (<code>alt</code>) and for video and audio transcripts and captions, if available.</p>
+<p>Providing alternative contents is important for accessibility reasons: A blind user has few cues to tell what an image is about without <code>@alt</code>, and other users may have no way of understanding what video or audio contents are about either.</p>
+<p>(For images whose <code>alt</code> attributes would introduce redundancy, and for images whose purpose is purely decorative which you cannot immediately use CSS for, use no alternative text, as in <code>alt=&quot;&quot;</code>.)</p>
+<pre><code>src=&quot;spreadsheet.png&quot;&gt;
+
+src=&quot;spreadsheet.png&quot;  alt=&quot;Spreadsheet screenshot.&quot;&gt;
+</code></pre><h4 id="3-1-5-Separation-of-Concerns"><a href="#3-1-5-Separation-of-Concerns" class="headerlink" title="3.1.5 Separation of Concerns"></a>3.1.5 Separation of Concerns<a href="https://google.github.io/styleguide/htmlcssguide.html#Separation_of_Concerns" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Separate structure from presentation from behavior.</p>
+<p>Strictly keep structure (markup), presentation (styling), and behavior (scripting) apart, and try to keep the interaction between the three to an absolute minimum.</p>
+<p>That is, make sure documents and templates contain only HTML and HTML that is solely serving structural purposes. Move everything presentational into style sheets, and everything behavioral into scripts.</p>
+<p>In addition, keep the contact area as small as possible by linking as few style sheets and scripts as possible from documents and templates.</p>
+<p>Separating structure from presentation from behavior is important for maintenance reasons. It is always more expensive to change HTML documents and templates than it is to update style sheets and scripts.</p>
+<pre><code>HTML sucks    rel=&quot;stylesheet&quot;  href=&quot;base.css&quot;  media=&quot;screen&quot;&gt;    rel=&quot;stylesheet&quot;  href=&quot;grid.css&quot;  media=&quot;screen&quot;&gt;    rel=&quot;stylesheet&quot;  href=&quot;print.css&quot;  media=&quot;print&quot;&gt;    style=&quot;font-size:  1em;&quot;&gt;HTML sucks  I’ve read about this on a few sites but now I’m sure: HTML is stupid!!1  I can’t believe there’s no way to control the styling of
+</code></pre><p>  my website without doing everything all over again!</p>
+<pre><code>My first CSS-only redesign    rel=&quot;stylesheet&quot;  href=&quot;default.css&quot;&gt;  My first CSS-only redesign  I’ve read about this on a few sites but today I’m actually
+</code></pre><p>  doing it: separating concerns and avoiding anything in the HTML of<br>  my website that is presentational. It’s awesome!</p>
+<h4 id="3-1-6-Entity-References"><a href="#3-1-6-Entity-References" class="headerlink" title="3.1.6 Entity References"></a>3.1.6 Entity References<a href="https://google.github.io/styleguide/htmlcssguide.html#Entity_References" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Do not use entity references.</p>
+<p>There is no need to use entity references like <code>&amp;mdash;</code>, <code>&amp;rdquo;</code>, or <code>&amp;#x263a;</code>, assuming the same encoding (UTF-8) is used for files and editors as well as among teams.</p>
+<p>The only exceptions apply to characters with special meaning in HTML (like <code>&lt;</code> and <code>&amp;</code>) as well as control or “invisible” characters (like no-break spaces).</p>
+<p> The currency symbol for the Euro is &ldquo;&eur;&rdquo;.</p>
+<p> The currency symbol for the Euro is “€”.</p>
+<h4 id="3-1-7-Optional-Tags"><a href="#3-1-7-Optional-Tags" class="headerlink" title="3.1.7 Optional Tags"></a>3.1.7 Optional Tags<a href="https://google.github.io/styleguide/htmlcssguide.html#Optional_Tags" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Omit optional tags (optional).</p>
+<p>For file size optimization and scannability purposes, consider omitting optional tags. The <a href="https://html.spec.whatwg.org/multipage/syntax.html#syntax-tag-omission" target="_blank" rel="noopener">HTML5 specification</a> defines what tags can be omitted.</p>
+<p>(This approach may require a grace period to be established as a wider guideline as it’s significantly different from what web developers are typically taught. For consistency and simplicity reasons it’s best served omitting all optional tags, not just a selection.)</p>
+<pre><code>    Spending money, spending bytes      Sic.    
+
+Saving money, saving bytes  Qed.
+</code></pre><h4 id="3-1-8-type-Attributes"><a href="#3-1-8-type-Attributes" class="headerlink" title="3.1.8 type Attributes"></a>3.1.8 <code>type</code> Attributes<a href="https://google.github.io/styleguide/htmlcssguide.html#type_Attributes" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Omit <code>type</code> attributes for style sheets and scripts.</p>
+<p>Do not use <code>type</code> attributes for style sheets (unless not using CSS) and scripts (unless not using JavaScript).</p>
+<p>Specifying <code>type</code> attributes in these contexts is not necessary as HTML5 implies <a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-style-type" target="_blank" rel="noopener"><code>text/css</code></a> and <a href="https://html.spec.whatwg.org/multipage/scripting.html#attr-script-type" target="_blank" rel="noopener"><code>text/javascript</code></a> as defaults. This can be safely done even for older browsers.</p>
+<pre><code>rel=&quot;stylesheet&quot;  href=&quot;https://www.google.com/css/maia.css&quot;  type=&quot;text/css&quot;&gt;
+
+rel=&quot;stylesheet&quot;  href=&quot;https://www.google.com/css/maia.css&quot;&gt;
+
+src=&quot;https://www.google.com/js/gweb/analytics/autotrack.js&quot;  type=&quot;text/javascript&quot;&gt;
+
+src=&quot;https://www.google.com/js/gweb/analytics/autotrack.js&quot;&gt;
+</code></pre><h3 id="3-2-HTML-Formatting-Rules"><a href="#3-2-HTML-Formatting-Rules" class="headerlink" title="3.2 HTML Formatting Rules"></a>3.2 HTML Formatting Rules<a href="https://google.github.io/styleguide/htmlcssguide.html#HTML_Formatting_Rules" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h3><h4 id="3-2-1-General-Formatting"><a href="#3-2-1-General-Formatting" class="headerlink" title="3.2.1 General Formatting"></a>3.2.1 General Formatting<a href="https://google.github.io/styleguide/htmlcssguide.html#General_Formatting" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use a new line for every block, list, or table element, and indent every such child element.</p>
+<p>Independent of the styling of an element (as CSS allows elements to assume a different role per <code>display</code> property), put every block, list, or table element on a new line.</p>
+<p>Also, indent them if they are child elements of a block, list, or table element.</p>
+<p>(If you run into issues around whitespace between list items it’s acceptable to put all <code>li</code> elements in one line. A linter is encouraged to throw a warning instead of an error.)</p>
+<p>  Space, the final frontier.  </p>
+<p>  Moe Larry Curly </p>
+<pre><code>scope=&quot;col&quot;&gt;Income   scope=&quot;col&quot;&gt;Taxes     $ 5.00 $ 4.50 
+</code></pre><h4 id="3-2-2-HTML-Line-Wrapping"><a href="#3-2-2-HTML-Line-Wrapping" class="headerlink" title="3.2.2 HTML Line-Wrapping"></a>3.2.2 HTML Line-Wrapping<a href="https://google.github.io/styleguide/htmlcssguide.html#HTML_Line-Wrapping" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Break long lines (optional).</p>
+<p>While there is no column limit recommendation for HTML, you may consider wrapping long lines if it significantly improves readability.</p>
+<p>When line-wrapping, each continuation line should be indented at least 4 additional spaces from the original line.</p>
+<p>  md-mode=”indeterminate”  class=”md-accent”  ng-show=”ctrl.loading”  md-diameter=”35”&gt;  </p>
+<p>  md-mode=”indeterminate”  class=”md-accent”  ng-show=”ctrl.loading”  md-diameter=”35”&gt;  </p>
+<p>  md-mode=”indeterminate”  class=”md-accent”  ng-show=”ctrl.loading”  md-diameter=”35”&gt;  </p>
+<h4 id="3-2-3-HTML-Quotation-Marks"><a href="#3-2-3-HTML-Quotation-Marks" class="headerlink" title="3.2.3 HTML Quotation Marks"></a>3.2.3 HTML Quotation Marks<a href="https://google.github.io/styleguide/htmlcssguide.html#HTML_Quotation_Marks" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>When quoting attributes values, use double quotation marks.</p>
+<p>Use double (<code>&quot;&quot;</code>) rather than single quotation marks (<code>&#39;&#39;</code>) around attribute values.</p>
+<pre><code>class=&apos;maia-button maia-button-secondary&apos;&gt;Sign in
+
+class=&quot;maia-button maia-button-secondary&quot;&gt;Sign in
+</code></pre><h2 id="4-CSS"><a href="#4-CSS" class="headerlink" title="4 CSS"></a>4 CSS<a href="https://google.github.io/styleguide/htmlcssguide.html#CSS" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h2><h3 id="4-1-CSS-Style-Rules"><a href="#4-1-CSS-Style-Rules" class="headerlink" title="4.1 CSS Style Rules"></a>4.1 CSS Style Rules<a href="https://google.github.io/styleguide/htmlcssguide.html#CSS_Style_Rules" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h3><h4 id="4-1-1-CSS-Validity"><a href="#4-1-1-CSS-Validity" class="headerlink" title="4.1.1 CSS Validity"></a>4.1.1 CSS Validity<a href="https://google.github.io/styleguide/htmlcssguide.html#CSS_Validity" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use valid CSS where possible.</p>
+<p>Unless dealing with CSS validator bugs or requiring proprietary syntax, use valid CSS code.</p>
+<p>Use tools such as the <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">W3C CSS validator</a> to test.</p>
+<p>Using valid CSS is a measurable baseline quality attribute that allows to spot CSS code that may not have any effect and can be removed, and that ensures proper CSS usage.</p>
+<h4 id="4-1-2-ID-and-Class-Naming"><a href="#4-1-2-ID-and-Class-Naming" class="headerlink" title="4.1.2 ID and Class Naming"></a>4.1.2 ID and Class Naming<a href="https://google.github.io/styleguide/htmlcssguide.html#ID_and_Class_Naming" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use meaningful or generic ID and class names.</p>
+<p>Instead of presentational or cryptic names, always use ID and class names that reflect the purpose of the element in question, or that are otherwise generic.</p>
+<p>Names that are specific and reflect the purpose of the element should be preferred as these are most understandable and the least likely to change.</p>
+<p>Generic names are simply a fallback for elements that have no particular or no meaning different from their siblings. They are typically needed as “helpers.”</p>
+<p>Using functional or generic names reduces the probability of unnecessary document or template changes.</p>
+<p>/<em> Not recommended: meaningless </em>/  #yee-1901 {}  /<em> Not recommended: presentational </em>/  .button-green {}  .clear {}</p>
+<p>/<em> Recommended: specific </em>/  #gallery {}  #login {}  .video {}  /<em> Recommended: generic </em>/  .aux {}  .alt {}</p>
+<h4 id="4-1-3-ID-and-Class-Name-Style"><a href="#4-1-3-ID-and-Class-Name-Style" class="headerlink" title="4.1.3 ID and Class Name Style"></a>4.1.3 ID and Class Name Style<a href="https://google.github.io/styleguide/htmlcssguide.html#ID_and_Class_Name_Style" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use ID and class names that are as short as possible but as long as necessary.</p>
+<p>Try to convey what an ID or class is about while being as brief as possible.</p>
+<p>Using ID and class names this way contributes to acceptable levels of understandability and code efficiency.</p>
+<p>/<em> Not recommended </em>/  #navigation {}  .atr {}</p>
+<p>/<em> Recommended </em>/  #nav {}  .author {}</p>
+<h4 id="4-1-4-Type-Selectors"><a href="#4-1-4-Type-Selectors" class="headerlink" title="4.1.4 Type Selectors"></a>4.1.4 Type Selectors<a href="https://google.github.io/styleguide/htmlcssguide.html#Type_Selectors" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Avoid qualifying ID and class names with type selectors.</p>
+<p>Unless necessary (for example with helper classes), do not use element names in conjunction with IDs or classes.</p>
+<p>Avoiding unnecessary ancestor selectors is useful for <a href="http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/" target="_blank" rel="noopener">performance reasons</a>.</p>
+<p>/<em> Not recommended </em>/ ul#example {} div.error {}</p>
+<p>/<em> Recommended </em>/  #example {}  .error {}</p>
+<h4 id="4-1-5-Shorthand-Properties"><a href="#4-1-5-Shorthand-Properties" class="headerlink" title="4.1.5 Shorthand Properties"></a>4.1.5 Shorthand Properties<a href="https://google.github.io/styleguide/htmlcssguide.html#Shorthand_Properties" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use shorthand properties where possible.</p>
+<p>CSS offers a variety of <a href="https://www.w3.org/TR/CSS21/about.html#shorthand" target="_blank" rel="noopener">shorthand</a> properties (like <code>font</code>) that should be used whenever possible, even in cases where only one value is explicitly set.</p>
+<p>Using shorthand properties is useful for code efficiency and understandability.</p>
+<p>/<em> Not recommended </em>/ border-top-style: none; font-family: palatino, georgia, serif; font-size:  100%; line-height:  1.6; padding-bottom:  2em; padding-left:  1em; padding-right:  1em; padding-top:  0;</p>
+<p>/<em> Recommended </em>/ border-top:  0; font:  100%/1.6 palatino, georgia, serif; padding:  0  1em  2em;</p>
+<h4 id="4-1-6-0-and-Units"><a href="#4-1-6-0-and-Units" class="headerlink" title="4.1.6 0 and Units"></a>4.1.6 0 and Units<a href="https://google.github.io/styleguide/htmlcssguide.html#0_and_Units" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Omit unit specification after “0” values, unless required.</p>
+<p>Do not use units after <code>0</code> values unless they are required.</p>
+<p>flex:  0px;  /<em> This flex-basis component requires a unit. </em>/ flex:  1  1  0px;  /<em> Not ambiguous without the unit, but needed in IE11. </em>/ margin:  0; padding:  0;</p>
+<h4 id="4-1-7-Leading-0s"><a href="#4-1-7-Leading-0s" class="headerlink" title="4.1.7 Leading 0s"></a>4.1.7 Leading 0s<a href="https://google.github.io/styleguide/htmlcssguide.html#Leading_0s" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Omit leading “0”s in values.</p>
+<p>Do not put <code>0</code>s in front of values or lengths between -1 and 1.</p>
+<p>font-size:  .8em;</p>
+<h4 id="4-1-8-Hexadecimal-Notation"><a href="#4-1-8-Hexadecimal-Notation" class="headerlink" title="4.1.8 Hexadecimal Notation"></a>4.1.8 Hexadecimal Notation<a href="https://google.github.io/styleguide/htmlcssguide.html#Hexadecimal_Notation" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use 3 character hexadecimal notation where possible.</p>
+<p>For color values that permit it, 3 character hexadecimal notation is shorter and more succinct.</p>
+<p>/<em> Not recommended </em>/ color:  #eebbcc;</p>
+<p>/<em> Recommended </em>/ color:  #ebc;</p>
+<h4 id="4-1-9-Prefixes"><a href="#4-1-9-Prefixes" class="headerlink" title="4.1.9 Prefixes"></a>4.1.9 Prefixes<a href="https://google.github.io/styleguide/htmlcssguide.html#Prefixes" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Prefix selectors with an application-specific prefix (optional).</p>
+<p>In large projects as well as for code that gets embedded in other projects or on external sites use prefixes (as namespaces) for ID and class names. Use short, unique identifiers followed by a dash.</p>
+<p>Using namespaces helps preventing naming conflicts and can make maintenance easier, for example in search and replace operations.</p>
+<p>.adw-help {}  /<em> AdWords </em>/  #maia-note {} /<em> Maia </em>/</p>
+<h4 id="4-1-10-ID-and-Class-Name-Delimiters"><a href="#4-1-10-ID-and-Class-Name-Delimiters" class="headerlink" title="4.1.10 ID and Class Name Delimiters"></a>4.1.10 ID and Class Name Delimiters<a href="https://google.github.io/styleguide/htmlcssguide.html#ID_and_Class_Name_Delimiters" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Separate words in ID and class names by a hyphen.</p>
+<p>Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.</p>
+<p>/<em> Not recommended: does not separate the words “demo” and “image” </em>/  .demoimage {}  /<em> Not recommended: uses underscore instead of hyphen </em>/  .error_status {}</p>
+<p>/<em> Recommended </em>/  #video-id {}  .ads-sample {}</p>
+<h4 id="4-1-11-Hacks"><a href="#4-1-11-Hacks" class="headerlink" title="4.1.11 Hacks"></a>4.1.11 Hacks<a href="https://google.github.io/styleguide/htmlcssguide.html#Hacks" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Avoid user agent detection as well as CSS “hacks”—try a different approach first.</p>
+<p>It’s tempting to address styling differences over user agent detection or special CSS filters, workarounds, and hacks. Both approaches should be considered last resort in order to achieve and maintain an efficient and manageable code base. Put another way, giving detection and hacks a free pass will hurt projects in the long run as projects tend to take the way of least resistance. That is, allowing and making it easy to use detection and hacks means using detection and hacks more frequently—and more frequently is too frequently.</p>
+<h3 id="4-2-CSS-Formatting-Rules"><a href="#4-2-CSS-Formatting-Rules" class="headerlink" title="4.2 CSS Formatting Rules"></a>4.2 CSS Formatting Rules<a href="https://google.github.io/styleguide/htmlcssguide.html#CSS_Formatting_Rules" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h3><h4 id="4-2-1-Declaration-Order"><a href="#4-2-1-Declaration-Order" class="headerlink" title="4.2.1 Declaration Order"></a>4.2.1 Declaration Order<a href="https://google.github.io/styleguide/htmlcssguide.html#Declaration_Order" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Alphabetize declarations.</p>
+<p>Put declarations in alphabetical order in order to achieve consistent code in a way that is easy to remember and maintain.</p>
+<p>Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-specific prefixes for a certain CSS property should be kept sorted (e.g. -moz prefix comes before -webkit).</p>
+<p>background: fuchsia; border:  1px solid;  -moz-border-radius:  4px;  -webkit-border-radius:  4px; border-radius:  4px; color: black; text-align: center; text-indent:  2em;</p>
+<h4 id="4-2-2-Block-Content-Indentation"><a href="#4-2-2-Block-Content-Indentation" class="headerlink" title="4.2.2 Block Content Indentation"></a>4.2.2 Block Content Indentation<a href="https://google.github.io/styleguide/htmlcssguide.html#Block_Content_Indentation" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Indent all block content.</p>
+<p>Indent all <a href="https://www.w3.org/TR/CSS21/syndata.html#block" target="_blank" rel="noopener">block content</a>, that is rules within rules as well as declarations, so to reflect hierarchy and improve understanding.</p>
+<p>@media screen, projection { html { background:  #fff; color:  #444;  }  }</p>
+<h4 id="4-2-3-Declaration-Stops"><a href="#4-2-3-Declaration-Stops" class="headerlink" title="4.2.3 Declaration Stops"></a>4.2.3 Declaration Stops<a href="https://google.github.io/styleguide/htmlcssguide.html#Declaration_Stops" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use a semicolon after every declaration.</p>
+<p>End every declaration with a semicolon for consistency and extensibility reasons.</p>
+<p>/<em> Not recommended </em>/  .test { display: block; height:  100px  }</p>
+<p>/<em> Recommended </em>/  .test { display: block; height:  100px;  }</p>
+<h4 id="4-2-4-Property-Name-Stops"><a href="#4-2-4-Property-Name-Stops" class="headerlink" title="4.2.4 Property Name Stops"></a>4.2.4 Property Name Stops<a href="https://google.github.io/styleguide/htmlcssguide.html#Property_Name_Stops" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use a space after a property name’s colon.</p>
+<p>Always use a single space between property and value (but no space between property and colon) for consistency reasons.</p>
+<p>/<em> Not recommended </em>/ h3 { font-weight:bold;  }</p>
+<p>/<em> Recommended </em>/ h3 { font-weight: bold;  }</p>
+<h4 id="4-2-5-Declaration-Block-Separation"><a href="#4-2-5-Declaration-Block-Separation" class="headerlink" title="4.2.5 Declaration Block Separation"></a>4.2.5 Declaration Block Separation<a href="https://google.github.io/styleguide/htmlcssguide.html#Declaration_Block_Separation" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use a space between the last selector and the declaration block.</p>
+<p>Always use a single space between the last selector and the opening brace that begins the <a href="https://www.w3.org/TR/CSS21/syndata.html#rule-sets" target="_blank" rel="noopener">declaration block</a>.</p>
+<p>The opening brace should be on the same line as the last selector in a given rule.</p>
+<p>/<em> Not recommended: missing space </em>/  #video{ margin-top:  1em;  }  /<em> Not recommended: unnecessary line break </em>/  #video  { margin-top:  1em;  }</p>
+<p>/<em> Recommended </em>/  #video { margin-top:  1em;  }</p>
+<h4 id="4-2-6-Selector-and-Declaration-Separation"><a href="#4-2-6-Selector-and-Declaration-Separation" class="headerlink" title="4.2.6 Selector and Declaration Separation"></a>4.2.6 Selector and Declaration Separation<a href="https://google.github.io/styleguide/htmlcssguide.html#Selector_and_Declaration_Separation" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Separate selectors and declarations by new lines.</p>
+<p>Always start a new line for each selector and declaration.</p>
+<p>/<em> Not recommended </em>/ a:focus, a:active { position: relative; top:  1px;  }</p>
+<p>/<em> Recommended </em>/ h1, h2, h3 { font-weight: normal; line-height:  1.2;  }</p>
+<h4 id="4-2-7-Rule-Separation"><a href="#4-2-7-Rule-Separation" class="headerlink" title="4.2.7 Rule Separation"></a>4.2.7 Rule Separation<a href="https://google.github.io/styleguide/htmlcssguide.html#Rule_Separation" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Separate rules by new lines.</p>
+<p>Always put a blank line (two line breaks) between rules.</p>
+<p>html { background:  #fff;  } body { margin:  auto; width:  50%;  }</p>
+<h4 id="4-2-8-CSS-Quotation-Marks"><a href="#4-2-8-CSS-Quotation-Marks" class="headerlink" title="4.2.8 CSS Quotation Marks"></a>4.2.8 CSS Quotation Marks<a href="https://google.github.io/styleguide/htmlcssguide.html#CSS_Quotation_Marks" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Use single (<code>&#39;&#39;</code>) rather than double (<code>&quot;&quot;</code>) quotation marks for attribute selectors and property values.</p>
+<p>Do not use quotation marks in URI values (<code>url()</code>).</p>
+<p>Exception: If you do need to use the <code>@charset</code> rule, use double quotation marks—<a href="https://www.w3.org/TR/CSS21/syndata.html#charset" target="_blank" rel="noopener">single quotation marks are not permitted</a>.</p>
+<p>/<em> Not recommended </em>/  @import url(“<a href="https://www.google.com/css/maia.css&quot;)" target="_blank" rel="noopener">https://www.google.com/css/maia.css&quot;)</a>; html { font-family:  “open sans”, arial, sans-serif;  }</p>
+<p>/<em> Recommended </em>/  @import url(<a href="https://www.google.com/css/maia.css)" target="_blank" rel="noopener">https://www.google.com/css/maia.css)</a>; html { font-family:  ‘open sans’, arial, sans-serif;  }</p>
+<h3 id="4-3-CSS-Meta-Rules"><a href="#4-3-CSS-Meta-Rules" class="headerlink" title="4.3 CSS Meta Rules"></a>4.3 CSS Meta Rules<a href="https://google.github.io/styleguide/htmlcssguide.html#CSS_Meta_Rules" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h3><h4 id="4-3-1-Section-Comments"><a href="#4-3-1-Section-Comments" class="headerlink" title="4.3.1 Section Comments"></a>4.3.1 Section Comments<a href="https://google.github.io/styleguide/htmlcssguide.html#Section_Comments" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h4><p>Group sections by a section comment (optional).</p>
+<p>If possible, group style sheet sections together by using comments. Separate sections with new lines.</p>
+<p>/<em> Header </em>/  #adw-header {}  /<em> Footer </em>/  #adw-footer {}  /<em> Gallery </em>/  .adw-gallery {}</p>
+<h2 id="Parting-Words"><a href="#Parting-Words" class="headerlink" title="Parting Words"></a>Parting Words<a href="https://google.github.io/styleguide/htmlcssguide.html#Parting_Words" target="_blank" rel="noopener"><img src="media/15299835376787/link.png" alt=""></a></h2><p><em>Be consistent.</em></p>
+<p>If you’re editing code, take a few minutes to look at the code around you and determine its style. If they use spaces around all their arithmetic operators, you should too. If their comments have little boxes of hash marks around them, make your comments have little boxes of hash marks around them too.</p>
+<p>The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you’re saying rather than on how you’re saying it. We present global style rules here so people know the vocabulary, but local style is also important. If code you add to a file looks drastically different from the existing code around it, it throws readers out of their rhythm when they go to read it. Avoid this.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/26/.html" data-id="cjiv502jk0000nw0f97cbum1a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-oocss/05-Module" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html" class="article-date">
+  <time datetime="2018-06-26T01:30:00.000Z" itemprop="datePublished">2018-06-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">05、模块 - 容器对象（Modules - Container Objects）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/stubbornella/oocss/wiki/Module" target="_blank" rel="noopener">原文</a><br><a href="http://oocss.org/module.html" target="_blank" rel="noopener">示例</a></p>
+<p>Modules are based on the <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">Standard Module Format</a>. They provide a simple, predictable way to skin container objects while maintaining accessibility and performance. Contour skins are separate from background skins, headers, and footers. I suggest you name skins in a way that indicates how that skin should be used (semantically). The module skin should not change the display of objects within its open editable zones. Features include: </p>
+<ul>
+<li>Less than 2K! (structures)</li>
+<li>Simple to skin</li>
+<li>One image per module</li>
+<li>Height and width agnostic</li>
+<li>Accessibility and performance baked-in</li>
+<li>Separates semantic markup from presentational fluff</li>
+</ul>
+<p>基于<a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">标准模块格式</a>的模块，提供了一个简单、可预测的皮肤容器，同时保持可访问性和性能。轮廓皮肤，背景皮肤，页眉和页尾分别独立。建议基于使用来对皮肤进行命名（语义化）。模块皮肤不应该改变其内部对象的显示。支持以下特性：</p>
+<ul>
+<li>小于2K（结构上）</li>
+<li>定制皮肤简单</li>
+<li>每个模块一张图片</li>
+<li>高度和宽度无关</li>
+<li>不影响可访问性和性能</li>
+<li>分离语义与外观</li>
+</ul>
+<h2 id="基础类（Base-Classes）"><a href="#基础类（Base-Classes）" class="headerlink" title="基础类（Base Classes）"></a>基础类（Base Classes）</h2><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mod</code></td>
+<td>Base class for all container modules. Use <code>mod</code> unless you specifically need one of the other structure objects. Mod is transparent on the inside, corners overlay content, it can therefore be used with any content. Allows infinite height and width as borders are generated via skin objects that define borders on <code>mod</code> and <code>inner</code>.</td>
+</tr>
+<tr>
+<td><code>complex</code></td>
+<td>Extends <code>mod</code>. Allows full image borders for cases where the desired look and feel cannot be generated via borders on <code>mod</code> and <code>inner</code>. <code>complex</code> is transparent on the inside, corners overlay content, thus it can be used with any content.</td>
+</tr>
+<tr>
+<td><code>pop</code></td>
+<td>Extends <code>mod</code>. Allows transparent outside, such as drop shadows. Use in cases where the module overlays an image, text, or other variable background. <code>pop</code> is transparent on the outside, content overlays background, thus it cannot be used with any content</td>
+</tr>
+<tr>
+<td><code>top</code></td>
+<td>A presentational element which wraps the top corners. It is used by <code>complex</code> to display the upper edge of the block. In other block structures it has no height. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+</tr>
+<tr>
+<td><code>bottom</code></td>
+<td>A presentational element which wraps the bottom corners. It is used by <code>complex</code> to display the lower edge of the block. In other block structures it has no height. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+</tr>
+<tr>
+<td><code>tl</code></td>
+<td>A presentational element used to display the top left corner of a block, and in <code>complex</code> the left edge of the block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+</tr>
+<tr>
+<td><code>tr</code></td>
+<td>A presentational element used to display the top right corner of a block, and in <code>complex</code> the right edge of the block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+</tr>
+<tr>
+<td><code>bl</code></td>
+<td>A presentational element used to display the bottom left corner of a block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+</tr>
+<tr>
+<td><code>br</code></td>
+<td>A presentational element used to display the bottom right corner of a block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mod</code></td>
+<td>所有容器模块的基类。大多数情况下使用<code>mod</code>即可，除非需要使用其他特定结构对象。Mod背景透明，边角覆盖在内容之上，因此可以和任何内容用在一起。通过在<code>mod</code> 和 <code>inner</code>上定义皮肤样式，可以支持长度的高度和宽度。</td>
+</tr>
+<tr>
+<td><code>complex</code></td>
+<td>扩展<code>mod</code>。在无法通过<code>mod</code>和<code>inner</code>的边框生成所需外观的情况下，允许使用全图像边框。<code>complex</code>背景透明，边角覆盖在内容之上，因此可以和任何内容用在一起。</td>
+</tr>
+<tr>
+<td><code>pop</code></td>
+<td>扩展<code>mod</code>。允许使用透明的外边框，比如投影。在模块包含图像，文本或其他可变背景的情况下使用。<code>pop</code>外边框是透明的，内容覆盖在背景上，因此不能用在任何地方。</td>
+</tr>
+<tr>
+<td><code>top</code></td>
+<td>一个用来包裹顶角的表现元素。使用<code>complex</code>时表现为块的上边缘。在其他的块级元素中，它没有高度。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
+</tr>
+<tr>
+<td><code>bottom</code></td>
+<td>一个用来包裹底角的表现元素。使用<code>complex</code>时表现为块的下边缘。在其他的块级元素中，它没有高度。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
+</tr>
+<tr>
+<td><code>tl</code></td>
+<td>一个用来渲染左上角或<code>complex</code>中左边缘的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
+</tr>
+<tr>
+<td><code>tr</code></td>
+<td>一个用来渲染右上角或<code>complex</code>中右边缘的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
+</tr>
+<tr>
+<td><code>bl</code></td>
+<td>一个用来渲染左下角的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
+</tr>
+<tr>
+<td><code>br</code></td>
+<td>一个用来渲染右下角的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="标记（The-Markup）"><a href="#标记（The-Markup）" class="headerlink" title="标记（The Markup）"></a>标记（The Markup）</h2><h3 id="模块类（Module）"><a href="#模块类（Module）" class="headerlink" title="模块类（Module）"></a>模块类（Module）</h3><p>Mod is the basic container, all other containers inherit from this one. This is the high performance container that should be used unless you specifically need another type.</p>
+<ul>
+<li>One tiny image</li>
+<li>Expands to any height or width</li>
+<li>Compatible with any content</li>
+<li>Choose for any container object that doesn’t require outside transparency or complex borders.</li>
+</ul>
+<p>Mod是基本容器，其他所有的容器都继承自它。这是一种具有高表现性的容器，所以除非您需要另外使用其他的样式，您都应当使用它。</p>
+<ul>
+<li>一张小图片</li>
+<li>支持任意的宽度和高度</li>
+<li>兼容任何内容</li>
+<li>适用于不需要外部透明度或复杂边界的容器对象。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mod"</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tr"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"br"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="复杂类（Complex）"><a href="#复杂类（Complex）" class="headerlink" title="复杂类（Complex）"></a>复杂类（Complex）</h3><p>Complex should be used in cases where you require images for borders because borders or drop shadows are too complex to be simulated via borders on mod and/or inner.</p>
+<ul>
+<li>One image</li>
+<li>Height and width limited by image size</li>
+<li>Compatible with any content</li>
+<li>Choose when you require complex borders which cannot be simulated via css borders on mod and inner.</li>
+</ul>
+<p>复杂类（complex）被用在需要图片边框的时候，此时使用mod属性和（或者）inner属性来描述边框和下落的阴影过于复杂，所以推荐使用complx类。</p>
+<ul>
+<li>一张图片</li>
+<li>高度和宽度受限于图片尺寸</li>
+<li>兼容任何内容</li>
+<li>当需要使用复杂的边框，并且无法通过mod和inner类下的css边框来实现的时候。</li>
+</ul>
+<p>Inspired by a conversation with Arnaud.</p>
+<p>这些内容是受到Arnaud的启发产生的想法。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mod complex"</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tr"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"br"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="弹出类（Popup）"><a href="#弹出类（Popup）" class="headerlink" title="弹出类（Popup）"></a>弹出类（Popup）</h3><p>Use for popups and other containers that need outside transparency.</p>
+<ul>
+<li>One image</li>
+<li>Height and width limited by image size</li>
+<li>Compatible with any container, but not any content</li>
+<li>Choose when you require outside transparency which cannot be simulated. (do i need to make this work with clip rather than bkg position?)</li>
+</ul>
+<p>用于需要外部透明度的弹出窗口和其他容器。</p>
+<ul>
+<li>一张图片</li>
+<li>高度和宽度受限于图片尺寸</li>
+<li>兼容任何容器，但不一定兼容任何内容</li>
+<li>当需要使用无法模拟的外部透明效果时使用（是否使用clip而不是bkg定位的方式更合适？）</li>
+</ul>
+<p>Inspired by Leslie Sommers mojo blocks.</p>
+<p>这些内容是受到Leslie Sommers mojo blocks启发产生的想法。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mod pop"</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tr"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"br"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="皮肤使用建议（Skinning-suggestions）"><a href="#皮肤使用建议（Skinning-suggestions）" class="headerlink" title="皮肤使用建议（Skinning suggestions）"></a>皮肤使用建议（Skinning suggestions）</h2><p>The contour and the background can be used to define the intersection of two parameters. For example you cross product status with product type. E.g. <code>sale</code>, <code>normal</code>, and <code>featured</code> backgrounds with <code>motorcycle</code>, <code>helmet</code>, and <code>clothing</code> contours. In so far as possible, keep your classes as abstract as they can reasonably be. For example choose <code>motorcycle</code> over <code>ducati</code>, <code>ducatiMonster</code>, or <code>NicolesDucatiMonster620dark</code> – unless you really mean to exclude all other uses! </p>
+<p>轮廓和背景可以定义成两个类组合使用。例如，当需要联合使用产品状态和产品类型的时候。例如<code>sale</code>, <code>normal</code>和<code>featured</code>的背景类和<code>motorcycle</code>, <code>helmet</code>和<code>clothing</code>的轮廓类组合。保持类尽可能合理的抽象。例如选择使用<code>motorcycle</code>属性而不是<code>ducati</code>, <code>ducatiMonster</code>和 <code>NicolesDucatiMonster620dark</code> – 当然，除非您真的不想将它们复用！</p>
+<p>Be careful not to choose classes linked to the display of the object (e.g. big blue borders).  The client will change their mind, you’ll have classes which no longer correlate to actual display.</p>
+<p>当心！不要使用与对象表现形式相关的类名（例如 big，blue，borders）。客户会改变想法，代码中会存在一批与实际表达效果不相符的类。</p>
+<h2 id="何时使用模块（How-to-decide-when-to-use-Modules）"><a href="#何时使用模块（How-to-decide-when-to-use-Modules）" class="headerlink" title="何时使用模块（How to decide when to use Modules）"></a>何时使用模块（How to decide when to use Modules）</h2><p>Deciding when to use Modules can be confusing. As a rule of thumb, if you are marking up an element on the page that conveys relevant information to the user by itself (e.g. breadcrumbs), you do not need a module. This is a good example for a content object. However, if you are marking up a container that conveys no relevant information on its own (e.g. tabs) and would only make sense to use when you place content objects in it, then you could mark it up as a module.</p>
+<p>也许当您使用模块时会感到困惑。从经验上讲，如果您在页面上标记的元素可以向用户传递相关信息时（例如面包屑breadcrumb），您不必使用模块。对于内容对象来说，这是一个很好的例子。但是，如果您在标记一个传递与其本身信息无关的容器时（就像标签tabs）并且只有当您将其中的元素换用内容对象才符合意义时，那您可以将它标注为一个模块。</p>
+<p>So you could ask “Is this element conveying any relevant information to the user?”. A container is never useful information to the user on its own; only the content elements within it convey reasonable information to the user. So if your answer to the question is “No”, you could use a module.</p>
+<p>所以，您可以这样问：“这个元素是否向用户传递了相关的信息呢？”一个容器本身绝对不会为用户提供有用的信息；只有里面的内容元素可以向用户传递相关的信息。所以，如果您的回答是“No”，那您可能再用一个模块。</p>
+<h2 id="Thanks"><a href="#Thanks" class="headerlink" title="Thanks"></a>Thanks</h2><p>Great feedback, bug reports,etc. Chris Griego, Jordan LaMons, Arnaud Gueras (as usual), Ryan Grove, Nicholas Zakas, Peter Ellenhauge, Chris Eppstein, Vinod Kerkar, Carsten, Dan H, Cindy Li, etc.</p>
+<p>感谢以下人员提供的良好的反馈意见和错误报告等。Chris Griego, Jordan LaMons, Arnaud Gueras (as usual), Ryan Grove, Nicholas Zakas, Peter Ellenhauge, Chris Eppstein, Vinod Kerkar, Carsten, Dan H, Cindy Li等。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html" data-id="cji3zsone0000js0fhzj4m4zs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-oocss/04-Standard-Module-Format" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html" class="article-date">
@@ -159,7 +603,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://bystep15.github.io/standard/2018/06/06/04、标准模块格式（standard-module-format）.html" data-id="cji394ml80000nn0flse0xnmb" class="article-share-link">Share</a>
+      <a data-url="https://bystep15.github.io/standard/2018/06/06/04、标准模块格式（standard-module-format）.html" data-id="cji2uj6qi0000al0f28tf60jm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
@@ -455,8 +899,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="基本模板（Basic-template）"><a href="#基本模板（Basic-template）" class="headerlink" title="基本模板（Basic template）"></a>基本模板（Basic template）</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"head"</span>&gt;</span><span class="comment">&lt;!-- Head --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"body"</span>&gt;</span><span class="comment">&lt;!-- Body --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"leftCol"</span>&gt;</span><span class="comment">&lt;!-- Left Column (optional region) --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"rightCol"</span>&gt;</span><span class="comment">&lt;!-- Right Column (optional region) --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="comment">&lt;!-- Main Content --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"foot"</span>&gt;</span><span class="comment">&lt;!-- Foot --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>	</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="全宽模板，两列，gmail格式类型（Full-width-template-2-columns-gmail-style-（160px-left-column-width））"><a href="#全宽模板，两列，gmail格式类型（Full-width-template-2-columns-gmail-style-（160px-left-column-width））" class="headerlink" title="全宽模板，两列，gmail格式类型（Full width template, 2 columns, gmail style （160px left column width））"></a>全宽模板，两列，gmail格式类型（Full width template, 2 columns, gmail style （160px left column width））</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page liquid"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"head"</span>&gt;</span><span class="comment">&lt;!-- Head --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"body"</span>&gt;</span><span class="comment">&lt;!-- Body --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"leftCol gMail"</span>&gt;</span><span class="comment">&lt;!-- Left Column (optional region) --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="comment">&lt;!-- Main Content --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- <span class="doctag">note:</span> right column has been removed --&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"foot"</span>&gt;</span><span class="comment">&lt;!-- Foot --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>	</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="基本模板（Basic-template）"><a href="#基本模板（Basic-template）" class="headerlink" title="基本模板（Basic template）"></a>基本模板（Basic template）</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"head"</span>&gt;</span><span class="comment">&lt;!-- Head --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"body"</span>&gt;</span><span class="comment">&lt;!-- Body --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"leftCol"</span>&gt;</span><span class="comment">&lt;!-- Left Column (optional region) --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"rightCol"</span>&gt;</span><span class="comment">&lt;!-- Right Column (optional region) --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="comment">&lt;!-- Main Content --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"foot"</span>&gt;</span><span class="comment">&lt;!-- Foot --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="全宽模板，两列，gmail格式类型（Full-width-template-2-columns-gmail-style-（160px-left-column-width））"><a href="#全宽模板，两列，gmail格式类型（Full-width-template-2-columns-gmail-style-（160px-left-column-width））" class="headerlink" title="全宽模板，两列，gmail格式类型（Full width template, 2 columns, gmail style （160px left column width））"></a>全宽模板，两列，gmail格式类型（Full width template, 2 columns, gmail style （160px left column width））</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page liquid"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"head"</span>&gt;</span><span class="comment">&lt;!-- Head --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"body"</span>&gt;</span><span class="comment">&lt;!-- Body --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"leftCol gMail"</span>&gt;</span><span class="comment">&lt;!-- Left Column (optional region) --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="comment">&lt;!-- Main Content --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- <span class="doctag">note:</span> right column has been removed --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"foot"</span>&gt;</span><span class="comment">&lt;!-- Foot --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="目标（Goals）"><a href="#目标（Goals）" class="headerlink" title="目标（Goals）"></a>目标（Goals）</h2><p>In object oriented CSS the most important goal is to have a single template from which all pages are built.  This eases CMS development because by having a single starting point all pages can be made into any other page. Users of the CMS do not have traps in which a page they have built cannot be morphed into a different page type.  Another goal of an OO template is to have each section (column, header, etc) control its own destiny.  Practically, that means that if you want to add a left column to the template, the only required action should be actually adding the column to the HTML.  You never want to write CSS in such a way that changes are required higher in the DOM tree in order to make child elements behave properly.  Looping through the DOM is costly for CMS development. Similarly, if you want to have a different left column width, it should be accomplished by extending the left column object by adding an additional class. </p>
 <p>在面向对象的CSS中，最重要的目标是创建一个唯一的通用模板，可以用来构建所有页面。这会简化CMS的开发，因为从一个单页模板出发，可以构建成任何需要的页面。CMS用户也不必陷入一个单一页面没法变成不同页面类型的苦恼。面向对象的模板的另一个目标是每个部分（比如列，页头，等等）可以控制自身的变化。特别的是，如果您想向模板中添加一列左边栏，您唯一要做的就是向HTML中添加一列竖列，而不需要对着DOM，编写复杂的CSS样式完成需要的效果。循环整个DOM结构对于CMS的开发是很费事的。相似的，如果需要一个不一样的列宽，唯一需要做的就是给左列对象添加一个额外的类。</p>
 <h3 id="扩展一个对象（Extending-an-object）"><a href="#扩展一个对象（Extending-an-object）" class="headerlink" title="扩展一个对象（Extending an object）"></a>扩展一个对象（Extending an object）</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"leftCol gMail"</span>&gt;</span> ... <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -660,14 +1104,14 @@
 <p>主要原则有以下两个：</p>
 <ol>
 <li>分离结构和外观：意味着将视觉特性定义为可复用的单元，如上例中<code>toggle</code>、<code>toggle-control</code>、<code>toggle-title</code>和<code>toggle-detail</code>4个类是结构类，simple是外观类。</li>
-<li>分离容器和内容：指的是不再将元素位置作为样式的限定词，如上例中<code>toggle</code>、<code>toggle-control</code>、<code>toggle-title</code>和<code>toggle-detail</code>4个类只是。</li>
+<li>分离容器和内容：指的是不再将元素位置作为样式的限定词，如上例中<code>toggle</code>、<code>toggle-control</code>、<code>toggle-title</code>和<code>toggle-detail</code>4个类。</li>
 </ol>
 <h2 id="资料翻译列表"><a href="#资料翻译列表" class="headerlink" title="资料翻译列表"></a>资料翻译列表</h2><ul>
 <li><a href="/standard/2018/01/02/01、面向对象的css（object-oriented-css）.html">1、面向对象的CSS（Object Oriented CSS）</a></li>
-<li><a href="02-Template.md">2、模板（Template）</a></li>
-<li><a href="03-Grids.md">3、网格（grids）</a></li>
-<li><a href="04-Standard-Module-Format.md">4、标准模块格式（Standard Module Format）</a></li>
-<li><a href="05-Module.md">5、模块（Modules）</a></li>
+<li><a href="/standard/2018/05/29/02、模板（template）.html">2、模板（Template）</a></li>
+<li><a href="/standard/2018/06/06/03、网格（grids）.html">3、网格（grids）</a></li>
+<li><a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">4、标准模块格式（Standard Module Format）</a></li>
+<li><a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">5、模块（Modules）</a></li>
 <li><a href="06-Module-Skins.md">6、模块的表现形式（Module Skins）</a></li>
 <li><a href="07-Content.md">7、内容（Content）</a></li>
 <li><a href="08-Buttons.md">8、按钮（Buttons）</a></li>
@@ -745,6 +1189,14 @@
       <ul>
         
           <li>
+            <a href="/standard/2018/06/26/.html">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">05、模块 - 容器对象（Modules - Container Objects）</a>
+          </li>
+        
+          <li>
             <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">04、标准模块格式（Standard Module Format）</a>
           </li>
         
@@ -754,14 +1206,6 @@
         
           <li>
             <a href="/standard/2018/05/29/02、模板（template）.html">02、模板（Template）</a>
-          </li>
-        
-          <li>
-            <a href="/standard/2018/01/02/01、面向对象的css（object-oriented-css）.html">01、面向对象的CSS（Object Oriented CSS）</a>
-          </li>
-        
-          <li>
-            <a href="/standard/2017/12/31/00、模块化css理论——oocss目录.html">00、模块化CSS理论——OOCSS目录</a>
           </li>
         
       </ul>
