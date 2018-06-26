@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="HTML&amp;CSS模块化理论学习">
 <meta property="og:description" content="原文     How do you scale CSS for thousands of pages? Object Oriented CSS is an answer. It’s an approach for writing CSS that’s fast, maintainable, and standards-based. It adds much needed predictabilit">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-29T08:08:36.448Z">
+<meta property="og:updated_time" content="2018-06-26T10:53:47.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="01、面向对象的CSS（Object Oriented CSS）">
 <meta name="twitter:description" content="原文     How do you scale CSS for thousands of pages? Object Oriented CSS is an answer. It’s an approach for writing CSS that’s fast, maintainable, and standards-based. It adds much needed predictabilit">
@@ -107,8 +107,8 @@
 <h3 id="OOCSS的两个主要原则（Two-Main-Principles-of-OOCSS）"><a href="#OOCSS的两个主要原则（Two-Main-Principles-of-OOCSS）" class="headerlink" title="OOCSS的两个主要原则（Two Main Principles of OOCSS）"></a>OOCSS的两个主要原则（Two Main Principles of OOCSS）</h3><ul>
 <li>分离结构和外观（Separate structure and skin ）</li>
 </ul>
-<p>This means to define repeating visual features (like background and border styles) as separate “skins” that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code. See the <a href="https://github.com/bystep15/standard/blob/master/oocss/05-Module.md" target="_blank" rel="noopener">module object</a> and <a href="https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md" target="_blank" rel="noopener">its skins</a>.</p>
-<p>这意味着需要将重复的视觉特征（如背景和边框样式）定义为单独的“皮肤”，与各种对象进行混合和匹配，用少量的代码得到广泛的使用。请参阅<a href="https://github.com/bystep15/standard/blob/master/oocss/05-Module.md" target="_blank" rel="noopener">模块对象</a>和<a href="https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md" target="_blank" rel="noopener">模块皮肤</a>。</p>
+<p>This means to define repeating visual features (like background and border styles) as separate “skins” that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code. See the <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">module object</a> and <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">its skins</a>.</p>
+<p>这意味着需要将重复的视觉特征（如背景和边框样式）定义为单独的“皮肤”，与各种对象进行混合和匹配，用少量的代码得到广泛的使用。请参阅<a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">模块对象</a>和<a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">模块皮肤</a>。</p>
 <p>Separating structure and skin can also mean using classes to name your objects and their components, rather than relying solely on the semantics of HTML. For example, the media object is named with <code>class=&quot;media&quot;</code>, and its components are named with <code>class=&quot;img&quot;</code> (for the image/video component) and <code>class=&quot;bd&quot;</code> (for the body/text component).</p>
 <p>分离结构和外观意味着使用类命名对象及其组件，而不是仅依赖于HTML的语义。例如，媒体对象以 <code>class=&quot;media&quot;</code> 命名，其组件以<code>class=&quot;img&quot;</code>（对于图像/视频组件）和<code>class=&quot;bd&quot;</code>（用于主体body/文本组件）命名。</p>
 <p>By referencing these classes in your stylesheets (say, rather than directly styling the <code>&lt;img&gt;</code> element), your HTML can be flexible. For instance, if a new media element were to take off in the next few years (e.g. <code>&lt;svg&gt;</code>), it could be integrated into the HTML without having to touch the CSS.</p>
@@ -269,6 +269,10 @@
       <ul>
         
           <li>
+            <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">06、模块皮肤（Module Skins）</a>
+          </li>
+        
+          <li>
             <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">05、模块 - 容器对象（Modules - Container Objects）</a>
           </li>
         
@@ -282,10 +286,6 @@
         
           <li>
             <a href="/standard/2018/05/29/02、模板（template）.html">02、模板（Template）</a>
-          </li>
-        
-          <li>
-            <a href="/standard/2018/01/02/01、面向对象的css（object-oriented-css）.html">01、面向对象的CSS（Object Oriented CSS）</a>
           </li>
         
       </ul>

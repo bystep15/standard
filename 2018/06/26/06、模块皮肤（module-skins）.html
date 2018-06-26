@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>06、模块皮肤（Module Skins） | HTML&amp;CSS模块化理论学习</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文 Each of the three module types needs to be skinned differently.  Abstracting all the heavy lifting to the mod, complex, and pop classes means that all of the values in the skins are predictable. In">
+<meta name="keywords" content="理论,css,oocss">
+<meta property="og:type" content="article">
+<meta property="og:title" content="06、模块皮肤（Module Skins）">
+<meta property="og:url" content="https://bystep15.github.io/standard/2018/06/26/06、模块皮肤（module-skins）.html">
+<meta property="og:site_name" content="HTML&amp;CSS模块化理论学习">
+<meta property="og:description" content="原文 Each of the three module types needs to be skinned differently.  Abstracting all the heavy lifting to the mod, complex, and pop classes means that all of the values in the skins are predictable. In">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-26T10:52:02.365Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="06、模块皮肤（Module Skins）">
+<meta name="twitter:description" content="原文 Each of the three module types needs to be skinned differently.  Abstracting all the heavy lifting to the mod, complex, and pop classes means that all of the values in the skins are predictable. In">
+  
+    <link rel="alternate" href="/standard/atom.xml" title="HTML&amp;CSS模块化理论学习" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/standard/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/standard/" id="logo">HTML&amp;CSS模块化理论学习</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/standard/">Home</a>
+        
+          <a class="main-nav-link" href="/standard/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/standard/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://bystep15.github.io/standard"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-oocss/06-Module-Skins" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html" class="article-date">
+  <time datetime="2018-06-26T10:30:00.000Z" itemprop="datePublished">2018-06-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      06、模块皮肤（Module Skins）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/stubbornella/oocss/wiki/Module-Skins" target="_blank" rel="noopener">原文</a></p>
+<p>Each of the three module types needs to be skinned differently.  Abstracting all the heavy lifting to the <code>mod</code>, <code>complex</code>, and <code>pop</code> classes means that all of the values in the skins are predictable. In fact, I’ll show you how they can be easily calculated.</p>
+<p>三种类型模块的皮肤需要不同的设置方法。将所有繁重的工作抽象到<code>mod</code>, <code>complex</code>, 和 <code>pop</code>3个类中，意味着所有皮肤的值都是可以预测的。接下来，我将会为您展示它们是如何通过简单地计算得到的。</p>
+<h2 id="扩展模块（Extending-mod）"><a href="#扩展模块（Extending-mod）" class="headerlink" title="扩展模块（Extending mod）"></a>扩展模块（Extending mod）</h2><p>Let’s create a simple grey rounded corner box.</p>
+<p>让我们来创建一个简单的灰色圆角盒子。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mod simple"</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tr"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h3</span>&gt;</span>simple<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Body<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"br"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ----- simple (extends mod) ----- */</span></span><br><span class="line"><span class="selector-class">.simple</span> <span class="selector-class">.inner</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#D7D7D7</span>;</span><br><span class="line">    <span class="attribute">-moz-border-radius</span>: <span class="number">7px</span>;</span><br><span class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">7px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">7px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.simple</span> <span class="selector-tag">b</span> &#123;</span><br><span class="line">    *background-image:url(skin/mod/simple_corners.png);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>We define the border to be one pixel solid gray. Anytime only one border is used it should be placed on <code>inner</code> rather than the module itself (to simplify the skin). </li>
+<li>We then tell browsers that the module should have rounded corners.</li>
+<li>Internet Explorer 5.5, 6, 7, 8 do not support rounded corners. Line two provides an image backup to generate these corners. The star hack is used so that better browsers that natively support rounded corners do not download the extra image unnecessarily.  You may also choose to omit this line and provide a square corner fallback for IE depending on how much market share they have amongst your visitors.</li>
+</ol>
+<ol>
+<li>首先定义一个1像素的实体灰色边框。任何时候如果只有一个边框被使用，那么应该把它放在<code>inner</code>中而不是模块本身（以简化皮肤样式）。</li>
+<li>然后声明模块应该有圆角。</li>
+<li>IE 5.5,6,7,8不支持圆角。第二段样式中用图片做降级方案来生成圆角。样式代码中使用星号Hack方法，指示更高版本的支持原生圆角的浏览器不会下载额外的图片。也可以选择省略掉该段代码，IE上显示为一个方形的角落，这取决于使用IE的用户占比。</li>
+</ol>
+<h2 id="复杂类（complex）"><a href="#复杂类（complex）" class="headerlink" title="复杂类（complex）"></a>复杂类（complex）</h2><h2 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h2><h3 id="Todo"><a href="#Todo" class="headerlink" title="Todo"></a>Todo</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/26/06、模块皮肤（module-skins）.html" data-id="cjivjeofc0000860frz1lr9jj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">05、模块 - 容器对象（Modules - Container Objects）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/">理论</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/">css</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/oocss/">oocss</a></li></ul></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/standard/tags/css/" style="font-size: 10px;">css</a> <a href="/standard/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/standard/tags/理论/" style="font-size: 10px;">理论</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2017/12/">十二月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">06、模块皮肤（Module Skins）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">05、模块 - 容器对象（Modules - Container Objects）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">04、标准模块格式（Standard Module Format）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/06/03、网格（grids）.html">03、网格（Grids）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/05/29/02、模板（template）.html">02、模板（Template）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 alex2010, bystep15<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/standard/" class="mobile-nav-link">Home</a>
+  
+    <a href="/standard/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/standard/fancybox/jquery.fancybox.css">
+  <script src="/standard/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/standard/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

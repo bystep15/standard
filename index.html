@@ -65,6 +65,65 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-oocss/06-Module-Skins" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html" class="article-date">
+  <time datetime="2018-06-26T10:30:00.000Z" itemprop="datePublished">2018-06-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">06、模块皮肤（Module Skins）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/stubbornella/oocss/wiki/Module-Skins" target="_blank" rel="noopener">原文</a></p>
+<p>Each of the three module types needs to be skinned differently.  Abstracting all the heavy lifting to the <code>mod</code>, <code>complex</code>, and <code>pop</code> classes means that all of the values in the skins are predictable. In fact, I’ll show you how they can be easily calculated.</p>
+<p>三种类型模块的皮肤需要不同的设置方法。将所有繁重的工作抽象到<code>mod</code>, <code>complex</code>, 和 <code>pop</code>3个类中，意味着所有皮肤的值都是可以预测的。接下来，我将会为您展示它们是如何通过简单地计算得到的。</p>
+<h2 id="扩展模块（Extending-mod）"><a href="#扩展模块（Extending-mod）" class="headerlink" title="扩展模块（Extending mod）"></a>扩展模块（Extending mod）</h2><p>Let’s create a simple grey rounded corner box.</p>
+<p>让我们来创建一个简单的灰色圆角盒子。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mod simple"</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tr"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h3</span>&gt;</span>simple<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Body<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"br"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ----- simple (extends mod) ----- */</span></span><br><span class="line"><span class="selector-class">.simple</span> <span class="selector-class">.inner</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#D7D7D7</span>;</span><br><span class="line">    <span class="attribute">-moz-border-radius</span>: <span class="number">7px</span>;</span><br><span class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">7px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">7px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.simple</span> <span class="selector-tag">b</span> &#123;</span><br><span class="line">    *background-image:url(skin/mod/simple_corners.png);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>We define the border to be one pixel solid gray. Anytime only one border is used it should be placed on <code>inner</code> rather than the module itself (to simplify the skin). </li>
+<li>We then tell browsers that the module should have rounded corners.</li>
+<li>Internet Explorer 5.5, 6, 7, 8 do not support rounded corners. Line two provides an image backup to generate these corners. The star hack is used so that better browsers that natively support rounded corners do not download the extra image unnecessarily.  You may also choose to omit this line and provide a square corner fallback for IE depending on how much market share they have amongst your visitors.</li>
+</ol>
+<ol>
+<li>首先定义一个1像素的实体灰色边框。任何时候如果只有一个边框被使用，那么应该把它放在<code>inner</code>中而不是模块本身（以简化皮肤样式）。</li>
+<li>然后声明模块应该有圆角。</li>
+<li>IE 5.5,6,7,8不支持圆角。第二段样式中用图片做降级方案来生成圆角。样式代码中使用星号Hack方法，指示更高版本的支持原生圆角的浏览器不会下载额外的图片。也可以选择省略掉该段代码，IE上显示为一个方形的角落，这取决于使用IE的用户占比。</li>
+</ol>
+<h2 id="复杂类（complex）"><a href="#复杂类（complex）" class="headerlink" title="复杂类（complex）"></a>复杂类（complex）</h2><h2 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h2><h3 id="Todo"><a href="#Todo" class="headerlink" title="Todo"></a>Todo</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/26/06、模块皮肤（module-skins）.html" data-id="cjivjeofc0000860frz1lr9jj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-oocss/05-Module" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html" class="article-date">
@@ -748,8 +807,8 @@
 <h3 id="OOCSS的两个主要原则（Two-Main-Principles-of-OOCSS）"><a href="#OOCSS的两个主要原则（Two-Main-Principles-of-OOCSS）" class="headerlink" title="OOCSS的两个主要原则（Two Main Principles of OOCSS）"></a>OOCSS的两个主要原则（Two Main Principles of OOCSS）</h3><ul>
 <li>分离结构和外观（Separate structure and skin ）</li>
 </ul>
-<p>This means to define repeating visual features (like background and border styles) as separate “skins” that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code. See the <a href="https://github.com/bystep15/standard/blob/master/oocss/05-Module.md" target="_blank" rel="noopener">module object</a> and <a href="https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md" target="_blank" rel="noopener">its skins</a>.</p>
-<p>这意味着需要将重复的视觉特征（如背景和边框样式）定义为单独的“皮肤”，与各种对象进行混合和匹配，用少量的代码得到广泛的使用。请参阅<a href="https://github.com/bystep15/standard/blob/master/oocss/05-Module.md" target="_blank" rel="noopener">模块对象</a>和<a href="https://github.com/bystep15/standard/blob/master/oocss/06-Module-Skins.md" target="_blank" rel="noopener">模块皮肤</a>。</p>
+<p>This means to define repeating visual features (like background and border styles) as separate “skins” that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code. See the <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">module object</a> and <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">its skins</a>.</p>
+<p>这意味着需要将重复的视觉特征（如背景和边框样式）定义为单独的“皮肤”，与各种对象进行混合和匹配，用少量的代码得到广泛的使用。请参阅<a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">模块对象</a>和<a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">模块皮肤</a>。</p>
 <p>Separating structure and skin can also mean using classes to name your objects and their components, rather than relying solely on the semantics of HTML. For example, the media object is named with <code>class=&quot;media&quot;</code>, and its components are named with <code>class=&quot;img&quot;</code> (for the image/video component) and <code>class=&quot;bd&quot;</code> (for the body/text component).</p>
 <p>分离结构和外观意味着使用类命名对象及其组件，而不是仅依赖于HTML的语义。例如，媒体对象以 <code>class=&quot;media&quot;</code> 命名，其组件以<code>class=&quot;img&quot;</code>（对于图像/视频组件）和<code>class=&quot;bd&quot;</code>（用于主体body/文本组件）命名。</p>
 <p>By referencing these classes in your stylesheets (say, rather than directly styling the <code>&lt;img&gt;</code> element), your HTML can be flexible. For instance, if a new media element were to take off in the next few years (e.g. <code>&lt;svg&gt;</code>), it could be integrated into the HTML without having to touch the CSS.</p>
@@ -957,6 +1016,10 @@
       <ul>
         
           <li>
+            <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">06、模块皮肤（Module Skins）</a>
+          </li>
+        
+          <li>
             <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">05、模块 - 容器对象（Modules - Container Objects）</a>
           </li>
         
@@ -970,10 +1033,6 @@
         
           <li>
             <a href="/standard/2018/05/29/02、模板（template）.html">02、模板（Template）</a>
-          </li>
-        
-          <li>
-            <a href="/standard/2018/01/02/01、面向对象的css（object-oriented-css）.html">01、面向对象的CSS（Object Oriented CSS）</a>
           </li>
         
       </ul>
