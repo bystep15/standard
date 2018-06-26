@@ -54,26 +54,26 @@ Please help me test the grids and template objects. Put them through their paces
 ## 基本模板（Basic template）
 ```html
 <div class="page">
-	<div class="head"><!-- Head --></div>
-	<div class="body"><!-- Body -->
-		<div class="leftCol"><!-- Left Column (optional region) --></div>
-		<div class="rightCol"><!-- Right Column (optional region) --></div>
-		<div class="main"><!-- Main Content --></div>
-	</div>
-	<div class="foot"><!-- Foot --></div>	
+    <div class="head"><!-- Head --></div>
+    <div class="body"><!-- Body -->
+        <div class="leftCol"><!-- Left Column (optional region) --></div>
+        <div class="rightCol"><!-- Right Column (optional region) --></div>
+        <div class="main"><!-- Main Content --></div>
+    </div>
+    <div class="foot"><!-- Foot --></div>
 </div>
 ```
 
 ## 全宽模板，两列，gmail格式类型（Full width template, 2 columns, gmail style （160px left column width））
 ```html
 <div class="page liquid">
-	<div class="head"><!-- Head --></div>
-	<div class="body"><!-- Body -->
-		<div class="leftCol gMail"><!-- Left Column (optional region) --></div>
-		<div class="main"><!-- Main Content --></div>
-		<!-- note: right column has been removed -->
-	</div>
-	<div class="foot"><!-- Foot --></div>	
+    <div class="head"><!-- Head --></div>
+    <div class="body"><!-- Body -->
+        <div class="leftCol gMail"><!-- Left Column (optional region) --></div>
+        <div class="main"><!-- Main Content --></div>
+        <!-- note: right column has been removed -->
+    </div>
+    <div class="foot"><!-- Foot --></div>
 </div>
 ```
 

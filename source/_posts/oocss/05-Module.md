@@ -1,10 +1,13 @@
-# 模块 - 容器对象（Modules - Container Objects）
+title: 05、模块 - 容器对象（Modules - Container Objects）
+categories: [理论, css, oocss]
+tags: [理论, css, oocss]
+date: 2018/06/26 09:30:00
+---
 
 [原文](https://github.com/stubbornella/oocss/wiki/Module)
+[示例](http://oocss.org/module.html)
 
-Modules are based on the [Standard Module Format](https://github.com/bystep15/standard/blob/master/oocss/04-Standard-Module-Format.md). They provide a simple, predictable way to skin container objects while maintaining accessibility and performance. Contour skins are separate from background skins, headers, and footers. I suggest you name skins in a way that indicates how that skin should be used (semantically). The module skin should not change the display of objects within its open editable zones. Features include: 
-
-模块基于[标准模块格式](https://github.com/bystep15/standard/blob/master/oocss/04-Standard-Module-Format.md)。它们为渲染容器对象提供了一个简单的，可预测的方法，同时保持可访问性和性能。轮廓区域的渲染独立于背景，页眉和页尾的渲染。在这里我认为您命名渲染的表现形式在某种程度上应该是表示渲染是如何使用的（基于语义上来命名）。渲染的模块不应该改变该对象在其开放的可编辑区域内的表现。包含的特性有以下几点：
+Modules are based on the [Standard Module Format](/standard/2018/06/06/04、标准模块格式（standard-module-format）.html). They provide a simple, predictable way to skin container objects while maintaining accessibility and performance. Contour skins are separate from background skins, headers, and footers. I suggest you name skins in a way that indicates how that skin should be used (semantically). The module skin should not change the display of objects within its open editable zones. Features include: 
 
 -  Less than 2K! (structures)
 -  Simple to skin
@@ -14,14 +17,17 @@ Modules are based on the [Standard Module Format](https://github.com/bystep15/st
 -  Separates semantic markup from presentational fluff
 
 
-- 小于2K（结构上）
-- 容易渲染
-- 每个模块一张图片
-- 高度和宽度未知
-- 无障碍且表现出色
-- 将语义与表现相分离
+基于[标准模块格式](/standard/2018/06/06/04、标准模块格式（standard-module-format）.html)的模块，提供了一个简单、可预测的皮肤容器，同时保持可访问性和性能。轮廓皮肤，背景皮肤，页眉和页尾分别独立。建议基于使用来对皮肤进行命名（语义化）。模块皮肤不应该改变其内部对象的显示。支持以下特性：
 
-## Base Classes
+- 小于2K（结构上）
+- 定制皮肤简单
+- 每个模块一张图片
+- 高度和宽度无关
+- 不影响可访问性和性能
+- 分离语义与外观
+
+## 基础类（Base Classes）
+
 | Property | Description |
 | --------- |---------|
 | `mod` | Base class for all container modules. Use `mod` unless you specifically need one of the other structure objects. Mod is transparent on the inside, corners overlay content, it can therefore be used with any content. Allows infinite height and width as borders are generated via skin objects that define borders on `mod` and `inner`.  |
@@ -36,120 +42,123 @@ Modules are based on the [Standard Module Format](https://github.com/bystep15/st
 
 | 属性 | 描述 |
 | --------- |---------|
-| `mod` | 所有容器模块的基本类型。除非您特别地需要使用其他结构对象，否则请您使用`mod`。Mod属性在内部，角落和覆盖内容上是透明的，因此可以用在任何区域上。边框是渲染对象通过`mod` 和 `inner`属性来定义的，并且可以使用无线长的高度和宽度。 |
-| `complex` | 由`mod`.扩展而来。在无法通过`mod`和`inner`的边框生成所需外观的情况下，允许使用全图像边框。`complex`在内部，角落和覆盖内容上是透明的，因此可以用在任何区域上。 |
-| `pop` | 由`mod`.扩展而来。允许使用透明的外边框，就像下落的阴影。在模块覆盖图像，文本或其他可变背景的情况下使用。`pop`在外边框，内容覆盖掉背景的情况下是透明的，因此不能用在任何地方。 |
-| `top` | 是一个用来描述顶角的表现元素。它通过使用`complex`元素来表现块的上边缘。在其他的块级元素中，它没有高度。这种空的，没有表现性的元素应该被嵌入到服务端脚本和JavaScript，更推荐前一种方式。 |
-| `bottom` | 是一个用来描述底角的表现元素。它通过使用`complex`元素来表现块的下边缘。在其他的块级元素中，它没有高度。这种空的，没有表现性的元素应该被嵌入到服务端脚本和JavaScrip，更推荐前一种方式。 |
-| `tl` | 是一个用来描述块的左上角和`complex`中块的左边缘的表现元素。这种空的，没有表现性的元素应该被嵌入到服务端脚本和JavaScrit，更推荐前一种方式。 |
-| `tr` | 是一个用来描述块的右上角和`complex`中块的右边缘的表现元素。这种空的，没有表现性的元素应该被嵌入到服务端脚本和JavaScrit，更推荐前一种方式。 |
-| `bl` | 是一个用来描述块的左下角的表现元素。这种空的，没有表现性的元素应该被嵌入到服务端脚本和JavaScrit，更推荐前一种方式。 |
-| `br` | 是一个用来描述块的右下角的表现元素。这种空的，没有表现性的元素应该被嵌入到服务端脚本和JavaScrit，更推荐前一种方式。 |
+| `mod` | 所有容器模块的基类。大多数情况下使用`mod`即可，除非需要使用其他特定结构对象。Mod背景透明，边角覆盖在内容之上，因此可以和任何内容用在一起。通过在`mod` 和 `inner`上定义皮肤样式，可以支持长度的高度和宽度。 |
+| `complex` | 扩展`mod`。在无法通过`mod`和`inner`的边框生成所需外观的情况下，允许使用全图像边框。`complex`背景透明，边角覆盖在内容之上，因此可以和任何内容用在一起。 |
+| `pop` | 扩展`mod`。允许使用透明的外边框，比如投影。在模块包含图像，文本或其他可变背景的情况下使用。`pop`外边框是透明的，内容覆盖在背景上，因此不能用在任何地方。 |
+| `top` | 一个用来包裹顶角的表现元素。使用`complex`时表现为块的上边缘。在其他的块级元素中，它没有高度。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。|
+| `bottom` | 一个用来包裹底角的表现元素。使用`complex`时表现为块的下边缘。在其他的块级元素中，它没有高度。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。|
+| `tl` | 一个用来渲染左上角或`complex`中左边缘的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。|
+| `tr` | 一个用来渲染右上角或`complex`中右边缘的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。|
+| `bl` | 一个用来渲染左下角的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。|
+| `br` | 一个用来渲染右下角的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。|
 
 ## 标记（The Markup）
 
-### 模块属性（Module）
+### 模块类（Module）
 
 Mod is the basic container, all other containers inherit from this one. This is the high performance container that should be used unless you specifically need another type.
-
-Mod是一种基本的容器。所有其他的容器都是继承自它。它是一种具有高表现性的容器，所以除非您需要另外使用其他的样式，您都应当使用它。
-
-- 一张小图片
-- 可以扩展成任意的宽度和高度
-- 与任何内容兼容
-- 可以选择任何不需要外部透明度或复杂边界的容器对象。
 
 - One tiny image
 - Expands to any height or width
 - Compatible with any content
 - Choose for any container object that doesn't require outside transparency or complex borders.
 
-```
+Mod是基本容器，其他所有的容器都继承自它。这是一种具有高表现性的容器，所以除非您需要另外使用其他的样式，您都应当使用它。
+
+- 一张小图片
+- 支持任意的宽度和高度
+- 兼容任何内容
+- 适用于不需要外部透明度或复杂边界的容器对象。
+
+```html
 <div class="mod"> 
-        <b class="top"><b class="tl"></b><b class="tr"></b></b>
-	<div class="inner">
-		<div class="bd">
-			<p>Lorem ipsum.</p>
-		</div>
-	</div>
-	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+    <b class="top"><b class="tl"></b><b class="tr"></b></b>
+    <div class="inner">
+        <div class="bd">
+            <p>Lorem ipsum.</p>
+        </div>
+    </div>
+    <b class="bottom"><b class="bl"></b><b class="br"></b></b> 
 </div>
 
 ```
-### 复杂属性（Complex）
+### 复杂类（Complex）
 
 Complex should be used in cases where you require images for borders because borders or drop shadows are too complex to be simulated via borders on mod and/or inner.
-
-复杂属性（complex）应当被用在当您需要对边框使用照片的时候。因为使用mod属性和（或者）inner属性来模拟边框和下落的阴影过于复杂，所以推荐使用complx属性。
 
 - One image
 - Height and width limited by image size
 - Compatible with any content
 - Choose when you require complex borders which cannot be simulated via css borders on mod and inner.
 
+
+复杂类（complex）被用在需要图片边框的时候，此时使用mod属性和（或者）inner属性来描述边框和下落的阴影过于复杂，所以推荐使用complx类。
+
 - 一张图片
-- 高度和宽度只限于图片的大小
-- 与任何内容兼容
-- 当您需要使用复杂的边框且无法通过mod和inner属性下的css边框来实现。
+- 高度和宽度受限于图片尺寸
+- 兼容任何内容
+- 当需要使用复杂的边框，并且无法通过mod和inner类下的css边框来实现的时候。
 
 Inspired by a conversation with Arnaud.
 
 这些内容是受到Arnaud的启发产生的想法。
 
-```
+```html
 <div class="mod complex"> 
-        <b class="top"><b class="tl"></b><b class="tr"></b></b>
-	<div class="inner">
-		<div class="bd">
-			<p>Lorem ipsum.</p>
-		</div>
-	</div>
-	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+    <b class="top"><b class="tl"></b><b class="tr"></b></b>
+    <div class="inner">
+        <div class="bd">
+            <p>Lorem ipsum.</p>
+        </div>
+    </div>
+    <b class="bottom"><b class="bl"></b><b class="br"></b></b> 
 </div>
 ```
 
-### 弹出属性（Popup）
+### 弹出类（Popup）
 
 Use for popups and other containers that need outside transparency.
-
-用于需要外部透明度的弹出窗口和其他容器。
 
 - One image
 - Height and width limited by image size
 - Compatible with any container, but not any content
 - Choose when you require outside transparency which cannot be simulated. (do i need to make this work with clip rather than bkg position?)
 
+
+用于需要外部透明度的弹出窗口和其他容器。
+
 - 一张图片
-- 高度和宽度只限于图片的大小
-- 与任何容器兼容，但并不是与任何内容兼容
-- 当您需要使用无法模拟的外部透明度时使用（我应该使用剪辑而不是bkg的方式来做这项工作？）
+- 高度和宽度受限于图片尺寸
+- 兼容任何容器，但不一定兼容任何内容
+- 当需要使用无法模拟的外部透明效果时使用（是否使用clip而不是bkg定位的方式更合适？）
 
 Inspired by Leslie Sommers mojo blocks.
 
 这些内容是受到Leslie Sommers mojo blocks启发产生的想法。
 
-```
+```html
 <div class="mod pop"> 
-        <b class="top"><b class="tl"></b><b class="tr"></b></b>
-	<div class="inner">
-		<div class="bd">
-			<p>Lorem ipsum.</p>
-		</div>
-	</div>
-	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+    <b class="top"><b class="tl"></b><b class="tr"></b></b>
+    <div class="inner">
+        <div class="bd">
+            <p>Lorem ipsum.</p>
+        </div>
+    </div>
+    <b class="bottom"><b class="bl"></b><b class="br"></b></b> 
 </div>
 ```
 
-## 渲染时的一些建议（Skinning suggestions）
+## 皮肤使用建议（Skinning suggestions）
+
 The contour and the background can be used to define the intersection of two parameters. For example you cross product status with product type. E.g. `sale`, `normal`, and `featured` backgrounds with `motorcycle`, `helmet`, and `clothing` contours. In so far as possible, keep your classes as abstract as they can reasonably be. For example choose `motorcycle` over `ducati`, `ducatiMonster`, or `NicolesDucatiMonster620dark` -- unless you really mean to exclude all other uses! 
 
-轮廓和背景可以用来定义两个参数的交集。例如，当您使用产品类型例如sale`, `normal`和`featured`的背景属性和`motorcycle`, `helmet`和`clothing`的轮廓属性来描述您的产品状态时。请让您的类尽可能抽象。例如选择使用`motorcycle`属性而不是`ducati`, `ducatiMonster`和 `NicolesDucatiMonster620dark` -- 当然，除非您真的不想用它们其他的所有用途！
+轮廓和背景可以定义成两个类组合使用。例如，当需要联合使用产品状态和产品类型的时候。例如`sale`, `normal`和`featured`的背景类和`motorcycle`, `helmet`和`clothing`的轮廓类组合。保持类尽可能合理的抽象。例如选择使用`motorcycle`属性而不是`ducati`, `ducatiMonster`和 `NicolesDucatiMonster620dark` -- 当然，除非您真的不想将它们复用！
 
 Be careful not to choose classes linked to the display of the object (e.g. big blue borders).  The client will change their mind, you'll have classes which no longer correlate to actual display.
 
-当心！不要选择与对象表现形式相关的类（例如 big，blue，borders等与表现相关的类）。这样做会改变这些类的初衷，如果您这样做，这些类的使用将会与它们的实际表达效果不相关。
+当心！不要使用与对象表现形式相关的类名（例如 big，blue，borders）。客户会改变想法，代码中会存在一批与实际表达效果不相符的类。
 
-## 当您选用模块时如何决定（How to decide when to use Modules）
+## 何时使用模块（How to decide when to use Modules）
 
 Deciding when to use Modules can be confusing. As a rule of thumb, if you are marking up an element on the page that conveys relevant information to the user by itself (e.g. breadcrumbs), you do not need a module. This is a good example for a content object. However, if you are marking up a container that conveys no relevant information on its own (e.g. tabs) and would only make sense to use when you place content objects in it, then you could mark it up as a module.
 
@@ -163,5 +172,4 @@ So you could ask "Is this element conveying any relevant information to the user
 Great feedback, bug reports,etc. Chris Griego, Jordan LaMons, Arnaud Gueras (as usual), Ryan Grove, Nicholas Zakas, Peter Ellenhauge, Chris Eppstein, Vinod Kerkar, Carsten, Dan H, Cindy Li, etc.
 
 
-32/5000
 感谢以下人员提供的良好的反馈意见和错误报告等。Chris Griego, Jordan LaMons, Arnaud Gueras (as usual), Ryan Grove, Nicholas Zakas, Peter Ellenhauge, Chris Eppstein, Vinod Kerkar, Carsten, Dan H, Cindy Li等。
