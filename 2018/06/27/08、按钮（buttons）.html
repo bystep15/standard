@@ -5,18 +5,20 @@
   
 
   
-  <title>归档: 2018 | HTML&amp;CSS模块化理论学习</title>
+  <title>08、按钮（Buttons） | HTML&amp;CSS模块化理论学习</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="通过css的理论化学习，架构更好的CSS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HTML&amp;CSS模块化理论学习">
-<meta property="og:url" content="https://bystep15.github.io/standard/archives/2018/index.html">
+  <meta name="description" content="原文 Outlining how this should work.  tag - a, button class - btn Possible displays:  single image sliding doors (horizontal only),  single image sliding doors (vertical and horizontal),  no images butt">
+<meta name="keywords" content="理论,css,oocss">
+<meta property="og:type" content="article">
+<meta property="og:title" content="08、按钮（Buttons）">
+<meta property="og:url" content="https://bystep15.github.io/standard/2018/06/27/08、按钮（buttons）.html">
 <meta property="og:site_name" content="HTML&amp;CSS模块化理论学习">
-<meta property="og:description" content="通过css的理论化学习，架构更好的CSS">
+<meta property="og:description" content="原文 Outlining how this should work.  tag - a, button class - btn Possible displays:  single image sliding doors (horizontal only),  single image sliding doors (vertical and horizontal),  no images butt">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-27T09:28:23.745Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML&amp;CSS模块化理论学习">
-<meta name="twitter:description" content="通过css的理论化学习，架构更好的CSS">
+<meta name="twitter:title" content="08、按钮（Buttons）">
+<meta name="twitter:description" content="原文 Outlining how this should work.  tag - a, button class - btn Possible displays:  single image sliding doors (horizontal only),  single image sliding doors (vertical and horizontal),  no images butt">
   
     <link rel="alternate" href="/standard/atom.xml" title="HTML&amp;CSS模块化理论学习" type="application/atom+xml">
   
@@ -65,173 +67,88 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/standard/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/06/27/08、按钮（buttons）.html" class="archive-article-date">
-  <time datetime="2018-06-27T08:30:00.000Z" itemprop="datePublished">6月 27</time>
+        <section id="main"><article id="post-oocss/08-Buttons" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/27/08、按钮（buttons）.html" class="article-date">
+  <time datetime="2018-06-27T08:30:00.000Z" itemprop="datePublished">2018-06-27</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/06/27/08、按钮（buttons）.html">08、按钮（Buttons）</a>
+    <h1 class="article-title" itemprop="name">
+      08、按钮（Buttons）
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/06/27/07、内容（content）.html" class="archive-article-date">
-  <time datetime="2018-06-27T02:30:00.000Z" itemprop="datePublished">6月 27</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/06/27/07、内容（content）.html">07、内容（Content）</a>
-    </h1>
-  
+        <p><a href="https://github.com/stubbornella/oocss/wiki/Buttons" target="_blank" rel="noopener">原文</a></p>
+<p>Outlining how this should work.</p>
+<ul>
+<li>tag - a, button</li>
+<li>class - btn</li>
+<li>Possible displays: <ol>
+<li>single image sliding doors (horizontal only), </li>
+<li>single image sliding doors (vertical and horizontal), </li>
+<li>no images buttons (perhaps bowman/goog as inspiration) or some of the gradient transforms/filters</li>
+</ol>
+</li>
+<li>Keep markup low (as few nodes as possible)</li>
+<li>Image, colors applied by a skin class, layout class for abstraction</li>
+<li>Inline-block</li>
+<li>Should be possible to float the buttons without breaking</li>
+</ul>
+<p>概述如按钮应该如何使用。</p>
+<ul>
+<li>标签选择 - a, button</li>
+<li>类名 - btn</li>
+<li>可能的使用场景<ol>
+<li>单图推拉门（仅水平)</li>
+<li>单图推拉门（垂直和水平）</li>
+<li>没有图像按钮（以bowman / goog为灵感）或一些渐变变换/滤镜</li>
+</ol>
+</li>
+<li>少用标签（尽可能少的节点）</li>
+<li>图像，皮肤类应用的颜色，抽象的布局类</li>
+<li>内联块</li>
+<li>支持内联，即使按钮浮动，也不会打破布局</li>
+</ul>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html" class="archive-article-date">
-  <time datetime="2018-06-26T10:30:00.000Z" itemprop="datePublished">6月 26</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">06、模块皮肤（Module Skins）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html" class="archive-article-date">
-  <time datetime="2018-06-26T01:30:00.000Z" itemprop="datePublished">6月 26</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/27/08、按钮（buttons）.html" data-id="cjiwtib8r0000o60fn86j1edw" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">05、模块 - 容器对象（Modules - Container Objects）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html" class="archive-article-date">
-  <time datetime="2018-06-06T02:30:00.000Z" itemprop="datePublished">6月 6</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">04、标准模块格式（Standard Module Format）</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/06/06/03、网格（grids）.html" class="archive-article-date">
-  <time datetime="2018-06-06T01:30:00.000Z" itemprop="datePublished">6月 6</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/06/06/03、网格（grids）.html">03、网格（Grids）</a>
-    </h1>
   
+    <a href="/standard/2018/06/27/07、内容（content）.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">07、内容（Content）</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/05/29/02、模板（template）.html" class="archive-article-date">
-  <time datetime="2018-05-29T01:30:00.000Z" itemprop="datePublished">5月 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/05/29/02、模板（template）.html">02、模板（Template）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/01/02/01、面向对象的css（object-oriented-css）.html" class="archive-article-date">
-  <time datetime="2018-01-02T01:30:00.000Z" itemprop="datePublished">1月 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/01/02/01、面向对象的css（object-oriented-css）.html">01、面向对象的CSS（Object Oriented CSS）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         
