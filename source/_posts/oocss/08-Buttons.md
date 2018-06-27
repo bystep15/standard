@@ -1,9 +1,12 @@
-# 按钮（Buttons）
+title: 08、按钮（Buttons）
+categories: [理论, css, oocss]
+tags: [理论, css, oocss]
+date: 2018/06/27 16:30:00
+---
 
 [原文](https://github.com/stubbornella/oocss/wiki/Buttons)
 
 Outlining how this should work.
-概述如按钮应该如何使用。
 
 - tag - a, button
 - class - btn
@@ -16,28 +19,16 @@ Outlining how this should work.
 - Inline-block
 - Should be possible to float the buttons without breaking
 
-----------
 
-- 标签 - a, button
-- 类 - btn
-- 可能的显示效果
+概述如按钮应该如何使用。
+
+- 标签选择 - a, button
+- 类名 - btn
+- 可能的使用场景
     1. 单图推拉门（仅水平)
     2. 单图推拉门（垂直和水平）
     3. 没有图像按钮（以bowman / goog为灵感）或一些渐变变换/滤镜
 - 少用标签（尽可能少的节点）
 - 图像，皮肤类应用的颜色，抽象的布局类
 - 内联块
-- 尽可能使按钮浮动，而不是打破布局
-
-----------
-
-- 使用a, button标签
-- 使用btn类
-- 可能要显示的效果
-    1. 单图的推拉门样式（仅水平)
-    2. 单图的推拉门样式（垂直和水平）
-    3. 没有图像按钮（以bowman / goog为灵感）或一些渐变变换/滤镜
-- 少用标签（尽可能像节点一样少）
-- 图像，皮肤类应该使用一个抽象的表现样式的类和布局类
-- 使用内联块
-- 尽可能使按钮浮动，而不是打破布局
+- 支持内联，即使按钮浮动，也不会打破布局
