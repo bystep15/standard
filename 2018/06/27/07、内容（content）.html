@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>07、内容（Content） | HTML&amp;CSS模块化理论学习</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文示例 Some parts of content are ready for alpha testing, however, it isn’t ready to be used in production projects.  内容的一些部分已经准备好进行Alpha测试了，但是还没有准备好在生产项目中使用。 媒体对象（Media Object）The media object allows y">
+<meta name="keywords" content="理论,css,oocss">
+<meta property="og:type" content="article">
+<meta property="og:title" content="07、内容（Content）">
+<meta property="og:url" content="https://bystep15.github.io/standard/2018/06/27/07、内容（content）.html">
+<meta property="og:site_name" content="HTML&amp;CSS模块化理论学习">
+<meta property="og:description" content="原文示例 Some parts of content are ready for alpha testing, however, it isn’t ready to be used in production projects.  内容的一些部分已经准备好进行Alpha测试了，但是还没有准备好在生产项目中使用。 媒体对象（Media Object）The media object allows y">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-27T03:03:49.721Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="07、内容（Content）">
+<meta name="twitter:description" content="原文示例 Some parts of content are ready for alpha testing, however, it isn’t ready to be used in production projects.  内容的一些部分已经准备好进行Alpha测试了，但是还没有准备好在生产项目中使用。 媒体对象（Media Object）The media object allows y">
+  
+    <link rel="alternate" href="/standard/atom.xml" title="HTML&amp;CSS模块化理论学习" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/standard/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/standard/" id="logo">HTML&amp;CSS模块化理论学习</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/standard/">Home</a>
+        
+          <a class="main-nav-link" href="/standard/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/standard/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://bystep15.github.io/standard"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-oocss/07-Content" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/27/07、内容（content）.html" class="article-date">
+  <time datetime="2018-06-27T02:30:00.000Z" itemprop="datePublished">2018-06-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      07、内容（Content）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/stubbornella/oocss/wiki/Content" target="_blank" rel="noopener">原文</a><br><a href="http://oocss.org/library.html" target="_blank" rel="noopener">示例</a></p>
+<p>Some parts of content are ready for alpha testing, however, it isn’t ready to be used in production projects. </p>
+<p>内容的一些部分已经准备好进行Alpha测试了，但是还没有准备好在生产项目中使用。</p>
+<h2 id="媒体对象（Media-Object）"><a href="#媒体对象（Media-Object）" class="headerlink" title="媒体对象（Media Object）"></a>媒体对象（Media Object）</h2><p>The media object allows you to have an image/flash or other fixed width media to the left or right with some content that describes it in the center. </p>
+<p>媒体对象允许您在图像/Flash或其他固定宽度的媒介的左侧或右侧添加一些内容，以便将上述内容描述在中间的位置。</p>
+<ul>
+<li>Status: ready for alpha testing</li>
+<li>状态：准备进行Alpha测试</li>
+</ul>
+<h3 id="基础类（Base-Classes）"><a href="#基础类（Base-Classes）" class="headerlink" title="基础类（Base Classes）"></a>基础类（Base Classes）</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>media</code></td>
+<td>Wrapper for the media object</td>
+</tr>
+<tr>
+<td><code>img</code></td>
+<td>Child node of the media object. Generally a link, image, or flash wrapper. Will appear to the left of the <code>.bd.</code> Optional region.</td>
+</tr>
+<tr>
+<td><code>bd</code></td>
+<td>Main content area for the media object, can contain any other objects. Protected. Required region.</td>
+</tr>
+<tr>
+<td><code>imgExt</code></td>
+<td>Child node of the media object. Generally a link, image, or flash wrapper. Will appear to the right of the <code>.bd.</code> Optional region.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>media</code></td>
+<td>媒体对象的包裹容器</td>
+</tr>
+<tr>
+<td><code>img</code></td>
+<td>媒体对象的子节点，链接，图像或flash包裹容器。通常在左侧的<code>.bd</code>区域，可选区域。</td>
+</tr>
+<tr>
+<td><code>bd</code></td>
+<td>媒体对象的主要内容区域，可以包含任何其他对象。受保护，必选区域。</td>
+</tr>
+<tr>
+<td><code>imgExt</code></td>
+<td>媒体对象的子节点，链接，图像或flash包裹容器。通常在右侧的<code>.bd</code>区域，可选区域。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"media"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://twitter.com/stubbornella"</span> <span class="attr">class</span>=<span class="string">"img"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://a3.twimg.com/profile_images/72157651/tattoo_pink_bkg_square_mini.jpg"</span> <span class="attr">alt</span>=<span class="string">"Stubbornella"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://twitter.com/stubbornella"</span>&gt;</span>@Stubbornella<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"detail"</span>&gt;</span>14 miniutes ago<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据表格（Data-Table）"><a href="#数据表格（Data-Table）" class="headerlink" title="数据表格（Data Table）"></a>数据表格（Data Table）</h2><p>It can sometimes be convenient to be able to format a data table to align correctly for particular kinds of data (e.g. currency aligns right). Creating new classes for each kind of data can quickly bloat a file because ideally you want to be able to align the data with a class on the table, tr, td, or th, and have the class closest to the data win in case of conflict. This can be done, but it isn’t how CSS automatically works, so to keep file size down, generic classes that support alignment can be used in conjunction with more semantic classes or microformats. </p>
+<p>有时需要方便地格式化数据表格，以便正确对齐特定类型的数据（例如货币右侧对齐）。为每种类型的数据创建新类可能会使文件体积迅速膨胀，理想情况下，在表格中的tr，td或th标签上设置类属性，数据自动与其对齐。虽然可以这样做做，但这不是CSS的方式，所以为了使文件体积缩小，支持对齐的通用类可以与多语义类或微格式一起使用。</p>
+<ul>
+<li><p>Status: ready for alpha testing</p>
+</li>
+<li><p>状态：准备进行Alpha测试</p>
+</li>
+</ul>
+<h3 id="基础类（Base-Classes）-1"><a href="#基础类（Base-Classes）-1" class="headerlink" title="基础类（Base Classes）"></a>基础类（Base Classes）</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data</code></td>
+<td>Div wrapper for the data table</td>
+</tr>
+<tr>
+<td><code>txtL</code></td>
+<td>Aligns left, default alignment, can be applied to table, tr, td, or th.</td>
+</tr>
+<tr>
+<td><code>txtR</code></td>
+<td>Aligns right, can be applied to table, tr, td, or th.</td>
+</tr>
+<tr>
+<td><code>txtC</code></td>
+<td>Aligns center (horizontally), can be applied to table, tr, td, or th.</td>
+</tr>
+<tr>
+<td><code>txtT</code></td>
+<td>Aligns top, can be applied to table, tr, td, or th.</td>
+</tr>
+<tr>
+<td><code>txtB</code></td>
+<td>Aligns bottom, can be applied to table, tr, td, or th.</td>
+</tr>
+<tr>
+<td><code>txtM</code></td>
+<td>Aligns middle (vertically), can be applied to table, tr, td, or th.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data</code></td>
+<td>数据表格的Div包裹容器</td>
+</tr>
+<tr>
+<td><code>txtL</code></td>
+<td>左对齐, 属于默认对齐方式, 可被用于：table, tr, td, 或 th。</td>
+</tr>
+<tr>
+<td><code>txtR</code></td>
+<td>右对齐, 可被用于：table, tr, td, 或 th。</td>
+</tr>
+<tr>
+<td><code>txtC</code></td>
+<td>居中对齐 (水平方向上), 可被用于：table, tr, td, 或 th。</td>
+</tr>
+<tr>
+<td><code>txtT</code></td>
+<td>上对齐, 可被用于：table, tr, td, 或 th。</td>
+</tr>
+<tr>
+<td><code>txtB</code></td>
+<td>底对齐, 可被用于：table, tr, td, 或 th。</td>
+</tr>
+<tr>
+<td><code>txtM</code></td>
+<td>居中对齐 (垂直方向上), 可被用于：table, tr, td, 或 th。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="HTML-1"><a href="#HTML-1" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"data"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"txtC"</span>&gt;</span><span class="comment">&lt;!--table alignment set to center --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span> <span class="attr">class</span>=<span class="string">"odd txtL"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span> <span class="attr">scope</span>=<span class="string">"row"</span> <span class="attr">class</span>=<span class="string">"txtR"</span>&gt;</span>Right aligned<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>Left aligned<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span> <span class="attr">class</span>=<span class="string">"even"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span> <span class="attr">scope</span>=<span class="string">"row"</span>&gt;</span>center aligned<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>center aligned<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="文件（Files）"><a href="#文件（Files）" class="headerlink" title="文件（Files）"></a>文件（Files）</h2><ul>
+<li>/css/content.css</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/27/07、内容（content）.html" data-id="cjivqvifu0000wkfyayypyiif" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">06、模块皮肤（Module Skins）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/">理论</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/">css</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/oocss/">oocss</a></li></ul></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/standard/tags/css/" style="font-size: 10px;">css</a> <a href="/standard/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/standard/tags/理论/" style="font-size: 10px;">理论</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2017/12/">十二月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/standard/2018/06/27/07、内容（content）.html">07、内容（Content）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">06、模块皮肤（Module Skins）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">05、模块 - 容器对象（Modules - Container Objects）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">04、标准模块格式（Standard Module Format）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/06/03、网格（grids）.html">03、网格（Grids）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 alex2010, bystep15<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/standard/" class="mobile-nav-link">Home</a>
+  
+    <a href="/standard/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/standard/fancybox/jquery.fancybox.css">
+  <script src="/standard/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/standard/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
