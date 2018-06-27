@@ -67,6 +67,154 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-oocss/09-Talk-Bubbles" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/27/09、对话框（talk-bubbles）.html" class="article-date">
+  <time datetime="2018-06-27T13:30:00.000Z" itemprop="datePublished">2018-06-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/standard/2018/06/27/09、对话框（talk-bubbles）.html">09、对话框（Talk Bubbles）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/stubbornella/oocss/wiki/Talk-Bubbles" target="_blank" rel="noopener">原文</a></p>
+<p>Talk bubbles were created to give context specific help, however they may be used for other purposes like blog comments, cartoon-style talk bubbles, etc. </p>
+<p>对话框是为了给文章的特定内容添加帮助信息而创建的，也可以用于其他目的，如博客评论，卡通式对话框等。</p>
+<p><a href="http://www.flickr.com/photos/nicole_hugo/3897449437/" title="Talk Bubbles by Stubbornella (aka Nicole), on Flickr" target="_blank" rel="noopener"><img src="http://farm4.static.flickr.com/3506/3897449437_6b0fe48b29_o.png" width="322" height="196" alt="Talk Bubbles"></a></p>
+<ul>
+<li>No images required</li>
+<li>Secondary elements in place to allow for borders (just make the lower b a bit larger and set the border color)</li>
+<li>Easy to adapt the size of the arrow</li>
+<li>Compatible with border-radius generated rounded corners</li>
+<li>Base CSS objects are 1K</li>
+<li>IE6 uses page background color for the transparent bits because it doesn’t support the color keyword “transparent”</li>
+<li>Allows eight different arrow positions</li>
+</ul>
+<ul>
+<li>不依赖图片</li>
+<li>箭头接触的位置可以设置边框（将箭头调大一些并设置颜色即可）</li>
+<li>易于调整光标箭头的大小</li>
+<li>兼容边框圆角</li>
+<li>基本的CSS对象只有1K</li>
+<li>IE6使用页面背景颜色实现透明效果，因为它不支持color关键字“transparent”</li>
+<li>支持8种不同的箭头位置</li>
+</ul>
+<p><a href="http://www.flickr.com/photos/nicole_hugo/3898006763/" title="Speech Bubble Pointer positions by Stubbornella (aka Nicole), on Flickr" target="_blank" rel="noopener"><img src="http://farm3.static.flickr.com/2452/3898006763_07e964665b_o.png" width="472" height="187" alt="Speech Bubble Pointer positions"></a></p>
+<h2 id="基础类（Base-Classes）"><a href="#基础类（Base-Classes）" class="headerlink" title="基础类（Base Classes）"></a>基础类（Base Classes）</h2><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bubble</code></td>
+<td>Applied to the mod wrapper, this is the base class for all talk bubbles. To change the size of the pointer edit this class (margin and border width should always be equal).</td>
+</tr>
+<tr>
+<td><code>bubbleTop</code></td>
+<td>Structural class that extends <code>.bubble</code>, positions the pointer at the top of the module.</td>
+</tr>
+<tr>
+<td><code>bubbleRight</code></td>
+<td>Structural class that extends <code>.bubble</code>, positions the pointer at the right of the module.</td>
+</tr>
+<tr>
+<td><code>bubbleBottom</code></td>
+<td>Structural class that extends <code>.bubble</code>, positions the pointer at the bottom of the module.</td>
+</tr>
+<tr>
+<td><code>bubbleLeft</code></td>
+<td>Structural class that extends <code>.bubble</code>, positions the pointer at the left of the module.</td>
+</tr>
+<tr>
+<td><code>bubbleHorizontalExt</code></td>
+<td>A class which can be used in conjunction with <code>.bubbleLeft</code> or <code>.bubbleRight</code> to move the talk pointer to the bottom portion of the left or right sides</td>
+</tr>
+<tr>
+<td><code>bubbleVerticalExt</code></td>
+<td>A class which can be used in conjunction with <code>.bubbleTop</code> or <code>.bubbleBottom</code> to move the talk pointer to the right edge of the top or bottom sides</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bubble</code></td>
+<td>应用于mod容器，这是所有对话框的基类。 如果您要改变箭头的大小，请您编辑这个类（外边距和边框宽度应该是相等的）。</td>
+</tr>
+<tr>
+<td><code>bubbleTop</code></td>
+<td>扩展<code>.bubble</code>的结构类，会将箭头置于模块的顶部。</td>
+</tr>
+<tr>
+<td><code>bubbleRight</code></td>
+<td>扩展<code>.bubble</code>的结构类，会将箭头置于模块的右部。</td>
+</tr>
+<tr>
+<td><code>bubbleBottom</code></td>
+<td>扩展<code>.bubble</code>的结构类，会将箭头置于模块的下部。</td>
+</tr>
+<tr>
+<td><code>bubbleLeft</code></td>
+<td>扩展<code>.bubble</code>的结构类，会将箭头置于模块的左部。</td>
+</tr>
+<tr>
+<td><code>bubbleHorizontalExt</code></td>
+<td>和<code>.bubbleLeft</code>或<code>.bubbleRight</code>组合使用的类，可以将对话框箭头移动到左侧或右侧的底部。</td>
+</tr>
+<tr>
+<td><code>bubbleVerticalExt</code></td>
+<td>和<code>.bubbleTop</code>或<code>.bubbleBottom</code>组合使用的类，可以将对话框箭头移动到顶部或底部的右部。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="文件（Files）"><a href="#文件（Files）" class="headerlink" title="文件（Files）"></a>文件（Files）</h2><ul>
+<li>talk.html</li>
+<li>/css/talk.css</li>
+<li>/css/talk_skins.css</li>
+</ul>
+<p>Unless you are building a complex application or interactive site it is unlikely that you will need all of the code for the different positions of the talk-nub. Keep the ones you need to make the stylesheet even smaller.</p>
+<p>除非正在构建一个复杂的应用程序或交互式网站，否则不太可能需要所有8种不同位置的对话框代码。记住，样式表的体积越小越好。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/27/09、对话框（talk-bubbles）.html" data-id="cjix5mcvy00004c0fkfdmnav7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-oocss/08-Buttons" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/standard/2018/06/27/08、按钮（buttons）.html" class="article-date">
@@ -1283,6 +1431,10 @@
       <ul>
         
           <li>
+            <a href="/standard/2018/06/27/09、对话框（talk-bubbles）.html">09、对话框（Talk Bubbles）</a>
+          </li>
+        
+          <li>
             <a href="/standard/2018/06/27/08、按钮（buttons）.html">08、按钮（Buttons）</a>
           </li>
         
@@ -1296,10 +1448,6 @@
         
           <li>
             <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">05、模块 - 容器对象（Modules - Container Objects）</a>
-          </li>
-        
-          <li>
-            <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">04、标准模块格式（Standard Module Format）</a>
           </li>
         
       </ul>

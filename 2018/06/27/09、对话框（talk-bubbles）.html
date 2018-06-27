@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>09、对话框（Talk Bubbles） | HTML&amp;CSS模块化理论学习</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文 Talk bubbles were created to give context specific help, however they may be used for other purposes like blog comments, cartoon-style talk bubbles, etc.  对话框是为了给文章的特定内容添加帮助信息而创建的，也可以用于其他目的，如博客评论，卡">
+<meta name="keywords" content="理论,css,oocss">
+<meta property="og:type" content="article">
+<meta property="og:title" content="09、对话框（Talk Bubbles）">
+<meta property="og:url" content="https://bystep15.github.io/standard/2018/06/27/09、对话框（talk-bubbles）.html">
+<meta property="og:site_name" content="HTML&amp;CSS模块化理论学习">
+<meta property="og:description" content="原文 Talk bubbles were created to give context specific help, however they may be used for other purposes like blog comments, cartoon-style talk bubbles, etc.  对话框是为了给文章的特定内容添加帮助信息而创建的，也可以用于其他目的，如博客评论，卡">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://farm4.static.flickr.com/3506/3897449437_6b0fe48b29_o.png">
+<meta property="og:image" content="http://farm3.static.flickr.com/2452/3898006763_07e964665b_o.png">
+<meta property="og:updated_time" content="2018-06-27T14:02:27.136Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="09、对话框（Talk Bubbles）">
+<meta name="twitter:description" content="原文 Talk bubbles were created to give context specific help, however they may be used for other purposes like blog comments, cartoon-style talk bubbles, etc.  对话框是为了给文章的特定内容添加帮助信息而创建的，也可以用于其他目的，如博客评论，卡">
+<meta name="twitter:image" content="http://farm4.static.flickr.com/3506/3897449437_6b0fe48b29_o.png">
+  
+    <link rel="alternate" href="/standard/atom.xml" title="HTML&amp;CSS模块化理论学习" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/standard/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/standard/" id="logo">HTML&amp;CSS模块化理论学习</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/standard/">Home</a>
+        
+          <a class="main-nav-link" href="/standard/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://github.com/bystep15/standard">GitHub</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/standard/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://bystep15.github.io/standard"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-oocss/09-Talk-Bubbles" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/27/09、对话框（talk-bubbles）.html" class="article-date">
+  <time datetime="2018-06-27T13:30:00.000Z" itemprop="datePublished">2018-06-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      09、对话框（Talk Bubbles）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/stubbornella/oocss/wiki/Talk-Bubbles" target="_blank" rel="noopener">原文</a></p>
+<p>Talk bubbles were created to give context specific help, however they may be used for other purposes like blog comments, cartoon-style talk bubbles, etc. </p>
+<p>对话框是为了给文章的特定内容添加帮助信息而创建的，也可以用于其他目的，如博客评论，卡通式对话框等。</p>
+<p><a href="http://www.flickr.com/photos/nicole_hugo/3897449437/" title="Talk Bubbles by Stubbornella (aka Nicole), on Flickr" target="_blank" rel="noopener"><img src="http://farm4.static.flickr.com/3506/3897449437_6b0fe48b29_o.png" width="322" height="196" alt="Talk Bubbles"></a></p>
+<ul>
+<li>No images required</li>
+<li>Secondary elements in place to allow for borders (just make the lower b a bit larger and set the border color)</li>
+<li>Easy to adapt the size of the arrow</li>
+<li>Compatible with border-radius generated rounded corners</li>
+<li>Base CSS objects are 1K</li>
+<li>IE6 uses page background color for the transparent bits because it doesn’t support the color keyword “transparent”</li>
+<li>Allows eight different arrow positions</li>
+</ul>
+<ul>
+<li>不依赖图片</li>
+<li>箭头接触的位置可以设置边框（将箭头调大一些并设置颜色即可）</li>
+<li>易于调整光标箭头的大小</li>
+<li>兼容边框圆角</li>
+<li>基本的CSS对象只有1K</li>
+<li>IE6使用页面背景颜色实现透明效果，因为它不支持color关键字“transparent”</li>
+<li>支持8种不同的箭头位置</li>
+</ul>
+<p><a href="http://www.flickr.com/photos/nicole_hugo/3898006763/" title="Speech Bubble Pointer positions by Stubbornella (aka Nicole), on Flickr" target="_blank" rel="noopener"><img src="http://farm3.static.flickr.com/2452/3898006763_07e964665b_o.png" width="472" height="187" alt="Speech Bubble Pointer positions"></a></p>
+<h2 id="基础类（Base-Classes）"><a href="#基础类（Base-Classes）" class="headerlink" title="基础类（Base Classes）"></a>基础类（Base Classes）</h2><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bubble</code></td>
+<td>Applied to the mod wrapper, this is the base class for all talk bubbles. To change the size of the pointer edit this class (margin and border width should always be equal).</td>
+</tr>
+<tr>
+<td><code>bubbleTop</code></td>
+<td>Structural class that extends <code>.bubble</code>, positions the pointer at the top of the module.</td>
+</tr>
+<tr>
+<td><code>bubbleRight</code></td>
+<td>Structural class that extends <code>.bubble</code>, positions the pointer at the right of the module.</td>
+</tr>
+<tr>
+<td><code>bubbleBottom</code></td>
+<td>Structural class that extends <code>.bubble</code>, positions the pointer at the bottom of the module.</td>
+</tr>
+<tr>
+<td><code>bubbleLeft</code></td>
+<td>Structural class that extends <code>.bubble</code>, positions the pointer at the left of the module.</td>
+</tr>
+<tr>
+<td><code>bubbleHorizontalExt</code></td>
+<td>A class which can be used in conjunction with <code>.bubbleLeft</code> or <code>.bubbleRight</code> to move the talk pointer to the bottom portion of the left or right sides</td>
+</tr>
+<tr>
+<td><code>bubbleVerticalExt</code></td>
+<td>A class which can be used in conjunction with <code>.bubbleTop</code> or <code>.bubbleBottom</code> to move the talk pointer to the right edge of the top or bottom sides</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bubble</code></td>
+<td>应用于mod容器，这是所有对话框的基类。 如果您要改变箭头的大小，请您编辑这个类（外边距和边框宽度应该是相等的）。</td>
+</tr>
+<tr>
+<td><code>bubbleTop</code></td>
+<td>扩展<code>.bubble</code>的结构类，会将箭头置于模块的顶部。</td>
+</tr>
+<tr>
+<td><code>bubbleRight</code></td>
+<td>扩展<code>.bubble</code>的结构类，会将箭头置于模块的右部。</td>
+</tr>
+<tr>
+<td><code>bubbleBottom</code></td>
+<td>扩展<code>.bubble</code>的结构类，会将箭头置于模块的下部。</td>
+</tr>
+<tr>
+<td><code>bubbleLeft</code></td>
+<td>扩展<code>.bubble</code>的结构类，会将箭头置于模块的左部。</td>
+</tr>
+<tr>
+<td><code>bubbleHorizontalExt</code></td>
+<td>和<code>.bubbleLeft</code>或<code>.bubbleRight</code>组合使用的类，可以将对话框箭头移动到左侧或右侧的底部。</td>
+</tr>
+<tr>
+<td><code>bubbleVerticalExt</code></td>
+<td>和<code>.bubbleTop</code>或<code>.bubbleBottom</code>组合使用的类，可以将对话框箭头移动到顶部或底部的右部。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="文件（Files）"><a href="#文件（Files）" class="headerlink" title="文件（Files）"></a>文件（Files）</h2><ul>
+<li>talk.html</li>
+<li>/css/talk.css</li>
+<li>/css/talk_skins.css</li>
+</ul>
+<p>Unless you are building a complex application or interactive site it is unlikely that you will need all of the code for the different positions of the talk-nub. Keep the ones you need to make the stylesheet even smaller.</p>
+<p>除非正在构建一个复杂的应用程序或交互式网站，否则不太可能需要所有8种不同位置的对话框代码。记住，样式表的体积越小越好。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/27/09、对话框（talk-bubbles）.html" data-id="cjix5mcvy00004c0fkfdmnav7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/standard/2018/06/27/08、按钮（buttons）.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">08、按钮（Buttons）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/">理论</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/">css</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/oocss/">oocss</a></li></ul></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/standard/tags/css/" style="font-size: 10px;">css</a> <a href="/standard/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/standard/tags/理论/" style="font-size: 10px;">理论</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2017/12/">十二月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/standard/2018/06/27/09、对话框（talk-bubbles）.html">09、对话框（Talk Bubbles）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/27/08、按钮（buttons）.html">08、按钮（Buttons）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/27/07、内容（content）.html">07、内容（Content）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">06、模块皮肤（Module Skins）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">05、模块 - 容器对象（Modules - Container Objects）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 alex2010, bystep15<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/standard/" class="mobile-nav-link">Home</a>
+  
+    <a href="/standard/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://github.com/bystep15/standard" class="mobile-nav-link">GitHub</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/standard/fancybox/jquery.fancybox.css">
+  <script src="/standard/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/standard/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
