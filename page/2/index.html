@@ -67,6 +67,329 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-oocss/03-Grids" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/06/03、网格（grids）.html" class="article-date">
+  <time datetime="2018-06-06T01:30:00.000Z" itemprop="datePublished">2018-06-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/standard/2018/06/06/03、网格（grids）.html">03、网格（Grids）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/stubbornella/oocss/wiki/Grids" target="_blank" rel="noopener">原文</a></p>
+<p>Grids are used to break any space into fractions, they can be nested and stacked. A unit can contain another line or it can contain other objects directly.  The sum of the fractional sizes of all children of one line should be equal to one. Grids control width, content controls height. The grids have all the functionality of YUI grids and some other important features.</p>
+<p>网格用于将行空间等分，这些等分单元可以嵌套和堆叠。一个单元可以继续做行等分，也可以直接包含其他的元素。一行中的所有内容的空间总和应当等于其他一行的空间。网格控制着宽度，内容控制着高度。网格模块包含YUI网格中所有的功能和一些其他重要的特性。</p>
+<ul>
+<li>Less than 1kb! (including full templates and grids)</li>
+<li>Infinite nesting and stacking.</li>
+<li>The only change required to use any of the objects, is to place it in the HTML. No changes to other places in the DOM, and no location dependent styling. </li>
+<li>Easy integration with back-end development.</li>
+<li>Easy for beginners to create complex page layouts.</li>
+</ul>
+<ul>
+<li>小于1kb！（包含所有的模板和网格）。</li>
+<li>可以无限地嵌套和堆叠。</li>
+<li>只需将需要的对象放到HTML中。DOM中其他地方不需要改变，也不会影响定位相关样式。</li>
+<li>便于后端开发工程师集成。</li>
+<li>便于初学者创建复杂页面布局。</li>
+</ul>
+<p>Please help me test the grids and template objects. Put them through their paces and let me know if you manage to break them!</p>
+<p>请帮我测试网格和模板对象。请您测试它们的效果，有任何疑问，请联系我！</p>
+<h2 id="Base-Classes"><a href="#Base-Classes" class="headerlink" title="Base Classes"></a>Base Classes</h2><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>line</code></td>
+<td>Groups units on one horizontal line. Note: for mobile layout units may be stacked to avoid horizontal scrolling.</td>
+</tr>
+<tr>
+<td><code>unit</code></td>
+<td>Base class which divides a line into sections (columns).</td>
+</tr>
+<tr>
+<td><code>sizeXofY</code></td>
+<td>Extends <code>unit</code>. Indicates the fractional width of the unit, for example <code>size3of4</code> would take up three quarters, or 75%, of the horizontal space. The following fractions are supported: 1, 1/2, 1/3, 2/3, 1/4, 3/4, 1/5, 2/5, 3/5, 4/5</td>
+</tr>
+<tr>
+<td><code>lastUnit</code></td>
+<td>Extends <code>unit</code>. Applied to the last child of every line.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>行(line)</code></td>
+<td>一组网格单元位于一条水平的行上。注意：对于移动端布局单元来说，网格单元可能会垂直堆积以避免水平滚动。</td>
+</tr>
+<tr>
+<td><code>单元（unit）</code></td>
+<td>单元基类，将一行分为几个部分（列）。</td>
+</tr>
+<tr>
+<td><code>sizeXofY</code></td>
+<td>继承自<code>unit</code>。表明单元的占比宽度，例如，<code>size3of4</code>表示占据整个水平空间的四分之三。支持的分数形式如下：1, 1/2, 1/3, 2/3, 1/4, 3/4, 1/5, 2/5, 3/5, 4/5。</td>
+</tr>
+<tr>
+<td><code>最后一个单元（lastUnit）</code></td>
+<td>继承自<code>unit</code>. 应用于每行中最后一个子元素。</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.flickr.com/photos/nicole_hugo/3291743394/" target="_blank" rel="noopener">Grids possible with OOCSS framework by Stubbornella (aka Nicole), on Flickr</a></p>
+<p><a href="http://www.flickr.com/photos/nicole_hugo/3291743394/" target="_blank" rel="noopener">在Flickr上，Stubbornella（又名Nicole）制作的OOCSS框架中网格可能的实现</a></p>
+<p><img src="http://farm4.static.flickr.com/3460/3291743394_4f4041bce5_b.jpg" alt="Grids possible with OOCSS framework"></p>
+<h2 id="一半（Halves）"><a href="#一半（Halves）" class="headerlink" title="一半（Halves）"></a>一半（Halves）</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of2"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/2<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of2 lastUnit"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/2<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="三等分（Thirds）"><a href="#三等分（Thirds）" class="headerlink" title="三等分（Thirds）"></a>三等分（Thirds）</h2><h3 id="1-3-1-3-1-3"><a href="#1-3-1-3-1-3" class="headerlink" title="1/3, 1/3, 1/3"></a>1/3, 1/3, 1/3</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of3"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/3<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of3"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/3<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of3 lastUnit"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/3<span class="tag">&lt;/<span class="name">h3</span>&gt;</span>        </span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-3-2-3"><a href="#1-3-2-3" class="headerlink" title="1/3, 2/3"></a>1/3, 2/3</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of3"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/3<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size2of3 lastUnit"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>2/3<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="四等分（Quarters）"><a href="#四等分（Quarters）" class="headerlink" title="四等分（Quarters）"></a>四等分（Quarters）</h2><h3 id="1-4-1-4-1-2"><a href="#1-4-1-4-1-2" class="headerlink" title="1/4, 1/4, 1/2"></a>1/4, 1/4, 1/2</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of4"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/4<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of4"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/4<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of2 lastUnit"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/2<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-4-1-4"><a href="#3-4-1-4" class="headerlink" title="3/4, 1/4"></a>3/4, 1/4</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size3of4"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>3/4<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of4 lastUnit"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/4<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="五等分（Fifths）"><a href="#五等分（Fifths）" class="headerlink" title="五等分（Fifths）"></a>五等分（Fifths）</h2><h3 id="4-5-1-5"><a href="#4-5-1-5" class="headerlink" title="4/5, 1/5"></a>4/5, 1/5</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size4of5"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>4/5<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of5 lastUnit"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/5<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-5-3-5"><a href="#2-5-3-5" class="headerlink" title="2/5, 3/5"></a>2/5, 3/5</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size2of5"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>2/5<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size3of5 lastUnit"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>3/5<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="复杂的集合-AG测试（Complicated-Nesting-the-AG-test）"><a href="#复杂的集合-AG测试（Complicated-Nesting-the-AG-test）" class="headerlink" title="复杂的集合 - AG测试（Complicated Nesting - the AG test）"></a>复杂的集合 - AG测试（Complicated Nesting - the AG test）</h2><p><a href="http://www.flickr.com/photos/nicole_hugo/3291776052/" target="_blank" rel="noopener">AG test of a great grids system by Stubbornella (aka Nicole), on Flickr</a></p>
+<p><a href="http://www.flickr.com/photos/nicole_hugo/3291776052/" target="_blank" rel="noopener">在Flickr上，由Stubbornella (aka Nicole)设计的基于大型的网格系统的AG测试</a></p>
+<p><img src="http://farm4.static.flickr.com/3549/3291776052_b7c8f36ed9.jpg" alt="AG test of a great grids system"></p>
+<p>Many years ago Arnaud Gueras, an excellent developer I worked with, created this litmus of a great grids system.  It should be able to nest any combination of the units and lines, and so it should be able to create the complicated layout below.  His test reminded me of the golden mean, so I still use it today. </p>
+<p>许多年前，和我一起工作的优秀工程师Arnaud Gueras创建一个完美的网格系统。它应当可以实现聚集所有单元和行的结合，并且可以创建一个复杂的布局结构。他的测试为我提供了这个完美的想法，我一直沿用至今。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of5"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/5<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size3of5"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- line --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of2"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/2<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of2 lastUnit"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/2<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- /line --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of3"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/3<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size2of3 lastUnit"</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- line --&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of2"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/2<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of2 lastUnit"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/2<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- /line --&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of1"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"unit size1of5 lastUnit"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>1/5<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/06/03、网格（grids）.html" data-id="cjiy0w45z003jqn0fd1kv3wvf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-oocss/02-Template" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/05/29/02、模板（template）.html" class="article-date">
+  <time datetime="2018-05-29T01:30:00.000Z" itemprop="datePublished">2018-05-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/standard/2018/05/29/02、模板（template）.html">02、模板（Template）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/stubbornella/oocss/wiki/Template" target="_blank" rel="noopener">原文</a></p>
+<p>Templates are used to solve common design patterns for page layout. Using these templates you can build pages which have a header, footer, left and right columns, and a main content area. Any of the sections can be broken up via <a href="/standard/2018/06/06/03、网格（grids）.html">grids</a>. You can also use grids instead of columns. The main column is fully liquid, taking up all the rest of the space when the left column and right column have been rendered.</p>
+<p>模板是用来解决页面布局的通用设计模式。可以使用模板来构建一个包含页眉、页脚、左右边栏和主体内容区域的页面。任何部分都可以通过<a href="/standard/2018/06/06/03、网格（grids）.html">网格</a>进行布局，也可以使用网格来代替竖栏布局。主体栏是流式布局，当左右边栏渲染完成后，主体栏会充满剩下的全部空间。</p>
+<p>Please help me test the grids and template objects. Put them through their paces and let me know if you manage to break them!</p>
+<p>请帮我测试网格和模板对象，测试它们的效果，如果出现问题，请联系我！</p>
+<h2 id="基础类（Base-Classes）"><a href="#基础类（Base-Classes）" class="headerlink" title="基础类（Base Classes）"></a>基础类（Base Classes）</h2><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>page</code></td>
+<td>Main wraps site content. It can be extended via the classes <code>oldSchool</code> and <code>liquid</code> to provide 750px and full width layouts respectively.</td>
+</tr>
+<tr>
+<td><code>head</code></td>
+<td>Site header, generally contains custom code. (e.g. horizontal navigation, logo, search box)</td>
+</tr>
+<tr>
+<td><code>body</code></td>
+<td>Main content area, body of the page.</td>
+</tr>
+<tr>
+<td><code>foot</code></td>
+<td>Site footer, generally contains custom code.</td>
+</tr>
+<tr>
+<td><code>main</code></td>
+<td>Creates a main content area, often the center column. Fully liquid, it takes all remaining space when left and right columns have been rendered.  You may have 1 main columns.</td>
+</tr>
+<tr>
+<td><code>leftCol</code></td>
+<td>Creates a left column, default width is 250px. Extended by <code>gMail</code>, <code>gCal</code>, <code>yahoo</code>, and <code>myYahoo</code> to create widths of 160px, 180px, 240px, and 300px respectively. You may have 0-n left columns.</td>
+</tr>
+<tr>
+<td><code>rightCol</code></td>
+<td>Creates a right column, default width is 250px. Extended by <code>gMail</code>, <code>gCal</code>, <code>yahoo</code>, and <code>myYahoo</code> to create widths of 160px, 180px, 240px, and 300px respectively. You may have 0-n right columns.</td>
+</tr>
+<tr>
+<td><code>gMail</code></td>
+<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a 160px column width.</td>
+</tr>
+<tr>
+<td><code>gCal</code></td>
+<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a 180px column width.</td>
+</tr>
+<tr>
+<td><code>yahoo</code></td>
+<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a 240px column width.</td>
+</tr>
+<tr>
+<td><code>myYahoo</code></td>
+<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a 300px column width.</td>
+</tr>
+<tr>
+<td><code>oldSchool</code></td>
+<td>Extends <code>page</code> to create a 750px layout.</td>
+</tr>
+<tr>
+<td><code>liquid</code></td>
+<td>Extends <code>page</code> to create a full-width liquid layout.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>页面（page）</code></td>
+<td>网站整页。它可以由<code>oldSchool</code>和<code>liquid</code>属性分别扩展为750px和全宽的布局。</td>
+</tr>
+<tr>
+<td><code>页眉（head）</code></td>
+<td>网站头部，通常包含自定义代码组成。（比如由水平导航栏，logo，搜索框）</td>
+</tr>
+<tr>
+<td><code>主体（body）</code></td>
+<td>网站主体内容区域，是页面的主体部分。</td>
+</tr>
+<tr>
+<td><code>页尾（foot）</code></td>
+<td>网页尾部，通常包含自定义代码部分。</td>
+</tr>
+<tr>
+<td><code>主要区域（main）</code></td>
+<td>页面的主要内容区域，经常是中心栏。它全部是流式布局，会填充左右边栏渲染剩下的全部区域。您可以有一个主要的中心栏。</td>
+</tr>
+<tr>
+<td><code>左边栏（leftCol）</code></td>
+<td>左边栏，默认的宽度是250px。可以分别由<code>gMail</code>, <code>gCal</code>, <code>yahoo</code> 和 <code>myYahoo</code> 属性扩展为160px, 180px, 240px, 和 300px。您可以有0个到n个左边栏。</td>
+</tr>
+<tr>
+<td><code>右边栏（rightCol）</code></td>
+<td>右边栏，默认的宽度是250px。可以分别由<code>gMail</code>, <code>gCal</code>, <code>yahoo</code> 和 <code>myYahoo</code> 属性扩展为160px, 180px, 240px, 和 300px。您可以有0个到n个右边栏。</td>
+</tr>
+<tr>
+<td><code>gMail</code></td>
+<td>扩展<code>leftCol</code> 或 <code>rightCol</code>为160px的列宽。</td>
+</tr>
+<tr>
+<td><code>gCal</code></td>
+<td>扩展<code>leftCol</code> 或 <code>rightCol</code>为180px的列宽。</td>
+</tr>
+<tr>
+<td><code>yahoo</code></td>
+<td>扩展<code>leftCol</code> 或 <code>rightCol</code>为240px的列宽。</td>
+</tr>
+<tr>
+<td><code>myYahoo</code></td>
+<td>扩展<code>leftCol</code> 或 <code>rightCol</code>为300px的列宽。</td>
+</tr>
+<tr>
+<td><code>oldSchool</code></td>
+<td>扩展<code>page</code>为750px宽的布局。</td>
+</tr>
+<tr>
+<td><code>liquid</code></td>
+<td>扩展<code>leftCol</code>为全宽的流式布局。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="基本模板（Basic-template）"><a href="#基本模板（Basic-template）" class="headerlink" title="基本模板（Basic template）"></a>基本模板（Basic template）</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"head"</span>&gt;</span><span class="comment">&lt;!-- Head --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"body"</span>&gt;</span><span class="comment">&lt;!-- Body --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"leftCol"</span>&gt;</span><span class="comment">&lt;!-- Left Column (optional region) --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"rightCol"</span>&gt;</span><span class="comment">&lt;!-- Right Column (optional region) --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="comment">&lt;!-- Main Content --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"foot"</span>&gt;</span><span class="comment">&lt;!-- Foot --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="全宽模板，两列，gmail格式类型（Full-width-template-2-columns-gmail-style-（160px-left-column-width））"><a href="#全宽模板，两列，gmail格式类型（Full-width-template-2-columns-gmail-style-（160px-left-column-width））" class="headerlink" title="全宽模板，两列，gmail格式类型（Full width template, 2 columns, gmail style （160px left column width））"></a>全宽模板，两列，gmail格式类型（Full width template, 2 columns, gmail style （160px left column width））</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page liquid"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"head"</span>&gt;</span><span class="comment">&lt;!-- Head --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"body"</span>&gt;</span><span class="comment">&lt;!-- Body --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"leftCol gMail"</span>&gt;</span><span class="comment">&lt;!-- Left Column (optional region) --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="comment">&lt;!-- Main Content --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- <span class="doctag">note:</span> right column has been removed --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"foot"</span>&gt;</span><span class="comment">&lt;!-- Foot --&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="目标（Goals）"><a href="#目标（Goals）" class="headerlink" title="目标（Goals）"></a>目标（Goals）</h2><p>In object oriented CSS the most important goal is to have a single template from which all pages are built.  This eases CMS development because by having a single starting point all pages can be made into any other page. Users of the CMS do not have traps in which a page they have built cannot be morphed into a different page type.  Another goal of an OO template is to have each section (column, header, etc) control its own destiny.  Practically, that means that if you want to add a left column to the template, the only required action should be actually adding the column to the HTML.  You never want to write CSS in such a way that changes are required higher in the DOM tree in order to make child elements behave properly.  Looping through the DOM is costly for CMS development. Similarly, if you want to have a different left column width, it should be accomplished by extending the left column object by adding an additional class. </p>
+<p>在面向对象的CSS中，最重要的目标是创建一个唯一的通用模板，可以用来构建所有页面。这会简化CMS的开发，因为从一个单页模板出发，可以构建成任何需要的页面。CMS用户也不必陷入一个单一页面没法变成不同页面类型的苦恼。面向对象的模板的另一个目标是每个部分（比如列，页头，等等）可以控制自身的变化。特别的是，如果您想向模板中添加一列左边栏，您唯一要做的就是向HTML中添加一列竖列，而不需要对着DOM，编写复杂的CSS样式完成需要的效果。循环整个DOM结构对于CMS的开发是很费事的。相似的，如果需要一个不一样的列宽，唯一需要做的就是给左列对象添加一个额外的类。</p>
+<h3 id="扩展一个对象（Extending-an-object）"><a href="#扩展一个对象（Extending-an-object）" class="headerlink" title="扩展一个对象（Extending an object）"></a>扩展一个对象（Extending an object）</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"leftCol gMail"</span>&gt;</span> ... <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="制定模板（Customizing-the-template）"><a href="#制定模板（Customizing-the-template）" class="headerlink" title="制定模板（Customizing the template）"></a>制定模板（Customizing the template）</h2><p>You may not find the default and extended widths of columns or pages match your site. In this case you can extend the column or main objects to allow custom widths. For performance reasons, you should avoid customizing templates whenever possible.</p>
+<p>列宽度、页面宽度的默认和扩展可能跟您的站点不匹配，这种情况下可以通过继承列或者主体对象来实现自定义宽度。出于性能考虑，应该尽量避免自定义模板。</p>
+<h3 id="列（Columns）"><a href="#列（Columns）" class="headerlink" title="列（Columns）"></a>列（Columns）</h3><p><code>myColumn</code> extends column objects to allow for custom column widths.</p>
+<p><code>myColum</code>继承列对象，实现列宽度的自定义。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.myColumn</span>&#123;<span class="attribute">width</span>:<span class="number">400px</span>;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="主页（Main-page）"><a href="#主页（Main-page）" class="headerlink" title="主页（Main page）"></a>主页（Main page）</h3><p><code>myPage</code>  extends <code>main</code>.</p>
+<p><code>myPage</code>继承<code>main</code>。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.myPage</span>&#123;<span class="attribute">width</span>:<span class="number">1050px</span> <span class="meta">!important</span>;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="已知的问题（Known-Issues）"><a href="#已知的问题（Known-Issues）" class="headerlink" title="已知的问题（Known Issues）"></a>已知的问题（Known Issues）</h2><ul>
+<li><p>Source order - the right column is before the main content in the source order. This choice was made in order to allow the columns to be completely independent objects and to have one unique template rather than multiple starting points for a site. This speeds and simplifies CMS development and enhances usability for those creating pages within the CMS. Skip to content links and navigational items marked up as lists are strongly encouraged.</p>
+</li>
+<li><p>源码顺序 - 在源码中，右边栏的顺序应该在主体内容部分之前，目的是为了让边栏成为完全独立的对象，并且对于整个网站，从唯一的模板做起点开始编码，避免从多个不同的起点。这样可以加速和简化CMS的开发，并且提高页面的可用性。同时强烈建议把调转到内容区域的链接列表和导航列表用列表标记实现。</p>
+</li>
+<li><p>Overflow - the containing blocks are made to wrap floats using the contexte de formattage; <code>overflow:hidden; _overflow:visible; zoom:1;</code>. This is known to cause printing bugs in older versions of Firefox and can cause absolutely positioned blocks originating in that container to be cropped. Removing floats and overflow via the print stylesheet is a corrective option.</p>
+</li>
+<li><p>溢出 - 包含块使用内容格式化的方式包含浮动块；<code>overflow:hidden; _overflow:visible; zoom:1;</code>。在老版本的Firefox中这会造成打印bug，并导致包含在该该块的绝对定位的块级元素被截短。针对这种情况，可以移除浮动和溢出，使用专门的打印样式表代替。</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/05/29/02、模板（template）.html" data-id="cjiy0w45w003hqn0ff8ev9lno" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-oocss/01-Object-Oriented-CSS" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/standard/2018/01/02/01、面向对象的css（object-oriented-css）.html" class="article-date">
@@ -241,14 +564,14 @@
 <li><a href="/standard/2018/06/06/03、网格（grids）.html">3、网格（grids）</a></li>
 <li><a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">4、标准模块格式（Standard Module Format）</a></li>
 <li><a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">5、模块（Modules）</a></li>
-<li><a href="06-Module-Skins.md">6、模块的表现形式（Module Skins）</a></li>
-<li><a href="07-Content.md">7、内容（Content）</a></li>
-<li><a href="08-Buttons.md">8、按钮（Buttons）</a></li>
-<li><a href="09-Talk-Bubbles.md">9、谈话框（Talk Bubbles）</a></li>
-<li><a href="10-Carousel.md">10、滚动栏（Carousel）</a></li>
-<li><a href="11-UML.md">11、UML</a></li>
-<li><a href="12-Graded-Browser-Support.md">12、分级浏览器支持（Graded Browser Support）</a></li>
-<li><a href="13-FAQ.md">13、常见问题（FAQ）</a></li>
+<li><a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">6、模块的表现形式（Module Skins）</a></li>
+<li><a href="/standard/2018/06/27/07、内容（content）.html">7、内容（Content）</a></li>
+<li><a href="/standard/2018/06/27/08、按钮（buttons）.html">8、按钮（Buttons）</a></li>
+<li><a href="/standard/2018/06/27/09、对话框（talk-bubbles）.html">9、谈话框（Talk Bubbles）</a></li>
+<li><a href="/standard/2018/06/28/10、走马灯（carousel）.html">10、滚动栏（Carousel）</a></li>
+<li><a href="/standard/2018/06/28/11、uml.html">11、UML</a></li>
+<li><a href="/standard/2018/06/28/12、浏览器分级支持（graded-browser-support）.html">12、分级浏览器支持（Graded Browser Support）</a></li>
+<li><a href="/standard/2018/06/28/13、常见问题（faq）.html">13、常见问题（FAQ）</a></li>
 </ul>
 
       
@@ -323,6 +646,14 @@
       <ul>
         
           <li>
+            <a href="/standard/2018/06/28/13、常见问题（faq）.html">13、常见问题（FAQ）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/28/12、浏览器分级支持（graded-browser-support）.html">12、浏览器分级支持（Graded Browser Support）</a>
+          </li>
+        
+          <li>
             <a href="/standard/2018/06/28/11、uml.html">11、UML</a>
           </li>
         
@@ -332,14 +663,6 @@
         
           <li>
             <a href="/standard/2018/06/27/09、对话框（talk-bubbles）.html">09、对话框（Talk Bubbles）</a>
-          </li>
-        
-          <li>
-            <a href="/standard/2018/06/27/08、按钮（buttons）.html">08、按钮（Buttons）</a>
-          </li>
-        
-          <li>
-            <a href="/standard/2018/06/27/07、内容（content）.html">07、内容（Content）</a>
           </li>
         
       </ul>
