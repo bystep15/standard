@@ -1,4 +1,9 @@
-# 常见问题（FAQ）
+title: 13、常见问题（FAQ）
+categories: [理论, css, oocss]
+tags: [理论, css, oocss]
+date: 2018/06/28 14:30:00
+---
+
 
 [原文](https://github.com/stubbornella/oocss/wiki/FAQ)
 
@@ -6,11 +11,11 @@ Whoa, you have lots of questions! I'd better start recording the answers if I wa
 
 哇，看来你有很多问题！ 如果我想把内容描述的更好，我最好开始记录答案。
 
-## 在面向对象的CSS中，一个“对象”意味着什么？（What is meant by an "object" in OOCSS?）
+## OOCSS中“对象”具体指什么？（What is meant by an "object" in OOCSS?）
 
 In keeping with the OO metaphor, an object is analogous with an instance of Java or PHP class, for example (though the [granularity is different!](http://www.stubbornella.org/content/2010/06/21/css-granularity-architecture/))
 
-为了保持与面向对象中的含义一致，一个对象可以类比于于Java或PHP类的一个实例（尽管[粒度是不同的！](http://www.stubbornella.org/content/2010/06/21/css-granularity-architecture/)）
+为了保持与面向对象中的概念一致，对象可以类比为Java或PHP的类一个实例（尽管[粒度不同](http://www.stubbornella.org/content/2010/06/21/css-granularity-architecture/)！）
 
 A CSS object consists of four things:
 - HTML, which can be one or more nodes of the DOM,
@@ -18,21 +23,21 @@ A CSS object consists of four things:
 - Components like background images and sprites required for display, and
 - JavaScript behaviors, listeners, or methods associated with the object.
 
-一个CSS对象包含以下四个部分：
-- HTML，可以是DOM的一个或多个子节点。
-- CSS声明的节点的样式，这些节点的样式全部开始于容器节点的类名
+一个CSS对象由以下四个部分组成：
+- HTML，表示DOM的一个或多个子节点。
+- 所有以容器节点的类名为前缀的CSS样式声明
 - 需要显示的背景图像和精灵等的组件
-- JavaScript表现形式，监听器或与对象关联的方法。
+- JavaScript功能，监听器和与对象关联的方法。
 
 This can be confusing because each CSS class is not necessarily an object in its own right, but can be a property of a wrapper class.
 
-这可能令人困惑，因为每个CSS类本身不一定是一个对象，但可以是一个容器类的属性。
+令人困惑的是，每个CSS类本身不一定是一个对象，但可以是一个容器类的属性。
 
 For example:
 
 例如：
 
-```
+```html
 <div class="mod">
     <div class="inner">
          <div class="hd">Block Head</div>
@@ -46,96 +51,96 @@ The object is a module, indicated by the class mod. It contains four property no
 
 该对象是一个模块，由类mod来表示。 它包含四个属性节点（这些节点不能脱离于模块，包括两个必要的区域，内部（inner）和正文（body），以及两个可选区域，头部（head）和脚部（foot）。
 
-## 面向对象的CSS是如何增强表现形式的呢？（How does OOCSS improve performance?）
+## 面向对象的CSS是如何提高性能的？（How does OOCSS improve performance?）
 
 The performance benefits of OOCSS are twofold:
-# Heavy reuse of CSS code, so less CSS code needed, which means:
-** Smaller files, hence faster transfers
-** A bigger percentage of the CSS code needed on most pages of your site is likely to be reused and possibly cached by the browser
-# To a lesser degree, fewer repaints and layout calculations on the part of the browser.  
-On a single page, the more CSS rules are reused, the less time the rendering engine spends calculating "computed values"
 
-面向对象的CSS的性能优点是双向的：
-# 重复使用CSS代码，所以需要的CSS代码数量少，这意味着：
-** 文件体积更小，所以可以更快的传输
-** 浏览器可能会重复使用网站大多数页面上所需的CSS代码，并可能会对其进行缓存
-# 更多程度上，浏览器很少会重绘和布局计算。
-在单个页面上，更多的CSS规则被重用，因此渲染引擎会花费更少的时间得到“计算值”
+1. Heavy reuse of CSS code, so less CSS code needed, which means:
+    1. Smaller files, hence faster transfers
+    2. A bigger percentage of the CSS code needed on most pages of your site is likely to be reused and possibly cached by the browser
 
-## 我应该用ID来描述我内容的样式么？（Should I use IDs to style my content?）
+2. To a lesser degree, fewer repaints and layout calculations on the part of the browser.  
+    On a single page, the more CSS rules are reused, the less time the rendering engine spends calculating "computed values"
+
+OOCSS从两个方面优化性能：
+
+1. CSS代码复用，所需的CSS代码数量更少，这意味着：
+    1. 文件体积更小，可以更快的传输
+    2. 网站大多数页面上会重用大部分CSS代码，浏览器可能会对其进行缓存
+
+2. 减少计算，浏览器会减少重绘和布局计算。
+    在单个页面上，CSS规则被重用的越多，渲染引擎花费“计算值”的时间越少。
+
+## 可以用ID来描述样式吗？（Should I use IDs to style my content?）
 
 There are two reasons for not using ID's to style content:
 1. They mess up specificity because they are too strong (the most important reason)
 2. They are unique identifiers, which makes components built with them something like singletons, not reusable on the same page
 
 
-以下有两个原因不适用ID来描述样式内容：
+有两个原因来说明不适合使用ID来描述样式：
 1. 因为它们的功能太强大了，如果使用会混淆了ID的特异性（这是最主要的原因）
 2. 它们是唯一的标识符，它使得构建的组件像单件一样，不能在同一页面上重用
 
 When you reuse an object in the same page (or on the same site if the cache is working properly), it is a performance "freebie".  Styling using IDs makes it impossible to use the same element twice on the same page. @cgriego (twitter) compared it to singletons, which sounds accurate to me.  There may be cases where you want to style using an ID, like header menus that are very specific, in this case you can use an ID to sandbox the particular element and be sure that the code written for it doesn't impact the rest of the site. Think carefully before you choose an ID over a class, it is really hard to predict what people will do with HTML built from your CSS as the site evolves. If you have a choice, leave things as flexible as possible.
 
-当你在同一个页面中重用一个对象时（或者如果一个网站的缓存可以运行的话），这是一个性能的重复使用。如果使用ID来描述样式，会使得在同一页面上不可能使用相同的元素两次。@cgriego （推特）将其与独立的样式比较，这在我听起来是准确的。可能有些情况下，你想要使用一个ID的样式，如非常特殊的标题菜单，在这种情况下，你可以使用一个ID来指定对应的元素，并确保为它写的代码不会影响网站的其余部分。在现在使用ID而不是class之前仔细想清楚，在网站构建过程中，很难预测人们如何使用由CSS构建的HTML。所以如果你有选择的话，尽可能的保持可复用性和灵活性。
+当一个页面中重用一个对象时（或者同站点的缓存生效时），会带来一定的性能优化。如果使用ID选择器，那么在同一页面上相同的元素不能出现两次。@cgriego （推特）将其比作单例，这种说法听起来是准确的。在某些情况下，可能需要使用一个ID的样式，比如非常特殊的标题菜单，在这种情况下，你可以使用一个ID来指定对应的元素，并确保为它写的代码不会影响网站的其余部分。慎重使用ID对类进行覆盖，随着网站的发展，很难预测人们如何使用跟CSS相关的HTML。所以选择的原则是，尽可能的保持可复用性和灵活性。
 
 I removed the ids from head, body, and foot in my template. Someone could have multiple main content areas.  Multiple site headers and footers are more difficult to imagine, but I bet there is a designer who can dream up something like that, so the IDs needed to disappear. 
 
-我从模板中的头部，主体和尾部删除了ID。 也许有人有多个主要内容区域。 那样对于多站点的页眉和页脚的数量是更难以想象的，但我敢打赌，肯定有设计师想过这样的事情，所以ID属性在这里不应出现。
+我已经从模板中的头部，主体和尾部删除了ID。 也许存在多个主要内容区域的情况，那样对于多站点的页眉和页脚的数量是更难以想象的，但我敢打赌，肯定有设计师想过这样的事情，所以ID属性在这里不应出现。
 
 On the other hand, IDs are great for linking and JS hooks.  Put them in the HTML, just don't use them for styles.
 
-换句话说，ID对于链接和JS的钩子来说是个不错的选择。将他们放在HTML里面但不在样式中使用它们，的确有些欠妥。
+换句话说，ID对于链接和JS的钩子来说是个不错的选择。只是将它们放在HTML里面，但不要在样式中使用它们。
 
-## 设计师不能编写面向对象的CSS么？（Designers can't code OOCSS, can they?）
+## 设计师能编写OOCSS吗？（Designers can't code OOCSS, can they?）
 
 Yes, designers instinctively understand objects, it is much more concrete than the way most people are currently coding CSS --layers of exceptions (think, there was an old lady who swallowed a fly). In fact, they love OOCSS for two reasons.  
-
-是的，设计师本能地认为对象比目前大多数编写的CSS对象的方式更具体 - 作为例外的层面（想想，有一位吞下了一只苍蝇的老太太 （是个梗么？？？？？？））。 事实上，他们出于两个原因才喜欢面向对象的CSS。
 
 1. It allows them to ramp up a lot faster when creating complex high traffic sites. They don't have to bother with understanding the structures until they are reasonably competent and comfortable with basic syntax.
 2. When learning CSS, they never have to create the ugly "hello world!" website.  Designers care very much that their work is beautiful.  If they have to make something ugly, even for the sake of learning, they will very quickly get frustrated and annoyed.  OO-CSS allows their work to be beautiful at each stage of the learning process. 
 
-1. 这使得他们可以更快的创建复杂的高流量网站。他们不必费心地去理解结构，直到他们可以合理和舒适的理解基本语法。
-2. 在学习CSS时，他们永远不必创建无聊的“hello world！”网站。设计师非常在乎他们网站的优美程度。如果他们不得不为了学习而做出丑陋的事情，他们很快就会感到沮丧和烦恼。而面向对象的CSS可以让他们在学习过程的每个阶段都感到他们代码的优美。
+能，设计师天生理解对象，这种方式比目前大多数编写CSS的方式更具体——当然会存在例外。实际上设计师喜欢OOCSS主要出于两个原因。
+
+1. 这使得他们可以更快的创建复杂的高流量网站。在正确、开心的理解基本语法之前，不必费心地去理解结构。
+2. 在学习CSS时，他们永远不必创建无聊的“hello world！”网站。设计师非常在乎他们网站的优美程度。如果他们不得不为了学习而做出丑陋的事情，他们很快就会感到沮丧和烦恼。而OOCSS可以让他们在学习过程的每个阶段都感到优美。
 
 Designers are smart.  We need to give them credit. They may speak a different, non-engineering language, but often geeky language excludes people in a way that is kind of ugly. We can do better than that.
 
-永远要记住，设计师都是很聪明的。我们应当给予他们信任。他们也许会说一些不基于编程语言的内容，但通常人们对于编写不规范的代码都会感到厌烦。所以我们可以，也应该做得比这更好。
+永远要记住，设计师都是很聪明的。我们应当给予他们信任。他们也许会有一些非编程语言相关的表达，但通常人们对于编写不规范的代码都会感到厌烦。所以我们可以，也应该做得更好。
 
-## I'm a Front-end Architect, how do I teach this to my team?
-
-## 我是一名前端架构师，我应当如何向我的团队传达这些内容？
+## 我是一名前端架构师，我应当如何向我的团队传达这些内容？（I'm a Front-end Architect, how do I teach this to my team?）
 
 As the architect, you should write the structure object; set up how the rounded corner box is created, positions all the presentational elems for corners or other features, and deals with browser differences. Newbies write the skins for these modules (borders, colors, background images, etc).
 
-作为一名架构师，您应该记录下结构对象; 设置如何创建圆角框，定位所有角落或其他功能的表现元素，并处理浏览器的差异性。 而新手为这些模块（边界，颜色，背景图像等）编写样式。
+由架构师来设计结构对象; 设计创建圆角的方式，定位所有角落或其他功能的表现元素，并处理浏览器兼容性。而新手为这些模块编写样式（边界，颜色，背景图像等）。
 
 I built large scale sites (1000s of pages, millions of visitors) using the OO-CSS method. It scales well and, when done correctly, it means that the individual components a newbie would be working on are relatively predictable. Code review is easy because there are clear rules about acceptable ways to extend objects. This kind of feedback makes new developers productive really quickly.
 
-我用面向对象的方法构建了一个大规模的站点（一千多个页面，百万级别的浏览者）。它的扩展性良好并且如果做得正确的话，这意味着一个新的即将开展编写的单个组件是相对可预测的。 代码审查是很容易的，因为有明确的规则来扩展对象。 这种反馈使得新开发非常迅速。
+我用面向对象的方法构建了一个大规模的站点（一千多个页面，百万级别的浏览者）。它的扩展性良好并且正确实现，这意味着一个新手编写的组件是相对可预测的。代码审查是很容易的，因为有明确的规则来扩展对象。 这种反馈使得新项目开发可以快速开展。
 
 I managed a team of front end developers at FullSIX (a web marketing agency in France) who are among the most talented people I’ve ever worked with. At some point our success meant that we had far more work than we could handle. It is very hard to hire front-end experts (there is no school for this stuff!), so I started an [internal internship program where designers who were interested in exploring code](http://www.slideshare.net/stubbornella/object-oriented-css/57) (but had little to no previous experience) could come work as junior members of our team for one month.
-
-我在FullSIX（法国一家网络销售机构）管理一批前端开发人员，他们是我曾经共事过的最有才华的人。在某种程度上，我们的成功意味着我们的工作要比我们所能处理的事情要多得多。 要聘请前端专家是非常困难的（学校里不会有这门课程），因此我开始了一个[内部实习计划](http://www.slideshare.net/stubbornella/object-oriented-css/57)，为那些有兴趣探索代码（但以前几乎没有什么经验）的人可以作为初级工程师来我们团队工作一个月。
 
 * Week 1: They learned about semantics and built html from existing CSS. Learning to build new pages without writing more CSS, HTML syntax, multiple classes, validation, semantics, intro to code review, etc.
 * Week 2: They built simple content objects (headings, lists, etc) for a week. Learning CSS syntax, how to extend objects, colors, % sizes for text, etc.
 * Week 3: they were building block skins. Borders, colors, background images, basic positioning, sprites. They worked with an amazing senior developer who answered a ton of questions and really helped them scale the learning curve. He also happens to be a very talented code reviewer.
 * Week 4: they were productive members of my team building skins that were production ready.
 
+我在FullSIX（法国一家网络销售机构）管理一批前端开发人员，他们是我曾经共事过的最有才华的人。在某种程度上，我们的成功是因为我们的工作成果远高于我们的能力。 要聘请前端专家是非常困难的（学校里不会有这门课程），因此我开始了一个[内部实习计划](http://www.slideshare.net/stubbornella/object-oriented-css/57)，那些有兴趣研究代码（但以前几乎没有什么经验）的人可以作为初级工程师来我们团队工作一个月。
+
 * 第一周：他们学习了语义化，并基于现有的CSS来构建了HTML。 学习用现有的CSS，HTML语法，多个类，有效性，语义化和代码审阅介绍来构建新的页面。
 * 第二周：他们用这周的时间来构建简单的内容对象（标题，列表等）。并学习CSS语法，如何扩展对象，颜色，文本的百分比大小等。
-* 第三周：他们来构建块级的样式。 边界，颜色，背景图像，基本定位，精灵图片。 他们和一个了不起的高级开发人员一起工作，并会回答他们很多问题，帮助他们扩展学习曲线。同时，他也会是一个非常有才华的代码审阅者。
-* 第四周：现在他们就是我们团队高效的编写样式的工作人员。
+* 第三周：他们来构建块级的样式。 边界，颜色，背景图像，基本定位，精灵图片。 他们和一个了不起的高级开发人员一起工作，并会解答他们很多问题，帮助他们扩展学习曲线。同时，他也会是一个非常有才华的代码审阅者。
+* 第四周：他们已经成为我们团队高效的编写样式的工作人员。
 
 Their code is live on a client website. It is as good as anything written by the senior developers, maybe better because they didn’t have to un-learn bad habits. :) 
 
 他们的代码在线上的网站上使用，并且表现的跟有工作经验的高级开发者一样好，或者比他们更好，毕竟他们现在还没有学习一些坏习惯:)
 
-## 开始：我应该如何用这些文件工作？（Getting Started: How do I work with these files?）
+## 起步：我应该如何用这些文件工作？（Getting Started: How do I work with these files?）
 
 Three files, libraries.css (reset and fonts from yui), grids.css and template.css are ready, the others are still extremely unstable. 
-
-这有三个文件，已经准备好的有libraries.css（基于YUI的重置和字体），grids.css和 ready，其他的文件目前还不稳定。
 
 1. [Download the whole project](http://github.com/stubbornella/oocss/downloads) via the download button.
 2. Open template.html and save it as a new file.
@@ -145,23 +150,25 @@ Three files, libraries.css (reset and fonts from yui), grids.css and template.cs
 6. Copy and paste modules and talk bubbles, add content there too
 7. Build new module styles based on "mod_skins.css"
 
-1. 通过下载按钮下载[下载整个项目](http://github.com/stubbornella/oocss/downloads)。
+libraries.css（基于YUI的重置和字体），grids.css和template.css已经是完成状态，其他的文件目前还不稳定。
+
+1. 点击[下载整个项目](http://github.com/stubbornella/oocss/downloads)。
 2. 打开template.html并将它另存为一个新的文件。
 3. 通过扩展这些对象来调整列的数量和宽度。 即使您的网页具有不同的列数，您的网站也只需要一个模板，因为这些列数像其他的东西一样都是个对象。 您可以将它们视为可选区域，您可能有0-n个左列。有关更多信息，请参阅模板文档。
 4. 使用网格将任何内容区域分解为更小的块。有关更多信息，请参阅网格文档。
 5. 添加内容。提示，这部分也应该是面向对象的部分。
-6. 复制和粘贴模块与谈话框，并在此部分添加内容。
+6. 复制和粘贴模块与对话框，并在此部分添加内容。
 7. 基于"mod_skins.css"建造新的模块样式。
 
 ## 我应该如何将它们部署到一个线上的站点？（How do I deploy this on a live site?）
 
 Keep in mind that the CSS is still evolving, I may change things based on feedback I'm receiving.
 
-应当注意，CSS还在发展的过程中，我也许会基于我收到的反馈来改变这些内容。
+应当注意，这些CSS还在发展的过程中，我会基于收到的反馈来调整这些内容。
 
 I've broken up the CSS files into modules like grids and template. On a real site you should remove unnecessary comments and reduce HTTP requests, or the site will be super slow.  This means you need to combine CSS files into one larger file.  I use nested comments, to keep the CSS organized.  Finally, run a CSS minifier as a part of the push/deployment process to remove stray comments.
 
-我已经把CSS文件分解成像网格和模板这样的模块。 在一个真实的网站，你应该删除不必要的评论，并减少HTTP请求，否则该网站会变得超慢。 这意味着您需要将CSS文件合并成一个更大的文件。 我使用嵌套评论，以此来保持CSS的结构。 最后，运行CSS 缩小镜作为推送/部署过程的一部分来移除注释。
+我已经把CSS文件分解成像网格和模板这样的模块。 在一个真实的网站，你应该删除不必要的注释，并减少HTTP请求，否则该网站会变得超慢。 这意味着您需要将CSS文件合并成一个更大的文件。 我使用嵌套注释，以此来保持CSS的结构。 最后，运行CSS代码压缩作为推送/部署过程的一部分来移除注释。
 
 ## 我应该编辑这些文件，或者用我的样式表重写它们么？（Should I edit these files, or overwrite them with my own stylesheet?）
 
@@ -181,12 +188,12 @@ If you want more than six heading styles, extend the heading objects by adding a
 
 如果您想要多于六个数量的标题样式，可以添加一个新类来扩展标题对象。
 
-```
-.category{
-  font-size:108%;
-  font-weight:normal;
+```css
+.category {
+  font-size: 108%;
+  font-weight: normal;
   font-style: normal;
-  text-transform:uppercase;
+  text-transform: uppercase;
   color: #333;
 }
 ```
@@ -194,13 +201,13 @@ If you want more than six heading styles, extend the heading objects by adding a
 What not to do:
 而不是这样操作：
 
-```
+```css
 #mySaleModule h2, 
-#mySaleModule .h2{
-  font-size:108%; 
-  font-weight:normal;
+#mySaleModule .h2 {
+  font-size: 108%; 
+  font-weight: normal;
   font-style: normal;
-  text-transform:uppercase;
+  text-transform: uppercase;
   color: #333;
 }
 ```
@@ -210,7 +217,7 @@ What not to do:
 If you want to extend an object, for example a 160px left column, rather than the default, you should add an additional class to the column.
 如果您想扩展一个对象，例如一个不同于默认样式的160px的左边栏，您可以向列的类中添加一个额外的类。
 
-```
+```html
 <div class="leftCol gMail"> ... </div>
 ```
 
@@ -223,26 +230,26 @@ If the default and extended widths of columns or pages don't match your site, yo
 `myColumn` extends column objects to allow for custom column widths.
 您可以使用`myColumn`来扩展列以允许自定义宽度。
 
-```
-.myColumn{width:400px;}
+```css
+.myColumn { width:400px; }
 ```
 
 And the HTML
 对于HTML
 
-```
+```html
 <div class="leftCol myColumn"> ... </div>
 ```
 
 Don't think of this as overwriting my classes, but rather extending the objects provided by the framework.  I give you columns, headings, and other objects.  You can extend those objects by adding another class that only specifies the differences between my base object and your implementation of the same. Mixins may be a good analogy here. 
 
-不要认为这样做是覆盖掉了我原来的类，这是位扩展框架提供了扩展的对象。 我给您列，标题和其他对象。 您可以通过添加另一个类来扩展这些对象，该类只指定我的基础对象和您的具体要实现的样式之间的区别。 Mixins在这里可能是一个很好的比喻。
+不要认为这样做是覆盖掉了我原来的类，这是为扩展框架提供了扩展的对象。 我给您列，标题和其他对象。 您可以通过添加另一个类来扩展这些对象，该类只指定我的基础对象和您的具体要实现的样式之间的区别。 Mixins在这里可能是一个很好的比喻。
 
 What not to do (because it will make it harder for you to upgrade to newer versions of my framework):
 
 不要向下面这样做（因为当您这样做之后，用我这个框架更新时会带来极大的不便）：
 
-```
+```css
 .leftCol{... custom css here ...}
 ```
 
@@ -262,13 +269,13 @@ In object oriented CSS, an important goal is to have a single template from whic
 
 OOCSS can be written in a semantic or non-semantic way, it is up to you to create modules like `errorMod` rather than `bigRedModule`. I've chosen class names with a few goals in mind (in no particular order).
 
-面向对象的CSS可以通过语义化和非语义化的方式来编写，您可以用`errorMod`而不是`bigRedModule`来创建模块,这完全取决于您。我是处于一些想法和目的来选择类的名称（没有特定的顺序）。
-
 - Brevity - every byte counts, so I kept classes as short as possible
 - Clarity - expected behavior/style should be immediately obvious
 - Semantic - what an object is matters more than what it looks like. How will it be used in the site?
 - Generic - the name should be true for most sites. Overly specific names reduce the number of use cases or cause semantic classes to be used in a non-semantic way.  
 - Screen - Different views might be provided by mobile or print stylesheets, however they override the default screen view, so the classes chosen are screen specific when there was a conflict. This simplifies development.
+
+OOCSS可以通过语义化和非语义化的方式来编写，您可以用`errorMod`而不是`bigRedModule`来创建模块,这完全取决于您。我是基于下面的原则和类的目的来选择类的名称（没有特定的顺序）。
 
 - 简洁 - 每一个字节的内容都是很重要的，所以我会将类尽可能的缩短
 - 清晰 - 预期的表现/风格应该立马能显示出来
@@ -278,13 +285,13 @@ OOCSS can be written in a semantic or non-semantic way, it is up to you to creat
 
 The code and docs are a framework, an example of OOCSS. I can't predict what you are going to put in leftCol. I could call it navigation, but that may not be true for your site. Sometimes these important goals are in opposition to one another.  In those cases I've fallen back on pragmatism and made a judgement call. Nothing can replace a clever developer making the right choice in a given situation.
 
-代码和文档是一个框架，面向对象的CSS就是一个例子。 我无法预测你要把什么放在左边。 我姑且称之为导航，但是这样可能并能不适用您的网站。 有时这些重要的目标是对立的。 在这种情况下，我会基于了实际情况作出判断。 没有什么会比一个聪明的开发人员在给定的情况下做出正确的选择更重要了。
+代码和文档是一个框架，OOCSS就是一个例子。 我无法预测你要把什么放在左边。 我姑且称之为导航，但是这样可能并能不适用您的网站。 有时这些重要的目标是对立的。 在这种情况下，我会基于了实际情况作出判断。 没有什么会比一个聪明的开发人员在给定的情况下做出正确的选择更重要了。
 
 ## 其他的库或者框架是怎样的？这个项目只跟YUI相关么？（What about other libraries/frameworks? Does this only work with YUI?）
 
 In an ecosystem with a lot of frameworks and libraries, YUI stands out as an example of professionalism and scalability. I compare myself to them because I am continually impressed by the quality of their code and documentation. OOCSS isn't really a framework, though I'm creating one here as an example, but a way of writing scalable, sane, maintainable CSS. Maybe the best analogy is a new language. Ultimately, it is JavaScript library agnostic and I hope to contribute code back to YUI and other frameworks.
 
-在一个拥有大量框架和库的生态系统中，YUI是一个专业且可扩展的典范。 我通过比较我和他们的代码和文档，以此来深刻地提高我的代码质量。尽管在这里我创建了一个框架作为例子，但是面向对象的CSS实际上并不是一个框架，而是一种可伸缩的，理性的，可维护的CSS的方法。 也许最好的比喻是一种新的语言。 最终，它是一种不可定型的JavaScript库，并且我希望将代码贡献给YUI和其他框架。
+在一个拥有大量框架和库的生态系统中，YUI是一个专业且可扩展的典范。 我通过比较我和他们的代码和文档，以此来进一步地提高我的代码质量。尽管在这里我创建了一个框架作为例子，但是OOCSS实际上并不是一个框架，而是一种可伸缩的，理性的，可维护的CSS的方法。 也许最好的比喻是一种新的语言。 最终，它是一种不可定型的JavaScript库，并且我希望将代码贡献给YUI和其他框架。
 
 ## 一个CSS的框架是不正确的！ 我们不应该从头开始编码一切吗？（A framework for CSS is overkill! Shouldn't we code everything from scratch?）
 
@@ -294,7 +301,7 @@ Do you rewrite the math class every time you need a random number generated?
 
 CSS is hard, [not because it is broken](http://www.stubbornella.org/content/2009/02/12/css-doesn’t-suck-you’re-just-doing-it-wrong/) , but because it is a legitimate technology requiring expertise to architect correctly. It would be foolish to reinvent the wheel for every site.
 
-CSS很难，[不仅是因为它是分散的](http://www.stubbornella.org/content/2009/02/12/css-doesn’t-suck-you’re-just-doing-it-wrong/)，还因为它是一个合法的技术，需要专业知识才能正确的构建。 为每个站点重新定义类这种方法才是愚蠢的。
+CSS很难，[不仅是因为它是分散的](http://www.stubbornella.org/content/2009/02/12/css-doesn’t-suck-you’re-just-doing-it-wrong/)，还因为它是一个规范的技术，需要专业知识才能正确的构建。 为每个站点重新定义类这种方法才是愚蠢的。
 
 ## 右边栏在源文件中的顺序位于的主列之前，这会影响可访问性吗？会影响搜索引擎优化么？（The right column comes before the main column in the source order, will this impact accessibility? SEO?）
 
@@ -308,10 +315,10 @@ I prefer tab order to match visual order (because it is weird if tab order varie
 
 Screen reader users have two options: 
 
-屏幕阅读用户有两个选项：
-
 1. Skip links 
 2. Navigation menus are always marked up as a list of links, or nested list of links. This is interesting because it allows screen reader users to skip the whole list via screen reader specific controls. 
+
+屏幕阅读用户有两个选项：
 
 1. 样式链接
 2. 导航菜单始终标记为链接列表或嵌套的链接列表。 这很有趣，因为它允许屏幕阅读器用户通过屏幕阅读器的特定控件跳过整个列表。
@@ -332,13 +339,13 @@ Markup navigation menus as lists, which will allow screen reader users to skip t
 
 Obviously, the first consideration is keeping hacks as few and far between as possible.
 
-显而易见，首先要考虑的是尽可能少的hack。
-
 1. Adding a separate stylesheet would add an additional HTTP request and increase total file size for a browser that already struggles with performance.
 2. I like to keep all the code for any one object in one place. I think it helps minimize the number of hacks used especially as a project evolves over time.
 3. Dev tools for IE6 and earlier are extremely primitive, which makes having hacks and normal code side by side even more important. I want to be able to figure out quickly when I have an IE bug which properties are coming into play. Again, I think this helps minimize hacks.
 4. The spec indicates that properties which are not understood should be ignored by the browser. Given that the _ behavior of IE6 and earlier is very well known, I can reasonably expect that good browsers will always ignore this property.
 5. Using conditional comments means that each html page has to contain a link to the IE specific stylesheet. One day (I can’t wait!) when IE6 market share drops to the minimal levels of IE5, I will turn off this code, but the last thing I want to do is touch 100s or 1000s of HTML pages. I’d rather have only CSS dependence on CSS hacks, rather than pushing this into the HTML. Unfortunately, IMHO the end of IE6 compatibility is farther off than we would like because quirksmode behavior in IE often falls back to an IE5.5 type model.
+
+显而易见，首先要考虑的是尽可能减少hack。
 
 1. 添加一个单独的样式表会增加一个额外的HTTP请求，并增加已经在性能方面有一定困难的浏览器中总文件的大小。
 2. 我喜欢将任何一个对象的所有代码放在一个地方。我认为这有助于最大限度地减少使用hack的数量，特别是随着项目不断发展时这种现象更显著。
@@ -370,7 +377,7 @@ This is questionable because the UL is clearly a separate object:
 
 这的确令人疑惑，因为UL显然是一个单独的对象：
 
-```
+```css
 #sidebar ul { ... }
 ```
 
@@ -378,7 +385,7 @@ so is this, because a carousel is clearly not part of the body object:
 
 这是因为滚动栏显然不是主体对象的一部分：
 
-```
+```css
 body.browseProducts .carousel 
 ```
 
@@ -386,7 +393,7 @@ This is appropriate use of the cascade because the sub-node is really part of th
 
 这是级联的适当用法，因为子节点实际上是较大的父对象的一部分。 b（corners）和inner显然然属于模块，它们不能独立存在：
 
-```
+```css
 .myModule { ... }
 .myModule b { ... }
 .myModule .inner { ... }
@@ -402,7 +409,7 @@ A leaf node is an element that doesn't contain other elements, e.g. `<strong>` o
 
 There is a in-depth code review of a website made with OOCSS in the OOCSS Google Group. The link to the demo has moved to [http://waltschmidt.com/v2](http://waltschmidt.com/v2).You can also [read the full thread](http://groups.google.com/group/object-oriented-css/browse_thread/thread/be6cab782afa2fcf)(including the code review). Thanks to Walt for his permission to use his "first stab" as an example.
 
-在谷歌面向对象的CSS团队中，面向对象的CSS对网站进行了深入的代码审查。 演示的链接已移至[http://waltschmidt.com/v2](http://waltschmidt.com/v2)。您还可以[阅读完整的主题](http://groups.google.com/group/object-oriented-css/browse_thread/thread/be6cab782afa2fcf)（包括代码审查）。 此处感谢Walt允许以他的“first stab”为例。
+在谷歌OOCSS Group中，面向对象的CSS对网站进行了深入的代码审查。 演示的链接已移至[http://waltschmidt.com/v2](http://waltschmidt.com/v2)。您还可以[阅读完整的主题](http://groups.google.com/group/object-oriented-css/browse_thread/thread/be6cab782afa2fcf)（包括代码审查）。 此处感谢Walt允许以他的“first stab”为例。
 
 ## 我能帮助些什么？（How can I help?）
 
