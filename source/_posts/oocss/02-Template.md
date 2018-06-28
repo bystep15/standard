@@ -7,9 +7,9 @@ tags: [理论, css, oocss]
 
 [原文](https://github.com/stubbornella/oocss/wiki/Template)
 
-Templates are used to solve common design patterns for page layout. Using these templates you can build pages which have a header, footer, left and right columns, and a main content area. Any of the sections can be broken up via [grids](https://github.com/bystep15/standard/blob/master/oocss/03-Grids.md). You can also use grids instead of columns. The main column is fully liquid, taking up all the rest of the space when the left column and right column have been rendered.
+Templates are used to solve common design patterns for page layout. Using these templates you can build pages which have a header, footer, left and right columns, and a main content area. Any of the sections can be broken up via [grids](/standard/2018/06/06/03、网格（grids）.html). You can also use grids instead of columns. The main column is fully liquid, taking up all the rest of the space when the left column and right column have been rendered.
 
-模板是用来解决页面布局的通用设计模式。可以使用模板来构建一个包含页眉、页脚、左右边栏和主体内容区域的页面。任何部分都可以通过[网格](https://github.com/bystep15/standard/blob/master/oocss/03-Grids.md)进行布局，也可以使用网格来代替竖栏布局。主体栏是流式布局，当左右边栏渲染完成后，主体栏会充满剩下的全部空间。
+模板是用来解决页面布局的通用设计模式。可以使用模板来构建一个包含页眉、页脚、左右边栏和主体内容区域的页面。任何部分都可以通过[网格](/standard/2018/06/06/03、网格（grids）.html)进行布局，也可以使用网格来代替竖栏布局。主体栏是流式布局，当左右边栏渲染完成后，主体栏会充满剩下的全部空间。
 
 Please help me test the grids and template objects. Put them through their paces and let me know if you manage to break them!
 
