@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>10、走马灯（Carousel） | HTML&amp;CSS模块化理论学习</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文 Documenting how this should work.  100% of the width of its parent container, adapts to any sized container. Controls can be above, below, or right/left. Items width must be set in pixels (they can">
+<meta name="keywords" content="理论,css,oocss">
+<meta property="og:type" content="article">
+<meta property="og:title" content="10、走马灯（Carousel）">
+<meta property="og:url" content="https://bystep15.github.io/standard/2018/06/28/10、走马灯（carousel）.html">
+<meta property="og:site_name" content="HTML&amp;CSS模块化理论学习">
+<meta property="og:description" content="原文 Documenting how this should work.  100% of the width of its parent container, adapts to any sized container. Controls can be above, below, or right/left. Items width must be set in pixels (they can">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-28T03:27:49.537Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="10、走马灯（Carousel）">
+<meta name="twitter:description" content="原文 Documenting how this should work.  100% of the width of its parent container, adapts to any sized container. Controls can be above, below, or right/left. Items width must be set in pixels (they can">
+  
+    <link rel="alternate" href="/standard/atom.xml" title="HTML&amp;CSS模块化理论学习" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/standard/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/standard/" id="logo">HTML&amp;CSS模块化理论学习</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/standard/">Home</a>
+        
+          <a class="main-nav-link" href="/standard/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://github.com/bystep15/standard">GitHub</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/standard/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://bystep15.github.io/standard"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-oocss/10-Carousel" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/28/10、走马灯（carousel）.html" class="article-date">
+  <time datetime="2018-06-28T01:30:00.000Z" itemprop="datePublished">2018-06-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      10、走马灯（Carousel）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/stubbornella/oocss/wiki/Carousel-" target="_blank" rel="noopener">原文</a></p>
+<p>Documenting how this should work.</p>
+<ul>
+<li>100% of the width of its parent container, adapts to any sized container.</li>
+<li>Controls can be above, below, or right/left.</li>
+<li>Items width must be set in pixels (they can’t be %, no way to inherit container width from parent’s parent)</li>
+<li>Ideally it would not have half-items visible, in JS remove the extra bit or expand the units to fill more space?</li>
+</ul>
+<p>使用文档</p>
+<ul>
+<li>宽度属性为其父容器的100％，适应于任何尺寸的容器。</li>
+<li>控制组件可以在上方，下方或右侧/左侧。</li>
+<li>元素宽度必须以像素为单位（不能设为百分比，无法从父级的父级容器继承宽度）</li>
+<li>理想情况下，不会显示半个元素，使用JS删除多余的空间或者填充更多的空间也许是个方法？</li>
+</ul>
+<p>Brainstorming common markup for tabs, carousel, toggle, and accordion using the html5 syntax.</p>
+<p>使用html5语法来设计标签页，走马灯，切换块和手风琴的通用标签。</p>
+<h2 id="标签页（tabs）"><a href="#标签页（tabs）" class="headerlink" title="标签页（tabs）"></a>标签页（tabs）</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section tabs"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"control"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span> <span class="comment">&lt;!-- menu? --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>Tab 1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>Tab 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>Tab 3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"details open"</span>&gt;</span> Content Area <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"details"</span>&gt;</span> Content Area <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"details"</span>&gt;</span> Content Area <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="走马灯（Carousel）"><a href="#走马灯（Carousel）" class="headerlink" title="走马灯（Carousel）"></a>走马灯（Carousel）</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section carousel"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"control"</span>&gt;</span> radio buttons for section and buttons for left/right or top/bottom scroll <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"details open"</span>&gt;</span> Content Area <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="切换块（toggle-block）"><a href="#切换块（toggle-block）" class="headerlink" title="切换块（toggle block）"></a>切换块（toggle block）</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section toggle"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"control"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Clicking on me toggles the display of the content area<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"details open"</span>&gt;</span> Content Area <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="手风琴（Accordion）"><a href="#手风琴（Accordion）" class="headerlink" title="手风琴（Accordion）"></a>手风琴（Accordion）</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section accordion"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"control"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Clicking on me opens the adjacent accordion content area<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"details open"</span>&gt;</span> Content Area <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"control"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Clicking on me opens the adjacent accordian content area<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"details"</span>&gt;</span> Content Area <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"control"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Clicking on me opens the adjacent accordian content area<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"details"</span>&gt;</span> Content Area <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/28/10、走马灯（carousel）.html" data-id="cjiy0s4s1000xph0fu7hgbf6h" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/standard/2018/06/28/11、uml.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          11、UML
+        
+      </div>
+    </a>
+  
+  
+    <a href="/standard/2018/06/27/09、对话框（talk-bubbles）.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">09、对话框（Talk Bubbles）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/">理论</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/">css</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/oocss/">oocss</a></li></ul></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/standard/tags/css/" style="font-size: 10px;">css</a> <a href="/standard/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/standard/tags/理论/" style="font-size: 10px;">理论</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2017/12/">十二月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/standard/2018/06/28/11、uml.html">11、UML</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/28/10、走马灯（carousel）.html">10、走马灯（Carousel）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/27/09、对话框（talk-bubbles）.html">09、对话框（Talk Bubbles）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/27/08、按钮（buttons）.html">08、按钮（Buttons）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/27/07、内容（content）.html">07、内容（Content）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 alex2010, bystep15<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/standard/" class="mobile-nav-link">Home</a>
+  
+    <a href="/standard/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://github.com/bystep15/standard" class="mobile-nav-link">GitHub</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/standard/fancybox/jquery.fancybox.css">
+  <script src="/standard/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/standard/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

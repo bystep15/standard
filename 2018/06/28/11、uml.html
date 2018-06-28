@@ -5,20 +5,22 @@
   
 
   
-  <title>08、按钮（Buttons） | HTML&amp;CSS模块化理论学习</title>
+  <title>11、UML | HTML&amp;CSS模块化理论学习</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原文 Outlining how this should work.  tag - a, button class - btn Possible displays:  single image sliding doors (horizontal only),  single image sliding doors (vertical and horizontal),  no images butt">
+  <meta name="description" content="原文 Where am I going with this?  How can we make HTML and CSS so predictable that they validate against a custom grammar? This is a very alpha look at describing OO CSS and HTML in UML. 为什么要写这篇内容？如何才能使">
 <meta name="keywords" content="理论,css,oocss">
 <meta property="og:type" content="article">
-<meta property="og:title" content="08、按钮（Buttons）">
-<meta property="og:url" content="https://bystep15.github.io/standard/2018/06/27/08、按钮（buttons）.html">
+<meta property="og:title" content="11、UML">
+<meta property="og:url" content="https://bystep15.github.io/standard/2018/06/28/11、uml.html">
 <meta property="og:site_name" content="HTML&amp;CSS模块化理论学习">
-<meta property="og:description" content="原文 Outlining how this should work.  tag - a, button class - btn Possible displays:  single image sliding doors (horizontal only),  single image sliding doors (vertical and horizontal),  no images butt">
+<meta property="og:description" content="原文 Where am I going with this?  How can we make HTML and CSS so predictable that they validate against a custom grammar? This is a very alpha look at describing OO CSS and HTML in UML. 为什么要写这篇内容？如何才能使">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-27T09:28:23.745Z">
+<meta property="og:image" content="https://bystep15.github.io/media/oocss/oocss-uml.png">
+<meta property="og:updated_time" content="2018-06-28T03:54:28.882Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="08、按钮（Buttons）">
-<meta name="twitter:description" content="原文 Outlining how this should work.  tag - a, button class - btn Possible displays:  single image sliding doors (horizontal only),  single image sliding doors (vertical and horizontal),  no images butt">
+<meta name="twitter:title" content="11、UML">
+<meta name="twitter:description" content="原文 Where am I going with this?  How can we make HTML and CSS so predictable that they validate against a custom grammar? This is a very alpha look at describing OO CSS and HTML in UML. 为什么要写这篇内容？如何才能使">
+<meta name="twitter:image" content="https://bystep15.github.io/media/oocss/oocss-uml.png">
   
     <link rel="alternate" href="/standard/atom.xml" title="HTML&amp;CSS模块化理论学习" type="application/atom+xml">
   
@@ -67,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-oocss/08-Buttons" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-oocss/11-UML" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/standard/2018/06/27/08、按钮（buttons）.html" class="article-date">
-  <time datetime="2018-06-27T08:30:00.000Z" itemprop="datePublished">2018-06-27</time>
+    <a href="/standard/2018/06/28/11、uml.html" class="article-date">
+  <time datetime="2018-06-28T02:30:00.000Z" itemprop="datePublished">2018-06-28</time>
 </a>
     
   <div class="article-category">
@@ -85,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      08、按钮（Buttons）
+      11、UML
     </h1>
   
 
@@ -93,42 +95,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://github.com/stubbornella/oocss/wiki/Buttons" target="_blank" rel="noopener">原文</a></p>
-<p>Outlining how this should work.</p>
-<ul>
-<li>tag - a, button</li>
-<li>class - btn</li>
-<li>Possible displays: <ol>
-<li>single image sliding doors (horizontal only), </li>
-<li>single image sliding doors (vertical and horizontal), </li>
-<li>no images buttons (perhaps bowman/goog as inspiration) or some of the gradient transforms/filters</li>
-</ol>
-</li>
-<li>Keep markup low (as few nodes as possible)</li>
-<li>Image, colors applied by a skin class, layout class for abstraction</li>
-<li>Inline-block</li>
-<li>Should be possible to float the buttons without breaking</li>
-</ul>
-<p>概述如按钮应该如何使用。</p>
-<ul>
-<li>标签选择 - a, button</li>
-<li>类名 - btn</li>
-<li>可能的使用场景<ol>
-<li>单图推拉门（仅水平)</li>
-<li>单图推拉门（垂直和水平）</li>
-<li>没有图像按钮（以bowman / goog为灵感）或一些渐变变换/滤镜</li>
-</ol>
-</li>
-<li>少用标签（尽可能少的节点）</li>
-<li>图像，皮肤类应用的颜色，抽象的布局类</li>
-<li>内联块</li>
-<li>支持内联，即使按钮浮动，也不会打破布局</li>
-</ul>
+        <p><a href="https://github.com/stubbornella/oocss/wiki/UML" target="_blank" rel="noopener">原文</a></p>
+<p>Where am I going with this?  How can we make HTML and CSS so predictable that they validate against a custom grammar? This is a very alpha look at describing OO CSS and HTML in UML.</p>
+<p>为什么要写这篇内容？如何才能使得HTML和CSS具有预测性，以便对照自定义语法来进行验证？ 下图是用UML描述面向对象的CSS和HTML的一个Alpha版本。</p>
+<p><a href="http://www.flickr.com/photos/nicole_hugo/3296789176/" title="Object Oriented CSS UML by Stubbornella (aka Nicole), on Flickr" target="_blank" rel="noopener"><img src="/media/oocss/oocss-uml.png" width="100%" alt="Object Oriented CSS UML"></a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://bystep15.github.io/standard/2018/06/27/08、按钮（buttons）.html" data-id="cjiy0s4ry000tph0fdr5k0dbs" class="article-share-link">Share</a>
+      <a data-url="https://bystep15.github.io/standard/2018/06/28/11、uml.html" data-id="cjiy0s4s2000yph0f1p3hf905" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
@@ -139,19 +114,10 @@
     
 <nav id="article-nav">
   
-    <a href="/standard/2018/06/27/09、对话框（talk-bubbles）.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          09、对话框（Talk Bubbles）
-        
-      </div>
-    </a>
   
-  
-    <a href="/standard/2018/06/27/07、内容（content）.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/standard/2018/06/28/10、走马灯（carousel）.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">07、内容（Content）</div>
+      <div class="article-nav-title">10、走马灯（Carousel）</div>
     </a>
   
 </nav>
