@@ -1,4 +1,8 @@
-# 问与答（FAQ）
+title: 03、常见问题（FAQ）
+categories: [理论, css, bem]
+date: 2018/06/28 22:30:00
+tags: [理论, css, bem]
+---
 
 [原文](http://getbem.com/faq/)
 

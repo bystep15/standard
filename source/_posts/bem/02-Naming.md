@@ -1,4 +1,8 @@
-# 命名（Naming）
+title: 02、命名（Naming）
+categories: [理论, css, bem]
+date: 2018/06/28 21:30:00
+tags: [理论, css, bem]
+---
 
 [原文](http://getbem.com/naming/)
 
