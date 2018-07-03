@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>03、常见问题（FAQ） | HTML&amp;CSS模块化理论学习</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文 These Frequently Asked Question are real questions of developers started with BEM, answered by the GetBEM community. Feel free to ask your question too, and we will answer it as well. 下面这些常见问题是开始使用">
+<meta name="keywords" content="理论,css,bem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="03、常见问题（FAQ）">
+<meta property="og:url" content="https://bystep15.github.io/standard/2018/06/28/03、常见问题（faq）.html">
+<meta property="og:site_name" content="HTML&amp;CSS模块化理论学习">
+<meta property="og:description" content="原文 These Frequently Asked Question are real questions of developers started with BEM, answered by the GetBEM community. Feel free to ask your question too, and we will answer it as well. 下面这些常见问题是开始使用">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-07-03T08:12:24.574Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="03、常见问题（FAQ）">
+<meta name="twitter:description" content="原文 These Frequently Asked Question are real questions of developers started with BEM, answered by the GetBEM community. Feel free to ask your question too, and we will answer it as well. 下面这些常见问题是开始使用">
+  
+    <link rel="alternate" href="/standard/atom.xml" title="HTML&amp;CSS模块化理论学习" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/standard/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/standard/" id="logo">HTML&amp;CSS模块化理论学习</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/standard/">Home</a>
+        
+          <a class="main-nav-link" href="/standard/archives">Archives</a>
+        
+          <a class="main-nav-link" href="https://github.com/bystep15/standard">GitHub</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/standard/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://bystep15.github.io/standard"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-bem/03-FAQ" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/28/03、常见问题（faq）.html" class="article-date">
+  <time datetime="2018-06-28T14:30:00.000Z" itemprop="datePublished">2018-06-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/bem/">bem</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      03、常见问题（FAQ）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://getbem.com/faq/" target="_blank" rel="noopener">原文</a></p>
+<p>These Frequently Asked Question are real questions of developers started with BEM, answered by the GetBEM community. Feel free to <a href="https://github.com/getbem/getbem.com/issues/new?title=FAQ:%20Type%20your%20question%20here" target="_blank" rel="noopener">ask your question</a> too, and we will answer it as well.</p>
+<p>下面这些常见问题是开始使用BEM的开发人员遇到的真实问题，由GetBEM社区回答。您可以在社区里面<a href="https://github.com/getbem/getbem.com/issues/new?title=FAQ:%20Type%20your%20question%20here" target="_blank" rel="noopener">随意问问题</a>，我们会在上面回答。</p>
+<ol>
+<li><a href="#why-bem">为什么选择BEM，而不是其他CSS模块方案？（Why should I choose BEM and not another CSS modular solution?）</a></li>
+<li><a href="#why-the-modifier-classes-are-prefixed">为什么不能把修饰符选择器写成组合选择器的形式？（Why are the modifier CSS classes not represented as a combined selector?）</a></li>
+<li><a href="#custom-tags-for-blocks">为什么需要为块设置CSS类而不是使用语义化的自定义标签？（Why do I need CSS classes for block instead of using semantic custom tags?）</a></li>
+<li><a href="#block-modifier-mix">为什么需要组合使用块和块名为前缀的修饰类？（Why do I need to combine block and prefixed modifier class for a modified block?）</a></li>
+<li><a href="#block-modifier-affects-elements">块修饰类可以改变内部元素吗？（Can a block modifier affect elements?）</a></li>
+<li><a href="#can-i-create-global-modifier">可以创建被任何块使用的全局修饰类吗？（Can I create a global modifier applicable to any block?）</a></li>
+<li><a href="#encapsulating-tag-selector">可以在选择器上合用标签和类吗，就像<code>button.button</code>？（Can I combine a tag and a class in selector like button.button?）</a></li>
+<li><a href="#css-modifier-names">可以将修饰类命名为CSS中对应的样式吗？就像<code>.block__element--border-bottom-5px</code>一样。（Is this good to name modifiers corresponding to what they have in CSS? Like <code>.block__element--border-bottom-5px</code>.）</a></li>
+<li><a href="#css-nested-elements">如何命名嵌套元素的类名？像<code>.block__el1__el2</code>这样吗？（What would be a class name for an element inside another element? <code>.block__el1__el2</code>?）</a></li>
+<li><a href="#global-css-resets">我听说BEM不推荐使用全局CSS重置，为什么？（I’ve heard that BEM does not recommend global CSS resets? Why?）</a></li>
+<li><a href="#ask-your-question">没找到答案？（Did not find the answer?）</a></li>
+</ol>
+<p><a id="#why-bem"></a></p>
+<h2 id="为什么选择BEM，而不是其他CSS模块方案？（Why-should-I-choose-BEM-as-a-modular-solution-for-CSS-）"><a href="#为什么选择BEM，而不是其他CSS模块方案？（Why-should-I-choose-BEM-as-a-modular-solution-for-CSS-）" class="headerlink" title="为什么选择BEM，而不是其他CSS模块方案？（Why should I choose BEM as a modular solution for CSS?）"></a>为什么选择BEM，而不是其他CSS模块方案？（Why should I choose BEM as a modular solution for CSS?）</h2><blockquote>
+<p>There are some other modular solutions for CSS (such as OOCSS, AMCSS, SMACSS, SUITCSS). What are the reasons to choose BEM?</p>
+</blockquote>
+<blockquote>
+<p>现在有许多的CSS模块解决方法（例如OOCSS，AMCSS，SMACSS和SUITCSS）。那为什么要选择BEM呢？</p>
+</blockquote>
+<p>BEM provides solutions for all the frontend technologies: CSS, JavaScript, templating; and also for building process of your web application. The methodology is applicable anywhere. However, to apply this in JavaScript and templating you would need special frameworks whereas in CSS you may just follow the methodological recommendations. The CSS part of BEM is the easiest to take into your development process. This is why many use only it. On the other hand, if lately you would found your project fully BEMed (in CSS) and yourself happy for its grown maintenance, you probably would take next step in modularizing your web application. BEM CSS will be easier to coordinate with modular JavaScript and blocks-based project file structure.</p>
+<p>BEM为所有的前端技术提供了解决方案：CSS，JavaScript，模板; 也可以用于构建您的Web应用程序。这种方法适用于任何地方。但是，要在JavaScript和模板中应用BEM，您需要特殊的框架，而在CSS中，您按照建议的方法去做就行。BEM的CSS部分是最容易引入到您的开发流程中的。这就是为什么许多人选择它的原因。另一方面，如果您的项目已经完全实现了实现BEM（在CSS中），并且可以容易的扩展，那您可以利用模块化来完成您的Web应用程序的下一步。BEM CSS易于与模块化的JavaScript和基于块的项目文件结构结合使用，可以让工作变得更轻松。</p>
+<p>If speaking about CSS modular solutions only, the key feature of BEM is block’s independence. Following the CSS recommendations enables to put a block into any place on a page and be sure that is won’t be affected by its surroundings. Also, if you would lately need to nest another block into the current one, their full compatibility is guaranteed. In other words, when maintaining your web application you would be able to move blocks across the page, add others and combine them.</p>
+<p>如果仅仅谈到CSS模块化的解决方案，BEM的关键特征就是块元素的独立性。根据BEM的CSS建议，一个块可以放置在网页上的任何位置，并确保不会受到周围环境的影响。而且，如果您需要在当前块中嵌套另一个块，会保证两个块的兼容性。换句话说，在维护Web应用程序时，您可以跨页面移动块元素，添加其他块并将其组合起来。</p>
+<p>BEM CSS unambiguously defines which CSS belongs to a piece of interface and so using it gives answers to questions “Can I remove this piece of code?” and “What happens and which interface parts will be affected if I change this piece of code?”.</p>
+<p>BEM CSS明确定义了哪些CSS属于一个界面，因此使用它可以解决“我可以删除这段代码吗？” 和“如果我更改了这段代码，会发生什么事情？哪些接口部件会受到影响？”的问题。</p>
+<p><a id="#why-the-modifier-classes-are-prefixed"></a></p>
+<h2 id="为什么不能把修饰符选择器写成组合选择器的形式？-Why-the-modifier-CSS-classes-are-not-represented-as-a-combined-selector"><a href="#为什么不能把修饰符选择器写成组合选择器的形式？-Why-the-modifier-CSS-classes-are-not-represented-as-a-combined-selector" class="headerlink" title="为什么不能把修饰符选择器写成组合选择器的形式？(Why the modifier CSS classes are not represented as a combined selector?)"></a>为什么不能把修饰符选择器写成组合选择器的形式？(Why the modifier CSS classes are not represented as a combined selector?)</h2><blockquote>
+<p>BEM recommends to modify blocks like this <code>&lt;div class=&quot;block block--mod&quot;&gt;</code>. Why not to use the simple version like <code>&lt;div class=&quot;block mod&quot;&gt;</code>? Since we now have combined selectors <code>.block.mod</code>, it’s easy to define all the CSS properties to it.</p>
+</blockquote>
+<blockquote>
+<p>BEM推荐像<code>&lt;div class=&quot;block block--mod&quot;&gt;</code>这样的修饰类。为什么不用简单<code>&lt;div class=&quot;block mod&quot;&gt;</code>这样的版本呢？使用组合选择器<code>.block.mod</code>，就可以很容易地定义所有CSS属性。</p>
+</blockquote>
+<p>The recommendation to prefix modifier CSS class with its block name has multiple reasons.</p>
+<p>使用块名称做修饰符CSS类的前缀有多种原因。</p>
+<p>Firstly, since it is possible to mix several blocks and elements at the same DOM node, we need to ensure that a modifier would affect only the block it belongs to. Let’s say that we have a menu item element and a button mixed together. In HTML this construction is represented<br>by the following markup:</p>
+<p>首先，由于我们可以在同一个DOM节点上添加多个块和元素的类，所以需要确保修饰符只影响它所属的块元素。假设我们将一个菜单项的元素和一个按钮混合在一起。在HTML中，这种结构会是这样的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"menu__item button"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>In this case adding <code>.active</code> modifier to them would affect both.</p>
+<p>在这个例子中添加修饰符<code>.active</code>会对它们俩都产生影响。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"menu__item button active"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>All the 3 sit at the same DOM node, so it is impossible to differentiate if we mean <code>menu__item.active</code> or <code>button.active</code>. Whereas in the prefixed case the naming <code>button--active</code> unambiguously says as that this is only the button that has to be affected.</p>
+<p>所有的3个类都在同一个DOM节点上，所以如果我们用<code>menu__item.active</code>或者<code>button.active</code>无法区分出它们。而在有前缀<code>button--active</code>的情况下 - 可以毫不含糊地说，当前元素是唯一会被影响的按钮。</p>
+<p>Another point is CSS specificity. The combined selectors are more specific (means more important) than single class selectors. This means that you might have trouble when redefining them with parent block code.</p>
+<p>另一点是CSS的特殊性。组合的选择器比单个选择器更具体（意味权重更高）。这意味着在用它们父节点块的代码重新定义它们时可能会遇到麻烦。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button active"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>If you already have <code>.button.active</code> selector in your code, the specificity of your redefining <code>.header .button</code> would be exactly the same as the specificity of modifier combined selector which makes you dependent on the order of the CSS rules declared. Whereas if you use a prefixed modifier, you can always be sure that the cascade selector <code>.header .button</code> will overwrite the <code>.button--active</code> modifier.</p>
+<p>如果在您的代码中已经添加了<code>.button.active</code>选择器，那么重新定义<code>.header .button</code>的独特性与修饰符组合选择器的独特性完全相同，这使得最后的效果会依赖于您声明的CSS规则的顺序。而如果使用前缀修饰符，则始终可以确保级联选择器<code>.header .button</code>将覆盖<code>.button-active</code>修饰符的样式。</p>
+<p>This makes life easier especially for maintainable projects.</p>
+<p>这更有利于项目的可维护性。</p>
+<p>The third point is that looking at the <code>&lt;div class=&quot;block block--mod&quot;&gt;</code> markup you can clearly see the block structure. It is easy to recognize that we have a block and its modifier and there is no different interpretations here. Unfortunately a grasp onto <code>&lt;div class=&quot;block mod&quot;&gt;</code> code does not give such information. Depending on what are the exact CSS classes sometimes it is impossible to recognize if we have a block and a modifier or a mix of 2 blocks here. This might be even more confusing if the names of the entities are complex or contracted/abbreviated (which sometimes happens in big projects).<br> Clear understanding of a block structure is especially helpful when looking for corresponding code on a file system.</p>
+<p>第三点是当您看看<code>&lt;div class =“block block-mod”&gt;</code>标记时，您可以清楚地看到块结构。我们很容易看到，此处我们有一个块元素和它的修饰符，这是确定的。不幸的是，使用<code>&lt;div class =“block mod”&gt;</code>代码并不能提供这样信息。如果依靠确切的CSS类，有时可能辨别不出我们是由一个块元素，还是一个修饰符或是2者的混合。 如果实体的名称是复杂的或是缩写的（这在大项目中有时会发生），情况可能会更加糟糕。</p>
+<p>You will also appreciate <code>.block--mod</code> practice when refactoring and use global search over all your project files. Imagine the same looking for not-prefixed <code>.mod</code> and all the HTML pieces it might be in.</p>
+<p>当重构和使用全局搜索您的所有项目文件时，您也许会喜欢使用<code>.block--mod</code>这样的方法。可以想象一下，如果<code>.mod</code>和其他HTML代码没有前缀，情况又是什么样的。</p>
+<p>And lastly, from a development process standpoint the difference between <code>.block.mod</code> and <code>.block--mod</code> is only one symbol. Using <code>-</code> instead of <code>.</code> costs nothing but it brings all the benefits listed above. Moreover, since pre-processor began to support BEM notation, it is pretty natural to write <code>&amp;--mod</code> there and finally get a modifier declared as it was recommended.</p>
+<p>最后，从开发过程的角度来看，<code>.block.mod</code>和<code>.block--mod</code>之间的区别只是一个符号。 使用<code>-</code> 而不是<code>.</code> 不会花费任何东西，但它会带来上面列出的所有好处。而且，由于预处理器开始支持BEM的声明，所以在那里编写<code>＆--mod</code>是很自然的，最后，您会得到一个推荐的修饰符。</p>
+<p><a id="custom-tags-for-blocks"></a></p>
+<h2 id="为什么需要为块设置CSS类而不是使用语义化的自定义标签？-Why-do-I-need-CSS-classes-for-block-instead-of-using-semantic-custom-tags"><a href="#为什么需要为块设置CSS类而不是使用语义化的自定义标签？-Why-do-I-need-CSS-classes-for-block-instead-of-using-semantic-custom-tags" class="headerlink" title="为什么需要为块设置CSS类而不是使用语义化的自定义标签？(Why do I need CSS classes for block instead of using semantic custom tags?)"></a>为什么需要为块设置CSS类而不是使用语义化的自定义标签？(Why do I need CSS classes for block instead of using semantic custom tags?)</h2><blockquote>
+<p>Blocks can be represented as custom tags which we may define CSS rules for. Looks like we do not need CSS classes for blocks at all. They can be used for modifiers only, like <code>&lt;button class=&quot;mod&quot;/&gt;</code>.</p>
+</blockquote>
+<blockquote>
+<p>块是可以是自定义标签，并为其定义CSS规则。所以看起来根本不需要CSS类的块，只需要（在语义化的标签上）使用修饰符即可，如<code>&lt;button class =“mod”/&gt;</code>。</p>
+</blockquote>
+<p>Using custom tags as block selectors is indeed one of the BEMish solutions and can be used. However this variant is less flexible than the recommended “class” approach.</p>
+<p>确实存在使用自定义标签作为块选择器的解决方案，BEMish就是其中可用的方案之一。但是，相比这种形式，推荐的“class”形式要更灵活。</p>
+<p>This is more likely that you would need to prefix modifier classes with their block name to provide them namespace. The details are uncovered in <a href="#why-the-modifier-classes-are-prefixed">“Why the modifier CSS classes are prefixed with their parent block name?”</a> question. So, finally the custom-tag version of a block is like <code>&lt;block class=&quot;block--mod&quot;/&gt;</code>. This does not look very different from <code>&lt;div class=&quot;block block--mod&quot;&gt;</code> especially assuming that being tag-independent you can use any custom node and stay with <code>&lt;block class=&quot;block block--mod&quot;&gt;</code>.</p>
+<p>需要考虑的情况是，块名称作为前缀为修饰符类提供命名空间。详细情况已在<a href="#why-the-modifier-classes-are-prefixed">“为什么不能把修饰符选择器写成组合选择器的形式？”</a>中说明。所以，自定义标签块的形式最终是<code>&lt;block class =“block-mod”/&gt;</code>。假设自定义节点和标签不关联，那么<code>&lt;block class =“block block-mod”&gt;</code>和<code>&lt;div class =“block block-mod”&gt;</code>看起来没什么两样。</p>
+<p>Second drawback is that “tag” version makes using the mixes of blocks impossible whereas the “class” version represent that naturally by <code>&lt;div class=&quot;block1 block2&quot;&gt;</code>.</p>
+<p>第二个缺点是“标签”的版本使得混用块是不可能的，而“class”的版本用<code>&lt;div class =“block1 block2”&gt;</code>自然地表示。</p>
+<p>And the last clench against such an approach is that in many cases you are not able to represent your blocks with custom tags at all. For a <code>link</code> block you definitely need <code>&lt;a&gt;</code> tag, and the same for <code>&lt;input&gt;</code>.</p>
+<p>最后一个原因是在很多情况下，块不能用自定义标签来表示。对于<code>link</code>块，您肯定需要<code>&lt;a&gt;</code>标签，对于<code>&lt;input&gt;</code>标签也是如此。</p>
+<p><a id="block-modifier-mix"></a></p>
+<h2 id="为什么需要组合使用块和块名为前缀的修饰类？-Why-do-I-need-to-combine-block-and-prefixed-modifier-class-for-a-modified-block"><a href="#为什么需要组合使用块和块名为前缀的修饰类？-Why-do-I-need-to-combine-block-and-prefixed-modifier-class-for-a-modified-block" class="headerlink" title="为什么需要组合使用块和块名为前缀的修饰类？(Why do I need to combine block and prefixed modifier class for a modified block?)"></a>为什么需要组合使用块和块名为前缀的修饰类？(Why do I need to combine block and prefixed modifier class for a modified block?)</h2><blockquote>
+<p>Why does both block’s and modifier’s class sit together in the modified block like <code>&lt;div class=”block block--mod”&gt;</code>?</p>
+</blockquote>
+<blockquote>
+<p>Everything about a modified block can be described in <code>.block--mod</code>. If there is something common between 2 modifiers, it’s possible to use preprocessor’s mixins to avoid copy-paste.</p>
+</blockquote>
+<blockquote>
+<p>为什么块和修饰类要在一起使用，比如<code>&lt;div class =“block block--mod”&gt;</code>？</p>
+</blockquote>
+<blockquote>
+<p>直接使用修饰类<code>.block--mod</code>来描述更简单。如果两个修饰类之间有共同之处，可以使用预处理器的mixin来避免重复。</p>
+</blockquote>
+<p>This approach is possible thanks to preprocessors. However it brings some drawbacks which you should be aware of.</p>
+<p>使用预处理器确实可以解决这个问题，但这样做存在一些需要考虑的缺点。</p>
+<p>In the case of combining 2 or more modifiers at the same block <code>&lt;div class=&quot;block--theme--christmas block--size--big&quot;&gt;</code>, you would get the core block’s styles twice. However this depends on the preprocessor algorithms.</p>
+<p>比如在同一个块<code>&lt;div class =“block--theme--christmas block--size--big”&gt;</code>中使用两个或更多修饰类，基础块的样式会被引用两次。但这不是绝对的，这取决于预处理器的算法。</p>
+<p>When adding/removing modifiers dynamically with JavaScript, the additional modifier is more handy. Switching it off would mean only removing one CSS class from the DOM node with no need to add the core block CSS class back as it sits there forever.</p>
+<p>另外当用JavaScript动态添加或移除修饰类时，添加修饰类的操作更方便。将其从DOM节点中删除也不需要考虑基础块——基础块会一直存在。</p>
+<p><a id="block-modifier-affects-elements"></a></p>
+<h2 id="块修饰类可以改变内部元素吗？（Can-a-block-modifier-affect-elements-）"><a href="#块修饰类可以改变内部元素吗？（Can-a-block-modifier-affect-elements-）" class="headerlink" title="块修饰类可以改变内部元素吗？（Can a block modifier affect elements?）"></a>块修饰类可以改变内部元素吗？（Can a block modifier affect elements?）</h2><blockquote>
+<p>If I have a block modifier, for example <code>xmas</code>, and I want the elements within that block to also be xmas themed, how would it be best to do it.</p>
+</blockquote>
+<blockquote>
+<p>Does a <code>--xmas</code> suffix for every element seem necessary? Or would this be the one use-case for nesting (e.g. <code>block--xmasblock__elem { ... }</code>?)</p>
+</blockquote>
+<blockquote>
+<p>假如一个块修饰类<code>xmas</code>，并且希望块中的元素也是xmas主题，这种情况怎么处理最好呢？</p>
+</blockquote>
+<blockquote>
+<p>是否需要为每个元素都添加<code>--xmas</code>后缀？或者这个案例中使用嵌套合适吗？（例如<code>block-xmas block__elem {...}</code>？）</p>
+</blockquote>
+<p>While in general BEM recommends avoiding nested selectors, in this case they are reasonable.</p>
+<p>通常情况下，BEM不建议使用嵌套选择器，但是在这个案例中可以使用。</p>
+<p>When creating the nested selector, you declare that one entity depends on another. Because BEM introduces independent components, such an approach is not suggested when we are speaking about 2 different blocks.</p>
+<p>在创建嵌套选择器时，定义一个实体依赖于另一个实体。因为BEM中引入了独立组件，所以2个不同的块元素中，并不建议这样使用。</p>
+<p>But when it comes to a block and its element, they are not of equivalent meaning. By definition, an element does not make any sense outside its parent block. So, an element is a block-dependent entity. Assuming this, it is quite normal and logical that an element is affected by the block’s current state.</p>
+<p>但是，在一个块和其内部的元素时，另当别论。 根据定义，一个元素若在其父块之外，它就没有任何意义。 所以，元素是依赖块的实体。基于这个假设，一个元素受到当前块状态的影响是很正常的，也是很合乎逻辑的。</p>
+<p>So, this is a common pattern in BEM to code</p>
+<p>所以，这种情况下BEM代码的通用格式如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.my-block--xmas</span> <span class="selector-class">.my-block__button</span> &#123;</span><br><span class="line">	<span class="comment">/* Jingle bells, jingle bells, jingle all the way.*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a id="can-i-create-global-modifier"></a></p>
+<h2 id="可以创建被任何块使用的全局修饰类吗？（Can-I-create-a-global-modifier-applicable-to-any-block-）"><a href="#可以创建被任何块使用的全局修饰类吗？（Can-I-create-a-global-modifier-applicable-to-any-block-）" class="headerlink" title="可以创建被任何块使用的全局修饰类吗？（Can I create a global modifier applicable to any block?）"></a>可以创建被任何块使用的全局修饰类吗？（Can I create a global modifier applicable to any block?）</h2><blockquote>
+<p>I’ve heard that global modifiers like <code>visible</code>, <code>invisible</code>, <code>red</code>, <code>opacity50</code> are not welcomed in BEM. Why?</p>
+</blockquote>
+<blockquote>
+<p>I think it is useful to incorporate common properties like this in such a global class and then apply it to different blocks.</p>
+</blockquote>
+<blockquote>
+<p>听说在BEM中不建议使用<code>visible</code>, <code>invisible</code>, <code>red</code>, <code>opacity50</code>这样的全局修饰类。为什么呢？</p>
+</blockquote>
+<blockquote>
+<p>我认为将上述这样的常见通用类设置为全局类，然后将其应用到不同的块中是有益的。</p>
+</blockquote>
+<p>Indeed you can have 2 main CSS classes at the same DOM node. In BEM we call it <code>mix</code>:</p>
+<p>确实，在同一个DOM节点上可以有两个主要的CSS类，在BEM中我们称之为<code>mix</code>；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block1 block2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>But the important thing about it is that both <code>block1</code> and <code>block2</code> should be standalone blocks. This is slightly different from what people usually mean by “global modifiers”, as modifiers do not have any sense on their own and are just a set of properties to change.</p>
+<p>但是，重要的是<code>block1</code>和<code>block2</code>都应该是独立的块。这与人们通常所说的“全局修饰类”的含义略有不同，因为修饰类本身没有任何意义，它们只是表示一组需要改变的属性。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block globalmod"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>If you think that in your case you would have a global modifier, these are the problems you may face:</p>
+<p>如果您认为在项目中需要用到全局修饰符，那么可能遇到如下问题：</p>
+<p>First of all the specificity problem appears. In a local modifier case CSS code goes like this:</p>
+<p>首先是特指性问题。在使用本地修饰类的情况下，CSS代码如下所示：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.block--hidden</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Both block and modifier selectors have the same specificity. As modifier declaration goes after the block, it redefines the CSS properties. These styles belong to block and are stored in the block file. Thus, independently on how the resultant CSS is built from source, you will always have them in this order and be sure that redefining happens.</p>
+<p>块和修饰选择器具有相同的特指性。由于修饰类是在块声明之后声明的，所有它会重新定义CSS属性。属于块元素的样式会在对应块的文件中存储。因此，构建需要保证CSS的顺序，得到覆盖后重新定义的CSS。</p>
+<p>In the case of global modifier, its properties can be redefined by the blocks if they follow modifiers in code:</p>
+<p>在全局修饰类的例子中，如果代码中块CSS声明的位置在修饰类声明的后面的话，那么会导致属性由块重新定义：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hidden</span> &#123; <span class="attribute">display</span>: none &#125;</span><br><span class="line"><span class="comment">/* ... */</span></span><br><span class="line"><span class="selector-class">.block</span> &#123; <span class="attribute">display</span>: block &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block hidden"</span>&gt;</span>you still see me<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>One of the possible solutions to this problem is to raise the selector specificity of global modifiers by adding <code>!important</code> to them. But in this case any side-effects of such a global modifier might be overwritten only by declarations with the same <code>!important</code> instruction.</p>
+<p>一个常见的解决方案是通过增加<code>!important</code>来提高全局修饰类选择器的特指性。但会造成一定的副作用，全局修饰符只能被同样具有<code>!important</code>的声明覆盖。</p>
+<p>Another way is to load global modifier CSS after all the other styles. But in this case you are not able any more to use lazy loading strategy for your components. The additional lazy CSS will still be loaded after the modifiers and you get the same problem.</p>
+<p>另一种方案是在所有样式声明之后再加载全局修饰符。但是这种情况下不允许组件使用延迟加载。若您这样使用的话，延迟加载的CSS会覆盖最后声明的修饰类的样式，那您又会遇到相同的问题。</p>
+<p>The next problem is combination of several global modifiers at the same block.</p>
+<p>接下来的问题是在同一个块中组合使用几个全局修饰符。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block mod1 mod2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>In this case you absolutely have no control over the block. The order of modifiers in code can be different. If it conflicts with other declarations, changing the order can fix this conflict but lead to another one. The only way would be to redefine the mess in block. And don’t forget about the <code>!important</code> to your hack.</p>
+<p>因为代码中修饰类的顺序可能不同，所以无法完全控制该块的样式。如果其中一个修饰符与其他的声明冲突，在改变顺序后，虽然可以解决这个冲突，但又导致其他的冲突。对于这个问题，唯一的办法是重新定义这些样式。记得不要忘记使用<code>!important</code>。</p>
+<p>Also, depending on a block the same modifier can be implemented differently. Even the simple <code>.hidden</code> sometimes needs to be not <code>display: none</code> but <code>visibility: hidden</code> or even <code>position: absolute; left: -9999px</code> etc. And if you need to bring some changes into your block, it is much nicer not to waste time searching for all the places where this block can be combined with a global modifier. Especially assuming that such dependencies usually are not described anywhere.</p>
+<p>而且，相同的修饰符在不同的块元素上可以有不同的样式。 即使是简单的<code>.hidden</code>有时使用<code>display: none</code>有时使用<code>visibility: hidden</code>，甚至使用<code>position: absolute; left: -9999px</code>等等。如果想要在您的块中加入一些变化，不用浪费时间去寻找整个块中所有可以和全局修饰符结合的地方。特别是这种依赖关系并不明晰。</p>
+<p>All this hell can be avoided by encapsulating a modifier in a block like <code>.block--mod</code>.</p>
+<p>所有这一切问题都可以通过把修饰类封装在块中（如<code>.block--mod</code>）来避免。</p>
+<p>Indeed using global modifiers makes the resultant code less. However if you measure the real difference in bytes it usually does not seem that big. Especially if you are using CSS optimizer which can combine selectors.</p>
+<p>当然，使用全局修饰符会使最后生成的代码量更少。但是，用字节数来衡量实际的差异通常并不大，而且可以使用组合CSS选择器的方式来优化。</p>
+<p><a id="encapsulating-tag-selector"></a></p>
+<h2 id="可以在选择器上合用标签和类吗，就像button-button？（Can-I-combine-a-tag-and-a-class-in-selector-like-button-button-）"><a href="#可以在选择器上合用标签和类吗，就像button-button？（Can-I-combine-a-tag-and-a-class-in-selector-like-button-button-）" class="headerlink" title="可以在选择器上合用标签和类吗，就像button.button？（Can I combine a tag and a class in selector like button.button?）"></a>可以在选择器上合用标签和类吗，就像<code>button.button</code>？（Can I combine a tag and a class in selector like <code>button.button</code>?）</h2><blockquote>
+<p>I want to use selectors like <code>button.button</code> to encapsulate my blocks functionality within a particular tag. If lately someone else would use in their code <code>&lt;h2 class=&quot;button&quot;&gt;</code>, such an encapsulation would prevent a conflict.</p>
+</blockquote>
+<blockquote>
+<p>我想使用<code>button.button</code>形式的选择器，将功能块封装进特定标签中。来避免<code>&lt;h2 class =“button”&gt;</code>之类的错误使用。</p>
+</blockquote>
+<p>The CSS specificity of such a selector grows. <code>.button--mod</code> selector will not overwrite CSS properties of the block, only <code>button.button--mod</code> would work. You will need its modifiers to be combined with the tag as well and so do the developers who lately would redefine your block.</p>
+<p>由于CSS特指性的增加，简单的使用<code>.button--mod</code>选择器并不能覆盖块的CSS属性，只有使用<code>button.button--mod</code>才能工作。必须将其修饰类与标签结合使用，重新定义块也需要与标签结合使用。</p>
+<p>Lately, when a project goes larger, it’s very likely that you may have <code>input.button</code>, <code>span.button</code> and <code>a.button</code> as well. And all the prefixed selectors for modifiers and nested elements will need 4 declarations.</p>
+<p>渐渐地，随着项目变大逐渐变大，很有可能会出现<code>input.button</code>，<code>span.button</code>和<code>a.button</code>等选择器。所有修饰类和嵌套元素类的前缀选择器都需要4个声明。</p>
+<p>So, it is better not to tie your own hands with such prefixing. However if you still can softly-softly ensure that your blocks are used with proper tags if your provide your users with templates for every block. This is the most flexible and automatic solution.</p>
+<p>所以，最好不要被这样的前缀束缚。可以提供块对应的样板，以帮助工程师正确的使用。这是最灵活，也最方便的解决方案。</p>
+<p>If the templating looks overhead, there is a “documentation” approach to inform your users which tag the block CSS class would be applied to, this can be done with documenting the block code. The shortest version could be just a comment with a tag name prefixing the block declaration <code>/*button*/.button</code>. Or that can be a larger comment with full HTML piece needed to the block to function.</p>
+<p>如果模板做起来太过复杂的话，那么可以使用“文档”的方法来告诉工程师哪个块的CSS类适用于哪个标签，这些都可以通过在块的代码中记录完成。最简单的方式只需要在声明代码<code>/*button*/.button</code>前面加上标签名即可。或者，写一段完整的HTML代码块来注释。</p>
+<p><a id="css-modifier-names"></a></p>
+<h2 id="可以将修饰类命名为CSS中对应的样式吗？（Is-this-good-to-name-modifiers-corresponding-to-what-they-have-in-CSS-）"><a href="#可以将修饰类命名为CSS中对应的样式吗？（Is-this-good-to-name-modifiers-corresponding-to-what-they-have-in-CSS-）" class="headerlink" title="可以将修饰类命名为CSS中对应的样式吗？（Is this good to name modifiers corresponding to what they have in CSS?）"></a>可以将修饰类命名为CSS中对应的样式吗？（Is this good to name modifiers corresponding to what they have in CSS?）</h2><blockquote>
+<p>Thanks to mixes, we can create a lot of modifiers which represent CSS properties and assign them to blocks. But I’ve heard that “it is bad”. For example, this selector <code>.block__element--border-bottom-5px</code> was stamped as “awful”. I am wondering why and how should the modifiers be named then?</p>
+</blockquote>
+<blockquote>
+<p>多亏了混合（mixes），可以创建很多代表CSS属性的修饰类，并将它们分配给块元素。但是我听说“这样做很糟糕”。例如，选择器<code>.block_element--border-bottom-5px</code>被打上了“糟糕”的名号。我想知道这是为什么，那我们又应该如何命名修饰类呢？</p>
+</blockquote>
+<p>Naming the modifiers corresponding to their CSS representation is not recommended. Indeed it looks not very nice but there are also practical reasons against it. Lately then the view of your components is changed, you will need to fix not only CSS but also the selectors. So, when you border is 6px, it would require changes in all the templates and sometimes in JavaScript.</p>
+<p>不推荐将修饰类命名为CSS中对应的样式。不止是看起来不友好，使用起来也不合理。比如改变组件的视图边框为6px，那不止要修改CSS，还要修改选择器，还要修改所有的模板和JavaScript中的引用。</p>
+<p>Also, it never happens that a modifier has only one CSS property to define and will have it forever. Even if now it is only border that differentiates one state from another, this is very likely that lately you would need other CSS properties for the same state of your block. This would be messy if you define a background or padding in a modifier called “border”. So, it is recommended to choose semantic names for modifiers even if they only have one property by now.</p>
+<p>另外，从来没有过只为一个CSS属性声明修饰类。即使现在两个类只是边框不同，之后也很有可能需要修改这个类中的其他CSS属性。 比如在“border”的修饰符类中定义背景或内边距的样式，这看起来会很奇怪。所以，即使现在只有一个属性，也建议选择使用语义来定义修饰类。</p>
+<p><a id="css-nested-elements"></a></p>
+<h2 id="如何命名嵌套元素的类名？像-block-el1-el2这样吗？（What-would-be-a-class-name-for-an-element-inside-another-element-block-el1-el2）"><a href="#如何命名嵌套元素的类名？像-block-el1-el2这样吗？（What-would-be-a-class-name-for-an-element-inside-another-element-block-el1-el2）" class="headerlink" title="如何命名嵌套元素的类名？像.block__el1__el2这样吗？（What would be a class name for an element inside another element? .block__el1__el2）?"></a>如何命名嵌套元素的类名？像<code>.block__el1__el2</code>这样吗？（What would be a class name for an element inside another element? <code>.block__el1__el2</code>）?</h2><blockquote>
+<p>What should I do if my block has a complex structure and its elements are nested? CSS classes like <code>block__elem1__elem2__elem3</code> look scary.</p>
+</blockquote>
+<blockquote>
+<p>如果一个块的结构复杂，子元素存在嵌套，应该如何处理它们？如果将CSS类命名为<code>block__elem1__elem2__elem3</code>，那看起来也太可怕了。</p>
+</blockquote>
+<p>According to BEM method, block structure should be flattened; you do not need to reflect nested DOM structure of the block. So, the class names for this case would be:</p>
+<p>根据BEM的方法，块元素的结构应该是平整的; 不需要反映该块是嵌套DOM结构。所以，这个例子的类名是：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block</span> &#123;&#125;</span><br><span class="line"><span class="selector-class">.block__elem1</span> &#123;&#125;</span><br><span class="line"><span class="selector-class">.block__elem2</span> &#123;&#125;</span><br><span class="line"><span class="selector-class">.block__elem3</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>Whereas the DOM representation of the block may be nested:</p>
+<p>嵌套的DOM结构可以如下表示：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block'</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem1'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem2'</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem3'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Besides the fact that the classes look much nicer, it makes the elements be dependent on the block only. So, you can easily move them  across the block when providing changes to the interface. The changes of the block DOM structure would not need corresponding changes to the CSS code.</p>
+<p>除了让类的结构看起来更好之外，它还使得子元素只依赖于块元素本身。所以，当对UI进行更改时，您可以轻松地对它们进行操作。而且，对于块DOM结构的变化，不需要对CSS代码做相应的改变。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block'</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem1'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem2'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem3'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><a id="global-css-resets"></a></p>
+<h2 id="我听说BEM不推荐使用全局CSS重置，为什么？（I’ve-heard-that-BEM-does-not-recommend-global-CSS-resets-Why-）"><a href="#我听说BEM不推荐使用全局CSS重置，为什么？（I’ve-heard-that-BEM-does-not-recommend-global-CSS-resets-Why-）" class="headerlink" title="我听说BEM不推荐使用全局CSS重置，为什么？（I’ve heard that BEM does not recommend global CSS resets. Why?）"></a>我听说BEM不推荐使用全局CSS重置，为什么？（I’ve heard that BEM does not recommend global CSS resets. Why?）</h2><blockquote>
+<p>CSS resets is a practise making a good showing. Many frameworks first align anything and then apply their special styles. BEM does not recommend common resets. Why? And what we are supposed to do instead?</p>
+</blockquote>
+<blockquote>
+<p>CSS重置是一种表现良好的实践。许多框架会首先使用它将所有元素重置，然后再应用特殊样式。为什么BEM不推荐这种常见的重置？那我们应该如何做呢？</p>
+</blockquote>
+<p>Nothing bad would happen to your blocks if you use common reset (well, except of some special cases below). So, BEM does not prohibit to use them. But using them BEM-way would be more effective.</p>
+<p>如果你正在使用常见的重置，不会对块产生不良的影响（除了下面的一些特殊情况）。所以，BEM并不禁止使用它们。但是，使用BEM的方式会更有效。</p>
+<p>Common CSS reset is a set of CSS to be applied to document nodes and ensure that their default view is the same in different browsers. In most cases the CSS rules are written for tag selectors and this is not recommended in BEM (you can find a lot of explanation above).</p>
+<p>常见的CSS重置是一组应用到文档节点的CSS，并确保它们在不同的浏览器中的默认视图保持一致，在这种数情况下，CSS规则是为标签选择器编写的，在BEM中不推荐（在上面可以找到很多解释）。</p>
+<p>Another point is that in BEM a block encapsulates everything which is needed for it to be displayed and function. And this is why we call the BEM blocks independent. If the block does not look properly without a third-party CSS being added onto the page, it cannot be called “independent” that much.</p>
+<p>另一个原因是，在BEM中，一个块会封装所需的所有功能，这就是我们称BEM为独立模块的原因。 如果块的展示依赖于第三方CSS，就不能称这个块为“独立”的块。</p>
+<p>Assuming this all, BEM recommends every block to reset itself. If you have <code>menu</code> block and <code>list</code> block both as <code>&lt;ul&gt;</code> in your HTML, each of them should provide the reset CSS usually given to <code>&lt;ul&gt;</code>. You may worry that having several blocks with the same reset rules will case repeats in the resultant code. But this is what CSS optimizers should do for you. As a developer you develop every block independently, as if there are no other blocks on the same page.</p>
+<p>除此之外，BEM还建议每个块可以重置其本身。如果在您的HTML中<code>menu</code>块和<code>list</code>块都是<code>&lt;ul&gt;</code>，那么两者都应该为<code>&lt;ul&gt;</code>提供复位的CSS。您可能会担心，具有相同重置规则的多个块会在结果代码中重复出现。但这是CSS优化器应该做的。作为开发人员，应该独立开发每个模块，就好像在同一页面上没有其他模块一样。</p>
+<p>In the case you don’t have a CSS optimizer to combine selectors with the same set of rules, you may use preprocessors to prevent copy-paste. With every new block you can make it reset itself mixing the proper code. For example, with SASS this would look like:</p>
+<p>上面这种情况中，如果没有合适的合并CSS不同选择器中相同规则的方式，可以使用预处理器来避免复制粘贴。可以在添加新块后，插入重置代码以保证最后可以生成正确的代码。例如，在SASS中，看起来就像：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.menu</span> &#123;</span><br><span class="line">    @include reset-list;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.menu__item</span> &#123;</span><br><span class="line">    @include reset-list-item;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ... */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.list</span> &#123;</span><br><span class="line">    @include reset-list;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.list__item</span> &#123;</span><br><span class="line">    @include reset-list-item;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>However using this mixin-way you should realize that the only reason for it is not having a proper optimizer.</p>
+<p>注意，您需要意识到，这里面使用混合方式的唯一原因是现在没有合适的优化器。</p>
+<p>Having resets for every block (besides being nice and BEMish) will also prevent problems with injecting a third-party piece of HTML/CSS markup which relies on browser defaults and so can be affected by global resets. For example, this is a known problem for webmails.</p>
+<p>重设每个块元素（除了好看和BEM范儿之外），也可以防止页面中注入第三方HTML/CSS后，对全局样式造成的影响。例如，在网络邮件中，是一个已经存在的问题。</p>
+<p><a id="ask-your-question"></a></p>
+<h2 id="没找到答案？请直接提问！（Did-not-find-the-answer-Please-ask-your-questions-）"><a href="#没找到答案？请直接提问！（Did-not-find-the-answer-Please-ask-your-questions-）" class="headerlink" title="没找到答案？请直接提问！（Did not find the answer? Please ask your questions!）"></a>没找到答案？请直接提问！（Did not find the answer? Please ask your questions!）</h2><p>If you didn’t find the proper answer, please <a href="https://github.com/getbem/getbem.com/issues/new?title=Type+your+question&amp;body=Explain+in+detail+your+question&amp;labels=question" target="_blank" rel="noopener">ask your question</a>!</p>
+<p>如果您没有找到合适的答案，请<a href="https://github.com/getbem/getbem.com/issues/new?title=Type+your+question&amp;body=Explain+in+detail+your+question&amp;labels=question" target="_blank" rel="noopener">直接提问</a>！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/28/03、常见问题（faq）.html" data-id="cjiybcx2700032a0ftvlmngjr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/bem/">bem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/standard/2018/06/28/02、命名（naming）.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">02、命名（Naming）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/">理论</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/">css</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/bem/">bem</a></li><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/oocss/">oocss</a></li></ul></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/bem/">bem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/standard/tags/bem/" style="font-size: 10px;">bem</a> <a href="/standard/tags/css/" style="font-size: 20px;">css</a> <a href="/standard/tags/oocss/" style="font-size: 15px;">oocss</a> <a href="/standard/tags/理论/" style="font-size: 20px;">理论</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/standard/archives/2017/12/">十二月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/standard/2018/06/28/03、常见问题（faq）.html">03、常见问题（FAQ）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/28/02、命名（naming）.html">02、命名（Naming）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/28/01、介绍（introduction）.html">01、介绍（Introduction）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/28/00、模块化css理论——bem目录.html">00、模块化CSS理论——BEM目录</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/28/13、常见问题（faq）.html">13、常见问题（FAQ）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 alex2010, bystep15<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/standard/" class="mobile-nav-link">Home</a>
+  
+    <a href="/standard/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="https://github.com/bystep15/standard" class="mobile-nav-link">GitHub</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/standard/fancybox/jquery.fancybox.css">
+  <script src="/standard/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/standard/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

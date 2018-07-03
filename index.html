@@ -67,6 +67,557 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-bem/03-FAQ" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/28/03、常见问题（faq）.html" class="article-date">
+  <time datetime="2018-06-28T14:30:00.000Z" itemprop="datePublished">2018-06-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/bem/">bem</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/standard/2018/06/28/03、常见问题（faq）.html">03、常见问题（FAQ）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://getbem.com/faq/" target="_blank" rel="noopener">原文</a></p>
+<p>These Frequently Asked Question are real questions of developers started with BEM, answered by the GetBEM community. Feel free to <a href="https://github.com/getbem/getbem.com/issues/new?title=FAQ:%20Type%20your%20question%20here" target="_blank" rel="noopener">ask your question</a> too, and we will answer it as well.</p>
+<p>下面这些常见问题是开始使用BEM的开发人员遇到的真实问题，由GetBEM社区回答。您可以在社区里面<a href="https://github.com/getbem/getbem.com/issues/new?title=FAQ:%20Type%20your%20question%20here" target="_blank" rel="noopener">随意问问题</a>，我们会在上面回答。</p>
+<ol>
+<li><a href="#why-bem">为什么选择BEM，而不是其他CSS模块方案？（Why should I choose BEM and not another CSS modular solution?）</a></li>
+<li><a href="#why-the-modifier-classes-are-prefixed">为什么不能把修饰符选择器写成组合选择器的形式？（Why are the modifier CSS classes not represented as a combined selector?）</a></li>
+<li><a href="#custom-tags-for-blocks">为什么需要为块设置CSS类而不是使用语义化的自定义标签？（Why do I need CSS classes for block instead of using semantic custom tags?）</a></li>
+<li><a href="#block-modifier-mix">为什么需要组合使用块和块名为前缀的修饰类？（Why do I need to combine block and prefixed modifier class for a modified block?）</a></li>
+<li><a href="#block-modifier-affects-elements">块修饰类可以改变内部元素吗？（Can a block modifier affect elements?）</a></li>
+<li><a href="#can-i-create-global-modifier">可以创建被任何块使用的全局修饰类吗？（Can I create a global modifier applicable to any block?）</a></li>
+<li><a href="#encapsulating-tag-selector">可以在选择器上合用标签和类吗，就像<code>button.button</code>？（Can I combine a tag and a class in selector like button.button?）</a></li>
+<li><a href="#css-modifier-names">可以将修饰类命名为CSS中对应的样式吗？就像<code>.block__element--border-bottom-5px</code>一样。（Is this good to name modifiers corresponding to what they have in CSS? Like <code>.block__element--border-bottom-5px</code>.）</a></li>
+<li><a href="#css-nested-elements">如何命名嵌套元素的类名？像<code>.block__el1__el2</code>这样吗？（What would be a class name for an element inside another element? <code>.block__el1__el2</code>?）</a></li>
+<li><a href="#global-css-resets">我听说BEM不推荐使用全局CSS重置，为什么？（I’ve heard that BEM does not recommend global CSS resets? Why?）</a></li>
+<li><a href="#ask-your-question">没找到答案？（Did not find the answer?）</a></li>
+</ol>
+<p><a id="#why-bem"></a></p>
+<h2 id="为什么选择BEM，而不是其他CSS模块方案？（Why-should-I-choose-BEM-as-a-modular-solution-for-CSS-）"><a href="#为什么选择BEM，而不是其他CSS模块方案？（Why-should-I-choose-BEM-as-a-modular-solution-for-CSS-）" class="headerlink" title="为什么选择BEM，而不是其他CSS模块方案？（Why should I choose BEM as a modular solution for CSS?）"></a>为什么选择BEM，而不是其他CSS模块方案？（Why should I choose BEM as a modular solution for CSS?）</h2><blockquote>
+<p>There are some other modular solutions for CSS (such as OOCSS, AMCSS, SMACSS, SUITCSS). What are the reasons to choose BEM?</p>
+</blockquote>
+<blockquote>
+<p>现在有许多的CSS模块解决方法（例如OOCSS，AMCSS，SMACSS和SUITCSS）。那为什么要选择BEM呢？</p>
+</blockquote>
+<p>BEM provides solutions for all the frontend technologies: CSS, JavaScript, templating; and also for building process of your web application. The methodology is applicable anywhere. However, to apply this in JavaScript and templating you would need special frameworks whereas in CSS you may just follow the methodological recommendations. The CSS part of BEM is the easiest to take into your development process. This is why many use only it. On the other hand, if lately you would found your project fully BEMed (in CSS) and yourself happy for its grown maintenance, you probably would take next step in modularizing your web application. BEM CSS will be easier to coordinate with modular JavaScript and blocks-based project file structure.</p>
+<p>BEM为所有的前端技术提供了解决方案：CSS，JavaScript，模板; 也可以用于构建您的Web应用程序。这种方法适用于任何地方。但是，要在JavaScript和模板中应用BEM，您需要特殊的框架，而在CSS中，您按照建议的方法去做就行。BEM的CSS部分是最容易引入到您的开发流程中的。这就是为什么许多人选择它的原因。另一方面，如果您的项目已经完全实现了实现BEM（在CSS中），并且可以容易的扩展，那您可以利用模块化来完成您的Web应用程序的下一步。BEM CSS易于与模块化的JavaScript和基于块的项目文件结构结合使用，可以让工作变得更轻松。</p>
+<p>If speaking about CSS modular solutions only, the key feature of BEM is block’s independence. Following the CSS recommendations enables to put a block into any place on a page and be sure that is won’t be affected by its surroundings. Also, if you would lately need to nest another block into the current one, their full compatibility is guaranteed. In other words, when maintaining your web application you would be able to move blocks across the page, add others and combine them.</p>
+<p>如果仅仅谈到CSS模块化的解决方案，BEM的关键特征就是块元素的独立性。根据BEM的CSS建议，一个块可以放置在网页上的任何位置，并确保不会受到周围环境的影响。而且，如果您需要在当前块中嵌套另一个块，会保证两个块的兼容性。换句话说，在维护Web应用程序时，您可以跨页面移动块元素，添加其他块并将其组合起来。</p>
+<p>BEM CSS unambiguously defines which CSS belongs to a piece of interface and so using it gives answers to questions “Can I remove this piece of code?” and “What happens and which interface parts will be affected if I change this piece of code?”.</p>
+<p>BEM CSS明确定义了哪些CSS属于一个界面，因此使用它可以解决“我可以删除这段代码吗？” 和“如果我更改了这段代码，会发生什么事情？哪些接口部件会受到影响？”的问题。</p>
+<p><a id="#why-the-modifier-classes-are-prefixed"></a></p>
+<h2 id="为什么不能把修饰符选择器写成组合选择器的形式？-Why-the-modifier-CSS-classes-are-not-represented-as-a-combined-selector"><a href="#为什么不能把修饰符选择器写成组合选择器的形式？-Why-the-modifier-CSS-classes-are-not-represented-as-a-combined-selector" class="headerlink" title="为什么不能把修饰符选择器写成组合选择器的形式？(Why the modifier CSS classes are not represented as a combined selector?)"></a>为什么不能把修饰符选择器写成组合选择器的形式？(Why the modifier CSS classes are not represented as a combined selector?)</h2><blockquote>
+<p>BEM recommends to modify blocks like this <code>&lt;div class=&quot;block block--mod&quot;&gt;</code>. Why not to use the simple version like <code>&lt;div class=&quot;block mod&quot;&gt;</code>? Since we now have combined selectors <code>.block.mod</code>, it’s easy to define all the CSS properties to it.</p>
+</blockquote>
+<blockquote>
+<p>BEM推荐像<code>&lt;div class=&quot;block block--mod&quot;&gt;</code>这样的修饰类。为什么不用简单<code>&lt;div class=&quot;block mod&quot;&gt;</code>这样的版本呢？使用组合选择器<code>.block.mod</code>，就可以很容易地定义所有CSS属性。</p>
+</blockquote>
+<p>The recommendation to prefix modifier CSS class with its block name has multiple reasons.</p>
+<p>使用块名称做修饰符CSS类的前缀有多种原因。</p>
+<p>Firstly, since it is possible to mix several blocks and elements at the same DOM node, we need to ensure that a modifier would affect only the block it belongs to. Let’s say that we have a menu item element and a button mixed together. In HTML this construction is represented<br>by the following markup:</p>
+<p>首先，由于我们可以在同一个DOM节点上添加多个块和元素的类，所以需要确保修饰符只影响它所属的块元素。假设我们将一个菜单项的元素和一个按钮混合在一起。在HTML中，这种结构会是这样的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"menu__item button"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>In this case adding <code>.active</code> modifier to them would affect both.</p>
+<p>在这个例子中添加修饰符<code>.active</code>会对它们俩都产生影响。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"menu__item button active"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>All the 3 sit at the same DOM node, so it is impossible to differentiate if we mean <code>menu__item.active</code> or <code>button.active</code>. Whereas in the prefixed case the naming <code>button--active</code> unambiguously says as that this is only the button that has to be affected.</p>
+<p>所有的3个类都在同一个DOM节点上，所以如果我们用<code>menu__item.active</code>或者<code>button.active</code>无法区分出它们。而在有前缀<code>button--active</code>的情况下 - 可以毫不含糊地说，当前元素是唯一会被影响的按钮。</p>
+<p>Another point is CSS specificity. The combined selectors are more specific (means more important) than single class selectors. This means that you might have trouble when redefining them with parent block code.</p>
+<p>另一点是CSS的特殊性。组合的选择器比单个选择器更具体（意味权重更高）。这意味着在用它们父节点块的代码重新定义它们时可能会遇到麻烦。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button active"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>If you already have <code>.button.active</code> selector in your code, the specificity of your redefining <code>.header .button</code> would be exactly the same as the specificity of modifier combined selector which makes you dependent on the order of the CSS rules declared. Whereas if you use a prefixed modifier, you can always be sure that the cascade selector <code>.header .button</code> will overwrite the <code>.button--active</code> modifier.</p>
+<p>如果在您的代码中已经添加了<code>.button.active</code>选择器，那么重新定义<code>.header .button</code>的独特性与修饰符组合选择器的独特性完全相同，这使得最后的效果会依赖于您声明的CSS规则的顺序。而如果使用前缀修饰符，则始终可以确保级联选择器<code>.header .button</code>将覆盖<code>.button-active</code>修饰符的样式。</p>
+<p>This makes life easier especially for maintainable projects.</p>
+<p>这更有利于项目的可维护性。</p>
+<p>The third point is that looking at the <code>&lt;div class=&quot;block block--mod&quot;&gt;</code> markup you can clearly see the block structure. It is easy to recognize that we have a block and its modifier and there is no different interpretations here. Unfortunately a grasp onto <code>&lt;div class=&quot;block mod&quot;&gt;</code> code does not give such information. Depending on what are the exact CSS classes sometimes it is impossible to recognize if we have a block and a modifier or a mix of 2 blocks here. This might be even more confusing if the names of the entities are complex or contracted/abbreviated (which sometimes happens in big projects).<br> Clear understanding of a block structure is especially helpful when looking for corresponding code on a file system.</p>
+<p>第三点是当您看看<code>&lt;div class =“block block-mod”&gt;</code>标记时，您可以清楚地看到块结构。我们很容易看到，此处我们有一个块元素和它的修饰符，这是确定的。不幸的是，使用<code>&lt;div class =“block mod”&gt;</code>代码并不能提供这样信息。如果依靠确切的CSS类，有时可能辨别不出我们是由一个块元素，还是一个修饰符或是2者的混合。 如果实体的名称是复杂的或是缩写的（这在大项目中有时会发生），情况可能会更加糟糕。</p>
+<p>You will also appreciate <code>.block--mod</code> practice when refactoring and use global search over all your project files. Imagine the same looking for not-prefixed <code>.mod</code> and all the HTML pieces it might be in.</p>
+<p>当重构和使用全局搜索您的所有项目文件时，您也许会喜欢使用<code>.block--mod</code>这样的方法。可以想象一下，如果<code>.mod</code>和其他HTML代码没有前缀，情况又是什么样的。</p>
+<p>And lastly, from a development process standpoint the difference between <code>.block.mod</code> and <code>.block--mod</code> is only one symbol. Using <code>-</code> instead of <code>.</code> costs nothing but it brings all the benefits listed above. Moreover, since pre-processor began to support BEM notation, it is pretty natural to write <code>&amp;--mod</code> there and finally get a modifier declared as it was recommended.</p>
+<p>最后，从开发过程的角度来看，<code>.block.mod</code>和<code>.block--mod</code>之间的区别只是一个符号。 使用<code>-</code> 而不是<code>.</code> 不会花费任何东西，但它会带来上面列出的所有好处。而且，由于预处理器开始支持BEM的声明，所以在那里编写<code>＆--mod</code>是很自然的，最后，您会得到一个推荐的修饰符。</p>
+<p><a id="custom-tags-for-blocks"></a></p>
+<h2 id="为什么需要为块设置CSS类而不是使用语义化的自定义标签？-Why-do-I-need-CSS-classes-for-block-instead-of-using-semantic-custom-tags"><a href="#为什么需要为块设置CSS类而不是使用语义化的自定义标签？-Why-do-I-need-CSS-classes-for-block-instead-of-using-semantic-custom-tags" class="headerlink" title="为什么需要为块设置CSS类而不是使用语义化的自定义标签？(Why do I need CSS classes for block instead of using semantic custom tags?)"></a>为什么需要为块设置CSS类而不是使用语义化的自定义标签？(Why do I need CSS classes for block instead of using semantic custom tags?)</h2><blockquote>
+<p>Blocks can be represented as custom tags which we may define CSS rules for. Looks like we do not need CSS classes for blocks at all. They can be used for modifiers only, like <code>&lt;button class=&quot;mod&quot;/&gt;</code>.</p>
+</blockquote>
+<blockquote>
+<p>块是可以是自定义标签，并为其定义CSS规则。所以看起来根本不需要CSS类的块，只需要（在语义化的标签上）使用修饰符即可，如<code>&lt;button class =“mod”/&gt;</code>。</p>
+</blockquote>
+<p>Using custom tags as block selectors is indeed one of the BEMish solutions and can be used. However this variant is less flexible than the recommended “class” approach.</p>
+<p>确实存在使用自定义标签作为块选择器的解决方案，BEMish就是其中可用的方案之一。但是，相比这种形式，推荐的“class”形式要更灵活。</p>
+<p>This is more likely that you would need to prefix modifier classes with their block name to provide them namespace. The details are uncovered in <a href="#why-the-modifier-classes-are-prefixed">“Why the modifier CSS classes are prefixed with their parent block name?”</a> question. So, finally the custom-tag version of a block is like <code>&lt;block class=&quot;block--mod&quot;/&gt;</code>. This does not look very different from <code>&lt;div class=&quot;block block--mod&quot;&gt;</code> especially assuming that being tag-independent you can use any custom node and stay with <code>&lt;block class=&quot;block block--mod&quot;&gt;</code>.</p>
+<p>需要考虑的情况是，块名称作为前缀为修饰符类提供命名空间。详细情况已在<a href="#why-the-modifier-classes-are-prefixed">“为什么不能把修饰符选择器写成组合选择器的形式？”</a>中说明。所以，自定义标签块的形式最终是<code>&lt;block class =“block-mod”/&gt;</code>。假设自定义节点和标签不关联，那么<code>&lt;block class =“block block-mod”&gt;</code>和<code>&lt;div class =“block block-mod”&gt;</code>看起来没什么两样。</p>
+<p>Second drawback is that “tag” version makes using the mixes of blocks impossible whereas the “class” version represent that naturally by <code>&lt;div class=&quot;block1 block2&quot;&gt;</code>.</p>
+<p>第二个缺点是“标签”的版本使得混用块是不可能的，而“class”的版本用<code>&lt;div class =“block1 block2”&gt;</code>自然地表示。</p>
+<p>And the last clench against such an approach is that in many cases you are not able to represent your blocks with custom tags at all. For a <code>link</code> block you definitely need <code>&lt;a&gt;</code> tag, and the same for <code>&lt;input&gt;</code>.</p>
+<p>最后一个原因是在很多情况下，块不能用自定义标签来表示。对于<code>link</code>块，您肯定需要<code>&lt;a&gt;</code>标签，对于<code>&lt;input&gt;</code>标签也是如此。</p>
+<p><a id="block-modifier-mix"></a></p>
+<h2 id="为什么需要组合使用块和块名为前缀的修饰类？-Why-do-I-need-to-combine-block-and-prefixed-modifier-class-for-a-modified-block"><a href="#为什么需要组合使用块和块名为前缀的修饰类？-Why-do-I-need-to-combine-block-and-prefixed-modifier-class-for-a-modified-block" class="headerlink" title="为什么需要组合使用块和块名为前缀的修饰类？(Why do I need to combine block and prefixed modifier class for a modified block?)"></a>为什么需要组合使用块和块名为前缀的修饰类？(Why do I need to combine block and prefixed modifier class for a modified block?)</h2><blockquote>
+<p>Why does both block’s and modifier’s class sit together in the modified block like <code>&lt;div class=”block block--mod”&gt;</code>?</p>
+</blockquote>
+<blockquote>
+<p>Everything about a modified block can be described in <code>.block--mod</code>. If there is something common between 2 modifiers, it’s possible to use preprocessor’s mixins to avoid copy-paste.</p>
+</blockquote>
+<blockquote>
+<p>为什么块和修饰类要在一起使用，比如<code>&lt;div class =“block block--mod”&gt;</code>？</p>
+</blockquote>
+<blockquote>
+<p>直接使用修饰类<code>.block--mod</code>来描述更简单。如果两个修饰类之间有共同之处，可以使用预处理器的mixin来避免重复。</p>
+</blockquote>
+<p>This approach is possible thanks to preprocessors. However it brings some drawbacks which you should be aware of.</p>
+<p>使用预处理器确实可以解决这个问题，但这样做存在一些需要考虑的缺点。</p>
+<p>In the case of combining 2 or more modifiers at the same block <code>&lt;div class=&quot;block--theme--christmas block--size--big&quot;&gt;</code>, you would get the core block’s styles twice. However this depends on the preprocessor algorithms.</p>
+<p>比如在同一个块<code>&lt;div class =“block--theme--christmas block--size--big”&gt;</code>中使用两个或更多修饰类，基础块的样式会被引用两次。但这不是绝对的，这取决于预处理器的算法。</p>
+<p>When adding/removing modifiers dynamically with JavaScript, the additional modifier is more handy. Switching it off would mean only removing one CSS class from the DOM node with no need to add the core block CSS class back as it sits there forever.</p>
+<p>另外当用JavaScript动态添加或移除修饰类时，添加修饰类的操作更方便。将其从DOM节点中删除也不需要考虑基础块——基础块会一直存在。</p>
+<p><a id="block-modifier-affects-elements"></a></p>
+<h2 id="块修饰类可以改变内部元素吗？（Can-a-block-modifier-affect-elements-）"><a href="#块修饰类可以改变内部元素吗？（Can-a-block-modifier-affect-elements-）" class="headerlink" title="块修饰类可以改变内部元素吗？（Can a block modifier affect elements?）"></a>块修饰类可以改变内部元素吗？（Can a block modifier affect elements?）</h2><blockquote>
+<p>If I have a block modifier, for example <code>xmas</code>, and I want the elements within that block to also be xmas themed, how would it be best to do it.</p>
+</blockquote>
+<blockquote>
+<p>Does a <code>--xmas</code> suffix for every element seem necessary? Or would this be the one use-case for nesting (e.g. <code>block--xmasblock__elem { ... }</code>?)</p>
+</blockquote>
+<blockquote>
+<p>假如一个块修饰类<code>xmas</code>，并且希望块中的元素也是xmas主题，这种情况怎么处理最好呢？</p>
+</blockquote>
+<blockquote>
+<p>是否需要为每个元素都添加<code>--xmas</code>后缀？或者这个案例中使用嵌套合适吗？（例如<code>block-xmas block__elem {...}</code>？）</p>
+</blockquote>
+<p>While in general BEM recommends avoiding nested selectors, in this case they are reasonable.</p>
+<p>通常情况下，BEM不建议使用嵌套选择器，但是在这个案例中可以使用。</p>
+<p>When creating the nested selector, you declare that one entity depends on another. Because BEM introduces independent components, such an approach is not suggested when we are speaking about 2 different blocks.</p>
+<p>在创建嵌套选择器时，定义一个实体依赖于另一个实体。因为BEM中引入了独立组件，所以2个不同的块元素中，并不建议这样使用。</p>
+<p>But when it comes to a block and its element, they are not of equivalent meaning. By definition, an element does not make any sense outside its parent block. So, an element is a block-dependent entity. Assuming this, it is quite normal and logical that an element is affected by the block’s current state.</p>
+<p>但是，在一个块和其内部的元素时，另当别论。 根据定义，一个元素若在其父块之外，它就没有任何意义。 所以，元素是依赖块的实体。基于这个假设，一个元素受到当前块状态的影响是很正常的，也是很合乎逻辑的。</p>
+<p>So, this is a common pattern in BEM to code</p>
+<p>所以，这种情况下BEM代码的通用格式如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.my-block--xmas</span> <span class="selector-class">.my-block__button</span> &#123;</span><br><span class="line">	<span class="comment">/* Jingle bells, jingle bells, jingle all the way.*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a id="can-i-create-global-modifier"></a></p>
+<h2 id="可以创建被任何块使用的全局修饰类吗？（Can-I-create-a-global-modifier-applicable-to-any-block-）"><a href="#可以创建被任何块使用的全局修饰类吗？（Can-I-create-a-global-modifier-applicable-to-any-block-）" class="headerlink" title="可以创建被任何块使用的全局修饰类吗？（Can I create a global modifier applicable to any block?）"></a>可以创建被任何块使用的全局修饰类吗？（Can I create a global modifier applicable to any block?）</h2><blockquote>
+<p>I’ve heard that global modifiers like <code>visible</code>, <code>invisible</code>, <code>red</code>, <code>opacity50</code> are not welcomed in BEM. Why?</p>
+</blockquote>
+<blockquote>
+<p>I think it is useful to incorporate common properties like this in such a global class and then apply it to different blocks.</p>
+</blockquote>
+<blockquote>
+<p>听说在BEM中不建议使用<code>visible</code>, <code>invisible</code>, <code>red</code>, <code>opacity50</code>这样的全局修饰类。为什么呢？</p>
+</blockquote>
+<blockquote>
+<p>我认为将上述这样的常见通用类设置为全局类，然后将其应用到不同的块中是有益的。</p>
+</blockquote>
+<p>Indeed you can have 2 main CSS classes at the same DOM node. In BEM we call it <code>mix</code>:</p>
+<p>确实，在同一个DOM节点上可以有两个主要的CSS类，在BEM中我们称之为<code>mix</code>；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block1 block2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>But the important thing about it is that both <code>block1</code> and <code>block2</code> should be standalone blocks. This is slightly different from what people usually mean by “global modifiers”, as modifiers do not have any sense on their own and are just a set of properties to change.</p>
+<p>但是，重要的是<code>block1</code>和<code>block2</code>都应该是独立的块。这与人们通常所说的“全局修饰类”的含义略有不同，因为修饰类本身没有任何意义，它们只是表示一组需要改变的属性。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block globalmod"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>If you think that in your case you would have a global modifier, these are the problems you may face:</p>
+<p>如果您认为在项目中需要用到全局修饰符，那么可能遇到如下问题：</p>
+<p>First of all the specificity problem appears. In a local modifier case CSS code goes like this:</p>
+<p>首先是特指性问题。在使用本地修饰类的情况下，CSS代码如下所示：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.block--hidden</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Both block and modifier selectors have the same specificity. As modifier declaration goes after the block, it redefines the CSS properties. These styles belong to block and are stored in the block file. Thus, independently on how the resultant CSS is built from source, you will always have them in this order and be sure that redefining happens.</p>
+<p>块和修饰选择器具有相同的特指性。由于修饰类是在块声明之后声明的，所有它会重新定义CSS属性。属于块元素的样式会在对应块的文件中存储。因此，构建需要保证CSS的顺序，得到覆盖后重新定义的CSS。</p>
+<p>In the case of global modifier, its properties can be redefined by the blocks if they follow modifiers in code:</p>
+<p>在全局修饰类的例子中，如果代码中块CSS声明的位置在修饰类声明的后面的话，那么会导致属性由块重新定义：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hidden</span> &#123; <span class="attribute">display</span>: none &#125;</span><br><span class="line"><span class="comment">/* ... */</span></span><br><span class="line"><span class="selector-class">.block</span> &#123; <span class="attribute">display</span>: block &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block hidden"</span>&gt;</span>you still see me<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>One of the possible solutions to this problem is to raise the selector specificity of global modifiers by adding <code>!important</code> to them. But in this case any side-effects of such a global modifier might be overwritten only by declarations with the same <code>!important</code> instruction.</p>
+<p>一个常见的解决方案是通过增加<code>!important</code>来提高全局修饰类选择器的特指性。但会造成一定的副作用，全局修饰符只能被同样具有<code>!important</code>的声明覆盖。</p>
+<p>Another way is to load global modifier CSS after all the other styles. But in this case you are not able any more to use lazy loading strategy for your components. The additional lazy CSS will still be loaded after the modifiers and you get the same problem.</p>
+<p>另一种方案是在所有样式声明之后再加载全局修饰符。但是这种情况下不允许组件使用延迟加载。若您这样使用的话，延迟加载的CSS会覆盖最后声明的修饰类的样式，那您又会遇到相同的问题。</p>
+<p>The next problem is combination of several global modifiers at the same block.</p>
+<p>接下来的问题是在同一个块中组合使用几个全局修饰符。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block mod1 mod2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>In this case you absolutely have no control over the block. The order of modifiers in code can be different. If it conflicts with other declarations, changing the order can fix this conflict but lead to another one. The only way would be to redefine the mess in block. And don’t forget about the <code>!important</code> to your hack.</p>
+<p>因为代码中修饰类的顺序可能不同，所以无法完全控制该块的样式。如果其中一个修饰符与其他的声明冲突，在改变顺序后，虽然可以解决这个冲突，但又导致其他的冲突。对于这个问题，唯一的办法是重新定义这些样式。记得不要忘记使用<code>!important</code>。</p>
+<p>Also, depending on a block the same modifier can be implemented differently. Even the simple <code>.hidden</code> sometimes needs to be not <code>display: none</code> but <code>visibility: hidden</code> or even <code>position: absolute; left: -9999px</code> etc. And if you need to bring some changes into your block, it is much nicer not to waste time searching for all the places where this block can be combined with a global modifier. Especially assuming that such dependencies usually are not described anywhere.</p>
+<p>而且，相同的修饰符在不同的块元素上可以有不同的样式。 即使是简单的<code>.hidden</code>有时使用<code>display: none</code>有时使用<code>visibility: hidden</code>，甚至使用<code>position: absolute; left: -9999px</code>等等。如果想要在您的块中加入一些变化，不用浪费时间去寻找整个块中所有可以和全局修饰符结合的地方。特别是这种依赖关系并不明晰。</p>
+<p>All this hell can be avoided by encapsulating a modifier in a block like <code>.block--mod</code>.</p>
+<p>所有这一切问题都可以通过把修饰类封装在块中（如<code>.block--mod</code>）来避免。</p>
+<p>Indeed using global modifiers makes the resultant code less. However if you measure the real difference in bytes it usually does not seem that big. Especially if you are using CSS optimizer which can combine selectors.</p>
+<p>当然，使用全局修饰符会使最后生成的代码量更少。但是，用字节数来衡量实际的差异通常并不大，而且可以使用组合CSS选择器的方式来优化。</p>
+<p><a id="encapsulating-tag-selector"></a></p>
+<h2 id="可以在选择器上合用标签和类吗，就像button-button？（Can-I-combine-a-tag-and-a-class-in-selector-like-button-button-）"><a href="#可以在选择器上合用标签和类吗，就像button-button？（Can-I-combine-a-tag-and-a-class-in-selector-like-button-button-）" class="headerlink" title="可以在选择器上合用标签和类吗，就像button.button？（Can I combine a tag and a class in selector like button.button?）"></a>可以在选择器上合用标签和类吗，就像<code>button.button</code>？（Can I combine a tag and a class in selector like <code>button.button</code>?）</h2><blockquote>
+<p>I want to use selectors like <code>button.button</code> to encapsulate my blocks functionality within a particular tag. If lately someone else would use in their code <code>&lt;h2 class=&quot;button&quot;&gt;</code>, such an encapsulation would prevent a conflict.</p>
+</blockquote>
+<blockquote>
+<p>我想使用<code>button.button</code>形式的选择器，将功能块封装进特定标签中。来避免<code>&lt;h2 class =“button”&gt;</code>之类的错误使用。</p>
+</blockquote>
+<p>The CSS specificity of such a selector grows. <code>.button--mod</code> selector will not overwrite CSS properties of the block, only <code>button.button--mod</code> would work. You will need its modifiers to be combined with the tag as well and so do the developers who lately would redefine your block.</p>
+<p>由于CSS特指性的增加，简单的使用<code>.button--mod</code>选择器并不能覆盖块的CSS属性，只有使用<code>button.button--mod</code>才能工作。必须将其修饰类与标签结合使用，重新定义块也需要与标签结合使用。</p>
+<p>Lately, when a project goes larger, it’s very likely that you may have <code>input.button</code>, <code>span.button</code> and <code>a.button</code> as well. And all the prefixed selectors for modifiers and nested elements will need 4 declarations.</p>
+<p>渐渐地，随着项目变大逐渐变大，很有可能会出现<code>input.button</code>，<code>span.button</code>和<code>a.button</code>等选择器。所有修饰类和嵌套元素类的前缀选择器都需要4个声明。</p>
+<p>So, it is better not to tie your own hands with such prefixing. However if you still can softly-softly ensure that your blocks are used with proper tags if your provide your users with templates for every block. This is the most flexible and automatic solution.</p>
+<p>所以，最好不要被这样的前缀束缚。可以提供块对应的样板，以帮助工程师正确的使用。这是最灵活，也最方便的解决方案。</p>
+<p>If the templating looks overhead, there is a “documentation” approach to inform your users which tag the block CSS class would be applied to, this can be done with documenting the block code. The shortest version could be just a comment with a tag name prefixing the block declaration <code>/*button*/.button</code>. Or that can be a larger comment with full HTML piece needed to the block to function.</p>
+<p>如果模板做起来太过复杂的话，那么可以使用“文档”的方法来告诉工程师哪个块的CSS类适用于哪个标签，这些都可以通过在块的代码中记录完成。最简单的方式只需要在声明代码<code>/*button*/.button</code>前面加上标签名即可。或者，写一段完整的HTML代码块来注释。</p>
+<p><a id="css-modifier-names"></a></p>
+<h2 id="可以将修饰类命名为CSS中对应的样式吗？（Is-this-good-to-name-modifiers-corresponding-to-what-they-have-in-CSS-）"><a href="#可以将修饰类命名为CSS中对应的样式吗？（Is-this-good-to-name-modifiers-corresponding-to-what-they-have-in-CSS-）" class="headerlink" title="可以将修饰类命名为CSS中对应的样式吗？（Is this good to name modifiers corresponding to what they have in CSS?）"></a>可以将修饰类命名为CSS中对应的样式吗？（Is this good to name modifiers corresponding to what they have in CSS?）</h2><blockquote>
+<p>Thanks to mixes, we can create a lot of modifiers which represent CSS properties and assign them to blocks. But I’ve heard that “it is bad”. For example, this selector <code>.block__element--border-bottom-5px</code> was stamped as “awful”. I am wondering why and how should the modifiers be named then?</p>
+</blockquote>
+<blockquote>
+<p>多亏了混合（mixes），可以创建很多代表CSS属性的修饰类，并将它们分配给块元素。但是我听说“这样做很糟糕”。例如，选择器<code>.block_element--border-bottom-5px</code>被打上了“糟糕”的名号。我想知道这是为什么，那我们又应该如何命名修饰类呢？</p>
+</blockquote>
+<p>Naming the modifiers corresponding to their CSS representation is not recommended. Indeed it looks not very nice but there are also practical reasons against it. Lately then the view of your components is changed, you will need to fix not only CSS but also the selectors. So, when you border is 6px, it would require changes in all the templates and sometimes in JavaScript.</p>
+<p>不推荐将修饰类命名为CSS中对应的样式。不止是看起来不友好，使用起来也不合理。比如改变组件的视图边框为6px，那不止要修改CSS，还要修改选择器，还要修改所有的模板和JavaScript中的引用。</p>
+<p>Also, it never happens that a modifier has only one CSS property to define and will have it forever. Even if now it is only border that differentiates one state from another, this is very likely that lately you would need other CSS properties for the same state of your block. This would be messy if you define a background or padding in a modifier called “border”. So, it is recommended to choose semantic names for modifiers even if they only have one property by now.</p>
+<p>另外，从来没有过只为一个CSS属性声明修饰类。即使现在两个类只是边框不同，之后也很有可能需要修改这个类中的其他CSS属性。 比如在“border”的修饰符类中定义背景或内边距的样式，这看起来会很奇怪。所以，即使现在只有一个属性，也建议选择使用语义来定义修饰类。</p>
+<p><a id="css-nested-elements"></a></p>
+<h2 id="如何命名嵌套元素的类名？像-block-el1-el2这样吗？（What-would-be-a-class-name-for-an-element-inside-another-element-block-el1-el2）"><a href="#如何命名嵌套元素的类名？像-block-el1-el2这样吗？（What-would-be-a-class-name-for-an-element-inside-another-element-block-el1-el2）" class="headerlink" title="如何命名嵌套元素的类名？像.block__el1__el2这样吗？（What would be a class name for an element inside another element? .block__el1__el2）?"></a>如何命名嵌套元素的类名？像<code>.block__el1__el2</code>这样吗？（What would be a class name for an element inside another element? <code>.block__el1__el2</code>）?</h2><blockquote>
+<p>What should I do if my block has a complex structure and its elements are nested? CSS classes like <code>block__elem1__elem2__elem3</code> look scary.</p>
+</blockquote>
+<blockquote>
+<p>如果一个块的结构复杂，子元素存在嵌套，应该如何处理它们？如果将CSS类命名为<code>block__elem1__elem2__elem3</code>，那看起来也太可怕了。</p>
+</blockquote>
+<p>According to BEM method, block structure should be flattened; you do not need to reflect nested DOM structure of the block. So, the class names for this case would be:</p>
+<p>根据BEM的方法，块元素的结构应该是平整的; 不需要反映该块是嵌套DOM结构。所以，这个例子的类名是：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block</span> &#123;&#125;</span><br><span class="line"><span class="selector-class">.block__elem1</span> &#123;&#125;</span><br><span class="line"><span class="selector-class">.block__elem2</span> &#123;&#125;</span><br><span class="line"><span class="selector-class">.block__elem3</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>Whereas the DOM representation of the block may be nested:</p>
+<p>嵌套的DOM结构可以如下表示：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block'</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem1'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem2'</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem3'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Besides the fact that the classes look much nicer, it makes the elements be dependent on the block only. So, you can easily move them  across the block when providing changes to the interface. The changes of the block DOM structure would not need corresponding changes to the CSS code.</p>
+<p>除了让类的结构看起来更好之外，它还使得子元素只依赖于块元素本身。所以，当对UI进行更改时，您可以轻松地对它们进行操作。而且，对于块DOM结构的变化，不需要对CSS代码做相应的改变。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block'</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem1'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem2'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'block__elem3'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><a id="global-css-resets"></a></p>
+<h2 id="我听说BEM不推荐使用全局CSS重置，为什么？（I’ve-heard-that-BEM-does-not-recommend-global-CSS-resets-Why-）"><a href="#我听说BEM不推荐使用全局CSS重置，为什么？（I’ve-heard-that-BEM-does-not-recommend-global-CSS-resets-Why-）" class="headerlink" title="我听说BEM不推荐使用全局CSS重置，为什么？（I’ve heard that BEM does not recommend global CSS resets. Why?）"></a>我听说BEM不推荐使用全局CSS重置，为什么？（I’ve heard that BEM does not recommend global CSS resets. Why?）</h2><blockquote>
+<p>CSS resets is a practise making a good showing. Many frameworks first align anything and then apply their special styles. BEM does not recommend common resets. Why? And what we are supposed to do instead?</p>
+</blockquote>
+<blockquote>
+<p>CSS重置是一种表现良好的实践。许多框架会首先使用它将所有元素重置，然后再应用特殊样式。为什么BEM不推荐这种常见的重置？那我们应该如何做呢？</p>
+</blockquote>
+<p>Nothing bad would happen to your blocks if you use common reset (well, except of some special cases below). So, BEM does not prohibit to use them. But using them BEM-way would be more effective.</p>
+<p>如果你正在使用常见的重置，不会对块产生不良的影响（除了下面的一些特殊情况）。所以，BEM并不禁止使用它们。但是，使用BEM的方式会更有效。</p>
+<p>Common CSS reset is a set of CSS to be applied to document nodes and ensure that their default view is the same in different browsers. In most cases the CSS rules are written for tag selectors and this is not recommended in BEM (you can find a lot of explanation above).</p>
+<p>常见的CSS重置是一组应用到文档节点的CSS，并确保它们在不同的浏览器中的默认视图保持一致，在这种数情况下，CSS规则是为标签选择器编写的，在BEM中不推荐（在上面可以找到很多解释）。</p>
+<p>Another point is that in BEM a block encapsulates everything which is needed for it to be displayed and function. And this is why we call the BEM blocks independent. If the block does not look properly without a third-party CSS being added onto the page, it cannot be called “independent” that much.</p>
+<p>另一个原因是，在BEM中，一个块会封装所需的所有功能，这就是我们称BEM为独立模块的原因。 如果块的展示依赖于第三方CSS，就不能称这个块为“独立”的块。</p>
+<p>Assuming this all, BEM recommends every block to reset itself. If you have <code>menu</code> block and <code>list</code> block both as <code>&lt;ul&gt;</code> in your HTML, each of them should provide the reset CSS usually given to <code>&lt;ul&gt;</code>. You may worry that having several blocks with the same reset rules will case repeats in the resultant code. But this is what CSS optimizers should do for you. As a developer you develop every block independently, as if there are no other blocks on the same page.</p>
+<p>除此之外，BEM还建议每个块可以重置其本身。如果在您的HTML中<code>menu</code>块和<code>list</code>块都是<code>&lt;ul&gt;</code>，那么两者都应该为<code>&lt;ul&gt;</code>提供复位的CSS。您可能会担心，具有相同重置规则的多个块会在结果代码中重复出现。但这是CSS优化器应该做的。作为开发人员，应该独立开发每个模块，就好像在同一页面上没有其他模块一样。</p>
+<p>In the case you don’t have a CSS optimizer to combine selectors with the same set of rules, you may use preprocessors to prevent copy-paste. With every new block you can make it reset itself mixing the proper code. For example, with SASS this would look like:</p>
+<p>上面这种情况中，如果没有合适的合并CSS不同选择器中相同规则的方式，可以使用预处理器来避免复制粘贴。可以在添加新块后，插入重置代码以保证最后可以生成正确的代码。例如，在SASS中，看起来就像：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.menu</span> &#123;</span><br><span class="line">    @include reset-list;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.menu__item</span> &#123;</span><br><span class="line">    @include reset-list-item;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ... */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.list</span> &#123;</span><br><span class="line">    @include reset-list;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.list__item</span> &#123;</span><br><span class="line">    @include reset-list-item;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>However using this mixin-way you should realize that the only reason for it is not having a proper optimizer.</p>
+<p>注意，您需要意识到，这里面使用混合方式的唯一原因是现在没有合适的优化器。</p>
+<p>Having resets for every block (besides being nice and BEMish) will also prevent problems with injecting a third-party piece of HTML/CSS markup which relies on browser defaults and so can be affected by global resets. For example, this is a known problem for webmails.</p>
+<p>重设每个块元素（除了好看和BEM范儿之外），也可以防止页面中注入第三方HTML/CSS后，对全局样式造成的影响。例如，在网络邮件中，是一个已经存在的问题。</p>
+<p><a id="ask-your-question"></a></p>
+<h2 id="没找到答案？请直接提问！（Did-not-find-the-answer-Please-ask-your-questions-）"><a href="#没找到答案？请直接提问！（Did-not-find-the-answer-Please-ask-your-questions-）" class="headerlink" title="没找到答案？请直接提问！（Did not find the answer? Please ask your questions!）"></a>没找到答案？请直接提问！（Did not find the answer? Please ask your questions!）</h2><p>If you didn’t find the proper answer, please <a href="https://github.com/getbem/getbem.com/issues/new?title=Type+your+question&amp;body=Explain+in+detail+your+question&amp;labels=question" target="_blank" rel="noopener">ask your question</a>!</p>
+<p>如果您没有找到合适的答案，请<a href="https://github.com/getbem/getbem.com/issues/new?title=Type+your+question&amp;body=Explain+in+detail+your+question&amp;labels=question" target="_blank" rel="noopener">直接提问</a>！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/28/03、常见问题（faq）.html" data-id="cjiybcx2700032a0ftvlmngjr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/bem/">bem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-bem/02-Naming" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/28/02、命名（naming）.html" class="article-date">
+  <time datetime="2018-06-28T13:30:00.000Z" itemprop="datePublished">2018-06-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/bem/">bem</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/standard/2018/06/28/02、命名（naming）.html">02、命名（Naming）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://getbem.com/naming/" target="_blank" rel="noopener">原文</a></p>
+<blockquote>
+<p>There are only two hard problems in Computer Science: cache invalidation and naming things — <em>Phil Karlton</em></p>
+</blockquote>
+<blockquote>
+<p>计算机科学中有两个最难的问题：缓存失效和命名 - <em>Phil Karlton</em></p>
+</blockquote>
+<p>It is a known fact that the right styleguide can significantly increase development speed, debugging, and the implementation of new features in legacy code. Sadly, most CSS codebases are sometimes developed without any structure or naming conventions. This leads to an unmaintainable CSS codebase in the long term.</p>
+<p>一个众所周知的事实：正确的编码风格可以显著地提高开发、调试以及在遗留代码添加新功能的速度。令人遗憾的是，大多数CSS代码库是在没有任何结构约定或命名约定的情况下开发的。这种导致了CSS代码库长期不可维护。</p>
+<p>The BEM approach ensures that everyone who participates in the development of a website works with a single codebase and speaks the same language. Using proper naming will prepare you for the changes in design of the website.</p>
+<p>BEM的方法确保参与网站开发的每个人都可以使用单一的代码库，并使用共同的语言进行开发。同时为将来网站的变化提供了适当的命名规范。</p>
+<h3 id="块（Block）"><a href="#块（Block）" class="headerlink" title="块（Block）"></a>块（Block）</h3><p>Encapsulates a standalone entity that is meaningful on its own. While blocks can be nested and interact with each other, semantically they remain equal; there is no precedence or hierarchy. Holistic entities without DOM representation (such as controllers or models) can be blocks as well.</p>
+<p>块是封装为一个独立有意义的实体。虽然块可以相互嵌套和交互，但是在语义上，它们是平等的，没有优先级或层级区分。注意，即使没有DOM的完整实体（如控制器或模型）也可以是一个块。</p>
+<h5 id="命名（Naming）"><a href="#命名（Naming）" class="headerlink" title="命名（Naming）"></a>命名（Naming）</h5><p>Block names may consist of Latin letters, digits, and dashes. To form a CSS class, add a short prefix for namespacing: <code>.block</code></p>
+<p>块的命名可以包括拉丁字母，数字和中横线组成。为了构成一个CSS类，需要在命名空间上添加一个简短的前缀<code>.block</code>。</p>
+<h5 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h5><p>Any DOM node can be a block if it accepts a class name.</p>
+<p>任何DOM节点如何可以接收到一个类名，都可以成为一个块元素。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h5><ul>
+<li>Use class name selector only</li>
+<li>No tag name or ids</li>
+<li>No dependency on other blocks/elements on a page</li>
+</ul>
+<ul>
+<li>仅使用类选择器</li>
+<li>不包含标签名称或ID</li>
+<li>不依赖页面上的其他块/元素</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block</span> &#123; <span class="attribute">color</span>: <span class="number">#042</span>; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="元素（Element）"><a href="#元素（Element）" class="headerlink" title="元素（Element）"></a>元素（Element）</h3><p>Parts of a block and have no standalone meaning. Any element is semantically tied to its block.</p>
+<p>元素是块的组成部分，没有独立的意义，并且在语义上与它对应的块关联。</p>
+<h5 id="命名（Naming）-1"><a href="#命名（Naming）-1" class="headerlink" title="命名（Naming）"></a>命名（Naming）</h5><p>Element names may consist of Latin letters, digits, dashes and underscores. CSS class is formed as block name plus two underscores plus element name: <code>.block__elem</code></p>
+<p>元素名称可以由拉丁字母，数字，中横线和下划线组成。CSS类可以在块名称后加上两个下划线再加上元素名称：<code>.block__elem</code></p>
+<h5 id="HTML-1"><a href="#HTML-1" class="headerlink" title="HTML"></a>HTML</h5><p>Any DOM node within a block can be an element. Within a given block, all elements are semantically equal.</p>
+<p>块中的任何DOM节点都可以看做一个元素。在一个块中的所有的元素在语义上相等。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block"</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"block__elem"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="CSS-1"><a href="#CSS-1" class="headerlink" title="CSS"></a>CSS</h5><ul>
+<li>Use class name selector only</li>
+<li>No tag name or ids</li>
+<li>No dependency on other blocks/elements on a page</li>
+</ul>
+<ul>
+<li>仅使用类选择器</li>
+<li>不包含标签名称或ID</li>
+<li>不依赖页面上的其他块/元素</li>
+</ul>
+<p><strong>好的范例（Good）</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block__elem</span> &#123; <span class="attribute">color</span>: <span class="number">#042</span>; &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>不好的范例（Bad）</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block</span> <span class="selector-class">.block__elem</span> &#123; <span class="attribute">color</span>: <span class="number">#042</span>; &#125;</span><br><span class="line">    <span class="selector-tag">div</span><span class="selector-class">.block__elem</span> &#123; <span class="attribute">color</span>: <span class="number">#042</span>; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="修饰符（Modifier）"><a href="#修饰符（Modifier）" class="headerlink" title="修饰符（Modifier）"></a>修饰符（Modifier）</h3><p>Flags on blocks or elements. Use them to change appearance, behavior or state.</p>
+<p>块或元素的标记。可以使用它们来改变块或元素的样式、行为或状态。</p>
+<h5 id="命名（Naming）-2"><a href="#命名（Naming）-2" class="headerlink" title="命名（Naming）"></a>命名（Naming）</h5><p>Modifier names may consist of Latin letters, digits, dashes and underscores. CSS class is formed as block’s or element’s name plus two dashes: <code>.block--mod</code> or <code>.block__elem--mod</code>and <code>.block--color-black</code>with <code>.block--color-red</code>. Spaces in complicated modifiers are replaced by dash.</p>
+<p>修饰符的名称可以由拉丁字母，数字，中横线和下划线组成。CSS类可以由块或元素的名称加上两个中横线组成：<code>.block--mod</code>或<code>.block__elem --mod</code>和 <code>.block--color-black</code>与<code>.block--color--red</code>。复杂修饰符中的空格被短划线所取代。</p>
+<h5 id="HTML-2"><a href="#HTML-2" class="headerlink" title="HTML"></a>HTML</h5><p>Modifier is an extra class name which you add to a block/element DOM node. Add modifier classes only to blocks/elements they modify, and keep the original class:</p>
+<p>修饰符是添加到块/元素DOM节点的额外类的名称。我们只将修饰符类添加到修改过的块/元素，并保留它们原始的类：</p>
+<p><strong>好的范例（Good）</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block block--mod"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block block--size-big block--shadow-yes"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>不好的范例（Bad）</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block--mod"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="CSS-2"><a href="#CSS-2" class="headerlink" title="CSS"></a>CSS</h5><p>Use modifier class name as selector:</p>
+<p>使用修饰符的类名作为选择器：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block--hidden</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
+<p>To alter elements based on a block-level modifier:</p>
+<p>若要基于块级修改器来更改元素，请执行以下操作：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block--mod</span> <span class="selector-class">.block__elem</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
+<p>Element modifier:</p>
+<p>元素修饰符：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block__elem--mod</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="范例（Example）"><a href="#范例（Example）" class="headerlink" title="范例（Example）"></a>范例（Example）</h3><p>Suppose you have block form with modifiers <code>theme: &quot;xmas&quot;</code> and <code>simple: true</code> and with elements <code>input</code> and <code>submit</code>, and element <code>submit</code> with its own modifier <code>disabled: true</code>for not submitting form while it is not filled:</p>
+<p>在此，假设您有以下修饰符的块：<code>theme: &quot;xmas&quot;</code> 和 <code>simple: true</code>，并且有元素<code>input</code> 和 <code>submit</code>，同时元素<code>submit</code>有本身为那些在没有填充时不显示的修饰符<code>disabled：true</code>时代码如下：</p>
+<h5 id="HTML-3"><a href="#HTML-3" class="headerlink" title="HTML"></a>HTML</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">"form form--theme-xmas form--simple"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"form__input"</span> <span class="attr">type</span>=<span class="string">"text"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"form__submit form__submit--disabled"</span> <span class="attr">type</span>=<span class="string">"submit"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="CSS-3"><a href="#CSS-3" class="headerlink" title="CSS"></a>CSS</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.form</span> &#123; &#125;</span><br><span class="line"><span class="selector-class">.form--theme-xmas</span> &#123; &#125;</span><br><span class="line"><span class="selector-class">.form--simple</span> &#123; &#125;</span><br><span class="line"><span class="selector-class">.form__input</span> &#123; &#125;</span><br><span class="line"><span class="selector-class">.form__submit</span> &#123; &#125;</span><br><span class="line"><span class="selector-class">.form__submit--disabled</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/28/02、命名（naming）.html" data-id="cjiybcx0s00002a0foyjelns7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/bem/">bem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-bem/01-Introduction" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/28/01、介绍（introduction）.html" class="article-date">
+  <time datetime="2018-06-28T12:30:00.000Z" itemprop="datePublished">2018-06-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/bem/">bem</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/standard/2018/06/28/01、介绍（introduction）.html">01、介绍（Introduction）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://getbem.com/introduction/" target="_blank" rel="noopener">原文</a></p>
+<p>On smaller brochure sites, how you organize your styles isn’t usually a big concern. You get in there, write some CSS, or maybe even some SASS. You compile it all into a single stylesheet with SASS’s production settings, and then you aggregate it to get all the stylesheets from modules into a nice tidy package.</p>
+<p>在小型网站上，设计网站的样式表通常问题不大。这种情况下，写一些CSS，或一些SASS就可以实现想要的效果。使用SASS的生产配置编译，将相关的样式表合到一个压缩后的文件中即可。</p>
+<p>However, when it comes to larger, more complex projects, how you organize your code is the key to efficiency in at least these three ways: it affects how long it takes you to write code, how much of that code you’ll have to write and how much loading your browser will have to do. This becomes especially important when you’re working with teams of themers, and when high performance is essential.</p>
+<p>但是，当网站变得更大，项目更复杂时，需要从3个关键细节思考如何有效地组织代码：编写代码的时间、编写代码的数量和浏览器加载的大小。在团队合作中这3点会更重要，同时必须考虑代码的性能。</p>
+<p>This is also true for long-term projects with legacy code (read <a href="http://webuild.envato.com/blog/how-to-scale-and-maintain-legacy-css-with-sass-and-smacss/" target="_blank" rel="noopener">“How to Scale and Maintain Legacy CSS with Sass and SMACSS”</a> — some nice SMACSS and BEM mixing in there).</p>
+<p>对于项目中的历史遗留代码也是如此（请参阅<a href="http://webuild.envato.com/blog/how-to-scale-and-maintain-legacy-css-with-sass-and-smacss/" target="_blank" rel="noopener">“如何使用Sass和SMACSS来扩展和维护历史遗留的CSS代码”</a> - 里面包含一些混合使用SMACSS和BEM的优秀案例）。</p>
+<h2 id="方法（Methodologies）"><a href="#方法（Methodologies）" class="headerlink" title="方法（Methodologies）"></a>方法（Methodologies）</h2><p>There are plenty of <a href="https://github.com/ikkou/awesome-css#architecture" target="_blank" rel="noopener">methodologies</a> out there aiming to reduce the CSS footprint, organize cooperation among programmers and maintain large CSS codebases. This is obvious in large projects like Twitter, Facebook and <a href="http://markdotto.com/2014/07/23/githubs-css/#two-bundles" target="_blank" rel="noopener">Github</a>, but other projects often grow into some “Huge CSS file” state pretty quickly.</p>
+<p>目前有很多<a href="https://github.com/ikkou/awesome-css#architecture" target="_blank" rel="noopener">方法</a>可以减少CSS的体积，处理工程师的合作问题以及维护大型的CSS代码库。这在Twitter，Facebook和<a href="http://markdotto.com/2014/07/23/githubs-css/#two-bundles" target="_blank" rel="noopener">Github</a>等公司的大型项目上表现明显，但一些其他项目的CSS的体积往往迅速膨胀。</p>
+<h4 id="OOCSS"><a href="#OOCSS" class="headerlink" title="OOCSS"></a><a href="http://oocss.org/" target="_blank" rel="noopener">OOCSS</a></h4><p>Separating container and content with CSS “objects”</p>
+<p>使用CSS“对象”分离容器和内容</p>
+<h4 id="SMACSS"><a href="#SMACSS" class="headerlink" title="SMACSS"></a><a href="http://smacss.com/" target="_blank" rel="noopener">SMACSS</a></h4><p>Style-guide to write your CSS with five categories for CSS rules</p>
+<p>通过五个CSS规范为您提供CSS的样式书写标准</p>
+<h4 id="SUITCSS"><a href="#SUITCSS" class="headerlink" title="SUITCSS"></a><a href="http://suitcss.github.io/" target="_blank" rel="noopener">SUITCSS</a></h4><p>Structured class names and meaningful hyphens</p>
+<p>结构化的类名和有意义的连字符</p>
+<h4 id="Atomic"><a href="#Atomic" class="headerlink" title="Atomic"></a><a href="http://github.com/nemophrost/atomic-css" target="_blank" rel="noopener">Atomic</a></h4><p>Breaking down styles into atomic, or indivisible, pieces</p>
+<p>将样式分解为最基本的，不可分割的片段</p>
+<h2 id="为什么选择BEM（Why-BEM-over-the-others-）"><a href="#为什么选择BEM（Why-BEM-over-the-others-）" class="headerlink" title="为什么选择BEM（Why BEM over the others?）"></a>为什么选择BEM（Why BEM over the others?）</h2><p>No matter what methodology you choose to use in your projects, you will benefit from the advantages of more structured CSS and UI. Some styles are less strict and more flexible, while others are easier to understand and adapt in a team.</p>
+<p>无论在您的项目中选择使用哪种方法，您都会获得结构化CSS和UI带来的优势。有的方法约束宽松、格式灵活，有的方法更容易理解、更适应团队。</p>
+<blockquote>
+<p>The reason I choose BEM over other methodologies comes down to this: it is less confusing than the other methods (i.e. SMACSS) but still provides us the good architecture we want (i.e. OOCSS) and with a recognizable terminology.</p>
+<p>Mark McDonnell, <a href="http://www.integralist.co.uk/posts/bem.html#4" target="_blank" rel="noopener">Maintainable CSS with BEM</a></p>
+</blockquote>
+<blockquote>
+<p>相比其他方法，选择BEM的原因是：它不会像其他方法有那么多令人困惑的地方（比如SMACSS），同时用一种易识别的术语满足了我们想要的架构（比如OOCSS)。</p>
+<p>Mark McDonnell, <a href="http://www.integralist.co.uk/posts/bem.html#4" target="_blank" rel="noopener">通过BEM编写可维护性的CSS</a></p>
+</blockquote>
+<h2 id="块，元素和修饰符（Blocks-Elements-and-Modifiers）"><a href="#块，元素和修饰符（Blocks-Elements-and-Modifiers）" class="headerlink" title="块，元素和修饰符（Blocks, Elements and Modifiers）"></a>块，元素和修饰符（Blocks, Elements and Modifiers）</h2><p>You will not be surprised to hear that BEM is an abbreviation of the key elements of the methodology — Block, Element and Modifier. BEM’s strict naming rules can be found <a href="/standard/2018/06/28/02、命名（naming）.html">here</a>.</p>
+<p>BEM是块(block)，元素(element)和修饰符(modifier)的缩写，可以在<a href="/standard/2018/06/28/02、命名（naming）.html">这里</a>查看详细的BEM命名规则。</p>
+<h3 id="块（Block）"><a href="#块（Block）" class="headerlink" title="块（Block）"></a>块（Block）</h3><p>Standalone entity that is meaningful on its own.</p>
+<p>块是独立的实体，本身有意义。</p>
+<h5 id="范例（Examples）"><a href="#范例（Examples）" class="headerlink" title="范例（Examples）"></a>范例（Examples）</h5><p><code>header</code>, <code>container</code>, <code>menu</code>, <code>checkbox</code>, <code>input</code></p>
+<h3 id="元素（Element）"><a href="#元素（Element）" class="headerlink" title="元素（Element）"></a>元素（Element）</h3><p>A part of a block that has no standalone meaning and is semantically tied to its block.</p>
+<p>元素是块的组成部分，没有独立的意义，并且在语义上与它对应的块关联。</p>
+<h5 id="范例（Examples）-1"><a href="#范例（Examples）-1" class="headerlink" title="范例（Examples）"></a>范例（Examples）</h5><p><code>menu item</code>, <code>list item</code>, <code>checkbox caption</code>, <code>header title</code></p>
+<h3 id="修饰符（Modifier）"><a href="#修饰符（Modifier）" class="headerlink" title="修饰符（Modifier）"></a>修饰符（Modifier）</h3><p>A flag on a block or element. Use them to change appearance or behavior.</p>
+<p>块或元素的标记。可以使用它们来改变块或元素的样式和行为。</p>
+<h5 id="范例（Examples）-2"><a href="#范例（Examples）-2" class="headerlink" title="范例（Examples）"></a>范例（Examples）</h5><p><code>disabled</code>, <code>highlighted</code>, <code>checked</code>, <code>fixed</code>, <code>size big</code>, <code>color yellow</code></p>
+<p><img src="/standard/media/bem/github_captions-1.jpg" alt=""></p>
+<h2 id="测试（Under-the-hood）"><a href="#测试（Under-the-hood）" class="headerlink" title="测试（Under the hood）"></a>测试（Under the hood）</h2><p>Let’s look how one particular element on a page can be implemented in BEM. We will take <code>button</code> from <a href="http://primercss.io/buttons/" target="_blank" rel="noopener">GitHub</a>:</p>
+<p>接下来看看如何使用BEM实现页面上的一个特定元素。以<a href="http://primercss.io/buttons/" target="_blank" rel="noopener">Github</a>上的<code>button</code>为例：</p>
+<p><img src="/standard/media/bem/github_buttons-1.jpg" alt=""></p>
+<p>We can have a normal button for usual cases, and two more states for different ones. Because we style blocks by class selectors with BEM, we can implement them using any tags we want (<code>button</code>, <code>a</code> or even <code>div</code>). The naming rules tell us to use <code>block--modifier-value</code> syntax.</p>
+<p>一般情况下会使用正常样式的按钮，有时候也需要其他两种状态。因为使用BEM的类选择器对块应用样式，可以应用于任何想要使用的标签（<code>button</code>,<code>a</code>或<code>div</code>），命名规则使用<code>block--modifier-value</code>语法。</p>
+<h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button"</span>&gt;</span></span><br><span class="line">    Normal button</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button button--state-success"</span>&gt;</span></span><br><span class="line">    Success button</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button button--state-danger"</span>&gt;</span></span><br><span class="line">    Danger button</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">7px</span> <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#D5D5D5</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(#EEE, #DDD);</span><br><span class="line">    <span class="attribute">font</span>: <span class="number">700</span> <span class="number">13px</span>/<span class="number">18px</span> Helvetica, arial;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.button--state-success</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#FFF</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#569E3D</span> <span class="built_in">linear-gradient</span>(#79D858, #569E3D) repeat-x;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#4A993E</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.button--state-danger</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#900</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="优势（Benefits）"><a href="#优势（Benefits）" class="headerlink" title="优势（Benefits）"></a>优势（Benefits）</h2><h4 id="模块化（Modularity）"><a href="#模块化（Modularity）" class="headerlink" title="模块化（Modularity）"></a>模块化（Modularity）</h4><p>Block styles are never dependent on other elements on a page, so you will never experience <a href="http://www.phase2technology.com/blog/used-and-abused-css-inheritance-and-our-misuse-of-the-cascade/" target="_blank" rel="noopener">problems from cascading</a>.</p>
+<p>块的样式不依赖于页面上的其他元素，所以您不会遇到<a href="http://www.phase2technology.com/blog/used-and-abused-css-inheritance-and-our-misuse-of-the-cascade/" target="_blank" rel="noopener">样式层叠</a>的问题。</p>
+<p>You also get the ability to transfer blocks from your finished projects to new ones.</p>
+<p>还可以在新项目中使用原先完成的项目中的块。</p>
+<h4 id="可复用（Reusability）"><a href="#可复用（Reusability）" class="headerlink" title="可复用（Reusability）"></a>可复用（Reusability）</h4><p>Composing independent blocks in different ways, and reusing them intelligently, reduces the amount of CSS code that you will have to maintain.</p>
+<p>通过不同的方式组合独立块，并合理的重用它们，可以有效地减少需要维护的CSS代码量。</p>
+<p>With a set of style guidelines in place, you can build a library of blocks, making your CSS super effective.</p>
+<p>可以建立一个基于块的标准样式库，使CSS变得更高效。</p>
+<h4 id="结构化（Structure）"><a href="#结构化（Structure）" class="headerlink" title="结构化（Structure）"></a>结构化（Structure）</h4><p>BEM methodology gives your CSS code a solid structure that remains simple and easy to understand.</p>
+<p>BEM方法可以保持CSS代码简单易懂，并有非常稳定的结构。</p>
+<h2 id="未来阅读资料（Further-Reading）"><a href="#未来阅读资料（Further-Reading）" class="headerlink" title="未来阅读资料（Further Reading）"></a>未来阅读资料（Further Reading）</h2><ul>
+<li><a href="http://blog.decaf.de/2015/06/24/why-bem-in-a-nutshell/" target="_blank" rel="noopener">简而言之，为什么选择BEM？（‘Why BEM?’ in a nutshell）</a></li>
+<li><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank" rel="noopener">MindBEMding</a> — 您的最佳BEM语法（getting your head ’round BEM syntax）</li>
+<li><a href="http://cssguidelin.es/#bem-like-naming" target="_blank" rel="noopener">CSS标准（CSS guidelines）</a></li>
+<li><a href="http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/" target="_blank" rel="noopener">小型项目中的BEM方法（BEM methodology for small projects）</a></li>
+<li><a href="http://www.slideshare.net/MaxShirshin/bem-it-for-brandwatch" target="_blank" rel="noopener">BEM It! for Brandwatch</a></li>
+<li><a href="http://www.phase2technology.com/blog/used-and-abused-css-inheritance-and-our-misuse-of-the-cascade/" target="_blank" rel="noopener">使用和滥用（Used and Abused）</a> — 我们对CSS继承和层叠的误用（CSS Inheritance and Our Misuse of the Cascade.）</li>
+<li><a href="https://medium.com/objects-in-space/objects-in-space-f6f404727" target="_blank" rel="noopener">空间中的对象（Objects in Space）</a> — （使用SMACSS和BEM开发模块化SASS样式的指南）A style-guide for modular SASS development using SMACSS and BEM</li>
+<li><a href="http://webuild.envato.com/blog/how-to-scale-and-maintain-legacy-css-with-sass-and-smacss/" target="_blank" rel="noopener">如何使用Sass和SMACSS扩展和维护旧版的CSS（How to Scale and Maintain Legacy CSS with Sass and SMACSS）</a></li>
+<li><a href="http://www.bluegg.co.uk/building-my-health-skills-part-3/" target="_blank" rel="noopener">使用BEM和Sass构建“My Health Skills”模块（Building a modular My Health Skills with BEM and Sass）</a></li>
+<li><a href="http://www.bluegg.co.uk/building-my-health-skills-part-3/" target="_blank" rel="noopener">构建“My Health Skills- ”第三部分（Building My Health Skills — Part 3）</a></li>
+</ul>
+<h2 id="案例分析（Case-study）"><a href="#案例分析（Case-study）" class="headerlink" title="案例分析（Case study）"></a>案例分析（Case study）</h2><p>We hope to write “How to migrate an existing project to BEM” soon. In the meantime you can watch this nice presentation by Nicole Sullivan — “<a href="http://www.youtube.com/watch?v=0NDyopLKE1w" target="_blank" rel="noopener">CSS preprocessor performance</a>“. She gives a very good overview of the problems she encounters in the majority of websites and offers ways to track them down and handle them.</p>
+<p>我们会尽快撰写“如何将现有项目迁移到BEM”说明。与此同时，您可以观看Nicole Sullivan的精彩演讲 - “<a href="http://www.youtube.com/watch?v=0NDyopLKE1w" target="_blank" rel="noopener">高效的CSS预处理器</a>”。她很好地概述了大多数网站中遇到的问题，并提供了追踪和处理这些问题的方法。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/28/01、介绍（introduction）.html" data-id="cjiybcx1c00022a0fl9l4fp0h" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/bem/">bem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-bem/README" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/28/00、模块化css理论——bem目录.html" class="article-date">
+  <time datetime="2018-06-28T11:30:00.000Z" itemprop="datePublished">2018-06-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/bem/">bem</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/standard/2018/06/28/00、模块化css理论——bem目录.html">00、模块化CSS理论——BEM目录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://getbem.com" target="_blank" rel="noopener">BEM</a>（Block Element Modifier），块元素修饰符，在SMACSS的基础上修改toggle组件的示例如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"toggle toggle—simple”&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">    &lt;div class=“toggle__control toggle__control—-active”&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">        &lt;h1 class=“toggle__title”&gt;Title 1&lt;/h1&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">    &lt;/div&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">    &lt;div class=“toggle__details toggle__details--active“&gt;…&lt;/div&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">    ...</span></span></span><br><span class="line"><span class="tag"><span class="string">&lt;/div&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>BEM只是一个CSS类名命名规则，让每一个CSS类名具备详细的自描述性，不涉及如何书写CSS结构，只是建议每个元素都添加带有如下内容的CSS类名：</p>
+<ol>
+<li>块名：所属组件的名称。</li>
+<li>元素：元素在块里面的名称。</li>
+<li>修饰符：任何与块或元素相关联的修饰符。</li>
+</ol>
+<p>元素名加在双下划线之后（例如<code>toggle__details</code>），修饰符加在双横杠之后（如<code>toggle__details—-active</code>）。</p>
+<h2 id="资料翻译列表"><a href="#资料翻译列表" class="headerlink" title="资料翻译列表"></a>资料翻译列表</h2><ol>
+<li><a href="/standard/2018/06/28/01、介绍（introduction）.html">介绍（Introduction）</a></li>
+<li><a href="/standard/2018/06/28/02、命名（naming）.html">命名（Naming）</a></li>
+<li><a href="/standard/2018/06/28/03、常见问题（faq）.html">常见问题（FAQ）</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/28/00、模块化css理论——bem目录.html" data-id="cjiybcx1000012a0f4s27dtb9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/bem/">bem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-oocss/13-FAQ" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/standard/2018/06/28/13、常见问题（faq）.html" class="article-date">
@@ -713,575 +1264,6 @@
 
 
   
-    <article id="post-oocss/07-Content" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/standard/2018/06/27/07、内容（content）.html" class="article-date">
-  <time datetime="2018-06-27T02:30:00.000Z" itemprop="datePublished">2018-06-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/standard/2018/06/27/07、内容（content）.html">07、内容（Content）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://github.com/stubbornella/oocss/wiki/Content" target="_blank" rel="noopener">原文</a><br><a href="http://oocss.org/library.html" target="_blank" rel="noopener">示例</a></p>
-<p>Some parts of content are ready for alpha testing, however, it isn’t ready to be used in production projects. </p>
-<p>内容的一些部分已经准备好进行Alpha测试了，但是还没有准备好在生产项目中使用。</p>
-<h2 id="媒体对象（Media-Object）"><a href="#媒体对象（Media-Object）" class="headerlink" title="媒体对象（Media Object）"></a>媒体对象（Media Object）</h2><p>The media object allows you to have an image/flash or other fixed width media to the left or right with some content that describes it in the center. </p>
-<p>媒体对象允许您在图像/Flash或其他固定宽度的媒介的左侧或右侧添加一些内容，以便将上述内容描述在中间的位置。</p>
-<ul>
-<li>Status: ready for alpha testing</li>
-<li>状态：准备进行Alpha测试</li>
-</ul>
-<h3 id="基础类（Base-Classes）"><a href="#基础类（Base-Classes）" class="headerlink" title="基础类（Base Classes）"></a>基础类（Base Classes）</h3><table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>media</code></td>
-<td>Wrapper for the media object</td>
-</tr>
-<tr>
-<td><code>img</code></td>
-<td>Child node of the media object. Generally a link, image, or flash wrapper. Will appear to the left of the <code>.bd.</code> Optional region.</td>
-</tr>
-<tr>
-<td><code>bd</code></td>
-<td>Main content area for the media object, can contain any other objects. Protected. Required region.</td>
-</tr>
-<tr>
-<td><code>imgExt</code></td>
-<td>Child node of the media object. Generally a link, image, or flash wrapper. Will appear to the right of the <code>.bd.</code> Optional region.</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>media</code></td>
-<td>媒体对象的包裹容器</td>
-</tr>
-<tr>
-<td><code>img</code></td>
-<td>媒体对象的子节点，链接，图像或flash包裹容器。通常在左侧的<code>.bd</code>区域，可选区域。</td>
-</tr>
-<tr>
-<td><code>bd</code></td>
-<td>媒体对象的主要内容区域，可以包含任何其他对象。受保护，必选区域。</td>
-</tr>
-<tr>
-<td><code>imgExt</code></td>
-<td>媒体对象的子节点，链接，图像或flash包裹容器。通常在右侧的<code>.bd</code>区域，可选区域。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"media"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://twitter.com/stubbornella"</span> <span class="attr">class</span>=<span class="string">"img"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://a3.twimg.com/profile_images/72157651/tattoo_pink_bkg_square_mini.jpg"</span> <span class="attr">alt</span>=<span class="string">"Stubbornella"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://twitter.com/stubbornella"</span>&gt;</span>@Stubbornella<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"detail"</span>&gt;</span>14 miniutes ago<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="数据表格（Data-Table）"><a href="#数据表格（Data-Table）" class="headerlink" title="数据表格（Data Table）"></a>数据表格（Data Table）</h2><p>It can sometimes be convenient to be able to format a data table to align correctly for particular kinds of data (e.g. currency aligns right). Creating new classes for each kind of data can quickly bloat a file because ideally you want to be able to align the data with a class on the table, tr, td, or th, and have the class closest to the data win in case of conflict. This can be done, but it isn’t how CSS automatically works, so to keep file size down, generic classes that support alignment can be used in conjunction with more semantic classes or microformats. </p>
-<p>有时需要方便地格式化数据表格，以便正确对齐特定类型的数据（例如货币右侧对齐）。为每种类型的数据创建新类可能会使文件体积迅速膨胀，理想情况下，在表格中的tr，td或th标签上设置类属性，数据自动与其对齐。虽然可以这样做做，但这不是CSS的方式，所以为了使文件体积缩小，支持对齐的通用类可以与多语义类或微格式一起使用。</p>
-<ul>
-<li><p>Status: ready for alpha testing</p>
-</li>
-<li><p>状态：准备进行Alpha测试</p>
-</li>
-</ul>
-<h3 id="基础类（Base-Classes）-1"><a href="#基础类（Base-Classes）-1" class="headerlink" title="基础类（Base Classes）"></a>基础类（Base Classes）</h3><table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>data</code></td>
-<td>Div wrapper for the data table</td>
-</tr>
-<tr>
-<td><code>txtL</code></td>
-<td>Aligns left, default alignment, can be applied to table, tr, td, or th.</td>
-</tr>
-<tr>
-<td><code>txtR</code></td>
-<td>Aligns right, can be applied to table, tr, td, or th.</td>
-</tr>
-<tr>
-<td><code>txtC</code></td>
-<td>Aligns center (horizontally), can be applied to table, tr, td, or th.</td>
-</tr>
-<tr>
-<td><code>txtT</code></td>
-<td>Aligns top, can be applied to table, tr, td, or th.</td>
-</tr>
-<tr>
-<td><code>txtB</code></td>
-<td>Aligns bottom, can be applied to table, tr, td, or th.</td>
-</tr>
-<tr>
-<td><code>txtM</code></td>
-<td>Aligns middle (vertically), can be applied to table, tr, td, or th.</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>data</code></td>
-<td>数据表格的Div包裹容器</td>
-</tr>
-<tr>
-<td><code>txtL</code></td>
-<td>左对齐, 属于默认对齐方式, 可被用于：table, tr, td, 或 th。</td>
-</tr>
-<tr>
-<td><code>txtR</code></td>
-<td>右对齐, 可被用于：table, tr, td, 或 th。</td>
-</tr>
-<tr>
-<td><code>txtC</code></td>
-<td>居中对齐 (水平方向上), 可被用于：table, tr, td, 或 th。</td>
-</tr>
-<tr>
-<td><code>txtT</code></td>
-<td>上对齐, 可被用于：table, tr, td, 或 th。</td>
-</tr>
-<tr>
-<td><code>txtB</code></td>
-<td>底对齐, 可被用于：table, tr, td, 或 th。</td>
-</tr>
-<tr>
-<td><code>txtM</code></td>
-<td>居中对齐 (垂直方向上), 可被用于：table, tr, td, 或 th。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="HTML-1"><a href="#HTML-1" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"data"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"txtC"</span>&gt;</span><span class="comment">&lt;!--table alignment set to center --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span> <span class="attr">class</span>=<span class="string">"odd txtL"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span> <span class="attr">scope</span>=<span class="string">"row"</span> <span class="attr">class</span>=<span class="string">"txtR"</span>&gt;</span>Right aligned<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>Left aligned<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span> <span class="attr">class</span>=<span class="string">"even"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span> <span class="attr">scope</span>=<span class="string">"row"</span>&gt;</span>center aligned<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span>center aligned<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="文件（Files）"><a href="#文件（Files）" class="headerlink" title="文件（Files）"></a>文件（Files）</h2><ul>
-<li>/css/content.css</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://bystep15.github.io/standard/2018/06/27/07、内容（content）.html" data-id="cjiy0w44g0012qn0f3pmoyssh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-oocss/06-Module-Skins" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html" class="article-date">
-  <time datetime="2018-06-26T10:30:00.000Z" itemprop="datePublished">2018-06-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">06、模块皮肤（Module Skins）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://github.com/stubbornella/oocss/wiki/Module-Skins" target="_blank" rel="noopener">原文</a></p>
-<p>Each of the three module types needs to be skinned differently.  Abstracting all the heavy lifting to the <code>mod</code>, <code>complex</code>, and <code>pop</code> classes means that all of the values in the skins are predictable. In fact, I’ll show you how they can be easily calculated.</p>
-<p>三种类型模块的皮肤需要不同的设置方法。将所有繁重的工作抽象到<code>mod</code>, <code>complex</code>, 和 <code>pop</code>3个类中，意味着所有皮肤的值都是可以预测的。接下来，我将会为您展示它们是如何通过简单地计算得到的。</p>
-<h2 id="扩展模块（Extending-mod）"><a href="#扩展模块（Extending-mod）" class="headerlink" title="扩展模块（Extending mod）"></a>扩展模块（Extending mod）</h2><p>Let’s create a simple grey rounded corner box.</p>
-<p>让我们来创建一个简单的灰色圆角盒子。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mod simple"</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tr"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h3</span>&gt;</span>simple<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Body<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"br"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ----- simple (extends mod) ----- */</span></span><br><span class="line"><span class="selector-class">.simple</span> <span class="selector-class">.inner</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#D7D7D7</span>;</span><br><span class="line">    <span class="attribute">-moz-border-radius</span>: <span class="number">7px</span>;</span><br><span class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">7px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">7px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.simple</span> <span class="selector-tag">b</span> &#123;</span><br><span class="line">    *background-image:url(skin/mod/simple_corners.png);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>We define the border to be one pixel solid gray. Anytime only one border is used it should be placed on <code>inner</code> rather than the module itself (to simplify the skin). </li>
-<li>We then tell browsers that the module should have rounded corners.</li>
-<li>Internet Explorer 5.5, 6, 7, 8 do not support rounded corners. Line two provides an image backup to generate these corners. The star hack is used so that better browsers that natively support rounded corners do not download the extra image unnecessarily.  You may also choose to omit this line and provide a square corner fallback for IE depending on how much market share they have amongst your visitors.</li>
-</ol>
-<ol>
-<li>首先定义一个1像素的实体灰色边框。任何时候如果只有一个边框被使用，那么应该把它放在<code>inner</code>中而不是模块本身（以简化皮肤样式）。</li>
-<li>然后声明模块应该有圆角。</li>
-<li>IE 5.5,6,7,8不支持圆角。第二段样式中用图片做降级方案来生成圆角。样式代码中使用星号Hack方法，指示更高版本的支持原生圆角的浏览器不会下载额外的图片。也可以选择省略掉该段代码，IE上显示为一个方形的角落，这取决于使用IE的用户占比。</li>
-</ol>
-<h2 id="复杂类（complex）"><a href="#复杂类（complex）" class="headerlink" title="复杂类（complex）"></a>复杂类（complex）</h2><h2 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h2><h3 id="Todo"><a href="#Todo" class="headerlink" title="Todo"></a>Todo</h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://bystep15.github.io/standard/2018/06/26/06、模块皮肤（module-skins）.html" data-id="cjiy0w44a000zqn0fwsxt4a44" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-oocss/05-Module" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html" class="article-date">
-  <time datetime="2018-06-26T01:30:00.000Z" itemprop="datePublished">2018-06-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">05、模块 - 容器对象（Modules - Container Objects）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://github.com/stubbornella/oocss/wiki/Module" target="_blank" rel="noopener">原文</a><br><a href="http://oocss.org/module.html" target="_blank" rel="noopener">示例</a></p>
-<p>Modules are based on the <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">Standard Module Format</a>. They provide a simple, predictable way to skin container objects while maintaining accessibility and performance. Contour skins are separate from background skins, headers, and footers. I suggest you name skins in a way that indicates how that skin should be used (semantically). The module skin should not change the display of objects within its open editable zones. Features include: </p>
-<ul>
-<li>Less than 2K! (structures)</li>
-<li>Simple to skin</li>
-<li>One image per module</li>
-<li>Height and width agnostic</li>
-<li>Accessibility and performance baked-in</li>
-<li>Separates semantic markup from presentational fluff</li>
-</ul>
-<p>基于<a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">标准模块格式</a>的模块，提供了一个简单、可预测的皮肤容器，同时保持可访问性和性能。轮廓皮肤，背景皮肤，页眉和页尾分别独立。建议基于使用来对皮肤进行命名（语义化）。模块皮肤不应该改变其内部对象的显示。支持以下特性：</p>
-<ul>
-<li>小于2K（结构上）</li>
-<li>定制皮肤简单</li>
-<li>每个模块一张图片</li>
-<li>高度和宽度无关</li>
-<li>不影响可访问性和性能</li>
-<li>分离语义与外观</li>
-</ul>
-<h2 id="基础类（Base-Classes）"><a href="#基础类（Base-Classes）" class="headerlink" title="基础类（Base Classes）"></a>基础类（Base Classes）</h2><table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>mod</code></td>
-<td>Base class for all container modules. Use <code>mod</code> unless you specifically need one of the other structure objects. Mod is transparent on the inside, corners overlay content, it can therefore be used with any content. Allows infinite height and width as borders are generated via skin objects that define borders on <code>mod</code> and <code>inner</code>.</td>
-</tr>
-<tr>
-<td><code>complex</code></td>
-<td>Extends <code>mod</code>. Allows full image borders for cases where the desired look and feel cannot be generated via borders on <code>mod</code> and <code>inner</code>. <code>complex</code> is transparent on the inside, corners overlay content, thus it can be used with any content.</td>
-</tr>
-<tr>
-<td><code>pop</code></td>
-<td>Extends <code>mod</code>. Allows transparent outside, such as drop shadows. Use in cases where the module overlays an image, text, or other variable background. <code>pop</code> is transparent on the outside, content overlays background, thus it cannot be used with any content</td>
-</tr>
-<tr>
-<td><code>top</code></td>
-<td>A presentational element which wraps the top corners. It is used by <code>complex</code> to display the upper edge of the block. In other block structures it has no height. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
-</tr>
-<tr>
-<td><code>bottom</code></td>
-<td>A presentational element which wraps the bottom corners. It is used by <code>complex</code> to display the lower edge of the block. In other block structures it has no height. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
-</tr>
-<tr>
-<td><code>tl</code></td>
-<td>A presentational element used to display the top left corner of a block, and in <code>complex</code> the left edge of the block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
-</tr>
-<tr>
-<td><code>tr</code></td>
-<td>A presentational element used to display the top right corner of a block, and in <code>complex</code> the right edge of the block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
-</tr>
-<tr>
-<td><code>bl</code></td>
-<td>A presentational element used to display the bottom left corner of a block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
-</tr>
-<tr>
-<td><code>br</code></td>
-<td>A presentational element used to display the bottom right corner of a block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>mod</code></td>
-<td>所有容器模块的基类。大多数情况下使用<code>mod</code>即可，除非需要使用其他特定结构对象。Mod背景透明，边角覆盖在内容之上，因此可以和任何内容用在一起。通过在<code>mod</code> 和 <code>inner</code>上定义皮肤样式，可以支持长度的高度和宽度。</td>
-</tr>
-<tr>
-<td><code>complex</code></td>
-<td>扩展<code>mod</code>。在无法通过<code>mod</code>和<code>inner</code>的边框生成所需外观的情况下，允许使用全图像边框。<code>complex</code>背景透明，边角覆盖在内容之上，因此可以和任何内容用在一起。</td>
-</tr>
-<tr>
-<td><code>pop</code></td>
-<td>扩展<code>mod</code>。允许使用透明的外边框，比如投影。在模块包含图像，文本或其他可变背景的情况下使用。<code>pop</code>外边框是透明的，内容覆盖在背景上，因此不能用在任何地方。</td>
-</tr>
-<tr>
-<td><code>top</code></td>
-<td>一个用来包裹顶角的表现元素。使用<code>complex</code>时表现为块的上边缘。在其他的块级元素中，它没有高度。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
-</tr>
-<tr>
-<td><code>bottom</code></td>
-<td>一个用来包裹底角的表现元素。使用<code>complex</code>时表现为块的下边缘。在其他的块级元素中，它没有高度。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
-</tr>
-<tr>
-<td><code>tl</code></td>
-<td>一个用来渲染左上角或<code>complex</code>中左边缘的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
-</tr>
-<tr>
-<td><code>tr</code></td>
-<td>一个用来渲染右上角或<code>complex</code>中右边缘的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
-</tr>
-<tr>
-<td><code>bl</code></td>
-<td>一个用来渲染左下角的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
-</tr>
-<tr>
-<td><code>br</code></td>
-<td>一个用来渲染右下角的块级表现元素。这种空的，没有语义的元素应该由服务端脚本和JavaScript嵌入，推荐前一种方式（笔者按：Server插入或JavaScript插入都不可取，既然需要，简单直接表明）。</td>
-</tr>
-</tbody>
-</table>
-<h2 id="标记（The-Markup）"><a href="#标记（The-Markup）" class="headerlink" title="标记（The Markup）"></a>标记（The Markup）</h2><h3 id="模块类（Module）"><a href="#模块类（Module）" class="headerlink" title="模块类（Module）"></a>模块类（Module）</h3><p>Mod is the basic container, all other containers inherit from this one. This is the high performance container that should be used unless you specifically need another type.</p>
-<ul>
-<li>One tiny image</li>
-<li>Expands to any height or width</li>
-<li>Compatible with any content</li>
-<li>Choose for any container object that doesn’t require outside transparency or complex borders.</li>
-</ul>
-<p>Mod是基本容器，其他所有的容器都继承自它。这是一种具有高表现性的容器，所以除非您需要另外使用其他的样式，您都应当使用它。</p>
-<ul>
-<li>一张小图片</li>
-<li>支持任意的宽度和高度</li>
-<li>兼容任何内容</li>
-<li>适用于不需要外部透明度或复杂边界的容器对象。</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mod"</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tr"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"br"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="复杂类（Complex）"><a href="#复杂类（Complex）" class="headerlink" title="复杂类（Complex）"></a>复杂类（Complex）</h3><p>Complex should be used in cases where you require images for borders because borders or drop shadows are too complex to be simulated via borders on mod and/or inner.</p>
-<ul>
-<li>One image</li>
-<li>Height and width limited by image size</li>
-<li>Compatible with any content</li>
-<li>Choose when you require complex borders which cannot be simulated via css borders on mod and inner.</li>
-</ul>
-<p>复杂类（complex）被用在需要图片边框的时候，此时使用mod属性和（或者）inner属性来描述边框和下落的阴影过于复杂，所以推荐使用complx类。</p>
-<ul>
-<li>一张图片</li>
-<li>高度和宽度受限于图片尺寸</li>
-<li>兼容任何内容</li>
-<li>当需要使用复杂的边框，并且无法通过mod和inner类下的css边框来实现的时候。</li>
-</ul>
-<p>Inspired by a conversation with Arnaud.</p>
-<p>这些内容是受到Arnaud的启发产生的想法。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mod complex"</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tr"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"br"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="弹出类（Popup）"><a href="#弹出类（Popup）" class="headerlink" title="弹出类（Popup）"></a>弹出类（Popup）</h3><p>Use for popups and other containers that need outside transparency.</p>
-<ul>
-<li>One image</li>
-<li>Height and width limited by image size</li>
-<li>Compatible with any container, but not any content</li>
-<li>Choose when you require outside transparency which cannot be simulated. (do i need to make this work with clip rather than bkg position?)</li>
-</ul>
-<p>用于需要外部透明度的弹出窗口和其他容器。</p>
-<ul>
-<li>一张图片</li>
-<li>高度和宽度受限于图片尺寸</li>
-<li>兼容任何容器，但不一定兼容任何内容</li>
-<li>当需要使用无法模拟的外部透明效果时使用（是否使用clip而不是bkg定位的方式更合适？）</li>
-</ul>
-<p>Inspired by Leslie Sommers mojo blocks.</p>
-<p>这些内容是受到Leslie Sommers mojo blocks启发产生的想法。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mod pop"</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"tr"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"bl"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;<span class="name">b</span> <span class="attr">class</span>=<span class="string">"br"</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="皮肤使用建议（Skinning-suggestions）"><a href="#皮肤使用建议（Skinning-suggestions）" class="headerlink" title="皮肤使用建议（Skinning suggestions）"></a>皮肤使用建议（Skinning suggestions）</h2><p>The contour and the background can be used to define the intersection of two parameters. For example you cross product status with product type. E.g. <code>sale</code>, <code>normal</code>, and <code>featured</code> backgrounds with <code>motorcycle</code>, <code>helmet</code>, and <code>clothing</code> contours. In so far as possible, keep your classes as abstract as they can reasonably be. For example choose <code>motorcycle</code> over <code>ducati</code>, <code>ducatiMonster</code>, or <code>NicolesDucatiMonster620dark</code> – unless you really mean to exclude all other uses! </p>
-<p>轮廓和背景可以定义成两个类组合使用。例如，当需要联合使用产品状态和产品类型的时候。例如<code>sale</code>, <code>normal</code>和<code>featured</code>的背景类和<code>motorcycle</code>, <code>helmet</code>和<code>clothing</code>的轮廓类组合。保持类尽可能合理的抽象。例如选择使用<code>motorcycle</code>属性而不是<code>ducati</code>, <code>ducatiMonster</code>和 <code>NicolesDucatiMonster620dark</code> – 当然，除非您真的不想将它们复用！</p>
-<p>Be careful not to choose classes linked to the display of the object (e.g. big blue borders).  The client will change their mind, you’ll have classes which no longer correlate to actual display.</p>
-<p>当心！不要使用与对象表现形式相关的类名（例如 big，blue，borders）。客户会改变想法，代码中会存在一批与实际表达效果不相符的类。</p>
-<h2 id="何时使用模块（How-to-decide-when-to-use-Modules）"><a href="#何时使用模块（How-to-decide-when-to-use-Modules）" class="headerlink" title="何时使用模块（How to decide when to use Modules）"></a>何时使用模块（How to decide when to use Modules）</h2><p>Deciding when to use Modules can be confusing. As a rule of thumb, if you are marking up an element on the page that conveys relevant information to the user by itself (e.g. breadcrumbs), you do not need a module. This is a good example for a content object. However, if you are marking up a container that conveys no relevant information on its own (e.g. tabs) and would only make sense to use when you place content objects in it, then you could mark it up as a module.</p>
-<p>也许当您使用模块时会感到困惑。从经验上讲，如果您在页面上标记的元素可以向用户传递相关信息时（例如面包屑breadcrumb），您不必使用模块。对于内容对象来说，这是一个很好的例子。但是，如果您在标记一个传递与其本身信息无关的容器时（就像标签tabs）并且只有当您将其中的元素换用内容对象才符合意义时，那您可以将它标注为一个模块。</p>
-<p>So you could ask “Is this element conveying any relevant information to the user?”. A container is never useful information to the user on its own; only the content elements within it convey reasonable information to the user. So if your answer to the question is “No”, you could use a module.</p>
-<p>所以，您可以这样问：“这个元素是否向用户传递了相关的信息呢？”一个容器本身绝对不会为用户提供有用的信息；只有里面的内容元素可以向用户传递相关的信息。所以，如果您的回答是“No”，那您可能再用一个模块。</p>
-<h2 id="Thanks"><a href="#Thanks" class="headerlink" title="Thanks"></a>Thanks</h2><p>Great feedback, bug reports,etc. Chris Griego, Jordan LaMons, Arnaud Gueras (as usual), Ryan Grove, Nicholas Zakas, Peter Ellenhauge, Chris Eppstein, Vinod Kerkar, Carsten, Dan H, Cindy Li, etc.</p>
-<p>感谢以下人员提供的良好的反馈意见和错误报告等。Chris Griego, Jordan LaMons, Arnaud Gueras (as usual), Ryan Grove, Nicholas Zakas, Peter Ellenhauge, Chris Eppstein, Vinod Kerkar, Carsten, Dan H, Cindy Li等。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://bystep15.github.io/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html" data-id="cjiy0w462003lqn0f37noa0cy" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-oocss/04-Standard-Module-Format" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html" class="article-date">
-  <time datetime="2018-06-06T02:30:00.000Z" itemprop="datePublished">2018-06-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/oocss/">oocss</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">04、标准模块格式（Standard Module Format）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://github.com/stubbornella/oocss/wiki/Standard-Module-Format" target="_blank" rel="noopener">原文</a></p>
-<p>The standard module format is based on the <a href="http://developer.yahoo.com/yui/examples/container:/module.html" target="_blank" rel="noopener">YUI module control</a>.  I hope to include input from microformats and HTML5 communities to inform the choice of class names.</p>
-<p>标准模块格式基于<a href="http://developer.yahoo.com/yui/examples/container:/module.html" target="_blank" rel="noopener">YUI模块控制</a>。我希望从微格式和HTML5社区收集一些意见，来为类选择合适的名称。</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>mod</code></td>
-<td>Module is the wrapper for every container object. It provides basic structure for a transparent inside module. It can be extended by <code>mojo</code> or <code>ag</code>to provide for transparent outside and complex borders respectively.</td>
-</tr>
-<tr>
-<td><code>inner</code></td>
-<td>Inner exists for two reasons. First, it solves a bug (Opera prior to version 8.5) in which position relative and overflow hidden cannot exist on the same element. Second, it allows for two elements on which borders can be placed to extend the number of blocks that can be built without using image based borders.</td>
-</tr>
-<tr>
-<td><code>hd</code></td>
-<td>The module header generally contains a heading, but may also contain buttons, links, tabs, etc. <code>hd</code> provides basic structure and can be extended via skin classes. A module can have 0-1 (should this be 0-n?) <code>hd</code>.</td>
-</tr>
-<tr>
-<td><code>bd</code></td>
-<td>The body is the main open editable region of the module. It is an obligatory region, the module may contain 1-n bodies.</td>
-</tr>
-<tr>
-<td><code>ft</code></td>
-<td>The module footer is an object. ft provides basic structure and it can be extended via skin classes.</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>mod</code></td>
-<td>模块是容器对象的包装器，为内在模块提供了透明的基本结构。可以使用<code>mojo</code> 或者 <code>ag</code>分别扩展成透明的外边距和复杂的边框。</td>
-</tr>
-<tr>
-<td><code>inner</code></td>
-<td>内元素（inner）存在有两个原因。第一，它解决了一个bug（Opera 8.5之前的版本存在），相对定位和溢出隐藏没办法同时存在于一个元素上。第二，使用两个元素的边框扩展了块的数量，而不需要基于图片的边框。</td>
-</tr>
-<tr>
-<td><code>hd</code></td>
-<td>这个模块头通常包括一个标题，也可以包含按钮，链接，标签等等。<code>hd</code>提供了基本的结构并且可以通过皮肤类来扩展。一个模块中可以包含0-1（或者说0-n？）个<code>hd</code>。</td>
-</tr>
-<tr>
-<td><code>bd</code></td>
-<td>主体部分是模块中主要的开放可编辑的区域。它是必须存在的区域，模块可以包含1-n个主体部分。</td>
-</tr>
-<tr>
-<td><code>ft</code></td>
-<td>这个尾部模块是一个对象。<code>ft</code>提供了基本的结构并且可以由皮肤类来扩展。</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mod"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hd"</span>&gt;</span>head<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span>body<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ft"</span>&gt;</span>foot<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://bystep15.github.io/standard/2018/06/06/04、标准模块格式（standard-module-format）.html" data-id="cjiy0w448000yqn0fjv6jobiy" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -1297,7 +1279,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/">理论</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/">css</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/oocss/">oocss</a></li></ul></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/">理论</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/">css</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/bem/">bem</a></li><li class="category-list-item"><a class="category-list-link" href="/standard/categories/理论/css/oocss/">oocss</a></li></ul></li></ul></li></ul>
     </div>
   </div>
 
@@ -1307,7 +1289,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/bem/">bem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/oocss/">oocss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
     </div>
   </div>
 
@@ -1317,7 +1299,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/standard/tags/css/" style="font-size: 10px;">css</a> <a href="/standard/tags/oocss/" style="font-size: 10px;">oocss</a> <a href="/standard/tags/理论/" style="font-size: 10px;">理论</a>
+      <a href="/standard/tags/bem/" style="font-size: 10px;">bem</a> <a href="/standard/tags/css/" style="font-size: 20px;">css</a> <a href="/standard/tags/oocss/" style="font-size: 15px;">oocss</a> <a href="/standard/tags/理论/" style="font-size: 20px;">理论</a>
     </div>
   </div>
 
@@ -1339,23 +1321,23 @@
       <ul>
         
           <li>
+            <a href="/standard/2018/06/28/03、常见问题（faq）.html">03、常见问题（FAQ）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/28/02、命名（naming）.html">02、命名（Naming）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/28/01、介绍（introduction）.html">01、介绍（Introduction）</a>
+          </li>
+        
+          <li>
+            <a href="/standard/2018/06/28/00、模块化css理论——bem目录.html">00、模块化CSS理论——BEM目录</a>
+          </li>
+        
+          <li>
             <a href="/standard/2018/06/28/13、常见问题（faq）.html">13、常见问题（FAQ）</a>
-          </li>
-        
-          <li>
-            <a href="/standard/2018/06/28/12、浏览器分级支持（graded-browser-support）.html">12、浏览器分级支持（Graded Browser Support）</a>
-          </li>
-        
-          <li>
-            <a href="/standard/2018/06/28/11、uml.html">11、UML</a>
-          </li>
-        
-          <li>
-            <a href="/standard/2018/06/28/10、走马灯（carousel）.html">10、走马灯（Carousel）</a>
-          </li>
-        
-          <li>
-            <a href="/standard/2018/06/27/09、对话框（talk-bubbles）.html">09、对话框（Talk Bubbles）</a>
           </li>
         
       </ul>

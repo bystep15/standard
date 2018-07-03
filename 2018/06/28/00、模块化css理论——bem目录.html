@@ -5,18 +5,20 @@
   
 
   
-  <title>归档: 2018/6 | HTML&amp;CSS模块化理论学习</title>
+  <title>00、模块化CSS理论——BEM目录 | HTML&amp;CSS模块化理论学习</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="通过css的理论化学习，架构更好的CSS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HTML&amp;CSS模块化理论学习">
-<meta property="og:url" content="https://bystep15.github.io/standard/archives/2018/06/page/2/index.html">
+  <meta name="description" content="BEM（Block Element Modifier），块元素修饰符，在SMACSS的基础上修改toggle组件的示例如下： 1234567&amp;lt;div class=&quot;toggle toggle—simple”&amp;gt;    &amp;lt;div class=“toggle__control toggle__control—-active”&amp;gt;        &amp;lt;h1 class=“toggl">
+<meta name="keywords" content="理论,css,bem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="00、模块化CSS理论——BEM目录">
+<meta property="og:url" content="https://bystep15.github.io/standard/2018/06/28/00、模块化css理论——bem目录.html">
 <meta property="og:site_name" content="HTML&amp;CSS模块化理论学习">
-<meta property="og:description" content="通过css的理论化学习，架构更好的CSS">
+<meta property="og:description" content="BEM（Block Element Modifier），块元素修饰符，在SMACSS的基础上修改toggle组件的示例如下： 1234567&amp;lt;div class=&quot;toggle toggle—simple”&amp;gt;    &amp;lt;div class=“toggle__control toggle__control—-active”&amp;gt;        &amp;lt;h1 class=“toggl">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-29T07:17:13.514Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML&amp;CSS模块化理论学习">
-<meta name="twitter:description" content="通过css的理论化学习，架构更好的CSS">
+<meta name="twitter:title" content="00、模块化CSS理论——BEM目录">
+<meta name="twitter:description" content="BEM（Block Element Modifier），块元素修饰符，在SMACSS的基础上修改toggle组件的示例如下： 1234567&amp;lt;div class=&quot;toggle toggle—simple”&amp;gt;    &amp;lt;div class=“toggle__control toggle__control—-active”&amp;gt;        &amp;lt;h1 class=“toggl">
   
     <link rel="alternate" href="/standard/atom.xml" title="HTML&amp;CSS模块化理论学习" type="application/atom+xml">
   
@@ -65,121 +67,80 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/standard/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/06/27/07、内容（content）.html" class="archive-article-date">
-  <time datetime="2018-06-27T02:30:00.000Z" itemprop="datePublished">6月 27</time>
+        <section id="main"><article id="post-bem/README" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/standard/2018/06/28/00、模块化css理论——bem目录.html" class="article-date">
+  <time datetime="2018-06-28T11:30:00.000Z" itemprop="datePublished">2018-06-28</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/standard/categories/理论/">理论</a>►<a class="article-category-link" href="/standard/categories/理论/css/">css</a>►<a class="article-category-link" href="/standard/categories/理论/css/bem/">bem</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/06/27/07、内容（content）.html">07、内容（Content）</a>
+    <h1 class="article-title" itemprop="name">
+      00、模块化CSS理论——BEM目录
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/06/26/06、模块皮肤（module-skins）.html" class="archive-article-date">
-  <time datetime="2018-06-26T10:30:00.000Z" itemprop="datePublished">6月 26</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/06/26/06、模块皮肤（module-skins）.html">06、模块皮肤（Module Skins）</a>
-    </h1>
-  
+        <p><a href="http://getbem.com" target="_blank" rel="noopener">BEM</a>（Block Element Modifier），块元素修饰符，在SMACSS的基础上修改toggle组件的示例如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"toggle toggle—simple”&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">    &lt;div class=“toggle__control toggle__control—-active”&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">        &lt;h1 class=“toggle__title”&gt;Title 1&lt;/h1&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">    &lt;/div&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">    &lt;div class=“toggle__details toggle__details--active“&gt;…&lt;/div&gt;</span></span></span><br><span class="line"><span class="tag"><span class="string">    ...</span></span></span><br><span class="line"><span class="tag"><span class="string">&lt;/div&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>BEM只是一个CSS类名命名规则，让每一个CSS类名具备详细的自描述性，不涉及如何书写CSS结构，只是建议每个元素都添加带有如下内容的CSS类名：</p>
+<ol>
+<li>块名：所属组件的名称。</li>
+<li>元素：元素在块里面的名称。</li>
+<li>修饰符：任何与块或元素相关联的修饰符。</li>
+</ol>
+<p>元素名加在双下划线之后（例如<code>toggle__details</code>），修饰符加在双横杠之后（如<code>toggle__details—-active</code>）。</p>
+<h2 id="资料翻译列表"><a href="#资料翻译列表" class="headerlink" title="资料翻译列表"></a>资料翻译列表</h2><ol>
+<li><a href="/standard/2018/06/28/01、介绍（introduction）.html">介绍（Introduction）</a></li>
+<li><a href="/standard/2018/06/28/02、命名（naming）.html">命名（Naming）</a></li>
+<li><a href="/standard/2018/06/28/03、常见问题（faq）.html">常见问题（FAQ）</a></li>
+</ol>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html" class="archive-article-date">
-  <time datetime="2018-06-26T01:30:00.000Z" itemprop="datePublished">6月 26</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/06/26/05、模块-容器对象（modules-container-objects）.html">05、模块 - 容器对象（Modules - Container Objects）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html" class="archive-article-date">
-  <time datetime="2018-06-06T02:30:00.000Z" itemprop="datePublished">6月 6</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://bystep15.github.io/standard/2018/06/28/00、模块化css理论——bem目录.html" data-id="cjiybcx1000012a0f4s27dtb9" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/06/06/04、标准模块格式（standard-module-format）.html">04、标准模块格式（Standard Module Format）</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/standard/2018/06/06/03、网格（grids）.html" class="archive-article-date">
-  <time datetime="2018-06-06T01:30:00.000Z" itemprop="datePublished">6月 6</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/standard/2018/06/06/03、网格（grids）.html">03、网格（Grids）</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/bem/">bem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/standard/tags/理论/">理论</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/standard/archives/2018/06/">&laquo; 上一页</a><a class="page-number" href="/standard/archives/2018/06/">1</a><span class="page-number current">2</span>
-  </nav>
+<nav id="article-nav">
+  
+    <a href="/standard/2018/06/28/01、介绍（introduction）.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          01、介绍（Introduction）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/standard/2018/06/28/13、常见问题（faq）.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">13、常见问题（FAQ）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
